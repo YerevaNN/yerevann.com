@@ -575,6 +575,84 @@ th {
     }
 </style>
 
+<style>
+    #impact .container {
+        max-width: 1152px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #impact .css-xi606m {
+        text-align: left;
+    }
+
+    #impact .features-container {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 40px 32px;
+        width: 100% !important;
+        margin: 56px 0 0 !important;
+        align-items: start;
+    }
+
+    #impact .features-container > .MuiGrid-item {
+        max-width: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        flex-basis: auto !important;
+    }
+
+    #impact .features-container > .MuiGrid-item > .MuiGrid-container {
+        align-items: flex-start !important;
+        color: #ffffff !important;
+        text-align: left !important;
+    }
+
+    #impact .features-container h6 {
+        margin: 0 0 12px !important;
+        color: #ffffff !important;
+        font-size: clamp(4.5rem, 7vw, 6rem) !important;
+        line-height: 0.95 !important;
+    }
+
+    #impact .features-container p,
+    #impact .features-container span {
+        color: #ffffff !important;
+        text-align: left !important;
+    }
+
+    #impact .features-container p {
+        font-size: 1rem !important;
+        line-height: 1.45 !important;
+        font-weight: 400 !important;
+    }
+
+    #impact .features-container span {
+        display: block;
+        margin-bottom: 18px;
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+        font-weight: 700 !important;
+    }
+
+    #impact .features-container hr {
+        display: none;
+    }
+
+    @media (max-width: 992px) {
+        #impact .features-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 576px) {
+        #impact .features-container {
+            grid-template-columns: 1fr;
+            gap: 36px;
+        }
+    }
+</style>
+
 <!-- App Integrations -->
 <!-- Fathom Analytics --><meta name="theme-color" content="#E6495B"><!-- End Fathom Analytics --><!-- Global site tag (gtag.js) - Google Analytics --><!-- End Global site tag (gtag.js) - Google Analytics --><!-- Hubspot Chat --><!-- End Hubspot Chat -->
 <!-- End Integrations -->
