@@ -2233,16 +2233,52 @@ div#research-papers .filter-container {
 #cta2 {
     display: block;
 }
+#research-papers .list-container > .MuiGrid-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0 !important;
+    width: 100% !important;
+}
+#research-papers .list-container > .MuiGrid-container > .MuiGrid-item {
+    max-width: none !important;
+    width: 100% !important;
+    flex-basis: auto !important;
+    padding: 0 !important;
+}
+#research-papers .list-item-wrapper,
+#research-papers .vertical-list-item,
+#research-papers .vertical-list-item > .MuiStack-root,
+#research-papers .vertical-list-item > .MuiStack-root > .MuiStack-root {
+    height: 100%;
+}
 #research-papers .vertical-list-item {
+    background: #fff;
     border: 0;
     border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(40, 35, 78, 0.08);
     color: #161522;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#research-papers .MuiBox-root[data-field-type="staticImage"] {
+    min-height: 220px !important;
+    overflow: hidden;
+    width: 100%;
+}
+#research-papers .MuiBox-root[data-field-type="staticImage"][data-field-empty-el=""] {
+    display: none;
 }
 #research-papers .static-image {
-    background-size: contain !important;
+    background-size: cover !important;
+    height: 220px !important;
+    width: 100% !important;
 }
 #research-papers a {
      color: #6458C3;
+     display: inline-flex;
+     margin: 4px 12px 0 0;
      padding: 6px 12px 6px 0;
      text-decoration: underline;
      font-weight: 500;
@@ -2257,6 +2293,11 @@ div#research-papers .filter-container {
 #research-papers .MuiBox-root[data-field-type="embed"] {
    overflow: initial;
 }
+#research-papers .embed-container > div {
+    align-items: center;
+    display: flex !important;
+    flex-wrap: wrap;
+}
 #research-papers .embed-container > div > a:first-child {
     background: #6458C3 !important;
     border-radius: 24px;
@@ -2265,8 +2306,17 @@ div#research-papers .filter-container {
     text-decoration: none !important;
     margin-right: 12px;
 }
-.additional-elements-wrapper {
+#research-papers .additional-elements-wrapper,
+#research-papers .additional-elements-wrapper > .MuiBox-root {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#research-papers .additional-elements-wrapper {
     padding: 24px;
+}
+#research-papers .MuiBox-root[data-field-type="embed"] {
+   margin-top: auto;
 }
 #research-papers .MuiChip-labelMedium span {
     font-weight: 700
@@ -2275,6 +2325,11 @@ body {
 opacity: 1 !important;
 transition: opacity 0.5s;
 }
+@media (max-width: 900px) {
+    #research-papers .list-container > .MuiGrid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 @media (max-width: 576px) {
         #home-header > header {
             top: 0;
@@ -2282,6 +2337,9 @@ transition: opacity 0.5s;
 	#hero > section {
 		padding-top: 96px !important;
 	}
+    #research-papers .list-container > .MuiGrid-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (min-width: 0px) {
