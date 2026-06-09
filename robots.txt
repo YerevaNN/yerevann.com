@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://yerevann.com/sitemap.xml
