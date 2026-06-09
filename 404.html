@@ -516,6 +516,65 @@ th {
 
 </style>
 
+<style>
+    #board > section > .container > .MuiGrid-container {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px clamp(24px, 5vw, 72px);
+        justify-items: center;
+        align-items: start;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #board > section > .container > .MuiGrid-container > .MuiGrid-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        max-width: 300px !important;
+        width: 100%;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+
+    #board > section > .container > .MuiGrid-container > .MuiGrid-item > .MuiGrid-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #board > section > .container > .MuiGrid-container label {
+        margin: 0 auto 12px;
+    }
+
+    #board > section > .container > .MuiGrid-container h5,
+    #board > section > .container > .MuiGrid-container small,
+    #board > section > .container > .MuiGrid-container p {
+        width: 100%;
+        text-align: center !important;
+    }
+
+    #board > section > .container > .MuiGrid-container small {
+        display: block;
+        line-height: 1.45;
+    }
+
+    @media (max-width: 900px) {
+        #board > section > .container > .MuiGrid-container {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+    }
+
+    @media (max-width: 576px) {
+        #board > section > .container > .MuiGrid-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
 <!-- App Integrations -->
 <!-- Fathom Analytics --><meta name="theme-color" content="#E6495B"><!-- End Fathom Analytics --><!-- Global site tag (gtag.js) - Google Analytics --><!-- End Global site tag (gtag.js) - Google Analytics --><!-- Hubspot Chat --><!-- End Hubspot Chat -->
 <!-- End Integrations -->
