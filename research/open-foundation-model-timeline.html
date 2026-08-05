@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Foundation Model Release Timeline</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #cfd8e3;
+      --axis: #94a3b8;
+      --scratch: #0f766e;
+      --initialized: #2563eb;
+      --distilled: #b45309;
+      --arrow: #64748b;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 34px 42px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.35;
+      max-width: 1120px;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      justify-content: flex-end;
+      color: var(--muted);
+      font-size: 13px;
+      min-width: 310px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .swatch {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .chart-wrap {
+      position: relative;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      flex: 1;
+      min-height: 690px;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 690px;
+    }
+
+    .axis text,
+    .lane-label,
+    .tick-label,
+    .pre-label {
+      fill: var(--muted);
+      font-size: 13px;
+    }
+
+    .lane-label {
+      font-weight: 700;
+      fill: #263348;
+    }
+
+    .lane-line {
+      stroke: #e3e9f2;
+      stroke-width: 1;
+    }
+
+    .tick {
+      stroke: #e6edf5;
+      stroke-width: 1;
+    }
+
+    .axis-line {
+      stroke: var(--axis);
+      stroke-width: 1.4;
+    }
+
+    .dep-arrow {
+      fill: none;
+      stroke: var(--arrow);
+      stroke-width: 1.25;
+      stroke-opacity: 0.65;
+    }
+
+    .model-point {
+      cursor: pointer;
+      stroke: #fff;
+      stroke-width: 2.2;
+    }
+
+    .model-label {
+      pointer-events: none;
+      fill: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+      paint-order: stroke;
+      stroke: #fff;
+      stroke-width: 4px;
+      stroke-linejoin: round;
+    }
+
+    .model-sublabel {
+      pointer-events: none;
+      fill: var(--muted);
+      font-size: 10px;
+      paint-order: stroke;
+      stroke: #fff;
+      stroke-width: 3px;
+      stroke-linejoin: round;
+    }
+
+    .tooltip {
+      position: absolute;
+      z-index: 50;
+      width: min(520px, calc(100vw - 32px));
+      background: #ffffff;
+      color: #172033;
+      border: 3px solid #0f172a;
+      border-radius: 14px;
+      padding: 28px 30px;
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.34);
+      font-size: 14px;
+      line-height: 1.55;
+      display: none;
+      pointer-events: auto;
+    }
+
+    .tooltip a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .tooltip a:hover {
+      text-decoration: underline;
+    }
+
+    .tooltip h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.22;
+      color: #0f172a;
+    }
+
+    .tooltip .meta {
+      color: #475467;
+      margin: 0 0 18px;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .tooltip .row {
+      margin: 12px 0;
+      padding: 6px 4px;
+    }
+
+    .tooltip b {
+      color: #111827;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 22px 16px;
+      }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .legend {
+        justify-content: flex-start;
+      }
+
+      .chart-wrap {
+        overflow-x: auto;
+      }
+
+      svg {
+        width: 1180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <h1>Open Foundation Model Timeline</h1>
+        <p class="subtitle">Release timing and dependency structure for open vision encoders, small VLMs, and small LLMs relevant to YerevaNN's physical-AI strategy. VLM/LLM vertical position uses total parameter count, including embeddings/components where known. Models released in June 2024 or earlier are excluded.</p>
+      </div>
+      <div class="legend" aria-label="Legend">
+        <span class="legend-item"><span class="swatch" style="background: var(--scratch)"></span>From scratch</span>
+        <span class="legend-item"><span class="swatch" style="background: var(--initialized)"></span>Partially initialized</span>
+        <span class="legend-item"><span class="swatch" style="background: var(--distilled)"></span>Distilled</span>
+      </div>
+    </header>
+
+    <div class="chart-wrap" id="chartWrap">
+      <svg id="timeline" role="img" aria-label="Timeline of open foundation model releases from mid-2024 through late 2026"></svg>
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <div class="note">Most rendered points are below 5B total parameters. Deliberate exceptions are shown for Gemma 4 E2B, Qwen3.8-27B, and DINOv3 ViT-7B. Dependency arrows show direct upstream model dependence when known. Click a point to pin its source links.</div>
+  </div>
+
+  <script>
+    const models = [
+      {
+        id: "aimv2",
+        label: "AIMv2",
+        sub: "Nov 2024",
+        date: "2024-11-01",
+        lane: "params",
+        paramB: 0.3,
+        kind: "vision",
+        details: "Apple AIMv2 open-weight vision encoder line with multimodal autoregressive objective.",
+        compute: "Public compute not found.",
+        caveat: "Useful open vision encoder family, but provenance/continuity is less central than DINO/SigLIP for our stack."
+      },
+      {
+        id: "siglip2",
+        label: "SigLIP 2",
+        sub: "Feb 2025",
+        date: "2025-02-21",
+        lane: "params",
+        paramB: 0.4,
+        kind: "vision",
+        details: "Google vision-language encoder line; important upstream dependency for modern small VLMs.",
+        compute: "Original SigLIP SO400M examples report 16 TPU-v4 chips for 3 days; comparable SigLIP 2 compute not found.",
+        caveat: "Less DINO-like; strong VLM encoder. Molmo2 and MiniCPM-V depend on SigLIP2."
+      },
+      {
+        id: "dinov3_s",
+        label: "DINOv3 ViT-S",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 0.021,
+        kind: "vision",
+        labelDx: 18,
+        labelDy: 20,
+        details: "Small DINOv3 ViT-S/16 checkpoint with about 21M parameters, distilled from the ViT-7B teacher.",
+        compute: "Public per-checkpoint compute not found; distilled from the DINOv3 ViT-7B teacher.",
+        caveat: "Distilled small checkpoint, not independently trained from scratch."
+      },
+      {
+        id: "dinov3_sp",
+        label: "DINOv3 ViT-S+",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 0.029,
+        kind: "vision",
+        labelDx: 18,
+        labelDy: -20,
+        details: "DINOv3 ViT-S+/16 checkpoint with about 29M parameters and SwiGLU FFN, distilled from ViT-7B.",
+        compute: "Public per-checkpoint compute not found; distilled from the DINOv3 ViT-7B teacher.",
+        caveat: "Distilled small checkpoint, not independently trained from scratch."
+      },
+      {
+        id: "dinov3_b",
+        label: "DINOv3 ViT-B",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 0.086,
+        kind: "vision",
+        labelDx: 18,
+        labelDy: 10,
+        details: "DINOv3 ViT-B/16 checkpoint with about 86M parameters, distilled from ViT-7B.",
+        compute: "Public per-checkpoint compute not found; distilled from the DINOv3 ViT-7B teacher.",
+        caveat: "Distilled small checkpoint, not independently trained from scratch."
+      },
+      {
+        id: "dinov3_l",
+        label: "DINOv3 ViT-L",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 0.3,
+        kind: "vision",
+        labelDx: 18,
+        labelDy: -12,
+        details: "DINOv3 ViT-L/16 checkpoint with about 300M parameters, distilled from ViT-7B.",
+        compute: "Public per-checkpoint compute not found; distilled from the DINOv3 ViT-7B teacher.",
+        caveat: "Distilled checkpoint; strong practical size for downstream vision work."
+      },
+      {
+        id: "dinov3_hp",
+        label: "DINOv3 ViT-H+",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 0.84,
+        kind: "vision",
+        labelDx: 18,
+        labelDy: 18,
+        details: "DINOv3 ViT-H+/16 checkpoint with about 840M parameters and SwiGLU FFN, distilled from ViT-7B.",
+        compute: "Public per-checkpoint compute not found; distilled from the DINOv3 ViT-7B teacher.",
+        caveat: "Largest sub-1B DINOv3 checkpoint in the released ViT family."
+      },
+      {
+        id: "dinov3",
+        label: "DINOv3 ViT-7B",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 6.716,
+        kind: "vision",
+        details: "Meta's strongest DINO-like self-supervised vision foundation model release.",
+        compute: "ViT-7B pretraining: 61,440 H100 GPU-hours. Full project compute is much larger.",
+        caveat: "If no DINOv4 appears, the community can continue on DINOv3 but may drift behind closed encoders."
+      },
+      {
+        id: "cradio4",
+        label: "C-RADIOv4",
+        sub: "Jan 2026",
+        date: "2026-01-25",
+        lane: "params",
+        paramB: 0.4,
+        kind: "vision",
+        details: "NVIDIA practical vision encoder family distilling several teacher models.",
+        compute: "Public compute not found.",
+        caveat: "Not independent: distills teachers including SigLIP2, DINOv3, and SAM-style models."
+      },
+      {
+        id: "gemmaVision",
+        label: "Gemma 4 ViT",
+        sub: "Apr 2026",
+        date: "2026-04-02",
+        lane: "params",
+        paramB: 0.15,
+        kind: "vision",
+        details: "Gemma 4 E2B/E4B use frozen ~150M ViT vision encoders. Larger non-12B variants use ~550M ViTs; 12B is encoder-free.",
+        compute: "Gemma 4 chip counts are public, but standalone vision-encoder data/objective/compute are not disclosed.",
+        caveat: "Open-weight component, but not a transparent DINO-style foundation-encoder release."
+      },
+      {
+        id: "qwen35_08",
+        label: "Qwen3.5-0.8B",
+        sub: "2026",
+        date: "2026-03-02",
+        lane: "params",
+        paramB: 0.8,
+        kind: "vlm",
+        details: "Small Qwen component used by MiniCPM-V 4.6 according to model materials.",
+        compute: "Public compute not found.",
+        caveat: "Shown because it is a dependency, not because it is YerevaNN's current baseline."
+      },
+      {
+        id: "qwen25_05",
+        label: "Qwen2.5-0.5B",
+        sub: "Sep 2024",
+        date: "2024-09-19",
+        lane: "params",
+        paramB: 0.5,
+        kind: "llm",
+        details: "Small dense Qwen2.5 language model. Relevant as the previous-generation open small Qwen baseline.",
+        compute: "Public model-specific GPU-hours not found. Qwen2.5 reports up to 18T pretraining tokens across the family.",
+        caveat: "Useful as historical baseline; not a VLM."
+      },
+      {
+        id: "qwen25_15",
+        label: "Qwen2.5-1.5B",
+        sub: "Sep 2024",
+        date: "2024-09-19",
+        lane: "params",
+        paramB: 1.5,
+        kind: "llm",
+        details: "Small dense Qwen2.5 language model, open-weight in base and instruct variants.",
+        compute: "Public model-specific GPU-hours not found. Qwen2.5 reports up to 18T pretraining tokens across the family.",
+        caveat: "Useful baseline for measuring what Qwen3 gained at similar or smaller scale."
+      },
+      {
+        id: "qwen25_3",
+        label: "Qwen2.5-3B",
+        sub: "Sep 2024",
+        date: "2024-09-19",
+        lane: "params",
+        paramB: 3.0,
+        kind: "llm",
+        details: "Qwen2.5 dense 3B language model; relevant because Qwen3-1.7B/4B are compared against Qwen2.5 small baselines.",
+        compute: "Public model-specific GPU-hours not found. Qwen2.5 reports up to 18T pretraining tokens across the family.",
+        caveat: "Qwen's blog notes the 3B variant has a different license from the Apache-2.0 Qwen2.5 sizes."
+      },
+      {
+        id: "qwen25vl3",
+        label: "Qwen2.5-VL-3B",
+        sub: "Jan 2025",
+        date: "2025-01-26",
+        lane: "params",
+        paramB: 3.0,
+        kind: "vlm",
+        details: "Small Qwen2.5 vision-language model for images, video, OCR, localization, and agentic visual tasks.",
+        compute: "Public compute not found.",
+        caveat: "Composite VLM; relevant predecessor to Qwen3-VL for small VLM/VLA fine-tuning."
+      },
+      {
+        id: "gemma3_1",
+        label: "Gemma 3 1B",
+        sub: "Mar 2025",
+        date: "2025-03-10",
+        lane: "params",
+        paramB: 1.0,
+        kind: "llm",
+        labelDx: 18,
+        labelDy: -18,
+        renderPriority: 10,
+        details: "Google Gemma 3 small text-only model. The 1B model uses a 32K context window.",
+        compute: "Model card reports 2T training tokens for 1B; chip-hours not disclosed.",
+        caveat: "Gemma 3 1B is text-only, unlike the 4B/12B/27B multimodal variants."
+      },
+      {
+        id: "gemma3_4",
+        label: "Gemma 3 4B",
+        sub: "Mar 2025",
+        date: "2025-03-10",
+        lane: "params",
+        paramB: 4.0,
+        kind: "vlm",
+        labelDx: 18,
+        labelDy: 20,
+        renderPriority: 10,
+        details: "Google Gemma 3 small multimodal model with image-text input and text output.",
+        compute: "Model card reports 4T training tokens for 4B; chip-hours not disclosed.",
+        caveat: "Gemma 3 technical report says the models are trained with distillation."
+      },
+      {
+        id: "qwen3_06",
+        label: "Qwen3-0.6B",
+        sub: "Apr 2025",
+        date: "2025-04-29",
+        lane: "params",
+        paramB: 0.6,
+        kind: "llm",
+        details: "Small dense Qwen3 language model; part of the Qwen3 dense family under 5B.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Qwen3 report compares small dense models against Qwen2.5 baselines; this is an LLM, not a VLM."
+      },
+      {
+        id: "qwen3_17",
+        label: "Qwen3-1.7B",
+        sub: "Apr 2025",
+        date: "2025-04-29",
+        lane: "params",
+        paramB: 1.7,
+        kind: "llm",
+        details: "Small dense Qwen3 language model; Qwen states Qwen3-1.7B performs around the Qwen2.5-3B baseline level.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Important practical small LLM baseline for sub-5B open-weight continuity."
+      },
+      {
+        id: "qwen3_4",
+        label: "Qwen3-4B",
+        sub: "Apr 2025",
+        date: "2025-04-29",
+        lane: "params",
+        paramB: 4.0,
+        kind: "llm",
+        details: "Dense Qwen3 4B language model; Molmo2 uses Qwen3-4B-Instruct as its LLM base.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Separate from Qwen3-VL-4B; this is the language backbone used by some downstream VLMs."
+      },
+      {
+        id: "gemma3_270m",
+        label: "Gemma 3 270M",
+        sub: "Aug 2025",
+        date: "2025-08-14",
+        lane: "params",
+        paramB: 0.27,
+        kind: "llm",
+        details: "Very small Gemma 3 open model released after the main Gemma 3 family.",
+        compute: "Model card reports 6T training tokens for 270M; chip-hours not disclosed.",
+        caveat: "Text-only; useful mainly as an edge/text baseline."
+      },
+      {
+        id: "minicpm46",
+        label: "MiniCPM-V 4.6",
+        sub: "May 2026",
+        date: "2026-05-11",
+        lane: "params",
+        paramB: 1.3,
+        kind: "vlm",
+        details: "OpenBMB edge-oriented VLM for image/video/OCR/multi-image use.",
+        compute: "Public compute not found.",
+        caveat: "Composite model: depends on SigLIP2-400M and Qwen3.5-0.8B."
+      },
+      {
+        id: "smollm3",
+        label: "SmolLM3-3B",
+        sub: "Jul 2025",
+        date: "2025-07-08",
+        lane: "params",
+        paramB: 3.0,
+        kind: "llm",
+        details: "Hugging Face small open text model with long context.",
+        compute: "Secondary sources report ~220k GPU-hours; primary compute table not verified.",
+        caveat: "Good fallback small LLM; not a VLM."
+      },
+      {
+        id: "phi4mini",
+        label: "Phi-4-mini",
+        sub: "Feb 2025",
+        date: "2025-02-20",
+        lane: "params",
+        paramB: 3.8,
+        kind: "llm",
+        details: "Microsoft small reasoning/text model.",
+        compute: "Public compute not found.",
+        caveat: "Not a VLM; less open in data/recipe than OLMo-style releases."
+      },
+      {
+        id: "qwen3vl4",
+        label: "Qwen3-VL-4B",
+        sub: "Sep/Nov 2025",
+        date: "2025-10-15",
+        lane: "params",
+        paramB: 4.0,
+        kind: "vlm",
+        details: "Qwen image/video VLM around the 4B scale; newer than Qwen2.5-VL.",
+        compute: "Public compute not found.",
+        caveat: "Key practical alternative/baseline for small VLA/VLM fine-tuning."
+      },
+      {
+        id: "qwen35_4",
+        label: "Qwen3.5-4B",
+        sub: "Mar 2026",
+        date: "2026-03-02",
+        lane: "params",
+        paramB: 4.0,
+        kind: "vlm",
+        details: "Sub-5B Qwen dependency; model card lists image-text-to-text and causal LM with vision encoder.",
+        compute: "Public compute not found.",
+        caveat: "Later Qwen3.6/3.8 announcements emphasize 27B+ open releases, so small-model continuity is a risk signal, not a proved stop."
+      },
+      {
+        id: "qwen35_2",
+        label: "Qwen3.5-2B",
+        sub: "Mar 2026",
+        date: "2026-03-02",
+        lane: "params",
+        paramB: 2.0,
+        kind: "vlm",
+        details: "Qwen3.5 small native multimodal model between the 0.8B and 4B releases.",
+        compute: "Public compute not found.",
+        caveat: "Missing from the first timeline draft; part of the Qwen3.5 small series."
+      },
+      {
+        id: "qwen35_9",
+        label: "Qwen3.5-9B",
+        sub: "Mar/Apr 2026",
+        date: "2026-03-02",
+        lane: "params",
+        paramB: 9.7,
+        kind: "vlm",
+        details: "Qwen3.5 mid-size native multimodal model. Hugging Face lists it at about 10B total parameters.",
+        compute: "Public compute not found.",
+        caveat: "Shown in the compressed >5B band; outside the sub-5B target range."
+      },
+      {
+        id: "qwen35_27",
+        label: "Qwen3.5-27B",
+        sub: "Feb/Apr 2026",
+        date: "2026-02-25",
+        lane: "params",
+        paramB: 27.0,
+        kind: "vlm",
+        details: "Qwen3.5 dense 27B native multimodal model.",
+        compute: "Public compute not found.",
+        caveat: "Shown in the compressed >5B band; useful as evidence that later Qwen3.5 releases strongly emphasize larger models."
+      },
+      {
+        id: "qwen35_35a3",
+        label: "Qwen3.5-35B-A3B",
+        sub: "Feb/Apr 2026",
+        date: "2026-02-25",
+        lane: "params",
+        paramB: 35.0,
+        kind: "vlm",
+        details: "Qwen3.5 MoE native multimodal model, nominally 35B-class with about 3B active.",
+        compute: "Public compute not found.",
+        caveat: "Kept because it is at the 35B cutoff; active parameters are noted in the label."
+      },
+      {
+        id: "llama31_8",
+        label: "Llama 3.1 8B",
+        sub: "Jul 2024",
+        date: "2024-07-23",
+        lane: "params",
+        paramB: 8.0,
+        kind: "llm",
+        details: "Meta's 8B Llama 3.1 text model with 128K context and multilingual/tool-use improvements.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Custom Llama license, not Apache/MIT; still an important open-weight baseline after the cutoff."
+      },
+      {
+        id: "mistralNemo12",
+        label: "Mistral NeMo 12B",
+        sub: "Jul 2024",
+        date: "2024-07-18",
+        lane: "params",
+        paramB: 12.0,
+        kind: "llm",
+        details: "Mistral/NVIDIA 12B open-weight multilingual text model with 128K context.",
+        compute: "Public compute not found.",
+        caveat: "Deprecated in Mistral docs for new integrations, but historically important and NVIDIA-relevant."
+      },
+      {
+        id: "llama32_1",
+        label: "Llama 3.2 1B",
+        sub: "Sep 2024",
+        date: "2024-09-25",
+        lane: "params",
+        paramB: 1.0,
+        kind: "llm",
+        details: "Meta's lightweight edge/mobile Llama 3.2 text model.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Meta says the lightweight Llama 3.2 models use pruning and distillation; custom Llama license."
+      },
+      {
+        id: "llama32_3",
+        label: "Llama 3.2 3B",
+        sub: "Sep 2024",
+        date: "2024-09-25",
+        lane: "params",
+        paramB: 3.0,
+        kind: "llm",
+        details: "Meta's 3B edge/mobile Llama 3.2 text model.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Meta says the lightweight Llama 3.2 models use pruning and distillation; custom Llama license."
+      },
+      {
+        id: "llama32v11",
+        label: "Llama 3.2 Vision 11B",
+        sub: "Sep 2024",
+        date: "2024-09-25",
+        lane: "params",
+        paramB: 11.0,
+        kind: "vlm",
+        details: "Meta's smaller Llama 3.2 vision-language model; the 90B sibling is excluded by the 35B cutoff.",
+        compute: "Public model-specific GPU-hours not found.",
+        caveat: "Custom Llama license; partially initialized/composite relative to the Llama text backbone."
+      },
+      {
+        id: "deepseekR1Qwen15",
+        label: "R1-Distill-Qwen-1.5B",
+        sub: "Jan 2025",
+        date: "2025-01-20",
+        lane: "params",
+        paramB: 1.5,
+        kind: "llm",
+        details: "DeepSeek-R1 distilled reasoning model based on Qwen2.5-Math-1.5B.",
+        compute: "Public compute not found; DeepSeek reports distillation from R1 reasoning data.",
+        caveat: "Distilled downstream model, not an independent foundation release."
+      },
+      {
+        id: "deepseekR1Qwen7",
+        label: "R1-Distill-Qwen-7B",
+        sub: "Jan 2025",
+        date: "2025-01-20",
+        lane: "params",
+        paramB: 7.0,
+        kind: "llm",
+        details: "DeepSeek-R1 distilled reasoning model based on Qwen2.5-Math-7B.",
+        compute: "Public compute not found; DeepSeek reports distillation from R1 reasoning data.",
+        caveat: "Distilled downstream model, not an independent foundation release."
+      },
+      {
+        id: "deepseekR1Qwen14",
+        label: "R1-Distill-Qwen-14B",
+        sub: "Jan 2025",
+        date: "2025-01-20",
+        lane: "params",
+        paramB: 14.0,
+        kind: "llm",
+        details: "DeepSeek-R1 distilled reasoning model based on Qwen2.5-14B.",
+        compute: "Public compute not found; DeepSeek reports distillation from R1 reasoning data.",
+        caveat: "Distilled downstream model, included because it shows Qwen as a reusable base."
+      },
+      {
+        id: "deepseekR1Qwen32",
+        label: "R1-Distill-Qwen-32B",
+        sub: "Jan 2025",
+        date: "2025-01-20",
+        lane: "params",
+        paramB: 32.0,
+        kind: "llm",
+        details: "DeepSeek-R1 distilled reasoning model based on Qwen2.5-32B.",
+        compute: "Public compute not found; DeepSeek reports distillation from R1 reasoning data.",
+        caveat: "At the high end of the allowed range; excluded 70B distilled models."
+      },
+      {
+        id: "graniteVision32",
+        label: "Granite Vision 3.2 2B",
+        sub: "Feb 2025",
+        date: "2025-02-26",
+        lane: "params",
+        paramB: 2.0,
+        kind: "vlm",
+        details: "IBM Granite Vision 3.2 2B, an Apache-2.0 multimodal model focused on document understanding.",
+        compute: "Public compute not found.",
+        caveat: "Domain emphasis is documents rather than robotics, but it is a notable open small VLM."
+      },
+      {
+        id: "phi4multi",
+        label: "Phi-4-multimodal",
+        sub: "Mar 2025",
+        date: "2025-03-03",
+        lane: "params",
+        paramB: 5.6,
+        kind: "vlm",
+        details: "Microsoft Phi-4 multimodal model with text, image, and audio inputs and text output.",
+        compute: "Public compute not found.",
+        caveat: "Slightly above 5B but below 35B; uses modality-specific adapters/routers."
+      },
+      {
+        id: "mistralSmall31",
+        label: "Mistral Small 3.1 24B",
+        sub: "Mar 2025",
+        date: "2025-03-17",
+        lane: "params",
+        paramB: 24.0,
+        kind: "vlm",
+        details: "Mistral Small 3.1 24B open-weight multimodal model with 128K context.",
+        compute: "Public compute not found.",
+        caveat: "Apache 2.0 and strong under-35B VLM baseline; Mistral says it builds on Mistral Small 3."
+      },
+      {
+        id: "qwen36_27",
+        label: "Qwen3.6-27B",
+        sub: "2026",
+        date: "2026-05-15",
+        lane: "params",
+        paramB: 27.0,
+        kind: "llm",
+        details: "Not under 5B. Included to show later Qwen open releases emphasizing larger models.",
+        compute: "Public compute not found.",
+        caveat: "Muted because it is outside the sub-5B target range."
+      },
+      {
+        id: "qwen38_27",
+        label: "Qwen3.8-27B",
+        sub: "Aug 2026",
+        date: "2026-08-03",
+        lane: "params",
+        paramB: 27.0,
+        kind: "llm",
+        details: "Not under 5B. Qwen3.8 announcement mentions Max plus 27B open weights, with no sub-5B model mentioned.",
+        compute: "Public compute not found.",
+        caveat: "Muted because it is outside the sub-5B target range."
+      },
+      {
+        id: "gemma4e2b",
+        label: "Gemma 4 E2B",
+        sub: "Apr 2026",
+        date: "2026-04-02",
+        lane: "params",
+        paramB: 5.1,
+        kind: "vlm",
+        details: "Google small effective-parameter multimodal VLM. E2B is about 2.3B effective parameters but about 5.1B including embeddings/components.",
+        compute: "Chip count public: E2B 4,096 TPUv6e. Chip-hours not disclosed.",
+        caveat: "Sits above the 5B guide line because this chart uses total parameter count, not effective parameter count."
+      },
+      {
+        id: "gemma4e4b",
+        label: "Gemma 4 E4B",
+        sub: "Apr 2026",
+        date: "2026-04-02",
+        lane: "params",
+        paramB: 8.0,
+        kind: "vlm",
+        details: "Google small effective-parameter multimodal VLM. E4B is about 4.5B effective parameters but about 8B including embeddings/components.",
+        compute: "Chip count public: E4B 6,144 TPUv6e. Chip-hours not disclosed.",
+        caveat: "Not a sub-5B model under total-parameter accounting."
+      },
+      {
+        id: "molmo2",
+        label: "Molmo2-4B",
+        sub: "Apr 2026",
+        date: "2026-04-02",
+        lane: "params",
+        paramB: 5.0,
+        kind: "vlm",
+        details: "Ai2 open VLM with open data/recipe/post-training.",
+        compute: "Post-component training: about 11.2k H100 GPU-hours. This excludes Qwen and SigLIP pretraining.",
+        caveat: "Does not start from OLMo: it uses Qwen3-4B-Instruct plus SigLIP 2."
+      },
+      {
+        id: "nemotron4",
+        label: "Nemotron 3 Nano 4B",
+        sub: "Apr 2026",
+        date: "2026-04-15",
+        lane: "params",
+        paramB: 3.97,
+        kind: "llm",
+        details: "NVIDIA small text/agentic open-weight model.",
+        compute: "Public compute not found.",
+        caveat: "Not a VLM in the cited 4B release."
+      },
+      {
+        id: "cosmosEdge",
+        label: "Cosmos3-Edge",
+        sub: "Jul 2026",
+        date: "2026-07-20",
+        lane: "params",
+        paramB: 4.0,
+        kind: "world",
+        details: "NVIDIA 4B physical-AI VLM/world-model backbone. Edge LLM backbone trained from scratch on 15T tokens plus 90B long-context tokens, then SFT.",
+        compute: "GPU-hours not public. VLM/reasoner training uses 22M multimodal pretraining samples plus 2.2M SFT samples.",
+        caveat: "More independent than Cosmos Nano/Super; design still follows Qwen3-1.7B in broad architecture."
+      },
+      {
+        id: "ministral3",
+        label: "Ministral 3 3B",
+        sub: "Dec 2025",
+        date: "2025-12-02",
+        lane: "params",
+        paramB: 3.0,
+        kind: "vlm",
+        details: "Mistral's smallest Ministral 3 model. Official docs describe robust language and vision capabilities in a compact edge-oriented package.",
+        compute: "Public compute not found.",
+        caveat: "Verified official source: open-weight Apache 2.0 family. The arXiv abstract says Ministral 3 is derived through Cascade Distillation, not trained as an independent from-scratch frontier model."
+      },
+      {
+        id: "olmoSmall",
+        label: "OLMo small",
+        sub: "2025",
+        date: "2025-05-01",
+        lane: "params",
+        paramB: 1.0,
+        kind: "llm",
+        details: "Ai2 small OLMo models are useful as fully open scientific text baselines.",
+        compute: "OLMo reports more training details than most, but a current <5B compute number was not verified here.",
+        caveat: "Strongest OLMo 3 public models appear >=7B, so <5B availability needs rechecking."
+      }
+    ];
+
+    const dependencies = [
+      ["siglip2", "molmo2", "SigLIP2 vision encoder"],
+      ["qwen3_4", "molmo2", "Qwen3-4B-Instruct LLM base"],
+      ["siglip2", "minicpm46", "SigLIP2-400M"],
+      ["qwen35_08", "minicpm46", "Qwen3.5-0.8B"],
+      ["qwen25_3", "qwen25vl3", "Qwen2.5 LLM base"],
+      ["dinov3", "cradio4", "DINOv3 teacher"],
+      ["siglip2", "cradio4", "SigLIP2 teacher"]
+    ];
+
+    const sources = {
+      aimv2: [
+        ["Apple AIMv2", "https://machinelearning.apple.com/research/multimodal-autoregressive"],
+        ["Apple ml-aim", "https://github.com/apple/ml-aim"]
+      ],
+      siglip2: [
+        ["SigLIP 2 HF blog", "https://huggingface.co/blog/siglip2"],
+        ["SigLIP 2 paper", "https://arxiv.org/abs/2502.14786"]
+      ],
+      dinov3: [
+        ["Meta DINOv3", "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/"],
+        ["DINOv3 GitHub", "https://github.com/facebookresearch/dinov3"],
+        ["DINOv3 paper", "https://arxiv.org/abs/2508.10104"]
+      ],
+      dinov3_s: [
+        ["DINOv3 GitHub", "https://github.com/facebookresearch/dinov3"],
+        ["Meta DINOv3", "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/"],
+        ["DINOv3 paper", "https://arxiv.org/abs/2508.10104"]
+      ],
+      dinov3_sp: [
+        ["DINOv3 GitHub", "https://github.com/facebookresearch/dinov3"],
+        ["Meta DINOv3", "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/"],
+        ["DINOv3 paper", "https://arxiv.org/abs/2508.10104"]
+      ],
+      dinov3_b: [
+        ["DINOv3 GitHub", "https://github.com/facebookresearch/dinov3"],
+        ["Meta DINOv3", "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/"],
+        ["DINOv3 paper", "https://arxiv.org/abs/2508.10104"]
+      ],
+      dinov3_l: [
+        ["DINOv3 GitHub", "https://github.com/facebookresearch/dinov3"],
+        ["Meta DINOv3", "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/"],
+        ["DINOv3 paper", "https://arxiv.org/abs/2508.10104"]
+      ],
+      dinov3_hp: [
+        ["DINOv3 GitHub", "https://github.com/facebookresearch/dinov3"],
+        ["Meta DINOv3", "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/"],
+        ["DINOv3 paper", "https://arxiv.org/abs/2508.10104"]
+      ],
+      cradio4: [
+        ["NVIDIA RADIO", "https://github.com/NVlabs/RADIO"],
+        ["C-RADIOv4 paper", "https://arxiv.org/abs/2601.17237"]
+      ],
+      gemmaVision: [
+        ["Gemma 4 model card", "https://ai.google.dev/gemma/docs/core/model_card_4"],
+        ["Gemma 4 report", "https://arxiv.org/abs/2607.02770"]
+      ],
+      qwen35_08: [
+        ["Qwen3.5-0.8B", "https://huggingface.co/Qwen/Qwen3.5-0.8B"],
+        ["Qwen3.5 collection", "https://huggingface.co/collections/Qwen/qwen35"]
+      ],
+      qwen25_05: [
+        ["Qwen2.5 blog", "https://qwenlm.github.io/blog/qwen2.5/"],
+        ["Qwen2.5 collection", "https://huggingface.co/collections/Qwen/qwen25"]
+      ],
+      qwen25_15: [
+        ["Qwen2.5 blog", "https://qwenlm.github.io/blog/qwen2.5/"],
+        ["Qwen2.5 collection", "https://huggingface.co/collections/Qwen/qwen25"]
+      ],
+      qwen25_3: [
+        ["Qwen2.5 blog", "https://qwenlm.github.io/blog/qwen2.5/"],
+        ["Qwen2.5 technical report", "https://arxiv.org/abs/2412.15115"]
+      ],
+      qwen25vl3: [
+        ["Qwen2.5-VL blog", "https://qwenlm.github.io/blog/qwen2.5-vl/"],
+        ["Qwen2.5-VL-3B", "https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct"],
+        ["Qwen2.5-VL report", "https://arxiv.org/abs/2502.13923"]
+      ],
+      gemma3_1: [
+        ["Gemma releases", "https://ai.google.dev/gemma/docs/releases"],
+        ["Gemma 3 model card", "https://ai.google.dev/gemma/docs/core/model_card_3"],
+        ["Gemma 3 report", "https://arxiv.org/abs/2503.19786"]
+      ],
+      gemma3_4: [
+        ["Gemma releases", "https://ai.google.dev/gemma/docs/releases"],
+        ["Gemma 3 model card", "https://ai.google.dev/gemma/docs/core/model_card_3"],
+        ["Gemma 3 report", "https://arxiv.org/abs/2503.19786"]
+      ],
+      qwen3_06: [
+        ["Qwen3 blog", "https://qwenlm.github.io/blog/qwen3/"],
+        ["Qwen3 technical report", "https://arxiv.org/abs/2505.09388"]
+      ],
+      qwen3_17: [
+        ["Qwen3 blog", "https://qwenlm.github.io/blog/qwen3/"],
+        ["Qwen3 technical report", "https://arxiv.org/abs/2505.09388"]
+      ],
+      qwen3_4: [
+        ["Qwen3 blog", "https://qwenlm.github.io/blog/qwen3/"],
+        ["Qwen3 technical report", "https://arxiv.org/abs/2505.09388"],
+        ["Qwen3 collection", "https://huggingface.co/collections/Qwen/qwen3"]
+      ],
+      gemma3_270m: [
+        ["Gemma releases", "https://ai.google.dev/gemma/docs/releases"],
+        ["Gemma 3 model card", "https://ai.google.dev/gemma/docs/core/model_card_3"]
+      ],
+      minicpm46: [
+        ["MiniCPM-V GitHub", "https://github.com/OpenBMB/MiniCPM-V"],
+        ["MiniCPM-V 4.6", "https://huggingface.co/openbmb/MiniCPM-V-4.6"]
+      ],
+      smollm3: [
+        ["SmolLM3 model card", "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"],
+        ["SmolLM3 blog", "https://huggingface.co/blog/smollm3"]
+      ],
+      phi4mini: [
+        ["Phi-4-mini", "https://huggingface.co/microsoft/Phi-4-mini-instruct"],
+        ["Phi models", "https://azure.microsoft.com/en-us/products/phi"]
+      ],
+      qwen3vl4: [
+        ["Qwen3-VL GitHub", "https://github.com/qwenlm/qwen3-vl"],
+        ["Qwen3-VL report", "https://arxiv.org/abs/2511.21631"]
+      ],
+      qwen35_4: [
+        ["Qwen3.5-4B", "https://huggingface.co/Qwen/Qwen3.5-4B"],
+        ["Qwen3.5 blog", "https://qwen.ai/blog?id=qwen3.5"]
+      ],
+      qwen35_2: [
+        ["Qwen3.5 collection", "https://huggingface.co/collections/Qwen/qwen35"],
+        ["Qwen3.5 blog", "https://qwen.ai/blog?id=qwen3.5"]
+      ],
+      qwen35_9: [
+        ["Qwen3.5 collection", "https://huggingface.co/collections/Qwen/qwen35"],
+        ["Qwen3.5 blog", "https://qwen.ai/blog?id=qwen3.5"]
+      ],
+      qwen35_27: [
+        ["Qwen3.5-27B", "https://huggingface.co/Qwen/Qwen3.5-27B"],
+        ["Qwen3.5 collection", "https://huggingface.co/collections/Qwen/qwen35"]
+      ],
+      qwen35_35a3: [
+        ["Qwen3.5 collection", "https://huggingface.co/collections/Qwen/qwen35"],
+        ["Qwen3.5 blog", "https://qwen.ai/blog?id=qwen3.5"]
+      ],
+      llama32_1: [
+        ["Llama 3.2 release", "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/"],
+        ["Llama 3.2 1B model card", "https://huggingface.co/meta-llama/Llama-3.2-1B"]
+      ],
+      llama32_3: [
+        ["Llama 3.2 release", "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/"],
+        ["Llama 3.2 3B model card", "https://huggingface.co/meta-llama/Llama-3.2-3B"]
+      ],
+      deepseekR1Qwen15: [
+        ["DeepSeek-R1 GitHub", "https://github.com/deepseek-ai/DeepSeek-R1"],
+        ["DeepSeek-R1-Distill-Qwen-1.5B", "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"]
+      ],
+      graniteVision32: [
+        ["IBM Granite 3.2 announcement", "https://www.ibm.com/new/announcements/ibm-granite-3-2-open-source-reasoning-and-vision"],
+        ["Granite Vision 3.2 2B", "https://huggingface.co/ibm-granite/granite-vision-3.2-2b"]
+      ],
+      qwen36_27: [
+        ["Qwen3.6-27B", "https://qwen.ai/blog?id=qwen3.6-27b"]
+      ],
+      qwen38_27: [
+        ["Qwen3.8 announcement", "https://qwen.ai/blog?id=qwen3.8"]
+      ],
+      gemma4e2b: [
+        ["Gemma 4 model card", "https://ai.google.dev/gemma/docs/core/model_card_4"],
+        ["Gemma 4 report", "https://arxiv.org/abs/2607.02770"]
+      ],
+      gemma4e4b: [
+        ["Gemma 4 model card", "https://ai.google.dev/gemma/docs/core/model_card_4"],
+        ["Gemma 4 report", "https://arxiv.org/abs/2607.02770"]
+      ],
+      molmo2: [
+        ["Molmo2 blog", "https://allenai.org/blog/molmo2"],
+        ["Molmo2 paper", "https://arxiv.org/abs/2601.10611"],
+        ["Molmo2-4B", "https://huggingface.co/allenai/Molmo2-4B"]
+      ],
+      nemotron4: [
+        ["Nemotron 3 Nano 4B", "https://huggingface.co/blog/nvidia/nemotron-3-nano-4b"],
+        ["Nemotron 3", "https://research.nvidia.com/labs/nemotron/Nemotron-3/"]
+      ],
+      cosmosEdge: [
+        ["Cosmos3-Edge", "https://huggingface.co/nvidia/Cosmos3-Edge"],
+        ["Cosmos3-Edge blog", "https://huggingface.co/blog/nvidia/cosmos3edge"],
+        ["Cosmos 3 report", "https://arxiv.org/abs/2606.02800"]
+      ],
+      ministral3: [
+        ["Ministral 3 3B docs", "https://docs.mistral.ai/models/model-cards/ministral-3-3b-25-12"],
+        ["Mistral 3 release", "https://mistral.ai/news/mistral-3/"],
+        ["Ministral 3 paper", "https://arxiv.org/abs/2601.08584"]
+      ],
+      olmoSmall: [
+        ["OLMo 3", "https://allenai.org/blog/olmo3"],
+        ["OLMo 2", "https://allenai.org/olmo2"]
+      ]
+    };
+
+    const provenanceById = {
+      aimv2: "scratch",
+      siglip2: "scratch",
+      dinov3: "scratch",
+      dinov3_s: "distilled",
+      dinov3_sp: "distilled",
+      dinov3_b: "distilled",
+      dinov3_l: "distilled",
+      dinov3_hp: "distilled",
+      cradio4: "distilled",
+      gemmaVision: "initialized",
+      qwen35_08: "scratch",
+      qwen25_05: "scratch",
+      qwen25_15: "scratch",
+      qwen25_3: "scratch",
+      qwen25vl3: "initialized",
+      gemma3_1: "distilled",
+      gemma3_4: "distilled",
+      qwen3_06: "scratch",
+      qwen3_17: "scratch",
+      qwen3_4: "scratch",
+      gemma3_270m: "distilled",
+      minicpm46: "initialized",
+      smollm3: "scratch",
+      phi4mini: "scratch",
+      qwen3vl4: "scratch",
+      qwen35_4: "scratch",
+      qwen35_2: "scratch",
+      qwen35_9: "scratch",
+      qwen35_27: "scratch",
+      qwen35_35a3: "scratch",
+      llama32_1: "distilled",
+      llama32_3: "distilled",
+      deepseekR1Qwen15: "distilled",
+      graniteVision32: "initialized",
+      qwen36_27: "scratch",
+      qwen38_27: "scratch",
+      gemma4e2b: "initialized",
+      gemma4e4b: "initialized",
+      molmo2: "initialized",
+      nemotron4: "scratch",
+      cosmosEdge: "initialized",
+      ministral3: "distilled",
+      olmoSmall: "scratch"
+    };
+
+    const provenanceColor = {
+      scratch: "var(--scratch)",
+      initialized: "var(--initialized)",
+      distilled: "var(--distilled)"
+    };
+
+    const provenanceLabel = {
+      scratch: "from scratch",
+      initialized: "at least partially initialized",
+      distilled: "distilled"
+    };
+
+    const svg = document.getElementById("timeline");
+    const wrap = document.getElementById("chartWrap");
+    const tooltip = document.getElementById("tooltip");
+    let pinnedTooltip = false;
+
+    function parseDate(s) {
+      return new Date(`${s}T00:00:00Z`);
+    }
+
+    function monthDiff(a, b) {
+      return (b.getUTCFullYear() - a.getUTCFullYear()) * 12 + (b.getUTCMonth() - a.getUTCMonth()) + (b.getUTCDate() - a.getUTCDate()) / 30;
+    }
+
+    function render() {
+      const width = Math.max(wrap.clientWidth, 1120);
+      const height = Math.max(wrap.clientHeight, 690);
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      svg.innerHTML = "";
+
+      const margin = { left: 215, right: 40, top: 62, bottom: 72 };
+      const startX = margin.left;
+      const endX = width - margin.right;
+      const start = new Date("2024-07-01T00:00:00Z");
+      const end = new Date("2026-12-31T00:00:00Z");
+      const totalMonths = monthDiff(start, end);
+      const paramBottom = height - margin.bottom - 8;
+      const paramTop = 74;
+      const paramMax = 5;
+      const visibleExceptionIds = new Set(["gemma4e2b", "qwen38_27", "dinov3"]);
+      const visibleModels = models.filter(model => model.paramB < paramMax || visibleExceptionIds.has(model.id));
+      const yForParam = value => {
+        const clamped = Math.max(0, Math.min(paramMax, value));
+        return paramBottom - (clamped / paramMax) * (paramBottom - paramTop);
+      };
+      const laneLabel = model => {
+        return `~${model.paramB}B total params`;
+      };
+      const xForDate = dateString => {
+        const d = parseDate(dateString);
+        if (d < start) return startX;
+        const t = Math.max(0, Math.min(1, monthDiff(start, d) / totalMonths));
+        return startX + t * (endX - startX);
+      };
+
+      const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+      defs.innerHTML = `
+        <marker id="arrowHead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L8,4 L0,8 z" fill="var(--arrow)"></path>
+        </marker>
+      `;
+      svg.appendChild(defs);
+
+      const bg = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      bg.setAttribute("x", 0);
+      bg.setAttribute("y", 0);
+      bg.setAttribute("width", width);
+      bg.setAttribute("height", height);
+      bg.setAttribute("fill", "transparent");
+      svg.appendChild(bg);
+
+      const paramAxisLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      paramAxisLabel.setAttribute("x", 24);
+      paramAxisLabel.setAttribute("y", paramTop - 15);
+      paramAxisLabel.setAttribute("class", "lane-label");
+      paramAxisLabel.textContent = "Approx. total parameters, shared scale";
+      svg.appendChild(paramAxisLabel);
+
+      for (const value of [0.1, 0.5, 1, 2, 5]) {
+        const y = yForParam(value);
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", startX);
+        line.setAttribute("x2", endX);
+        line.setAttribute("y1", y);
+        line.setAttribute("y2", y);
+        line.setAttribute("class", "lane-line");
+        svg.appendChild(line);
+
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", 152);
+        label.setAttribute("y", y + 5);
+        label.setAttribute("class", "lane-label");
+        label.textContent = value < 1 ? `${Math.round(value * 1000)}M` : `${value}B`;
+        svg.appendChild(label);
+      }
+
+      const zeroLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      zeroLine.setAttribute("x1", startX);
+      zeroLine.setAttribute("x2", endX);
+      zeroLine.setAttribute("y1", paramBottom);
+      zeroLine.setAttribute("y2", paramBottom);
+      zeroLine.setAttribute("class", "lane-line");
+      svg.appendChild(zeroLine);
+
+      const months = [
+        ["2024-07-01", "mid 2024"],
+        ["2025-01-01", "2025"], ["2025-07-01", "mid 2025"],
+        ["2026-01-01", "2026"], ["2026-07-01", "mid 2026"], ["2026-12-31", "late 2026"]
+      ];
+
+      for (const [date, labelText] of months) {
+        const x = xForDate(date);
+        const tick = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        tick.setAttribute("x1", x);
+        tick.setAttribute("x2", x);
+        tick.setAttribute("y1", margin.top - 28);
+        tick.setAttribute("y2", height - margin.bottom + 24);
+        tick.setAttribute("class", "tick");
+        svg.appendChild(tick);
+
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", x);
+        label.setAttribute("y", height - 30);
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("class", "tick-label");
+        label.textContent = labelText;
+        svg.appendChild(label);
+      }
+
+      const axis = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      axis.setAttribute("x1", startX);
+      axis.setAttribute("x2", endX);
+      axis.setAttribute("y1", height - margin.bottom + 24);
+      axis.setAttribute("y2", height - margin.bottom + 24);
+      axis.setAttribute("class", "axis-line");
+      svg.appendChild(axis);
+
+      const nodeMap = new Map();
+      const collisionCounts = {};
+      for (const model of visibleModels) {
+        const cappedParam = Math.min(paramMax, model.paramB);
+        const baseY = yForParam(model.paramB);
+        const collisionKey = `${model.date}-${cappedParam}`;
+        collisionCounts[collisionKey] = (collisionCounts[collisionKey] || 0) + 1;
+        const collisionIndex = collisionCounts[collisionKey] - 1;
+        const xOffset = collisionIndex === 0 ? 0 : (collisionIndex % 2 === 1 ? 14 : -14) * Math.ceil(collisionIndex / 2);
+        const x = xForDate(model.date) + xOffset;
+        const y = baseY;
+        nodeMap.set(model.id, { ...model, x, y });
+      }
+
+      for (const [from, to, label] of dependencies) {
+        const a = nodeMap.get(from);
+        const b = nodeMap.get(to);
+        if (!a || !b) continue;
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        const midX = (a.x + b.x) / 2;
+        const c1y = a.y - 55;
+        const c2y = b.y - 55;
+        path.setAttribute("d", `M ${a.x} ${a.y - 8} C ${midX} ${c1y}, ${midX} ${c2y}, ${b.x} ${b.y - 10}`);
+        path.setAttribute("class", "dep-arrow");
+        path.setAttribute("marker-end", "url(#arrowHead)");
+        path.setAttribute("aria-label", label);
+        svg.appendChild(path);
+      }
+
+      const orderedModels = [...nodeMap.values()].sort((a, b) => (a.renderPriority || 0) - (b.renderPriority || 0));
+      for (const model of orderedModels) {
+        const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        group.setAttribute("aria-label", model.label);
+        const provenance = provenanceById[model.id] || "initialized";
+
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", model.x);
+        circle.setAttribute("cy", model.y);
+        circle.setAttribute("r", model.offrow ? 7 : 8.5);
+        circle.setAttribute("fill", provenanceColor[provenance]);
+        if (model.paramB && model.paramB > 5) {
+          circle.setAttribute("opacity", "0.42");
+        }
+        circle.setAttribute("class", "model-point");
+        if (model.offrow) {
+          circle.setAttribute("stroke-dasharray", "3 2");
+        }
+        group.appendChild(circle);
+
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        const labelX = model.x + (model.labelDx ?? 11);
+        const labelY = model.y + (model.labelDy ?? -3);
+        text.setAttribute("x", labelX);
+        text.setAttribute("y", labelY);
+        text.setAttribute("class", "model-label");
+        if (model.paramB && model.paramB > 5) {
+          text.setAttribute("opacity", "0.62");
+        }
+        text.textContent = model.label;
+        group.appendChild(text);
+
+        const sub = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        sub.setAttribute("x", labelX);
+        sub.setAttribute("y", labelY + 14);
+        sub.setAttribute("class", "model-sublabel");
+        if (model.paramB && model.paramB > 5) {
+          sub.setAttribute("opacity", "0.62");
+        }
+        sub.textContent = model.sub;
+        group.appendChild(sub);
+
+        const show = evt => {
+          svg.appendChild(group);
+          if (!pinnedTooltip) showTooltip(model, evt, false);
+        };
+        const hide = () => {
+          if (!pinnedTooltip) tooltip.style.display = "none";
+        };
+        group.addEventListener("mouseenter", show);
+        group.addEventListener("mousemove", show);
+        group.addEventListener("mouseleave", hide);
+        group.addEventListener("click", evt => {
+          evt.stopPropagation();
+          svg.appendChild(group);
+          pinnedTooltip = true;
+          showTooltip(model, evt, true);
+        });
+
+        svg.appendChild(group);
+      }
+    }
+
+    wrap.addEventListener("click", evt => {
+      if (!evt.target.closest(".tooltip")) {
+        pinnedTooltip = false;
+        tooltip.style.display = "none";
+      }
+    });
+
+    function showTooltip(model, evt, pinned) {
+      const rect = wrap.getBoundingClientRect();
+      const links = (sources[model.id] || []).map(([text, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`).join(" · ");
+      const provenance = provenanceById[model.id] || "initialized";
+      tooltip.innerHTML = `
+        <h2>${model.label}</h2>
+        <div class="meta">${model.sub} · ${model.kind.toUpperCase()} · ${provenanceLabel[provenance]} · ${laneLabel(model)}</div>
+        <div class="row"><b>Details:</b> ${model.details}</div>
+        <div class="row"><b>Compute:</b> ${model.compute}</div>
+        <div class="row"><b>Caveat:</b> ${model.caveat}</div>
+        ${links ? `<div class="row"><b>Sources:</b> ${links}</div>` : ""}
+        ${pinned ? `<div class="row meta">Click outside this card to close.</div>` : ""}
+      `;
+      tooltip.style.display = "block";
+      const w = tooltip.offsetWidth;
+      const h = tooltip.offsetHeight;
+      let x = evt.clientX - rect.left + 14;
+      let y = evt.clientY - rect.top + 14;
+      x = Math.max(10, Math.min(x, rect.width - w - 10));
+      y = Math.max(10, Math.min(y, rect.height - h - 10));
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top = `${y}px`;
+    }
+
+    window.addEventListener("resize", render);
+    render();
+  </script>
+</body>
+</html>
