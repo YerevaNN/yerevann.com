@@ -512,6 +512,34 @@
         caveat: "Qwen3 report compares small dense models against Qwen2.5 baselines; this is an LLM, not a VLM."
       },
       {
+        id: "sa2va1",
+        label: "Sa2VA-1B",
+        sub: "Jan 2025",
+        date: "2025-01-08",
+        lane: "params",
+        paramB: 1.0,
+        kind: "vlm",
+        labelDx: -18,
+        labelDy: 20,
+        details: "ByteDance Seed collaboration for image/video QA, visual prompting, grounding, and dense segmentation.",
+        compute: "Public GPU-hours not found.",
+        caveat: "Partially initialized: combines SAM 2 with InternVL2.5-1B, whose language component is Qwen2.5-0.5B. Hugging Face reports 1B total."
+      },
+      {
+        id: "sa2va4",
+        label: "Sa2VA-4B",
+        sub: "Jan 2025",
+        date: "2025-01-08",
+        lane: "params",
+        paramB: 4.0,
+        kind: "vlm",
+        labelDx: 20,
+        labelDy: -16,
+        details: "ByteDance Seed collaboration for grounded image/video understanding and dense segmentation.",
+        compute: "Public GPU-hours not found.",
+        caveat: "Partially initialized: combines SAM 2 with InternVL2.5-4B, whose language component is Qwen2.5-3B. Hugging Face reports 4B total."
+      },
+      {
         id: "qwen3_17",
         label: "Qwen3-1.7B",
         sub: "Apr 2025",
@@ -546,6 +574,20 @@
         details: "Very small Gemma 3 open model released after the main Gemma 3 family.",
         compute: "Model card reports 6T training tokens for 270M; chip-hours not disclosed.",
         caveat: "Text-only; useful mainly as an edge/text baseline."
+      },
+      {
+        id: "tar15",
+        label: "Seed Tar-1.5B",
+        sub: "Jun 2025",
+        date: "2025-06-23",
+        lane: "params",
+        paramB: 3.0,
+        kind: "vlm",
+        labelDx: 14,
+        labelDy: 20,
+        details: "ByteDance Seed unified image-understanding and image-generation model using text-aligned discrete visual tokens. Hugging Face reports 3B total parameters.",
+        compute: "GPU-hours not disclosed; paper reports 23M curated text-image training pairs.",
+        caveat: "Partially initialized from Qwen2.5-1.5B-Instruct; the diffusion de-tokenizer starts from SANA-0.6B. The 1.5B name is the language-backbone scale, not total parameters."
       },
       {
         id: "minicpm46",
@@ -915,6 +957,9 @@
       ["siglip2", "minicpm46", "SigLIP2-400M"],
       ["qwen35_08", "minicpm46", "Qwen3.5-0.8B"],
       ["qwen25_3", "qwen25vl3", "Qwen2.5 LLM base"],
+      ["qwen25_05", "sa2va1", "Qwen2.5-0.5B language component"],
+      ["qwen25_3", "sa2va4", "Qwen2.5-3B language component"],
+      ["qwen25_15", "tar15", "Qwen2.5-1.5B-Instruct base"],
       ["dinov3", "cradio4", "DINOv3 teacher"],
       ["siglip2", "cradio4", "SigLIP2 teacher"]
     ];
@@ -1013,6 +1058,20 @@
       gemma3_270m: [
         ["Gemma releases", "https://ai.google.dev/gemma/docs/releases"],
         ["Gemma 3 model card", "https://ai.google.dev/gemma/docs/core/model_card_3"]
+      ],
+      sa2va1: [
+        ["Sa2VA repository", "https://github.com/bytedance/Sa2VA"],
+        ["Sa2VA-1B weights", "https://huggingface.co/ByteDance/Sa2VA-1B"],
+        ["Sa2VA paper", "https://arxiv.org/abs/2501.04001"]
+      ],
+      sa2va4: [
+        ["Sa2VA repository", "https://github.com/bytedance/Sa2VA"],
+        ["Sa2VA-4B weights", "https://huggingface.co/ByteDance/Sa2VA-4B"],
+        ["Sa2VA paper", "https://arxiv.org/abs/2501.04001"]
+      ],
+      tar15: [
+        ["Tar-1.5B weights", "https://huggingface.co/ByteDance-Seed/Tar-1.5B"],
+        ["Tar paper", "https://arxiv.org/abs/2506.18898"]
       ],
       minicpm46: [
         ["MiniCPM-V GitHub", "https://github.com/OpenBMB/MiniCPM-V"],
@@ -1127,6 +1186,9 @@
       qwen3_17: "scratch",
       qwen3_4: "scratch",
       gemma3_270m: "distilled",
+      sa2va1: "initialized",
+      sa2va4: "initialized",
+      tar15: "initialized",
       minicpm46: "initialized",
       smollm3: "scratch",
       phi4mini: "scratch",
