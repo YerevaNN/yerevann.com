@@ -84,6 +84,15 @@
       display: inline-block;
     }
 
+    .swatch-diamond {
+      width: 11px;
+      height: 11px;
+      border-radius: 2px;
+      display: inline-block;
+      transform: rotate(45deg);
+      background: var(--muted);
+    }
+
     .chart-wrap {
       position: relative;
       background: var(--panel);
@@ -256,6 +265,7 @@
         <span class="legend-item"><span class="swatch" style="background: var(--scratch)"></span>From scratch</span>
         <span class="legend-item"><span class="swatch" style="background: var(--initialized)"></span>Partially initialized</span>
         <span class="legend-item"><span class="swatch" style="background: var(--distilled)"></span>Distilled</span>
+        <span class="legend-item"><span class="swatch-diamond"></span>Vision encoder</span>
       </div>
     </header>
 
@@ -1314,19 +1324,31 @@
         group.setAttribute("aria-label", model.label);
         const provenance = provenanceById[model.id] || "initialized";
 
-        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circle.setAttribute("cx", model.x);
-        circle.setAttribute("cy", model.y);
-        circle.setAttribute("r", model.offrow ? 7 : 8.5);
-        circle.setAttribute("fill", provenanceColor[provenance]);
+        const marker = model.kind === "vision"
+          ? document.createElementNS("http://www.w3.org/2000/svg", "rect")
+          : document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        if (model.kind === "vision") {
+          const size = 14;
+          marker.setAttribute("x", model.x - size / 2);
+          marker.setAttribute("y", model.y - size / 2);
+          marker.setAttribute("width", size);
+          marker.setAttribute("height", size);
+          marker.setAttribute("rx", 2);
+          marker.setAttribute("transform", `rotate(45 ${model.x} ${model.y})`);
+        } else {
+          marker.setAttribute("cx", model.x);
+          marker.setAttribute("cy", model.y);
+          marker.setAttribute("r", model.offrow ? 7 : 8.5);
+        }
+        marker.setAttribute("fill", provenanceColor[provenance]);
         if (model.paramB && model.paramB > 5) {
-          circle.setAttribute("opacity", "0.42");
+          marker.setAttribute("opacity", "0.42");
         }
-        circle.setAttribute("class", "model-point");
+        marker.setAttribute("class", "model-point");
         if (model.offrow) {
-          circle.setAttribute("stroke-dasharray", "3 2");
+          marker.setAttribute("stroke-dasharray", "3 2");
         }
-        group.appendChild(circle);
+        group.appendChild(marker);
 
         const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
         const labelX = model.x + (model.labelDx ?? 11);
