@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Physical AI: From UAVs to Humanoids</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #64717d;
+      --line: #d6dde2;
+      --paper: #ffffff;
+      --page: #e9eef1;
+      --external: #f1f4f5;
+      --external-border: #bbc6cc;
+      --yerevan: #f15a6d;
+      --yerevan-soft: #fff0f2;
+      --yerevan-ink: #9d2639;
+      --armenian-soft: #fff8e8;
+      --armenian-border: #e2bd57;
+      --blue: #2457a7;
+      --orange: #ef8b2c;
+      --red: #d92935;
+      --green: #2e8878;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--page); }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--page);
+      font-family: Inter, Aptos, "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    .stage {
+      width: 100%;
+      padding: 18px 0 24px;
+      overflow-x: auto;
+    }
+
+    .slide-shell {
+      position: relative;
+      width: 1600px;
+      height: 900px;
+      margin: 0 auto;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 1600px;
+      height: 900px;
+      padding: 42px 56px 34px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(20, 33, 44, 0.16);
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 66px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 39px;
+      line-height: 1;
+      font-weight: 760;
+    }
+
+    .thesis {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.35;
+      text-align: right;
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: 240px repeat(3, minmax(0, 1fr));
+      grid-template-rows: 72px 104px 96px 84px 96px 88px;
+      column-gap: 24px;
+      row-gap: 9px;
+      margin-top: 14px;
+    }
+
+    .corner-label {
+      align-self: end;
+      padding: 0 8px 13px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .column-head {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 15px 12px;
+      border-bottom: 3px solid var(--ink);
+    }
+
+    .column-head.cyber { border-bottom-color: var(--orange); }
+
+    .year {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .platform {
+      margin-top: 6px;
+      font-size: 24px;
+      line-height: 1.08;
+      font-weight: 760;
+    }
+
+    .inline-provisional {
+      margin-left: 5px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .row-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 14px;
+      border-right: 1px solid var(--line);
+    }
+
+    .row-number {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .row-name {
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.12;
+      font-weight: 760;
+    }
+
+    .row-note {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .cell {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      min-width: 0;
+      padding: 8px;
+      border: 1px solid #e0e5e8;
+      background: #fbfcfc;
+    }
+
+    .single { grid-template-columns: 1fr; }
+
+    .subcell {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      padding: 10px 34px 10px 12px;
+      border: 1px solid var(--external-border);
+      border-radius: 6px;
+      color: #33414a;
+      background: var(--external);
+      font-size: 16px;
+      line-height: 1.18;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .subcell.yerevann {
+      justify-content: flex-start;
+      padding-left: 44px;
+      border-color: var(--armenian-border);
+      color: #594711;
+      background: var(--armenian-soft);
+      text-align: left;
+    }
+
+    .subcell.armenian {
+      border-color: var(--armenian-border);
+      background: var(--armenian-soft);
+    }
+
+    .subcell.unknown {
+      border-style: dashed;
+      border-color: #98a4aa;
+      color: #58656c;
+      background: #fafbfb;
+    }
+
+    .subcell.armenian.unknown {
+      border-color: #c9bb91;
+      color: #706540;
+      background: #fbf8ef;
+    }
+
+    .yn-logo {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      width: 25px;
+      height: 25px;
+      border-radius: 3px;
+      object-fit: cover;
+      transform: translateY(-50%);
+    }
+
+    .cycle-mark {
+      position: absolute;
+      right: 6px;
+      bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      color: #ffffff;
+      background: var(--yerevan);
+      box-shadow: 0 1px 3px rgba(119, 30, 44, 0.24);
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 850;
+    }
+
+    .am-corner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 17px;
+      overflow: hidden;
+      border-radius: 0 5px 0 4px;
+      background: linear-gradient(to bottom, var(--red) 0 33.33%, var(--blue) 33.33% 66.66%, var(--orange) 66.66% 100%);
+    }
+
+    .sensor-cell,
+    .perception-cell { overflow: visible; }
+
+    .sensor-cell::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 25%;
+      width: 50%;
+      height: 16px;
+      border-left: 2px solid #b6c1c7;
+      border-right: 2px solid #b6c1c7;
+      pointer-events: none;
+    }
+
+    .hardware-cell .subcell {
+      justify-content: center;
+      font-size: 21px;
+    }
+
+    .research-engine {
+      display: grid;
+      grid-template-columns: 240px 820px 220px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 108px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+
+    .engine-label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 760;
+      text-align: right;
+    }
+
+    .cycle-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      color: #ffffff;
+      background: var(--yerevan);
+      box-shadow: 0 1px 3px rgba(119, 30, 44, 0.24);
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 850;
+    }
+
+    .loop {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 34px;
+      align-items: start;
+      height: 76px;
+      padding: 0 25px 26px;
+    }
+
+    .loop-step {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 8px;
+      border: 1.5px solid var(--yerevan);
+      border-radius: 6px;
+      color: #6f2632;
+      background: #fff8f9;
+      font-size: 16px;
+      line-height: 1.1;
+      font-weight: 760;
+      text-align: center;
+    }
+
+    .loop-step:not(.final-step)::after {
+      content: "→";
+      position: absolute;
+      right: -28px;
+      top: 50%;
+      color: var(--yerevan);
+      font-size: 21px;
+      transform: translateY(-55%);
+    }
+
+    .loop-return-path {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 76px;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .return-label {
+      position: absolute;
+      left: 50%;
+      bottom: -1px;
+      z-index: 1;
+      padding: 0 12px;
+      color: var(--yerevan);
+      background: var(--paper);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      transform: translateX(-50%);
+    }
+
+    .legend {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mini-flag {
+      width: 19px;
+      height: 14px;
+      flex: 0 0 auto;
+      border-radius: 2px;
+      background: linear-gradient(to bottom, var(--red) 0 33.33%, var(--blue) 33.33% 66.66%, var(--orange) 66.66% 100%);
+    }
+
+    .mini-yn {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
+      border-radius: 2px;
+    }
+
+    .mini-unknown {
+      width: 19px;
+      height: 14px;
+      flex: 0 0 auto;
+      border: 1px dashed #84929a;
+      border-radius: 2px;
+      background: #fafbfb;
+    }
+
+    .narrative {
+      width: min(1060px, calc(100% - 40px));
+      margin: 26px auto 70px;
+      padding: 42px 54px 52px;
+      background: var(--paper);
+      box-shadow: 0 8px 28px rgba(20, 33, 44, 0.08);
+    }
+
+    .narrative h2 {
+      margin: 0 0 26px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .narrative h3 {
+      margin: 30px 0 10px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .narrative p,
+    .narrative li {
+      color: #36434b;
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    .narrative ul { padding-left: 22px; }
+
+    .narrative a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .narrative strong { color: var(--ink); }
+
+    .callout {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--yerevan);
+      background: #fff5f6;
+      color: #5c2b34;
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 680;
+    }
+
+    @media print {
+      html, body { background: white; }
+      .stage { padding: 0; overflow: visible; }
+      .slide-shell { margin: 0; }
+      .slide { box-shadow: none; }
+      .narrative { box-shadow: none; break-before: page; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="stage" aria-label="Physical AI roadmap slide">
+      <div class="slide-shell" id="slide-shell">
+        <div class="slide" id="slide">
+          <header class="title-row">
+            <h1>Physical AI: From UAVs to Humanoids</h1>
+            <div class="thesis">Build the complete AI loop on a programmable UAV, transfer it to a reference humanoid, then generalize it to Armenian hardware and sensors.</div>
+          </header>
+
+          <div class="roadmap">
+            <div class="corner-label">Research stack</div>
+
+            <div class="column-head">
+              <span class="year">Year 1–2</span>
+              <span class="platform">UAV · X500 V2 <span class="inline-provisional">(provisional)</span></span>
+            </div>
+            <div class="column-head">
+              <span class="year">Year 2+</span>
+              <span class="platform">Agile ONE S</span>
+            </div>
+            <div class="column-head cyber">
+              <span class="year">Year 3+</span>
+              <span class="platform">CyberFusion Humanoid</span>
+              <span class="am-corner" aria-label="Armenian ecosystem"></span>
+            </div>
+
+            <div class="row-label">
+              <span class="row-number">05</span>
+              <span class="row-name">High-level policy</span>
+              <span class="row-note">Human-level task commands</span>
+            </div>
+            <div class="cell">
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Navigation
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Active search
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Navigation
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Industrial manipulation
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Navigation
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Industrial manipulation
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="row-label">
+              <span class="row-number">04</span>
+              <span class="row-name">Perception AI</span>
+              <span class="row-note">Aligned to sensor families</span>
+            </div>
+            <div class="cell perception-cell">
+              <div class="subcell">DINOv3 / CLIP</div>
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                χViT
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="cell perception-cell">
+              <div class="subcell">DINOv3 / CLIP</div>
+              <div class="subcell unknown">Agile LiDAR perception</div>
+            </div>
+            <div class="cell perception-cell">
+              <div class="subcell armenian unknown">
+                New vision model?
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+              <div class="subcell yerevann">
+                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
+                Radar models
+                <span class="cycle-mark">↻</span>
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="row-label">
+              <span class="row-number">03</span>
+              <span class="row-name">Sensors</span>
+              <span class="row-note">Observations for perception</span>
+            </div>
+            <div class="cell sensor-cell">
+              <div class="subcell">RGB camera</div>
+              <div class="subcell">Multispectral camera</div>
+            </div>
+            <div class="cell sensor-cell">
+              <div class="subcell">Built-in cameras</div>
+              <div class="subcell">LiDAR</div>
+            </div>
+            <div class="cell sensor-cell">
+              <div class="subcell armenian unknown">
+                New sensor from Karen's lab?
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+              <div class="subcell armenian">
+                Waveye radar
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="row-label">
+              <span class="row-number">02</span>
+              <span class="row-name">Low-level control</span>
+              <span class="row-note">Stability and motion execution</span>
+            </div>
+            <div class="cell">
+              <div class="subcell">PX4</div>
+              <div class="subcell armenian unknown">
+                Astghik's lab · new methods?
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="subcell">Agile proprietary controller</div>
+              <div class="subcell armenian unknown">
+                Astghik's lab · new methods?
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="subcell armenian">
+                CyberFusion controller
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+              <div class="subcell armenian unknown">
+                Astghik's lab · new methods?
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <div class="row-label">
+              <span class="row-number">01</span>
+              <span class="row-name">Hardware</span>
+              <span class="row-note">Physical embodiment</span>
+            </div>
+            <div class="cell single hardware-cell">
+              <div class="subcell">Holybro X500 V2 + Pixhawk</div>
+            </div>
+            <div class="cell single hardware-cell">
+              <div class="subcell">Agile ONE S</div>
+            </div>
+            <div class="cell single hardware-cell">
+              <div class="subcell armenian">
+                CyberFusion Humanoid
+                <span class="am-corner" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="research-engine">
+            <div class="engine-label">
+              Inside most AI cells <span class="cycle-key">↻</span>
+            </div>
+            <div class="loop" aria-label="Real data, simulation, AI model training, deployment, then return to real data">
+              <div class="loop-step">Real data</div>
+              <div class="loop-step">Simulation</div>
+              <div class="loop-step">AI model training</div>
+              <div class="loop-step final-step">Deployment</div>
+              <svg class="loop-return-path" viewBox="0 0 850 76" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <marker id="loop-arrowhead" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
+                    <path d="M 0 0 L 7 3.5 L 0 7 Z" fill="#f15a6d"></path>
+                  </marker>
+                </defs>
+                <path d="M 738 40 V 69 H 112 V 47" fill="none" stroke="#f15a6d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#loop-arrowhead)"></path>
+              </svg>
+              <div class="return-label">deployment feedback closes the loop</div>
+            </div>
+            <div class="legend">
+              <div class="legend-item"><img class="mini-yn" src="../assets/yerevann-icon-128.png" alt=""> YerevaNN-developed AI</div>
+              <div class="legend-item"><span class="mini-flag"></span> Armenian ecosystem</div>
+              <div class="legend-item"><span class="mini-unknown"></span> Open decision / undisclosed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article class="narrative">
+      <h2>How to read the roadmap</h2>
+
+      <div class="callout">The program starts by building an end-to-end Physical AI capability on a programmable UAV, transfers the reusable AI layers to an internationally recognized humanoid, and then generalizes them to Armenian humanoid hardware and sensing.</div>
+
+      <h3>The five-layer system</h3>
+      <p><strong>Sensors</strong> provide observations to sensor-aligned <strong>perception models</strong>. Perception feeds the <strong>high-level policy</strong>, which selects actions at approximately the level of a human operator. Those commands are executed through <strong>low-level controllers</strong> on the physical <strong>hardware</strong>. The grid is a capability map rather than a single downward pipeline: sensing flows upward, while actions flow downward.</p>
+      <p>The exact interface between high-level policy and low-level control remains an open design question; the appropriate action abstraction may differ across platforms.</p>
+
+      <h3>Year 1–2: a provisional UAV platform</h3>
+      <p>The current leading choice is the <strong>Holybro X500 V2 with Pixhawk and PX4</strong>, but procurement remains subject to a focused validation. The selection criteria are: physical use in strong robotics or vision research; programmable high-level control; synchronized observation, action and flight logging; payload capacity for RGB and multispectral sensing; simulator and hardware-in-the-loop support; extensibility; research availability; and stable replacement parts.</p>
+      <p>The X500 satisfies several of these criteria: Holybro publishes a modular development kit with payload mounting and PX4 integration; PX4 exposes offboard setpoints, ROS 2 connectivity, detailed ULog recording, and Gazebo simulation. Physical X500-family systems have been used for autonomous data collection in <a href="https://secplab.ppgia.pucpr.br/files/papers/2023icra.pdf">ICRA 2023</a>, payload-intensive contact experiments in <a href="https://doi.org/10.1109/ICRA57147.2024.10610459">ICRA 2024</a>, and camera-data acquisition in the <a href="https://papers.nips.cc/paper_files/paper/2025/hash/8a8eca190088852067b4e8cc1b907122-Abstract-Datasets_and_Benchmarks_Track.html">NeurIPS 2025 InFlux benchmark</a>. See also the <a href="https://holybro.com/products/px4-development-kit-x500-v2">X500 V2 kit</a>, <a href="https://docs.px4.io/v1.17/en/flight_modes/offboard">PX4 offboard control</a>, <a href="https://docs.px4.io/main/en/dev_log/logging">logging</a>, and <a href="https://docs.px4.io/v1.16/en/simulation/">simulation</a> documentation.</p>
+      <p>The remaining validation should test the exact multispectral payload, onboard compute, storage, power, flight duration, outdoor safety procedures, and whether the platform can produce the complete observation-action datasets needed by the policy work.</p>
+      <p>Holybro would serve as the internationally recognized reference platform. In parallel, the program will look for a suitable Armenian UAV that can be used alongside it. An Armenian platform should be added when it provides comparable programmability, synchronized data and action access, sensor extensibility, research availability, and a credible simulation path. Using both would support cross-platform generalization while also advancing local hardware.</p>
+
+      <h3>UAV intelligence</h3>
+      <p>RGB perception starts from established encoders such as DINOv3 or CLIP. YerevaNN's <strong>χViT</strong> line targets efficient multispectral perception. Above perception, YerevaNN develops <strong>navigation</strong> and <strong>active-search</strong> policies. Active search means selecting flight actions that reduce uncertainty, locate a target, or acquire a more useful viewpoint rather than following a fixed route.</p>
+      <p><strong>Ground2Sat</strong>, the satellite-to-ground matching line, is an enabling component rather than a separate policy cell. Its intended role is to match oblique UAV or ground observations against satellite imagery, providing geographic evidence to navigation and helping an active-search policy reason about what has been observed and where to move next.</p>
+
+      <h3>Year 2+: Agile ONE S</h3>
+      <p>Agile ONE S is the internationally recognized humanoid reference. The public sensor description confirms built-in cameras and LiDAR, but does not disclose camera specifications, the LiDAR perception model, raw-data interfaces, or the low-level whole-body controller. The slide therefore labels the controller as <strong>Agile proprietary controller</strong> and the LiDAR perception stack as undisclosed. DINOv3 or CLIP provides the initial visual encoder; YerevaNN's original work concentrates on policy adaptation, navigation, and <strong>industrial manipulation</strong>.</p>
+
+      <h3>Year 3+: Armenian humanoid stack</h3>
+      <p>CyberFusion provides the Armenian humanoid, its controller, and the ability to integrate selected sensors. Waveye supplies the Armenian radar, while Karen Eguizarian's lab is shown as a provisional path toward an additional Armenian sensor and a corresponding new vision model. YerevaNN develops the radar perception models. Together, these components create a controlled setting for studying transfer from Agile ONE S to a second humanoid and generalization across embodiments and sensors.</p>
+
+      <h3>Division of responsibility</h3>
+      <p>YerevaNN owns the AI cells carrying its logo: χViT, radar perception, navigation, active search, and industrial manipulation. Most AI cells follow the internal cycle shown below the matrix: <strong>real data → simulation → AI model training → deployment → new real data</strong>.</p>
+      <p>Astghik's possible contribution remains explicitly question-marked because it has not yet been established whether new low-level-control research is needed for each platform. Armenian tricolor corners identify all components originating in the Armenian ecosystem, including YerevaNN, Waveye, CyberFusion, Karen Eguizarian's lab, and the proposed collaboration with Astghik's lab.</p>
+    </article>
+  </main>
+
+  <script>
+    const shell = document.getElementById('slide-shell');
+    const slide = document.getElementById('slide');
+
+    function fitSlide() {
+      const available = Math.max(760, window.innerWidth - 32);
+      const scale = Math.min(1, available / 1600);
+      shell.style.width = `${1600 * scale}px`;
+      shell.style.height = `${900 * scale}px`;
+      slide.style.transformOrigin = 'top left';
+      slide.style.transform = `scale(${scale})`;
+    }
+
+    fitSlide();
+    window.addEventListener('resize', fitSlide);
+  </script>
+</body>
+</html>
+
