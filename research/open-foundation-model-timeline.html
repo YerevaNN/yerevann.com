@@ -614,6 +614,21 @@
         caveat: "Good fallback small LLM; not a VLM."
       },
       {
+        id: "tinyAyaGlobal",
+        label: "Tiny Aya Global",
+        sub: "Feb 2026",
+        date: "2026-02-17",
+        lane: "params",
+        paramB: 3.35,
+        kind: "llm",
+        labelDx: -18,
+        labelDy: -20,
+        renderPriority: 12,
+        details: "Cohere Labs multilingual text model covering 70+ languages. In its published common evaluation, it leads same-scale models on mDolly (86.9), Flores ChrF (43.5), and WMT24++ ChrF (46.0), while Qwen3.5-4B leads Global MMLU, INCLUDE, Global PIQA, mArenaHard, and GlobalMGSM.",
+        compute: "Pretrained from scratch for 6T tokens on 256 H100 GPUs; elapsed time and total GPU-hours are not disclosed. The report also describes extensive 200B-token ablations.",
+        caveat: "Text-only with 8K context. The released instruction model uses distilled post-training data synthesized through FusioN from Gemma3-27B-It, Command A, and DeepSeek-V3. CC-BY-NC-4.0, not a permissive commercial license."
+      },
+      {
         id: "phi4mini",
         label: "Phi-4-mini",
         sub: "Feb 2025",
@@ -1081,6 +1096,11 @@
         ["SmolLM3 model card", "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"],
         ["SmolLM3 blog", "https://huggingface.co/blog/smollm3"]
       ],
+      tinyAyaGlobal: [
+        ["Tiny Aya Global model card", "https://huggingface.co/CohereLabs/tiny-aya-global"],
+        ["Tiny Aya technical report", "https://arxiv.org/abs/2603.11510"],
+        ["Cohere release", "https://cohere.com/blog/cohere-labs-launches-tiny-aya"]
+      ],
       phi4mini: [
         ["Phi-4-mini", "https://huggingface.co/microsoft/Phi-4-mini-instruct"],
         ["Phi models", "https://azure.microsoft.com/en-us/products/phi"]
@@ -1191,6 +1211,7 @@
       tar15: "initialized",
       minicpm46: "initialized",
       smollm3: "scratch",
+      tinyAyaGlobal: "distilled",
       phi4mini: "scratch",
       qwen3vl4: "scratch",
       qwen35_4: "scratch",
