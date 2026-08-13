@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Firebird Physical AI Strategy</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #61707c;
+      --line: #d7dee3;
+      --paper: #ffffff;
+      --page: #e9eef1;
+      --soft: #f5f7f8;
+      --coral: #df5266;
+      --coral-soft: #fff0f2;
+      --blue: #2864a8;
+      --blue-soft: #eef5fc;
+      --green: #237a69;
+      --green-soft: #edf8f5;
+      --gold: #a56d08;
+      --gold-soft: #fff7e5;
+      --violet: #6a55a3;
+      --violet-soft: #f4f1fa;
+      --danger: #bb3641;
+      --danger-soft: #fff1f2;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, Aptos, "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    body { overflow: hidden; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .viewport {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 18px 72px;
+    }
+
+    .slide-shell {
+      position: relative;
+      flex: 0 0 auto;
+      width: 1600px;
+      height: 900px;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      width: 1600px;
+      height: 900px;
+      padding: 44px 58px 42px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(20, 33, 44, 0.16);
+    }
+
+    .slide.active { display: block; }
+
+    .header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      min-height: 70px;
+      padding-bottom: 17px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header h1 {
+      max-width: 930px;
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.04;
+      font-weight: 770;
+    }
+
+    .subtitle {
+      max-width: 590px;
+      margin-left: 32px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.34;
+      text-align: right;
+    }
+
+    .eyebrow {
+      margin-bottom: 8px;
+      color: var(--coral);
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer {
+      position: absolute;
+      right: 58px;
+      bottom: 22px;
+      left: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #77848d;
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .footer .source-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .goal-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 22px;
+      margin-top: 28px;
+    }
+
+    .goal {
+      position: relative;
+      min-height: 252px;
+      padding: 27px 30px 24px 112px;
+      border: 1px solid var(--line);
+      border-left-width: 7px;
+      background: #fbfcfc;
+    }
+
+    .goal.g1 { border-left-color: var(--green); }
+    .goal.g2 { border-left-color: var(--gold); }
+    .goal.g3 { border-left-color: var(--blue); }
+    .goal.g4 { border-left-color: var(--coral); }
+
+    .goal-number {
+      position: absolute;
+      top: 27px;
+      left: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 27px;
+      font-weight: 820;
+    }
+
+    .g1 .goal-number { background: var(--green); }
+    .g2 .goal-number { background: var(--gold); }
+    .g3 .goal-number { background: var(--blue); }
+    .g4 .goal-number { background: var(--coral); }
+
+    .goal h2 {
+      margin: 0 0 12px;
+      font-size: 27px;
+      line-height: 1.13;
+      font-weight: 760;
+    }
+
+    .goal p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.43;
+    }
+
+    .goal strong { color: var(--ink); }
+
+    .bottom-thesis {
+      margin-top: 18px;
+      padding: 15px 22px;
+      border-left: 5px solid var(--ink);
+      background: var(--soft);
+      font-size: 20px;
+      line-height: 1.32;
+      font-weight: 680;
+    }
+
+    .tension-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px 1fr;
+      gap: 24px;
+      height: 620px;
+      margin-top: 30px;
+    }
+
+    .objective-panel {
+      padding: 30px 34px;
+      border: 2px solid var(--line);
+      background: #fbfcfc;
+    }
+
+    .objective-panel.goal3 {
+      border-color: #9abce0;
+      background: var(--blue-soft);
+    }
+
+    .objective-panel.goal4 {
+      border-color: #ed9dab;
+      background: var(--coral-soft);
+    }
+
+    .objective-label {
+      font-size: 14px;
+      font-weight: 820;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .goal3 .objective-label { color: var(--blue); }
+    .goal4 .objective-label { color: var(--coral); }
+
+    .objective-panel h2 {
+      margin: 12px 0 22px;
+      font-size: 32px;
+      line-height: 1.12;
+    }
+
+    .objective-panel ul,
+    .skeptic-list,
+    .path-list,
+    .questions {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .objective-panel li {
+      margin: 0;
+      padding: 14px 0 14px 27px;
+      border-top: 1px solid rgba(23, 33, 43, 0.12);
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .objective-panel li::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      margin: 8px 0 0 -25px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .tension-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .collision {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      text-align: center;
+    }
+
+    .collision b {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--danger);
+      font-size: 18px;
+    }
+
+    .collision span {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    .not-logical {
+      padding: 20px;
+      border: 1px solid #dbbd71;
+      background: var(--gold-soft);
+      font-size: 17px;
+      line-height: 1.38;
+      text-align: center;
+    }
+
+    .skeptic-layout {
+      display: grid;
+      grid-template-columns: 1fr 405px;
+      gap: 28px;
+      margin-top: 27px;
+    }
+
+    .skeptic-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .skeptic-list li {
+      min-height: 160px;
+      padding: 21px 23px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--danger);
+      background: #fbfcfc;
+    }
+
+    .skeptic-list b {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 21px;
+      line-height: 1.18;
+    }
+
+    .skeptic-list span {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.36;
+    }
+
+    .counterweight {
+      padding: 28px;
+      border: 1px solid #9abce0;
+      background: var(--blue-soft);
+    }
+
+    .counterweight h2 {
+      margin: 0 0 18px;
+      color: var(--blue);
+      font-size: 25px;
+    }
+
+    .counterweight p {
+      margin: 0;
+      padding: 14px 0;
+      border-top: 1px solid rgba(40, 100, 168, 0.2);
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .counterweight p:first-of-type { border-top: 0; }
+
+    .test-question {
+      margin-top: 18px;
+      padding: 17px 20px;
+      border-left: 5px solid var(--danger);
+      background: var(--danger-soft);
+      font-size: 20px;
+      line-height: 1.32;
+      font-weight: 730;
+    }
+
+    .path-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .path-title {
+      padding: 20px 25px;
+      border: 2px solid var(--line);
+      background: var(--soft);
+    }
+
+    .path-title.a {
+      border-color: #6fb5a7;
+      background: var(--green-soft);
+    }
+
+    .path-title.b {
+      border-color: #9abce0;
+      background: var(--blue-soft);
+    }
+
+    .path-title .tag {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 820;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .path-title h2 {
+      margin: 7px 0 4px;
+      font-size: 30px;
+      line-height: 1.12;
+    }
+
+    .path-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+      margin: 20px 0 24px;
+    }
+
+    .pipe-step {
+      position: relative;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      background: #fbfcfc;
+      text-align: center;
+    }
+
+    .pipe-step:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      top: 50%;
+      right: -21px;
+      color: #87939b;
+      font-size: 24px;
+      font-weight: 800;
+      transform: translateY(-50%);
+    }
+
+    .pipe-step b {
+      margin-bottom: 5px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .pipe-step span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .path-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .path-block {
+      min-height: 310px;
+      padding: 24px 27px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .path-block h3 {
+      margin: 0 0 13px;
+      font-size: 23px;
+    }
+
+    .path-list li {
+      padding: 10px 0 10px 23px;
+      border-top: 1px solid #e5e9ec;
+      color: #35424b;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .path-list li:first-child { border-top: 0; }
+
+    .path-list li::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      margin: 7px 0 0 -21px;
+      background: var(--coral);
+    }
+
+    .overlap-note {
+      margin-top: 15px;
+      padding: 14px 17px;
+      border-left: 4px solid var(--violet);
+      background: var(--violet-soft);
+      color: #443960;
+      font-size: 15px;
+      line-height: 1.33;
+    }
+
+    .gate {
+      margin-top: 20px;
+      padding: 16px 22px;
+      border-left: 6px solid var(--gold);
+      background: var(--gold-soft);
+      font-size: 19px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .better-grid {
+      display: grid;
+      grid-template-columns: 245px 1fr 390px;
+      margin-top: 26px;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .better-grid > div {
+      min-height: 68px;
+      padding: 10px 14px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      line-height: 1.23;
+    }
+
+    .better-grid .head {
+      min-height: 43px;
+      color: #fff;
+      background: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .better-grid .dimension {
+      display: flex;
+      align-items: center;
+      color: var(--ink);
+      background: var(--soft);
+      font-size: 17px;
+      font-weight: 760;
+    }
+
+    .better-grid .idea { color: #33414a; }
+
+    .better-grid .why {
+      color: #5b4b1a;
+      background: var(--gold-soft);
+    }
+
+    .definition {
+      margin-top: 14px;
+      padding: 12px 18px;
+      border-left: 5px solid var(--green);
+      background: var(--green-soft);
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .question-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 26px;
+    }
+
+    .question-column {
+      padding: 22px 27px 20px;
+      border: 1px solid var(--line);
+      background: #fbfcfc;
+    }
+
+    .question-column.a { border-top: 6px solid var(--green); }
+    .question-column.b { border-top: 6px solid var(--blue); }
+
+    .question-column h2 {
+      margin: 0 0 13px;
+      font-size: 25px;
+    }
+
+    .questions {
+      counter-reset: question;
+    }
+
+    .questions li {
+      position: relative;
+      min-height: 88px;
+      padding: 13px 8px 13px 49px;
+      border-top: 1px solid var(--line);
+      font-size: 17px;
+      line-height: 1.34;
+      counter-increment: question;
+    }
+
+    .questions li::before {
+      content: counter(question);
+      position: absolute;
+      top: 13px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .questions li:first-child { border-top: 0; }
+
+    .meeting-outcome {
+      margin-top: 20px;
+      padding: 17px 22px;
+      border-left: 6px solid var(--coral);
+      background: var(--coral-soft);
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 720;
+    }
+
+    .controls {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 58px;
+      border-top: 1px solid #cfd7dc;
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .icon-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border: 1px solid #b9c4ca;
+      border-radius: 5px;
+      color: var(--ink);
+      background: #fff;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .icon-button:hover { border-color: var(--coral); color: var(--coral); }
+    .icon-button:disabled { cursor: default; opacity: 0.35; }
+
+    .counter {
+      width: 70px;
+      color: var(--muted);
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+      text-align: center;
+    }
+
+    @media print {
+      html, body { background: white; overflow: visible; }
+      .deck { width: auto; height: auto; overflow: visible; }
+      .viewport { position: static; display: block; padding: 0; }
+      .slide-shell { width: 1600px !important; height: auto !important; transform: none !important; }
+      .slide {
+        position: relative;
+        display: block !important;
+        page-break-after: always;
+        box-shadow: none;
+        transform: none !important;
+      }
+      .controls { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="Firebird Physical AI strategy slideshow">
+    <div class="viewport">
+      <div class="slide-shell" id="slide-shell">
+        <section class="slide active" aria-label="Program goals">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Decision framing</div>
+              <h1>What Should Firebird Enable?</h1>
+            </div>
+            <div class="subtitle">Four goals for an Armenian research program in small foundation models and Physical AI</div>
+          </header>
+
+          <div class="goal-list">
+            <article class="goal g1">
+              <div class="goal-number">1</div>
+              <h2>Globally competitive research</h2>
+              <p>Organize researchers from <strong>YerevaNN, CAST, and other Armenian teams</strong> around work that is scientifically useful beyond Armenia. Involve international advisors including Andre Martins, Michal Valko, Armen Aghajanyan, and Hrayr Harutyunyan.</p>
+            </article>
+
+            <article class="goal g2">
+              <div class="goal-number">2</div>
+              <h2>Use Firebird at its highest value</h2>
+              <p>Turn access to approximately <strong>100 B200 GPUs</strong> into a durable research capability: ambitious final runs, disciplined scaling experiments, shared infrastructure, and repeated releases rather than idle capacity or disconnected projects.</p>
+            </article>
+
+            <article class="goal g3">
+              <div class="goal-number">3</div>
+              <h2>Guarantee a small open foundation</h2>
+              <p>Ensure that academics retain access to <strong>frontier-level 1-2B models</strong>, independent of future product and release decisions by Alibaba or any other single frontier laboratory.</p>
+            </article>
+
+            <article class="goal g4">
+              <div class="goal-number">4</div>
+              <h2>Lead small Physical AI foundations</h2>
+              <p>Develop the best foundation models for Physical AI at <strong>4B parameters or below</strong>: perception, uncommon sensors, temporal understanding, world-action learning, and high-level control.</p>
+            </article>
+          </div>
+
+          <div class="bottom-thesis">Goals 1 and 2 support either strategy. The decision is whether Goal 3 is a prerequisite for Goal 4, a parallel public-good program, or an expensive distraction from it.</div>
+          <footer class="footer"><span>Firebird Physical AI Strategy</span><span>Discussion draft</span></footer>
+        </section>
+
+        <section class="slide" aria-label="Goal tension">
+          <header class="header">
+            <div>
+              <div class="eyebrow">The central choice</div>
+              <h1>Goals 3 and 4 Compete for the Same Program</h1>
+            </div>
+            <div class="subtitle">They are not logically incompatible, but they optimize different outcomes under fixed people, time, and compute.</div>
+          </header>
+
+          <div class="tension-grid">
+            <article class="objective-panel goal3">
+              <div class="objective-label">Goal 3</div>
+              <h2>Independent general foundation</h2>
+              <ul>
+                <li><strong>Scope:</strong> language, knowledge, reasoning, coding, multilinguality</li>
+                <li><strong>Winning move:</strong> reproduce frontier data quality and refresh continuously</li>
+                <li><strong>Success:</strong> researchers choose it over an aging Qwen checkpoint</li>
+                <li><strong>Primary value:</strong> continuity, openness, tokenizer and architecture control</li>
+              </ul>
+            </article>
+
+            <div class="tension-center">
+              <div class="collision"><b>Compute</b><span>Generic trillions of text tokens versus physical multimodal and action training</span></div>
+              <div class="collision"><b>Quality</b><span>Best inherited base versus independence from the supplier of that base</span></div>
+              <div class="collision"><b>Organization</b><span>General foundation-model lab versus focused Physical AI program</span></div>
+              <div class="not-logical"><strong>Possible resolution:</strong><br>Stage the goals. Lead Physical AI now; earn the right to train an independent base through scaling evidence.</div>
+            </div>
+
+            <article class="objective-panel goal4">
+              <div class="objective-label">Goal 4</div>
+              <h2>Differentiated Physical AI foundation</h2>
+              <ul>
+                <li><strong>Scope:</strong> sensors, geometry, video, state, action, simulation</li>
+                <li><strong>Winning move:</strong> start from the strongest base and add unique physical data</li>
+                <li><strong>Success:</strong> academics and companies adopt it for real physical tasks</li>
+                <li><strong>Primary value:</strong> scientific leadership and deployable capability</li>
+              </ul>
+            </article>
+          </div>
+
+          <footer class="footer"><span>Question: must independence come before differentiation?</span><span>2 / 7</span></footer>
+        </section>
+
+        <section class="slide" aria-label="Reasons Goal 3 may be unrealistic">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Hypothesis to validate</div>
+              <h1>Goal 3: Reasons for Skepticism</h1>
+            </div>
+            <div class="subtitle">These are arguments to test with advisors, not a settled decision.</div>
+          </header>
+
+          <div class="skeptic-layout">
+            <ul class="skeptic-list">
+              <li><b>The data advantage is private</b><span>Qwen's architecture is partly disclosed; its filtering, synthetic-data, curriculum, and quality pipeline are not reproducible.</span></li>
+              <li><b>Architecture is not enough</b><span>A newer Kimi-like architecture trained on weaker public data may be faster yet still lose to Qwen3.5. Missing base capabilities are rarely recovered through ordinary post-training.</span></li>
+              <li><b>"Frontier" may be the wrong target</b><span>If it includes robust agentic behavior, 1-2B may simply be below viable scale. The required capability set must be explicit.</span></li>
+              <li><b>"Always" is an institution, not a run</b><span>It requires recurring training, evaluation, maintenance, and releases while the external frontier keeps moving.</span></li>
+              <li><b>Compute is not the only bottleneck</b><span>100 B200s can execute major runs, but do not automatically create Alibaba-scale data curation, teachers, or training expertise.</span></li>
+              <li><b>There is an opportunity cost</b><span>Every generic-text experiment displaces sensor, video, simulation, world-action, and deployment work where Armenia could differentiate.</span></li>
+            </ul>
+
+            <aside class="counterweight">
+              <h2>Why keep Goal 3 alive?</h2>
+              <p><strong>Armenian and underserved-language tokenizer:</strong> vocabulary design is difficult to change cleanly after full pretraining.</p>
+              <p><strong>Public infrastructure:</strong> base weights, intermediate checkpoints, data manifests, and recipes have value even below absolute frontier quality.</p>
+              <p><strong>Distillation at every stage:</strong> strong teachers may reduce the data-quality gap in pretraining, multimodal alignment, and post-training.</p>
+              <p><strong>Strategic continuity:</strong> an independent lineage reduces dependence on the release policy of one company.</p>
+            </aside>
+          </div>
+
+          <div class="test-question">Decision test: can we identify a data or training advantage strong enough that an external practitioner would prefer our 1-2B base over Qwen3.5?</div>
+          <footer class="footer">
+            <span class="source-links"><a href="https://qwen.ai/blog?email_hash=23463b99b62a72f26ed677cc556c44e8&amp;id=qwen3.5">Qwen3.5</a><a href="https://arxiv.org/abs/2510.26692">Kimi Linear</a><a href="https://arxiv.org/abs/2512.13961">OLMo 3</a></span>
+            <span>3 / 7</span>
+          </footer>
+        </section>
+
+        <section class="slide" aria-label="Path A">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Path A to Goal 4</div>
+              <h1>Extend the Strongest Available Base</h1>
+            </div>
+            <div class="subtitle">Optimize first for globally competitive Physical AI research, accepting an upstream dependency.</div>
+          </header>
+
+          <div class="path-header">
+            <div class="path-title a">
+              <div class="tag">Objective A</div>
+              <h2>Best-base adaptation</h2>
+              <p>Use Qwen3.5, Isaac, Cosmos Edge, or the strongest suitable successor.</p>
+            </div>
+            <div class="path-title">
+              <div class="tag">Where Armenia differentiates</div>
+              <h2>Physical data and objectives</h2>
+              <p>Non-RGB sensing, temporal causality, simulation, action, and deployment feedback.</p>
+            </div>
+          </div>
+
+          <div class="pipeline">
+            <div class="pipe-step"><b>Frontier open VLM</b><span>Retain language, reasoning, code, and RGB competence</span></div>
+            <div class="pipe-step"><b>Sensor encoders</b><span>Radar, LiDAR, SAR, multispectral, cross-sensor alignment</span></div>
+            <div class="pipe-step"><b>Physical CPT</b><span>Video, simulation, state-action trajectories, future prediction</span></div>
+            <div class="pipe-step"><b>Open &le;4B foundation</b><span>High-level UAV and humanoid perception and action</span></div>
+          </div>
+
+          <div class="path-body">
+            <article class="path-block">
+              <h3>Why this can win</h3>
+              <ul class="path-list">
+                <li>Starts from the highest available general capability.</li>
+                <li>Concentrates Firebird compute on differentiated physical learning.</li>
+                <li>Produces useful datasets, encoders, evaluations, and models sooner.</li>
+                <li>Allows new upstream bases to be swapped in as the frontier changes.</li>
+                <li>Fits YerevaNN's radar, multispectral, sim-to-real, and UAV work.</li>
+              </ul>
+            </article>
+
+            <article class="path-block">
+              <h3>Overlap and complementarity</h3>
+              <ul class="path-list">
+                <li><strong>Perceptron Isaac:</strong> compact RGB perception, grounding, OCR, spatial reasoning.</li>
+                <li><strong>NVIDIA Cosmos:</strong> physical reasoning, video/world generation, actions.</li>
+                <li><strong>Armenian opportunity:</strong> uncommon sensors, synchronized cross-sensor data, sim-to-real, cross-embodiment high-level control.</li>
+              </ul>
+              <div class="overlap-note">Isaac 0.1 itself follows Path A: Qwen3-1.7B + SigLIP 2, then perceptive-language specialization. Repeating its RGB scope would duplicate Armen's work; extending the physical stack could complement it.</div>
+            </article>
+          </div>
+
+          <footer class="footer">
+            <span class="source-links"><a href="https://huggingface.co/PerceptronAI/Isaac-0.1-Base">Isaac 0.1 Base</a><a href="https://huggingface.co/PerceptronAI/Isaac-0.2-1B">Isaac 0.2</a><a href="https://huggingface.co/nvidia/Cosmos3-Edge">Cosmos3-Edge</a></span>
+            <span>4 / 7</span>
+          </footer>
+        </section>
+
+        <section class="slide" aria-label="Path B">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Path B to Goal 4</div>
+              <h1>Build an Independent Physical-Native Base</h1>
+            </div>
+            <div class="subtitle">Pursue independence only through a model whose pretraining is already shaped by Physical AI.</div>
+          </header>
+
+          <div class="path-header">
+            <div class="path-title b">
+              <div class="tag">Objective B</div>
+              <h2>Independent model flow</h2>
+              <p>Own architecture, tokenizer, weights, physical data mixture, checkpoints, and release recipe.</p>
+            </div>
+            <div class="path-title">
+              <div class="tag">Critical correction</div>
+              <h2>Not 18T generic text first</h2>
+              <p>General competence remains necessary, but differentiation must enter pretraining early.</p>
+            </div>
+          </div>
+
+          <div class="pipeline">
+            <div class="pipe-step"><b>Architecture + tokenizer</b><span>Edge-efficient sequence model; Armenian and underserved scripts</span></div>
+            <div class="pipe-step"><b>Curated base + distillation</b><span>Compact high-quality text, code, science, spatial and procedural data</span></div>
+            <div class="pipe-step"><b>Native physical pretraining</b><span>Images, video, sensors, geometry, state, action, simulated interventions</span></div>
+            <div class="pipe-step"><b>Independent &le;4B base</b><span>Open model flow designed for continued physical adaptation</span></div>
+          </div>
+
+          <div class="path-body">
+            <article class="path-block">
+              <h3>What this buys</h3>
+              <ul class="path-list">
+                <li>Control over immutable choices: tokenizer, modality interfaces, context structure.</li>
+                <li>A durable lineage not tied to Alibaba's future release sizes or licenses.</li>
+                <li>Early fusion of uncommon sensors and physical sequences.</li>
+                <li>Scientific access to every checkpoint, mixture, ablation, and failure.</li>
+                <li>A model that can serve Goal 3 partially while being judged on Goal 4.</li>
+              </ul>
+            </article>
+
+            <article class="path-block">
+              <h3>What could make it fail</h3>
+              <ul class="path-list">
+                <li>A weak general base remains worse than Qwen after physical post-training.</li>
+                <li>Early multimodal training can consume compute without useful sensor-language grounding.</li>
+                <li>Physical datasets may be too small, narrow, or poorly synchronized.</li>
+                <li>Distillation can import teacher capability, but does not create true future independence.</li>
+                <li>The program can become too broad for Armenia's research capacity.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="gate">Scale gate: do not approve a full multi-trillion-token run until 100-500B-token pilots show a credible parity trend against Qwen3.5 and a measurable Physical AI advantage.</div>
+          <footer class="footer"><span>Path B must earn scale through evidence.</span><span>5 / 7</span></footer>
+        </section>
+
+        <section class="slide" aria-label="Path B differentiation ideas">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Brainstorm for Objective B</div>
+              <h1>What Could Be Genuinely Better?</h1>
+            </div>
+            <div class="subtitle">The target is a better Physical AI foundation, not a weaker general chatbot with a newer architecture.</div>
+          </header>
+
+          <div class="better-grid" role="table" aria-label="Differentiated pretraining ideas">
+            <div class="head">Dimension</div><div class="head">Specific program</div><div class="head">Why it belongs before narrow fine-tuning</div>
+            <div class="dimension">Physical corpus</div><div class="idea">Robot manuals, ROS/PX4/URDF code, spatial and procedural text, technical video, simulated episodes, failures, and calibrated sensor logs.</div><div class="why">Builds vocabulary and representations around physical state, procedure, uncertainty, and intervention.</div>
+            <div class="dimension">Native modalities</div><div class="idea">Synchronized RGB + radar + LiDAR + SAR + multispectral streams, with calibration and geometry metadata.</div><div class="why">Creates cross-sensor representations that RGB-only frontier models do not supply.</div>
+            <div class="dimension">Causal objectives</div><div class="idea">Future-latent prediction, inverse dynamics, action-conditioned futures, cross-modal prediction, sensor dropout, and sim-real invariance.</div><div class="why">Teaches what changes because of an action, not only how a scene is described.</div>
+            <div class="dimension">Embodiment</div><div class="idea">A shared high-level action representation across UAVs and humanoids, while platform controllers retain low-level stabilization.</div><div class="why">Targets the transferable AI layer that YerevaNN intends to own.</div>
+            <div class="dimension">Tokenizer</div><div class="idea">Efficient Armenian and underserved-script tokenization, plus physical symbols, structured actions, coordinates, and telemetry.</div><div class="why">Vocabulary and embedding allocation are awkward to repair after serious pretraining; this is one real argument for scratch training.</div>
+            <div class="dimension">Distillation</div><div class="idea">Use multiple teachers during base, multimodal, reasoning, world-model, and policy stages; distill representations as well as outputs.</div><div class="why">May narrow the private-data quality gap while reducing dependence on any single teacher.</div>
+            <div class="dimension">Open science</div><div class="idea">Release intermediate checkpoints, data manifests, scaling curves, ablations, sensor interfaces, and evaluation suites.</div><div class="why">Can be globally valuable even when generic benchmark parity is incomplete.</div>
+          </div>
+
+          <div class="definition">Success criterion: dominate the &le;4B Physical AI Pareto frontier while retaining sufficient general language and reasoning capability for downstream research.</div>
+          <footer class="footer">
+            <span class="source-links"><a href="https://kexue.fm/archives/11854">Example Chinese technical literature: Scientific Spaces</a><a href="https://qwen.ai/blog?id=qwenvla">Qwen-VLA recipe</a></span>
+            <span>6 / 7</span>
+          </footer>
+        </section>
+
+        <section class="slide" aria-label="Questions for Armen Aghajanyan">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Discussion with Armen Aghajanyan</div>
+              <h1>What Would Actually Help?</h1>
+            </div>
+            <div class="subtitle">Questions for the academic community and for Perceptron AI</div>
+          </header>
+
+          <div class="question-columns">
+            <article class="question-column a">
+              <h2>Objective A: extend the best base</h2>
+              <ol class="questions">
+                <li>Isaac 0.1 began from Qwen3-1.7B and SigLIP 2. <strong>What pretraining did you wish those upstream models had?</strong></li>
+                <li>Where should Armenia complement rather than duplicate Isaac: non-RGB sensing, video and temporal learning, simulation, world-action modeling, or high-level control?</li>
+                <li>Which Firebird-scale public asset would Perceptron itself use: an open dataset, sensor encoder, continued-pretrained VLM, simulator corpus, action representation, or evaluation suite?</li>
+                <li>What can a 1-4B model reliably own in robotics: grounded perception, short planning, tool use, high-level closed-loop action, or something narrower?</li>
+              </ol>
+            </article>
+
+            <article class="question-column b">
+              <h2>Objective B: independent physical-native base</h2>
+              <ol class="questions">
+                <li>What physical pretraining data or objective could make scratch training better than continued training from Qwen3.5?</li>
+                <li>What result at 100-500B pilot-token scale would justify a full multi-trillion-token run?</li>
+                <li>How would you use distillation in each stage, and can multiple teachers provide independence rather than simply reproduce a new dependency?</li>
+                <li>Is tokenizer control, including Armenian and other underserved scripts, important enough to justify scratch training? What lower-cost alternatives should be tested first?</li>
+              </ol>
+            </article>
+          </div>
+
+          <div class="meeting-outcome">Desired outcome: choose Path A, Path B, or a staged A &rarr; B strategy; identify one missing foundation artifact; define who would use it; and agree on the experimental gate before committing Firebird-scale compute.</div>
+          <footer class="footer">
+            <span class="source-links"><a href="https://huggingface.co/PerceptronAI/Isaac-0.1-Base">Isaac 0.1 lineage</a><a href="https://papers.perceptron.inc/data_sparsity.pdf">Perceptron data-sparsity study</a></span>
+            <span>7 / 7</span>
+          </footer>
+        </section>
+      </div>
+    </div>
+
+    <nav class="controls" aria-label="Slideshow controls">
+      <button class="icon-button" id="previous" type="button" aria-label="Previous slide" title="Previous slide">&larr;</button>
+      <div class="counter" id="counter" aria-live="polite">1 / 7</div>
+      <button class="icon-button" id="next" type="button" aria-label="Next slide" title="Next slide">&rarr;</button>
+      <button class="icon-button" id="fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">&#x26F6;</button>
+    </nav>
+  </main>
+
+  <script>
+    const shell = document.getElementById("slide-shell");
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const counter = document.getElementById("counter");
+    const previous = document.getElementById("previous");
+    const next = document.getElementById("next");
+    const fullscreen = document.getElementById("fullscreen");
+    let current = 0;
+
+    function fitSlides() {
+      const availableWidth = Math.max(320, window.innerWidth - 36);
+      const availableHeight = Math.max(240, window.innerHeight - 92);
+      const scale = Math.min(1, availableWidth / 1600, availableHeight / 900);
+      shell.style.width = `${1600 * scale}px`;
+      shell.style.height = `${900 * scale}px`;
+      slides.forEach((slide) => {
+        slide.style.transformOrigin = "top left";
+        slide.style.transform = `scale(${scale})`;
+      });
+    }
+
+    function showSlide(index, updateHash = true) {
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      slides.forEach((slide, slideIndex) => slide.classList.toggle("active", slideIndex === current));
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      previous.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+      if (updateHash) history.replaceState(null, "", `#${current + 1}`);
+    }
+
+    function indexFromHash() {
+      const parsed = Number.parseInt(window.location.hash.slice(1), 10);
+      return Number.isFinite(parsed) ? parsed - 1 : 0;
+    }
+
+    previous.addEventListener("click", () => showSlide(current - 1));
+    next.addEventListener("click", () => showSlide(current + 1));
+    fullscreen.addEventListener("click", async () => {
+      if (!document.fullscreenElement) {
+        await document.documentElement.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (["ArrowRight", "PageDown", " "].includes(event.key)) {
+        event.preventDefault();
+        showSlide(current + 1);
+      } else if (["ArrowLeft", "PageUp"].includes(event.key)) {
+        event.preventDefault();
+        showSlide(current - 1);
+      } else if (event.key === "Home") {
+        showSlide(0);
+      } else if (event.key === "End") {
+        showSlide(slides.length - 1);
+      }
+    });
+
+    window.addEventListener("hashchange", () => showSlide(indexFromHash(), false));
+    window.addEventListener("resize", fitSlides);
+    showSlide(indexFromHash(), false);
+    fitSlides();
+  </script>
+</body>
+</html>
