@@ -86,7 +86,7 @@
 
     .roadmap {
       display: grid;
-      grid-template-columns: 240px repeat(3, minmax(0, 1fr));
+      grid-template-columns: 240px minmax(0, 1fr) minmax(0, 3.2fr);
       grid-template-rows: 72px 104px 96px 84px 96px 88px;
       column-gap: 24px;
       row-gap: 9px;
@@ -112,7 +112,7 @@
       border-bottom: 3px solid var(--ink);
     }
 
-    .column-head.cyber { border-bottom-color: var(--orange); }
+    .column-head.humanoid { border-bottom-color: var(--orange); }
 
     .year {
       color: var(--muted);
@@ -176,6 +176,8 @@
     }
 
     .single { grid-template-columns: 1fr; }
+    .three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .subcell {
       position: relative;
@@ -264,15 +266,13 @@
     .sensor-cell,
     .perception-cell { overflow: visible; }
 
-    .sensor-cell::before {
+    .sensor-cell .subcell::before {
       content: "";
       position: absolute;
-      top: -16px;
-      left: 25%;
-      width: 50%;
-      height: 16px;
+      top: -17px;
+      left: 50%;
+      height: 17px;
       border-left: 2px solid #b6c1c7;
-      border-right: 2px solid #b6c1c7;
       pointer-events: none;
     }
 
@@ -484,24 +484,19 @@
         <div class="slide" id="slide">
           <header class="title-row">
             <h1>Physical AI: From UAVs to Humanoids</h1>
-            <div class="thesis">Build the complete AI loop on a programmable UAV, transfer it to a reference humanoid, then generalize it to Armenian hardware and sensors.</div>
+            <div class="thesis">Deliver UAV capability by the end of 2027 and humanoid capability across international and Armenian platforms by the end of 2028.</div>
           </header>
 
           <div class="roadmap">
             <div class="corner-label">Research stack</div>
 
             <div class="column-head">
-              <span class="year">Year 1–2</span>
-              <span class="platform">UAV · X500 V2 <span class="inline-provisional">(provisional)</span></span>
+              <span class="year">Milestone · delivery by end of 2027</span>
+              <span class="platform">UAV capability</span>
             </div>
-            <div class="column-head">
-              <span class="year">Year 2+</span>
-              <span class="platform">Agile ONE S</span>
-            </div>
-            <div class="column-head cyber">
-              <span class="year">Year 3+</span>
-              <span class="platform">CyberFusion Humanoid</span>
-              <span class="am-corner" aria-label="Armenian ecosystem"></span>
+            <div class="column-head humanoid">
+              <span class="year">Milestone · delivery by end of 2028</span>
+              <span class="platform">Humanoid capability</span>
             </div>
 
             <div class="row-label">
@@ -537,20 +532,6 @@
                 <span class="am-corner" aria-hidden="true"></span>
               </div>
             </div>
-            <div class="cell">
-              <div class="subcell yerevann">
-                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
-                Navigation
-                <span class="cycle-mark">↻</span>
-                <span class="am-corner" aria-hidden="true"></span>
-              </div>
-              <div class="subcell yerevann">
-                <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
-                Industrial manipulation
-                <span class="cycle-mark">↻</span>
-                <span class="am-corner" aria-hidden="true"></span>
-              </div>
-            </div>
 
             <div class="row-label">
               <span class="row-number">04</span>
@@ -561,15 +542,13 @@
               <div class="subcell">DINOv3 / CLIP</div>
               <div class="subcell yerevann">
                 <img class="yn-logo" src="../assets/yerevann-icon-128.png" alt="YerevaNN">
-                χViT
+                Multispectral models (χViT)
                 <span class="am-corner" aria-hidden="true"></span>
               </div>
             </div>
-            <div class="cell perception-cell">
+            <div class="cell perception-cell four">
               <div class="subcell">DINOv3 / CLIP</div>
               <div class="subcell unknown">Agile LiDAR perception</div>
-            </div>
-            <div class="cell perception-cell">
               <div class="subcell armenian unknown">
                 New vision model?
                 <span class="cycle-mark">↻</span>
@@ -592,11 +571,9 @@
               <div class="subcell">RGB camera</div>
               <div class="subcell">Multispectral camera</div>
             </div>
-            <div class="cell sensor-cell">
+            <div class="cell sensor-cell four">
               <div class="subcell">Built-in cameras</div>
               <div class="subcell">LiDAR</div>
-            </div>
-            <div class="cell sensor-cell">
               <div class="subcell armenian unknown">
                 New sensor from Karen's lab?
                 <span class="am-corner" aria-hidden="true"></span>
@@ -619,14 +596,8 @@
                 <span class="am-corner" aria-hidden="true"></span>
               </div>
             </div>
-            <div class="cell">
+            <div class="cell three">
               <div class="subcell">Agile proprietary controller</div>
-              <div class="subcell armenian unknown">
-                Astghik's lab · new methods?
-                <span class="am-corner" aria-hidden="true"></span>
-              </div>
-            </div>
-            <div class="cell">
               <div class="subcell armenian">
                 CyberFusion controller
                 <span class="am-corner" aria-hidden="true"></span>
@@ -643,12 +614,10 @@
               <span class="row-note">Physical embodiment</span>
             </div>
             <div class="cell single hardware-cell">
-              <div class="subcell">Holybro X500 V2 + Pixhawk</div>
+              <div class="subcell">Holybro X500 V2 + Pixhawk <span class="inline-provisional">(provisional)</span></div>
             </div>
-            <div class="cell single hardware-cell">
+            <div class="cell hardware-cell">
               <div class="subcell">Agile ONE S</div>
-            </div>
-            <div class="cell single hardware-cell">
               <div class="subcell armenian">
                 CyberFusion Humanoid
                 <span class="am-corner" aria-hidden="true"></span>
@@ -688,31 +657,30 @@
     <article class="narrative">
       <h2>How to read the roadmap</h2>
 
-      <div class="callout">The program starts by building an end-to-end Physical AI capability on a programmable UAV, transfers the reusable AI layers to an internationally recognized humanoid, and then generalizes them to Armenian humanoid hardware and sensing.</div>
+      <div class="callout">The dates are capability-delivery milestones, not common start or finish dates for every component. The program targets integrated UAV capability by the end of 2027 and integrated humanoid capability by the end of 2028.</div>
 
       <h3>The five-layer system</h3>
       <p><strong>Sensors</strong> provide observations to sensor-aligned <strong>perception models</strong>. Perception feeds the <strong>high-level policy</strong>, which selects actions at approximately the level of a human operator. Those commands are executed through <strong>low-level controllers</strong> on the physical <strong>hardware</strong>. The grid is a capability map rather than a single downward pipeline: sensing flows upward, while actions flow downward.</p>
       <p>The exact interface between high-level policy and low-level control remains an open design question; the appropriate action abstraction may differ across platforms.</p>
       <p>Most high-level policies will be built by adapting the strongest suitable open-weight VLM or VLA backbone available at the time, constrained to no more than 4B parameters for efficient research and deployment; Qwen3.5 is the current reference. A strategic risk is that frontier laboratories may stop releasing competitive open-weight models in this size range. Physical AI teams would then be left adapting aging foundations, while capabilities missing from the base model generally cannot be recovered through ordinary fine-tuning.</p>
 
-      <h3>Year 1–2: a provisional UAV platform</h3>
+      <h3>Milestone 1 — delivery by end of 2027: UAV capability</h3>
       <p>The current leading choice is the <strong>Holybro X500 V2 with Pixhawk and PX4</strong>, but procurement remains subject to a focused validation. The selection criteria are: physical use in strong robotics or vision research; programmable high-level control; synchronized observation, action and flight logging; payload capacity for RGB and multispectral sensing; simulator and hardware-in-the-loop support; extensibility; research availability; and stable replacement parts.</p>
       <p>The X500 satisfies several of these criteria: Holybro publishes a modular development kit with payload mounting and PX4 integration; PX4 exposes offboard setpoints, ROS 2 connectivity, detailed ULog recording, and Gazebo simulation. Physical X500-family systems have been used for autonomous data collection in <a href="https://secplab.ppgia.pucpr.br/files/papers/2023icra.pdf">ICRA 2023</a>, payload-intensive contact experiments in <a href="https://doi.org/10.1109/ICRA57147.2024.10610459">ICRA 2024</a>, and camera-data acquisition in the <a href="https://papers.nips.cc/paper_files/paper/2025/hash/8a8eca190088852067b4e8cc1b907122-Abstract-Datasets_and_Benchmarks_Track.html">NeurIPS 2025 InFlux benchmark</a>. See also the <a href="https://holybro.com/products/px4-development-kit-x500-v2">X500 V2 kit</a>, <a href="https://docs.px4.io/v1.17/en/flight_modes/offboard">PX4 offboard control</a>, <a href="https://docs.px4.io/main/en/dev_log/logging">logging</a>, and <a href="https://docs.px4.io/v1.16/en/simulation/">simulation</a> documentation.</p>
       <p>The remaining validation should test the exact multispectral payload, onboard compute, storage, power, flight duration, outdoor safety procedures, and whether the platform can produce the complete observation-action datasets needed by the policy work.</p>
       <p>Holybro would serve as the internationally recognized reference platform. In parallel, the program will look for a suitable Armenian UAV that can be used alongside it. An Armenian platform should be added when it provides comparable programmability, synchronized data and action access, sensor extensibility, research availability, and a credible simulation path. Using both would support cross-platform generalization while also advancing local hardware.</p>
 
       <h3>UAV intelligence</h3>
-      <p>RGB perception starts from established encoders such as DINOv3 or CLIP. YerevaNN's <strong>χViT</strong> line targets efficient multispectral perception. Above perception, YerevaNN develops <strong>navigation</strong> and <strong>active-search</strong> policies. Active search means selecting flight actions that reduce uncertainty, locate a target, or acquire a more useful viewpoint rather than following a fixed route.</p>
+      <p>RGB perception starts from established encoders such as DINOv3 or CLIP. YerevaNN's <strong>multispectral models, including χViT</strong>, target efficient perception across spectral bands. Above perception, YerevaNN develops <strong>navigation</strong> and <strong>active-search</strong> policies. Active search means selecting flight actions that reduce uncertainty, locate a target, or acquire a more useful viewpoint rather than following a fixed route.</p>
       <p><strong>Ground2Sat</strong>, the satellite-to-ground matching line, is an enabling component rather than a separate policy cell. Its intended role is to match oblique UAV or ground observations against satellite imagery, providing geographic evidence to navigation and helping an active-search policy reason about what has been observed and where to move next.</p>
 
-      <h3>Year 2+: Agile ONE S</h3>
-      <p>Agile ONE S is the internationally recognized humanoid reference. The public sensor description confirms built-in cameras and LiDAR, but does not disclose camera specifications, the LiDAR perception model, raw-data interfaces, or the low-level whole-body controller. The slide therefore labels the controller as <strong>Agile proprietary controller</strong> and the LiDAR perception stack as undisclosed. DINOv3 or CLIP provides the initial visual encoder; YerevaNN's original work concentrates on policy adaptation, navigation, and <strong>industrial manipulation</strong>.</p>
-
-      <h3>Year 3+: Armenian humanoid stack</h3>
-      <p>CyberFusion provides the Armenian humanoid, its controller, and the ability to integrate selected sensors. Waveye supplies the Armenian radar, while Karen Eguizarian's lab is shown as a provisional path toward an additional Armenian sensor and a corresponding new vision model. YerevaNN develops the radar perception models. Together, these components create a controlled setting for studying transfer from Agile ONE S to a second humanoid and generalization across embodiments and sensors.</p>
+      <h3>Milestone 2 — delivery by end of 2028: humanoid capability</h3>
+      <p>The humanoid milestone combines two platforms rather than treating them as separate phases. <strong>Agile ONE S</strong> is the internationally recognized research reference, while the <strong>CyberFusion Humanoid</strong> is the Armenian platform for customization and cross-robot generalization. The shared high-level policy targets are navigation and industrial manipulation.</p>
+      <p>Agile's public description confirms built-in cameras and LiDAR, but does not disclose camera specifications, the LiDAR perception model, raw-data interfaces, or the low-level whole-body controller. The diagram therefore labels the controller as <strong>Agile proprietary controller</strong> and leaves Agile LiDAR perception as an open component. DINOv3 or CLIP provides the initial visual encoder.</p>
+      <p>CyberFusion provides its humanoid controller and the ability to integrate selected sensors. Waveye supplies the Armenian radar, while Karen Eguizarian's lab is shown as a provisional path toward an additional Armenian sensor and a corresponding new vision model. YerevaNN develops the radar perception models. Together, the two humanoids support transfer from an international reference platform to Armenian hardware and generalization across embodiments and sensors.</p>
 
       <h3>Division of responsibility</h3>
-      <p>YerevaNN owns the AI cells carrying its logo: χViT, radar perception, navigation, active search, and industrial manipulation. Most AI cells follow the internal cycle shown below the matrix: <strong>real data → simulation → AI model training → deployment → new real data</strong>.</p>
+      <p>YerevaNN owns the AI cells carrying its logo: multispectral models including χViT, radar perception, navigation, active search, and industrial manipulation. Most AI cells follow the internal cycle shown below the matrix: <strong>real data → simulation → AI model training → deployment → new real data</strong>.</p>
       <p>Astghik's possible contribution remains explicitly question-marked because it has not yet been established whether new low-level-control research is needed for each platform. Armenian tricolor corners identify all components originating in the Armenian ecosystem, including YerevaNN, Waveye, CyberFusion, Karen Eguizarian's lab, and the proposed collaboration with Astghik's lab.</p>
     </article>
   </main>
