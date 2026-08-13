@@ -185,7 +185,7 @@
       align-items: center;
       justify-content: center;
       min-width: 0;
-      padding: 10px 34px;
+      padding: 10px 8px;
       border: 1px solid var(--external-border);
       border-radius: 6px;
       color: #33414a;
@@ -198,6 +198,7 @@
 
     .subcell.yerevann {
       justify-content: center;
+      gap: 7px;
       border-color: var(--armenian-border);
       color: #594711;
       background: var(--armenian-soft);
@@ -223,14 +224,12 @@
     }
 
     .yn-logo {
-      position: absolute;
-      left: 10px;
-      top: 50%;
+      position: static;
       width: 25px;
       height: 25px;
+      flex: 0 0 auto;
       border-radius: 3px;
       object-fit: cover;
-      transform: translateY(-50%);
     }
 
     .cycle-mark {
