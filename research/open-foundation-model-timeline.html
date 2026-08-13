@@ -274,7 +274,7 @@
       <div class="tooltip" id="tooltip"></div>
     </div>
 
-    <div class="note">Most rendered points are below 5B total parameters. Deliberate exceptions are shown for Gemma 4 E2B, Qwen3.8-27B, and DINOv3 ViT-7B. Dependency arrows show direct upstream model dependence when known. Click a point to pin its source links.</div>
+    <div class="note">Most rendered points are below 5B total parameters. Deliberate exceptions are shown for strategically relevant releases up to 35B, plus DINOv3 ViT-7B. Dependency arrows show direct upstream model dependence when known. Last audited August 13, 2026. Click a point to pin its source links.</div>
   </div>
 
   <script>
@@ -953,6 +953,167 @@
         caveat: "Verified official source: open-weight Apache 2.0 family. The arXiv abstract says Ministral 3 is derived through Cascade Distillation, not trained as an independent from-scratch frontier model."
       },
       {
+        id: "graniteVision41",
+        label: "Granite Vision 4.1-4B",
+        sub: "Apr 2026",
+        date: "2026-04-29",
+        lane: "params",
+        paramB: 4.0,
+        kind: "vlm",
+        labelDx: -16,
+        labelDy: 30,
+        details: "IBM document-oriented VLM with a 3.4B Granite 4.1 language model, SigLIP2 vision encoder, Q-Former projectors, and DeepStack-style feature injection.",
+        compute: "Public GPU-hours not found.",
+        caveat: "Specialized for charts, tables, and key-value extraction; initialized from Granite 4.1 and SigLIP2 rather than pretrained end to end from scratch."
+      },
+      {
+        id: "fara15_4",
+        label: "Fara1.5-4B",
+        sub: "May 2026",
+        date: "2026-05-21",
+        lane: "params",
+        paramB: 4.74,
+        kind: "vlm",
+        labelDx: 12,
+        labelDy: -18,
+        details: "Microsoft screenshot-only computer-use agent that emits grounded browser actions; supervised fine-tuned from Qwen3.5-4B.",
+        compute: "Specialization used 32 B200 GPUs for 2 days, or 1,536 B200 GPU-hours; base-model pretraining is excluded.",
+        caveat: "A specialized agent checkpoint, not an independently pretrained foundation. Total parameters follow the underlying Qwen3.5-4B checkpoint rather than the rounded 4B name."
+      },
+      {
+        id: "minicpm5_1",
+        label: "MiniCPM5-1B",
+        sub: "May 2026",
+        date: "2026-05-26",
+        lane: "params",
+        paramB: 1.081,
+        kind: "llm",
+        labelDx: 12,
+        labelDy: -18,
+        details: "OpenBMB 1.08B language model with released base and post-trained checkpoints, open training corpora, reasoning RL, and on-policy distillation.",
+        compute: "Public GPU-hours not found. The release reports 200B-token deep-thinking SFT and 200B-token hybrid-thinking SFT stages.",
+        caveat: "Base pretraining is from scratch; the displayed final model also uses RL and teacher-based on-policy distillation during post-training."
+      },
+      {
+        id: "graniteSwash2",
+        label: "Granite-SWASH-2B",
+        sub: "Jul 2026",
+        date: "2026-07-07",
+        lane: "params",
+        paramB: 2.144,
+        kind: "llm",
+        labelDx: -16,
+        labelDy: 26,
+        details: "IBM experimental 2.14B base model combining full and sliding-window attention with learnable attention sinks.",
+        compute: "Public training-token count and GPU-hours not found.",
+        caveat: "An English-only, unaligned preview for future Granite releases rather than a mature instruction model."
+      },
+      {
+        id: "mageVit",
+        label: "Mage-ViT",
+        sub: "Jul 2026",
+        date: "2026-07-27",
+        lane: "params",
+        paramB: 0.316,
+        kind: "vision",
+        labelDx: -70,
+        labelDy: -18,
+        hideSub: true,
+        details: "Microsoft 316M codec-native image/video encoder pretrained from scratch with variable resolution and codec-derived spatiotemporal token selection.",
+        compute: "Hardware-time total not disclosed; two-stage pretraining uses about 100M unlabeled image/video frames.",
+        caveat: "Promising data-efficient video encoder, but the release is very new and its headline results are not yet independently replicated."
+      },
+      {
+        id: "mageVl",
+        label: "Mage-VL",
+        sub: "Jul 2026",
+        date: "2026-07-27",
+        lane: "params",
+        paramB: 4.742,
+        kind: "vlm",
+        labelDx: -54,
+        labelDy: 24,
+        hideSub: true,
+        details: "Microsoft codec-native streaming VLM combining the new Mage-ViT encoder with Qwen3-4B-Instruct-2507 and a proactive speech/response gate.",
+        compute: "Public training GPU-hours not found; its new vision encoder used about 100M unlabeled frames.",
+        caveat: "Only the vision encoder is pretrained from scratch; the language backbone is initialized from Qwen3-4B."
+      },
+      {
+        id: "lfm25_26",
+        label: "LFM2.5-2.6B",
+        sub: "Jul 2026",
+        date: "2026-07-28",
+        lane: "params",
+        paramB: 2.69,
+        kind: "llm",
+        labelDx: -40,
+        labelDy: -18,
+        hideSub: true,
+        details: "Liquid AI hybrid convolution-attention language model designed for on-device deployment, with a released pretrained base and agentic post-trained checkpoint.",
+        compute: "34T-token training budget; public GPU-hours not found.",
+        caveat: "LFM Open License rather than Apache/MIT. The final checkpoint adds agentic post-training over the from-scratch base."
+      },
+      {
+        id: "museGlimmer",
+        label: "Muse Glimmer 30B",
+        sub: "Aug 2026",
+        date: "2026-08-09",
+        lane: "params",
+        paramB: 29.6,
+        kind: "vlm",
+        labelDx: -150,
+        labelDy: 23,
+        hideSub: true,
+        details: "Meta dense multimodal agent model distilled from Muse Spark, with a dedicated approximately 1.8B ViT-G/14 perception encoder and local-device quantized releases.",
+        compute: "Public training compute not disclosed.",
+        caveat: "Apache 2.0 weights, but distilled from Meta's closed Muse Spark teacher and far above the sub-5B target."
+      },
+      {
+        id: "northMicroVision",
+        label: "North Micro Vision",
+        sub: "Aug 2026",
+        date: "2026-08-12",
+        lane: "params",
+        paramB: 2.4,
+        kind: "vlm",
+        labelDx: -145,
+        labelDy: 25,
+        hideSub: true,
+        details: "Cohere 2.4B native-resolution VLM: an in-house 2B language model plus a custom-trained 400M encoder initialized from SigLIP2 SO400M, with DeepStack fusion.",
+        compute: "Public GPU-hours and multimodal training-token/image totals not disclosed.",
+        caveat: "Apache 2.0 and designed for customization, but behind Qwen3.5-2B on most general VLM benchmarks and not trained for tools or agentic workflows."
+      },
+      {
+        id: "lfm25vl3",
+        label: "LFM2.5-VL-3B",
+        sub: "Aug 2026",
+        date: "2026-08-12",
+        lane: "params",
+        paramB: 3.1,
+        kind: "vlm",
+        labelDx: -130,
+        labelDy: -18,
+        hideSub: true,
+        details: "Liquid AI edge VLM combining LFM2.5-2.6B with a SigLIP2 NaFlex 400M encoder; particularly strong on grounding, screens, and low-latency deployment.",
+        compute: "Public multimodal GPU-hours not found; its language backbone reports a 34T-token training budget.",
+        caveat: "Uses the LFM Open License and a pretrained SigLIP2 encoder; general reasoning remains behind Qwen3.5-4B."
+      },
+      {
+        id: "nemotron35Lightning",
+        label: "Nemotron 3.5 Lightning",
+        sub: "Aug 2026",
+        date: "2026-08-11",
+        lane: "params",
+        paramB: 30.0,
+        kind: "llm",
+        labelDx: -170,
+        labelDy: -18,
+        hideSub: true,
+        details: "NVIDIA 30B-total/3B-active hybrid Mamba-2, attention, and MoE language model released with BF16, NVFP4, data, and deployment recipes.",
+        compute: "Pretrained on more than 20T tokens; public GPU-hours not disclosed.",
+        caveat: "Text-only and much larger in total parameters than the target small VLMs. NVIDIA's own common harness shows Qwen3.6-35B-A3B ahead on most reasoning and agentic benchmarks."
+      },
+      {
         id: "olmoSmall",
         label: "OLMo small",
         sub: "2025",
@@ -976,7 +1137,14 @@
       ["qwen25_3", "sa2va4", "Qwen2.5-3B language component"],
       ["qwen25_15", "tar15", "Qwen2.5-1.5B-Instruct base"],
       ["dinov3", "cradio4", "DINOv3 teacher"],
-      ["siglip2", "cradio4", "SigLIP2 teacher"]
+      ["siglip2", "cradio4", "SigLIP2 teacher"],
+      ["siglip2", "graniteVision41", "SigLIP2 vision encoder"],
+      ["qwen35_4", "fara15_4", "Qwen3.5-4B base"],
+      ["mageVit", "mageVl", "Mage-ViT vision encoder"],
+      ["qwen3_4", "mageVl", "Qwen3-4B-Instruct backbone"],
+      ["siglip2", "northMicroVision", "SigLIP2 initialization"],
+      ["siglip2", "lfm25vl3", "SigLIP2 NaFlex encoder"],
+      ["lfm25_26", "lfm25vl3", "LFM2.5 language backbone"]
     ];
 
     const sources = {
@@ -1178,6 +1346,48 @@
         ["Mistral 3 release", "https://mistral.ai/news/mistral-3/"],
         ["Ministral 3 paper", "https://arxiv.org/abs/2601.08584"]
       ],
+      graniteVision41: [
+        ["Granite Vision 4.1-4B", "https://huggingface.co/ibm-granite/granite-vision-4.1-4b"]
+      ],
+      fara15_4: [
+        ["Fara1.5-4B", "https://huggingface.co/microsoft/Fara1.5-4B"],
+        ["Microsoft Fara1.5 release", "https://www.microsoft.com/en-us/research/articles/fara1-5-computer-use-agent/"],
+        ["Fara1.5 paper", "https://arxiv.org/abs/2606.20785"]
+      ],
+      minicpm5_1: [
+        ["MiniCPM5-1B", "https://huggingface.co/openbmb/MiniCPM5-1B"],
+        ["MiniCPM5-1B base", "https://huggingface.co/openbmb/MiniCPM5-1B-Base"]
+      ],
+      graniteSwash2: [
+        ["Granite-SWASH-2B", "https://huggingface.co/ibm-granite/granite-swash-2b"]
+      ],
+      mageVit: [
+        ["Mage-ViT", "https://huggingface.co/microsoft/Mage-ViT"],
+        ["Mage-VL paper", "https://arxiv.org/abs/2607.24904"]
+      ],
+      mageVl: [
+        ["Mage-VL", "https://huggingface.co/microsoft/Mage-VL"],
+        ["Mage-VL paper", "https://arxiv.org/abs/2607.24904"]
+      ],
+      lfm25_26: [
+        ["LFM2.5-2.6B", "https://huggingface.co/LiquidAI/LFM2.5-2.6B"],
+        ["Liquid AI release", "https://www.liquid.ai/blog/lfm2-5-2-6b"]
+      ],
+      museGlimmer: [
+        ["Muse Glimmer 30B", "https://huggingface.co/meta-models/Muse-Glimmer-30B"]
+      ],
+      northMicroVision: [
+        ["North Micro Vision", "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct"],
+        ["Cohere technical post", "https://huggingface.co/blog/CohereLabs/meet-north-micro-vision-instruct"]
+      ],
+      lfm25vl3: [
+        ["LFM2.5-VL-3B", "https://huggingface.co/LiquidAI/LFM2.5-VL-3B"],
+        ["Liquid AI release", "https://www.liquid.ai/blog/lfm2-5-vl-3b"]
+      ],
+      nemotron35Lightning: [
+        ["Nemotron 3.5 Lightning BF16", "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"],
+        ["Nemotron 3.5 Lightning NVFP4", "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"]
+      ],
       olmoSmall: [
         ["OLMo 3", "https://allenai.org/blog/olmo3"],
         ["OLMo 2", "https://allenai.org/olmo2"]
@@ -1231,6 +1441,17 @@
       nemotron4: "scratch",
       cosmosEdge: "initialized",
       ministral3: "distilled",
+      graniteVision41: "initialized",
+      fara15_4: "initialized",
+      minicpm5_1: "distilled",
+      graniteSwash2: "scratch",
+      mageVit: "scratch",
+      mageVl: "initialized",
+      lfm25_26: "scratch",
+      museGlimmer: "distilled",
+      northMicroVision: "initialized",
+      lfm25vl3: "initialized",
+      nemotron35Lightning: "scratch",
       olmoSmall: "scratch"
     };
 
@@ -1274,14 +1495,11 @@
       const paramBottom = height - margin.bottom - 8;
       const paramTop = 74;
       const paramMax = 5;
-      const visibleExceptionIds = new Set(["gemma4e2b", "qwen38_27", "dinov3"]);
+      const visibleExceptionIds = new Set(["gemma4e2b", "qwen38_27", "dinov3", "museGlimmer", "nemotron35Lightning"]);
       const visibleModels = models.filter(model => model.paramB < paramMax || visibleExceptionIds.has(model.id));
       const yForParam = value => {
         const clamped = Math.max(0, Math.min(paramMax, value));
         return paramBottom - (clamped / paramMax) * (paramBottom - paramTop);
-      };
-      const laneLabel = model => {
-        return `~${model.paramB}B total params`;
       };
       const xForDate = dateString => {
         const d = parseDate(dateString);
@@ -1452,7 +1670,7 @@
         if (model.paramB && model.paramB > 5) {
           sub.setAttribute("opacity", "0.62");
         }
-        sub.textContent = model.sub;
+        sub.textContent = model.hideSub ? "" : model.sub;
         group.appendChild(sub);
 
         const show = evt => {
@@ -1489,7 +1707,7 @@
       const provenance = provenanceById[model.id] || "initialized";
       tooltip.innerHTML = `
         <h2>${model.label}</h2>
-        <div class="meta">${model.sub} · ${model.kind.toUpperCase()} · ${provenanceLabel[provenance]} · ${laneLabel(model)}</div>
+        <div class="meta">${model.sub} · ${model.kind.toUpperCase()} · ${provenanceLabel[provenance]} · ~${model.paramB}B total params</div>
         <div class="row"><b>Details:</b> ${model.details}</div>
         <div class="row"><b>Compute:</b> ${model.compute}</div>
         <div class="row"><b>Caveat:</b> ${model.caveat}</div>
