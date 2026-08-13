@@ -311,7 +311,7 @@
 
     .skeptic-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1.05fr 1.45fr 0.75fr;
       gap: 18px;
     }
 
@@ -336,19 +336,59 @@
       line-height: 1.4;
     }
 
-    .skeptic-list .release-evidence span {
-      font-size: 16px;
-      line-height: 1.36;
+    .skeptic-list .release-evidence {
+      padding: 23px 24px;
     }
 
-    .release-year {
+    .release-signals {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 13px;
+    }
+
+    .release-signal {
+      padding: 14px 15px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .release-signal.against { border-top: 4px solid var(--green); }
+    .release-signal.for { border-top: 4px solid var(--danger); }
+
+    .release-signal strong {
       display: block;
-      margin: 10px 0 3px;
-      color: var(--ink);
-      font-size: 16px;
+      margin-bottom: 6px;
+      font-size: 15px;
+      line-height: 1.2;
+      text-transform: uppercase;
     }
 
-    .release-year:first-child { margin-top: 0; }
+    .release-signal.against strong { color: var(--green); }
+    .release-signal.for strong { color: var(--danger); }
+
+    .release-signal span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.34;
+    }
+
+    .skeptic-list .continuity-risk {
+      border-top-color: var(--gold);
+      background: var(--gold-soft);
+    }
+
+    .risk-rank {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 8px;
+      color: #76500a;
+      background: #f4dfaa;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      text-transform: uppercase;
+    }
 
     .counterweight {
       display: grid;
@@ -454,20 +494,6 @@
       font-size: 38px;
       font-weight: 500;
     }
-
-    .staged-path {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 20px;
-      margin-top: 20px;
-      padding: 17px 22px;
-      border-left: 6px solid var(--coral);
-      background: var(--coral-soft);
-      font-size: 18px;
-      line-height: 1.3;
-    }
-
-    .staged-path strong { font-size: 21px; }
 
     .path-header {
       display: grid;
@@ -633,19 +659,19 @@
     }
 
     .better-grid > div {
-      min-height: 92px;
-      padding: 15px 18px;
+      min-height: 104px;
+      padding: 17px 19px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      font-size: 16px;
-      line-height: 1.3;
+      font-size: 19px;
+      line-height: 1.34;
     }
 
     .better-grid .head {
       min-height: 43px;
       color: #fff;
       background: var(--ink);
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -656,7 +682,7 @@
       align-items: center;
       color: var(--ink);
       background: var(--soft);
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 760;
     }
 
@@ -911,8 +937,14 @@
           <div class="skeptic-layout">
             <ul class="skeptic-list">
               <li><b>Compute does not reproduce the training system</b><span>Alibaba's advantage includes private data, filtering, synthetic-data generation, curriculum, teachers, and accumulated training expertise. A weaker base is not rescued by ordinary downstream fine-tuning.</span></li>
-              <li><b>"Always" requires a permanent institution</b><span>A one-time Firebird run is not continuity. The promise requires recurring data refreshes, experiments, evaluations, maintenance, and releases as the external frontier moves.</span></li>
-              <li class="release-evidence"><b>External releases cut both ways</b><span><strong class="release-year">New in 2026</strong>Liquid LFM2.5 1.2B (Jan 5); Cohere Tiny Aya 3.35B (Feb 17); Google Gemma 4 E2B (Apr 2); NVIDIA Cosmos3-Edge 4B (Jul 20); Cohere North Micro Vision 2.4B (Aug 12). Only Liquid directly matches a general 1-2B base.<strong class="release-year">No relevant 2026 successor yet</strong>Ai2 OLMo 2 1B (May 1, 2025); Hugging Face SmolLM3 3B (Jul 8, 2025); Mistral's Ministral 3B (Dec 2, 2025). This supports the concern that some labs may leave the category.</span></li>
+              <li class="release-evidence">
+                <b>External releases send opposing signals</b>
+                <div class="release-signals">
+                  <div class="release-signal against"><strong>Against Goal 3: alternatives still appear</strong><span>2026 brought Liquid LFM2.5 1.2B (Jan 5), Cohere Tiny Aya 3.35B (Feb 17), Google Gemma 4 E2B (Apr 2), NVIDIA Cosmos3-Edge 4B (Jul 20), and Cohere North Micro Vision 2.4B (Aug 12). Armenia may not need to recreate a generic base.</span></div>
+                  <div class="release-signal for"><strong>For Goal 3: exact coverage is unreliable</strong><span>Only Liquid directly matches a general 1-2B base. Ai2 OLMo 2 1B (May 1, 2025), Hugging Face SmolLM3 3B (Jul 8, 2025), and Mistral Ministral 3B (Dec 2, 2025) have no relevant 2026 successors yet. Top labs may leave this category.</span></div>
+                </div>
+              </li>
+              <li class="continuity-risk"><span class="risk-rank">Smaller risk</span><b>Continuity still needs an owner</b><span>Firebird may continue supporting the program if results are strong. Even then, "always" depends on recurring experiments, evaluations, maintenance, and releases as the frontier moves.</span></li>
             </ul>
 
             <aside class="counterweight">
@@ -944,7 +976,7 @@
               <h2>Adapt the best available base</h2>
               <p>Use Qwen, Isaac, Cosmos Edge, or the strongest suitable successor.</p>
               <dl class="path-facts">
-                <dt>Firebird focus</dt><dd>Sensor encoders, physical continued pretraining, simulation, and action.</dd>
+                <dt>Research focus</dt><dd>Sensor encoders, physical continued pretraining, simulation, and action.</dd>
                 <dt>Advantage</dt><dd>Highest general capability and useful releases sooner.</dd>
                 <dt>Risk</dt><dd>Upstream dependence and overlap with Perceptron Isaac and NVIDIA Cosmos.</dd>
                 <dt>Our edge</dt><dd>Radar, LiDAR, SAR, multispectral, sim-to-real, and cross-embodiment control.</dd>
@@ -958,7 +990,7 @@
               <h2>Build a physical-native base</h2>
               <p>Own the architecture, tokenizer, weights, physical mixture, checkpoints, and recipe.</p>
               <dl class="path-facts">
-                <dt>Firebird focus</dt><dd>Curated general data plus physical modalities and objectives from early pretraining.</dd>
+                <dt>Research focus</dt><dd>Curated general data plus physical modalities and objectives from early pretraining.</dd>
                 <dt>Advantage</dt><dd>Control over tokenizer, modality interfaces, data mixture, and model lineage.</dd>
                 <dt>Risk</dt><dd>A weaker general base, insufficient physical data, and a program too broad to execute.</dd>
                 <dt>Scale gate</dt><dd>100-500B-token pilots must show a parity trend and a physical advantage before a full run.</dd>
@@ -966,7 +998,6 @@
             </article>
           </div>
 
-          <div class="staged-path"><strong>Likely sequence: A &rarr; B</strong><span>Objective A builds the physical datasets, objectives, evaluations, and team needed to test Objective B. Independence is funded only after those assets demonstrate a reason to own the base.</span></div>
           <footer class="footer">
             <span class="source-links"><a href="https://huggingface.co/PerceptronAI/Isaac-0.1-Base">Isaac 0.1</a><a href="https://huggingface.co/PerceptronAI/Isaac-0.2-1B">Isaac 0.2</a><a href="https://huggingface.co/nvidia/Cosmos3-Edge">Cosmos3-Edge</a></span>
             <span>4 / 6</span>
