@@ -741,6 +741,70 @@
 
     .principle strong { color: var(--ink); }
 
+    .layer-table {
+      width: 100%;
+      margin-top: 24px;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .layer-table th,
+    .layer-table td {
+      padding: 13px 16px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .layer-table th {
+      color: #fff;
+      background: var(--ink);
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+    }
+
+    .layer-table td {
+      height: 112px;
+      color: #3f4d56;
+      background: #fbfcfc;
+      font-size: 15px;
+      line-height: 1.31;
+    }
+
+    .layer-table td:first-child {
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 760;
+    }
+
+    .layer-table tr.layer-a td:first-child { border-left: 7px solid var(--green); background: var(--green-soft); }
+    .layer-table tr.layer-b td:first-child { border-left: 7px solid var(--blue); background: var(--blue-soft); }
+    .layer-table tr.layer-c td:first-child { border-left: 7px solid var(--coral); background: var(--coral-soft); }
+    .layer-table tr.layer-d td:first-child { border-left: 7px solid var(--violet); background: var(--violet-soft); }
+
+    .layer-table strong { color: var(--ink); }
+
+    .token-number {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 820;
+    }
+
+    .token-note {
+      margin-top: 15px;
+      padding: 13px 18px;
+      border-left: 5px solid var(--gold);
+      background: var(--gold-soft);
+      color: #5b4b1a;
+      font-size: 16px;
+      line-height: 1.32;
+    }
+
     .question-columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -942,7 +1006,7 @@
             </article>
           </div>
 
-          <footer class="footer"><span>Question: must independence come before differentiation?</span><span>2 / 6</span></footer>
+          <footer class="footer"><span>Question: must independence come before differentiation?</span><span>2 / 7</span></footer>
         </section>
 
         <section class="slide" aria-label="Reasons Goal 3 may be unrealistic">
@@ -995,7 +1059,7 @@
           <div class="test-question">Decision test: can Armenian labs produce, within one year, a &le;2B open model that is demonstrably better than Qwen3.5-2B on a pre-agreed evaluation suite?</div>
           <footer class="footer">
             <span class="source-links"><a href="https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai">LFM2.5</a><a href="https://docs.cohere.com/v2/docs/tiny-aya">Tiny Aya</a><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4</a><a href="https://huggingface.co/blog/nvidia/cosmos3edge">Cosmos3-Edge</a><a href="https://huggingface.co/blog/CohereLabs/meet-north-micro-vision-instruct">North Micro</a><a href="https://allenai.org/olmo2">OLMo 2</a><a href="https://huggingface.co/blog/smollm3">SmolLM3</a><a href="https://mistral.ai/news/mistral-3/">Mistral 3</a><a href="https://huggingface.co/Qwen/Qwen3.5-2B">Qwen3.5</a></span>
-            <span>3 / 6</span>
+            <span>3 / 7</span>
           </footer>
         </section>
 
@@ -1038,7 +1102,7 @@
 
           <footer class="footer">
             <span class="source-links"><a href="https://huggingface.co/PerceptronAI/Isaac-0.1-Base">Isaac 0.1</a><a href="https://huggingface.co/PerceptronAI/Isaac-0.2-1B">Isaac 0.2</a><a href="https://huggingface.co/nvidia/Cosmos3-Edge">Cosmos3-Edge</a></span>
-            <span>4 / 6</span>
+            <span>4 / 7</span>
           </footer>
         </section>
 
@@ -1065,7 +1129,7 @@
           </div>
           <footer class="footer">
             <span class="source-links"><a href="https://kexue.fm/archives/11854">Example Chinese technical literature: Scientific Spaces</a><a href="https://qwen.ai/blog?id=qwenvla">Qwen-VLA recipe</a></span>
-            <span>5 / 6</span>
+            <span>5 / 7</span>
           </footer>
         </section>
 
@@ -1101,7 +1165,66 @@
           <div class="meeting-outcome">Desired outcome: identify one missing foundation artifact that Perceptron and academic teams would use, and agree on the experimental gate before committing Firebird-scale compute.</div>
           <footer class="footer">
             <span class="source-links"><a href="https://huggingface.co/PerceptronAI/Isaac-0.1-Base">Isaac 0.1 lineage</a><a href="https://papers.perceptron.inc/data_sparsity.pdf">Perceptron data-sparsity study</a></span>
-            <span>6 / 6</span>
+            <span>6 / 7</span>
+          </footer>
+        </section>
+
+        <section class="slide" aria-label="Codex proposal for nested physical pretraining data">
+          <header class="header">
+            <div>
+              <div class="eyebrow">Pretraining data proposal from Codex</div>
+              <h1>One Corpus, Four Nested Information Layers</h1>
+            </div>
+            <div class="subtitle">A-D are not four datasets. Each layer adds information to the same temporal physical experience.</div>
+          </header>
+
+          <table class="layer-table" aria-label="Nested physical pretraining data layers">
+            <colgroup>
+              <col style="width: 15%">
+              <col style="width: 25%">
+              <col style="width: 27%">
+              <col style="width: 19%">
+              <col style="width: 14%">
+            </colgroup>
+            <thead>
+              <tr><th>Layer</th><th>Information added</th><th>Potential sources</th><th>Simulation assessment</th><th>120K simulated hours</th></tr>
+            </thead>
+            <tbody>
+              <tr class="layer-a">
+                <td>A &middot; Temporal state</td>
+                <td>Observation history, geometry, object state, motion, occupancy, and future latent state.</td>
+                <td><strong>Real:</strong> Ego4D, InternVid, instructional and driving video.<br><strong>Synthetic:</strong> simulator trajectories with exact state.</td>
+                <td>Strong exact supervision; real video remains important for appearance and behavior diversity.</td>
+                <td><span class="token-number">562B</span>at ~1.3K tokens/s</td>
+              </tr>
+              <tr class="layer-b">
+                <td>B &middot; Multisensor state</td>
+                <td>A plus synchronized RGB, thermal, radar/LiDAR, IMU, maps, calibration, and validity.</td>
+                <td><strong>Real:</strong> Waymo, Ego-Exo4D, Boreas, field/UAV logs.<br><strong>Synthetic:</strong> TartanAir/Isaac-style sensor suites.</td>
+                <td>Necessary for scale; realistic radar, thermal, noise, timing, and calibration drift are the hard parts.</td>
+                <td><span class="token-number">994B</span>at ~2.3K tokens/s</td>
+              </tr>
+              <tr class="layer-c">
+                <td>C &middot; Action-conditioned state</td>
+                <td>B plus operator/robot actions, Action IR, outcomes, forward dynamics, and inverse dynamics.</td>
+                <td><strong>Real:</strong> Open X-Embodiment, DROID, AgiBot, operator logs.<br><strong>Synthetic:</strong> task planners and branched simulator rollouts.</td>
+                <td>Highly scalable; real logs are still required to ground delays, actuation, and embodiment differences.</td>
+                <td><span class="token-number">1.04T</span>at ~2.4K tokens/s</td>
+              </tr>
+              <tr class="layer-d">
+                <td>D &middot; Uncertainty</td>
+                <td>C replayed with sensor loss, conflicts, corruptions, action failures, recovery, and abstention targets.</td>
+                <td><strong>Same corpus:</strong> generated perturbations plus held-out real failures and operator interventions.</td>
+                <td>Easiest to multiply synthetically; real failures are essential for calibration and evaluation.</td>
+                <td><span class="token-number">4.15T</span>exposures with 4 variants</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="token-note"><strong>Illustrative tokenizer, not a measured constant.</strong> B contains A; C contains B; D replays C under clean and perturbed conditions. The rows are cumulative and must not be summed.</div>
+          <footer class="footer">
+            <span class="source-links"><a href="https://ego4d-data.org/">Ego4D</a><a href="https://waymo.com/open/">Waymo Open</a><a href="https://tartanair.org/">TartanAir</a><a href="https://robotics-transformer-x.github.io/">Open X-Embodiment</a><a href="https://droid-dataset.github.io/">DROID</a><a href="https://huggingface.co/agibot-world">AgiBot World</a></span>
+            <span>7 / 7</span>
           </footer>
         </section>
       </div>
@@ -1109,7 +1232,7 @@
 
     <nav class="controls" aria-label="Slideshow controls">
       <button class="icon-button" id="previous" type="button" aria-label="Previous slide" title="Previous slide">&larr;</button>
-      <div class="counter" id="counter" aria-live="polite">1 / 6</div>
+      <div class="counter" id="counter" aria-live="polite">1 / 7</div>
       <button class="icon-button" id="next" type="button" aria-label="Next slide" title="Next slide">&rarr;</button>
       <button class="icon-button" id="fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">&#x26F6;</button>
     </nav>
