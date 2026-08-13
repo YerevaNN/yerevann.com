@@ -315,7 +315,7 @@
       gap: 18px;
     }
 
-    .skeptic-list li {
+    .skeptic-list > li {
       min-height: 290px;
       padding: 27px 28px;
       border: 1px solid var(--line);
@@ -323,14 +323,14 @@
       background: #fbfcfc;
     }
 
-    .skeptic-list b {
+    .skeptic-list > li > b {
       display: block;
       margin-bottom: 8px;
       font-size: 24px;
       line-height: 1.18;
     }
 
-    .skeptic-list span {
+    .skeptic-list > li > span {
       color: var(--muted);
       font-size: 18px;
       line-height: 1.4;
@@ -371,6 +371,26 @@
       color: var(--muted);
       font-size: 14px;
       line-height: 1.34;
+    }
+
+    .signal-points {
+      margin: 0;
+      padding: 0 0 0 18px;
+      list-style: disc;
+    }
+
+    .signal-points li {
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.28;
+    }
+
+    .signal-points li:last-child { margin-bottom: 0; }
+
+    .signal-points .signal-conclusion {
+      color: var(--ink);
+      font-weight: 720;
     }
 
     .skeptic-list .continuity-risk {
@@ -436,7 +456,7 @@
     }
 
     .path-card {
-      min-height: 500px;
+      min-height: 540px;
       padding: 28px 32px;
       border: 1px solid var(--line);
       border-top-width: 7px;
@@ -456,20 +476,20 @@
 
     .path-card h2 {
       margin: 8px 0 5px;
-      font-size: 30px;
+      font-size: 34px;
       line-height: 1.12;
     }
 
     .path-card > p {
       margin: 0 0 18px;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 20px;
       line-height: 1.35;
     }
 
     .path-facts {
       display: grid;
-      grid-template-columns: 145px 1fr;
+      grid-template-columns: 155px 1fr;
       margin-top: 8px;
       border-top: 1px solid var(--line);
     }
@@ -477,10 +497,10 @@
     .path-facts dt,
     .path-facts dd {
       margin: 0;
-      padding: 14px 0;
+      padding: 17px 0;
       border-bottom: 1px solid var(--line);
-      font-size: 17px;
-      line-height: 1.3;
+      font-size: 20px;
+      line-height: 1.36;
     }
 
     .path-facts dt { font-weight: 780; }
@@ -940,8 +960,26 @@
               <li class="release-evidence">
                 <b>External releases send opposing signals</b>
                 <div class="release-signals">
-                  <div class="release-signal against"><strong>Against Goal 3: alternatives still appear</strong><span>2026 brought Liquid LFM2.5 1.2B (Jan 5), Cohere Tiny Aya 3.35B (Feb 17), Google Gemma 4 E2B (Apr 2), NVIDIA Cosmos3-Edge 4B (Jul 20), and Cohere North Micro Vision 2.4B (Aug 12). Armenia may not need to recreate a generic base.</span></div>
-                  <div class="release-signal for"><strong>For Goal 3: exact coverage is unreliable</strong><span>Only Liquid directly matches a general 1-2B base. Ai2 OLMo 2 1B (May 1, 2025), Hugging Face SmolLM3 3B (Jul 8, 2025), and Mistral Ministral 3B (Dec 2, 2025) have no relevant 2026 successors yet. Top labs may leave this category.</span></div>
+                  <div class="release-signal against">
+                    <strong>Against Goal 3: alternatives still appear</strong>
+                    <ul class="signal-points">
+                      <li>Liquid LFM2.5 1.2B - Jan 5, 2026</li>
+                      <li>Cohere Tiny Aya 3.35B - Feb 17, 2026</li>
+                      <li>Google Gemma 4 E2B - Apr 2, 2026</li>
+                      <li>NVIDIA Cosmos3-Edge 4B - Jul 20, 2026</li>
+                      <li>Cohere North Micro Vision 2.4B - Aug 12, 2026</li>
+                      <li class="signal-conclusion">Armenia may not need to recreate a generic base.</li>
+                    </ul>
+                  </div>
+                  <div class="release-signal for">
+                    <strong>For Goal 3: exact coverage is unreliable</strong>
+                    <ul class="signal-points">
+                      <li>Only Liquid directly matches a general 1-2B base.</li>
+                      <li>OLMo 2 1B, SmolLM3 3B, and Ministral 3B have no relevant 2026 successors yet.</li>
+                      <li>Top labs may still leave this category.</li>
+                      <li class="signal-conclusion">None has demonstrated broad general-purpose superiority over comparable-size Qwen3.5; some win on specialized tasks.</li>
+                    </ul>
+                  </div>
                 </div>
               </li>
               <li class="continuity-risk"><span class="risk-rank">Smaller risk</span><b>Continuity still needs an owner</b><span>Firebird may continue supporting the program if results are strong. Even then, "always" depends on recurring experiments, evaluations, maintenance, and releases as the frontier moves.</span></li>
@@ -954,9 +992,9 @@
             </aside>
           </div>
 
-          <div class="test-question">Decision test: is the unmet need specifically a continuously refreshed 1-2B general base? Most 2026 releases miss that exact target.</div>
+          <div class="test-question">Decision test: can Armenian labs produce, within one year, a &le;2B open model that is demonstrably better than Qwen3.5-2B on a pre-agreed evaluation suite?</div>
           <footer class="footer">
-            <span class="source-links"><a href="https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai">LFM2.5</a><a href="https://docs.cohere.com/v2/docs/tiny-aya">Tiny Aya</a><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4</a><a href="https://huggingface.co/blog/nvidia/cosmos3edge">Cosmos3-Edge</a><a href="https://huggingface.co/blog/CohereLabs/meet-north-micro-vision-instruct">North Micro</a><a href="https://allenai.org/olmo2">OLMo 2</a><a href="https://huggingface.co/blog/smollm3">SmolLM3</a><a href="https://mistral.ai/news/mistral-3/">Mistral 3</a></span>
+            <span class="source-links"><a href="https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai">LFM2.5</a><a href="https://docs.cohere.com/v2/docs/tiny-aya">Tiny Aya</a><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/">Gemma 4</a><a href="https://huggingface.co/blog/nvidia/cosmos3edge">Cosmos3-Edge</a><a href="https://huggingface.co/blog/CohereLabs/meet-north-micro-vision-instruct">North Micro</a><a href="https://allenai.org/olmo2">OLMo 2</a><a href="https://huggingface.co/blog/smollm3">SmolLM3</a><a href="https://mistral.ai/news/mistral-3/">Mistral 3</a><a href="https://huggingface.co/Qwen/Qwen3.5-2B">Qwen3.5</a></span>
             <span>3 / 6</span>
           </footer>
         </section>
@@ -1008,24 +1046,24 @@
           <header class="header">
             <div>
               <div class="eyebrow">Brainstorm for Objective B</div>
-              <h1>What Could Be Genuinely Better?</h1>
+              <h1>What Can Improve in Pretraining?</h1>
             </div>
-            <div class="subtitle">The target is a better Physical AI foundation, not a weaker general chatbot with a newer architecture.</div>
+            <div class="subtitle">Which capabilities require changing base pretraining, and which can be learned through continued pretraining or post-training?</div>
           </header>
 
           <div class="better-grid" role="table" aria-label="Differentiated pretraining ideas">
-            <div class="head">Dimension</div><div class="head">Specific program</div><div class="head">Why it belongs before narrow fine-tuning</div>
-            <div class="dimension">Physical data substrate</div><div class="idea">Synchronized RGB, radar, LiDAR, SAR, and multispectral streams linked to calibration, state, action, failures, technical video, robot code, and simulated episodes.</div><div class="why">Creates cross-sensor and physical-sequence representations that RGB-text models do not supply.</div>
-            <div class="dimension">Causal objectives</div><div class="idea">Future-latent prediction, inverse dynamics, action-conditioned futures, cross-modal prediction, sensor dropout, and sim-real invariance.</div><div class="why">Teaches what changes because of an action, not only how a scene is described.</div>
-            <div class="dimension">Action interface</div><div class="idea">A shared high-level action representation across UAVs and humanoids, while platform controllers retain low-level stabilization.</div><div class="why">Targets the transferable AI layer that YerevaNN intends to own.</div>
-            <div class="dimension">Tokenizer + representation</div><div class="idea">Efficient Armenian and underserved scripts, plus physical symbols, structured actions, coordinates, and telemetry.</div><div class="why">Vocabulary and embedding allocation are difficult to repair after full pretraining; this is a concrete argument for owning the base.</div>
+            <div class="head">Dimension</div><div class="head">Possible pretraining change</div><div class="head">Case for base pretraining</div>
+            <div class="dimension">Physical data substrate</div><div class="idea">Interleave synchronized RGB, radar, LiDAR, SAR, multispectral, state, action, failures, robot code, and simulated episodes with text from early training.</div><div class="why"><strong>Promising, not proven:</strong> test whether early interleaving beats physical continued pretraining from Qwen3.5.</div>
+            <div class="dimension">Causal objectives</div><div class="idea">Add future-latent prediction, inverse dynamics, action-conditioned futures, cross-modal prediction, sensor dropout, and sim-real invariance at scale.</div><div class="why"><strong>Promising:</strong> may shape dynamics representations, but must beat adding the same objectives later.</div>
+            <div class="dimension">Action interface</div><div class="idea">Pretrain shared state and high-level action representations across UAVs and humanoids; retain conventional low-level controllers.</div><div class="why"><strong>Weakest scratch case:</strong> may be learnable during post-training unless action tokens must reshape the base representation.</div>
+            <div class="dimension">Tokenizer + representation</div><div class="idea">Allocate vocabulary and embeddings to Armenian, underserved scripts, physical symbols, structured actions, coordinates, and telemetry.</div><div class="why"><strong>Strongest scratch case:</strong> vocabulary allocation is costly to repair later, though tokenizer-extension baselines must be tested.</div>
           </div>
 
           <div class="program-principles">
             <div class="principle"><strong>Training method:</strong> multi-teacher distillation throughout base, multimodal, world-model, and policy training.</div>
             <div class="principle"><strong>Public outputs:</strong> intermediate checkpoints, data manifests, scaling curves, sensor interfaces, and evaluations.</div>
           </div>
-          <div class="definition">Success criterion: dominate the &le;4B Physical AI Pareto frontier while retaining sufficient general language and reasoning capability for downstream research.</div>
+          <div class="definition">Question for Armen: which capability must be learned during base pretraining, rather than through continued pretraining or post-training on Qwen3.5?</div>
           <footer class="footer">
             <span class="source-links"><a href="https://kexue.fm/archives/11854">Example Chinese technical literature: Scientific Spaces</a><a href="https://qwen.ai/blog?id=qwenvla">Qwen-VLA recipe</a></span>
             <span>5 / 6</span>
