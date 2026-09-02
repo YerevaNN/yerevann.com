@@ -14,6 +14,7 @@ The pages are saved as GitHub Pages-ready static HTML. Each route contains the r
 - `/ai-for-robotics` - AI for Robotics
 - `/ai-for-molecule-generation` - AI for Molecule Generation
 - `/a-guide-to-deep-learning` - A Guide to Deep Learning
+- `/research/vln-simulations/` - Interactive UAV mission dataset viewer
 
 ## Local preview
 
