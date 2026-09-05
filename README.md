@@ -15,6 +15,7 @@ The pages are saved as GitHub Pages-ready static HTML. Each route contains the r
 - `/ai-for-molecule-generation` - AI for Molecule Generation
 - `/a-guide-to-deep-learning` - A Guide to Deep Learning
 - `/research/vln-simulations/` - Interactive UAV mission dataset viewer
+- `/research/h100-rendering/` - Isaac Sim / OmniGibson rendering stress comparison on H100 and RTX A6000
 
 ## Local preview
 
