@@ -1,17 +1,18 @@
 name = "yerevann-ai-ecosystem-analytics"
 main = "src/index.js"
 compatibility_date = "2026-09-12"
+account_id = "ccd1fff53fd4bb397d7bf98a855836dd"
 
 # Create a new, dedicated D1 database. Do not point this at the reviewer portal.
 [[d1_databases]]
 binding = "ANALYTICS_DB"
 database_name = "yerevann-ai-ecosystem-analytics"
-database_id = "REPLACE_WITH_NEW_D1_DATABASE_ID"
+database_id = "5caa3acc-66d2-48ef-93bb-df4fa9bf3997"
 migrations_dir = "migrations"
 
 [vars]
 # Comma-separated exact origins. Replace the preview domain before deployment.
-ALLOWED_ORIGINS = "https://yerevann.com,http://localhost:8788"
+ALLOWED_ORIGINS = "https://yerevann.com,https://www.yerevann.com,http://localhost:8788"
 # This must point to the checked-in public manifest for the deployed report.
 MANIFEST_URL = "https://yerevann.com/ai-ecosystem-2026/content-manifest.json"
 # Raw events are deleted by the scheduled handler after this period.
