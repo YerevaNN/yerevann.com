@@ -41,13 +41,13 @@
     const now = Date.now(), delta = Math.max(0, now - lastTick); lastTick = now;
     const isActive = active(), sections = new Set();
     for (const [el, state] of blocks) {
-      if (state.visible && isActive) { sections.add(sectionFor(el)); if (!state.qualifiedAt) state.qualifiedAt = now; if (!state.impressed && now - state.qualifiedAt >= 2000) { state.impressed = true; add("block_impression", {block_id:el.dataset.blockId, section_id:sectionFor(el)}); } }
+      if (state.visible && isActive && !pdfMode) { sections.add(sectionFor(el)); if (!state.qualifiedAt) state.qualifiedAt = now; if (!state.impressed && now - state.qualifiedAt >= 2000) { state.impressed = true; add("block_impression", {block_id:el.dataset.blockId, section_id:sectionFor(el)}); } }
       else state.qualifiedAt = 0;
     }
     // Accumulate interval unions; one bounded event per heartbeat prevents a
     // healthy reader from outpacing its own batch drain rate.
     const pdfVisible = pdfMode && [...pdfPages.values()].some(state => state.visible);
-    if (isActive && (sections.size || pdfVisible) && delta) { sessionDelta += delta; for (const section_id of sections) sectionDeltas.set(section_id, (sectionDeltas.get(section_id) || 0) + delta); for (const [el,state] of blocks) if (state.visible) state.delta=(state.delta||0)+delta; }
+    if (isActive && (sections.size || pdfVisible) && delta) { sessionDelta += delta; for (const section_id of sections) sectionDeltas.set(section_id, (sectionDeltas.get(section_id) || 0) + delta); for (const [el,state] of blocks) if (state.visible && !pdfMode) state.delta=(state.delta||0)+delta; }
     for (const [page, state] of pdfPages) {
       if (state.visible && isActive && pdfMode) { if (!state.qualifiedAt) state.qualifiedAt = now; if (!state.impressed && now-state.qualifiedAt >= 2000) { state.impressed=true; add("pdf_page_impression", {page_number:page}); } if (delta) pageDeltas.set(page,(pageDeltas.get(page)||0)+delta); }
       else state.qualifiedAt = 0;
@@ -73,15 +73,16 @@
   contentsToggle.addEventListener("click",()=>{const open=contents.classList.toggle("is-open");contentsToggle.setAttribute("aria-expanded",String(open));});
   document.querySelectorAll(".contents nav a").forEach(el=>el.addEventListener("click",()=>{add("contents_nav",{section_id:el.getAttribute("href").slice(1)});contents.classList.remove("is-open");contentsToggle.setAttribute("aria-expanded","false");}));
 
-  let pdf, pdfBundle, page=1, scale=1, pdfLoading, renderEpoch=0, renderTasks=[];
-  const panel=document.querySelector("#pdf-panel"),viewer=document.querySelector("#pdf-viewer"),pageLabel=document.querySelector("#pdf-page"),error=document.querySelector("#pdf-error");
-  const pdfObserver=new IntersectionObserver(entries=>entries.forEach(e=>{const p=Number(e.target.dataset.page);const state=pdfPages.get(p)||{visible:false,qualifiedAt:0,impressed:false};const visible=e.isIntersecting && e.intersectionRatio>=requiredRatio(e.boundingClientRect);if(state.visible&&!visible)state.qualifiedAt=0;if(!state.visible&&visible)state.qualifiedAt=pdfMode&&active()?Date.now():0;state.visible=visible;pdfPages.set(p,state);}),{threshold:[0,.05,.1,.15,.2,.25,.3,.35,.4,.45,.5,.6,.75,1]});
-  async function loadPdf(){if(pdfBundle)return pdfBundle;pdfLoading ||= (config.pdfLoader?config.pdfLoader():import("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs").then(async lib=>{lib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";return {lib,doc:await lib.getDocument("AI-Ecosystem-in-Armenia-August-2026.pdf").promise};}));pdfBundle=await pdfLoading;return pdfBundle;}
-  async function layers(lib,pdfPage,viewport,wrap){const textLayer=document.createElement("div");textLayer.className="textLayer";textLayer.style.width=`${viewport.width}px`;textLayer.style.height=`${viewport.height}px`;wrap.append(textLayer);const layer=new lib.TextLayer({textContentSource:pdfPage.streamTextContent(),container:textLayer,viewport});await layer.render();const links=document.createElement("div");links.className="linkLayer";for(const a of await pdfPage.getAnnotations()){if(!a.url||!a.rect)continue;const [x1,y1,x2,y2]=viewport.convertToViewportRectangle(a.rect);const link=document.createElement("a");link.href=a.url;link.target="_blank";link.rel="noopener noreferrer";link.dataset.externalLink="";link.style.left=`${Math.min(x1,x2)}px`;link.style.top=`${Math.min(y1,y2)}px`;link.style.width=`${Math.abs(x2-x1)}px`;link.style.height=`${Math.abs(y2-y1)}px`;links.append(link);}wrap.append(links);}
-  async function renderPdf(){const epoch=++renderEpoch;for(const task of renderTasks)task.cancel();renderTasks=[];try{const loaded=await loadPdf();if(epoch!==renderEpoch)return;pdf=loaded.doc;page=Math.max(1,Math.min(page,pdf.numPages));viewer.replaceChildren();pdfPages.clear();for(const number of [page-1,page,page+1].filter(n=>n>=1&&n<=pdf.numPages)){const p=await pdf.getPage(number);if(epoch!==renderEpoch)return;const viewport=p.getViewport({scale}),wrap=document.createElement("div");wrap.className="pdf-page-wrap";wrap.dataset.page=number;const canvas=document.createElement("canvas");canvas.className="pdf-page-canvas";canvas.width=viewport.width;canvas.height=viewport.height;wrap.append(canvas);viewer.append(wrap);pdfObserver.observe(wrap);const task=p.render({canvasContext:canvas.getContext("2d"),viewport});renderTasks.push(task);await task.promise;if(epoch!==renderEpoch)return;await layers(loaded.lib,p,viewport,wrap);if(epoch!==renderEpoch)return;}viewer.querySelector(`[data-page="${page}"]`)?.scrollIntoView({block:"start"});pageLabel.textContent=`Page ${page} of ${pdf.numPages}`;error.hidden=true;}catch(e){if(e?.name!=="RenderingCancelledException"){error.hidden=false;pageLabel.textContent="PDF unavailable";}}}
-  const openPdf=async()=>{pdfMode=true;panel.hidden=false;add("reader_mode",{mode:"pdf"});await renderPdf();};
-  const changePdfPage=async delta=>{page+=delta;await renderPdf();};
-  if(config.testHooks) config.testHooks({tick,flush,emit:add,openPdf,changePdfPage,setZoom:async value=>{scale=value;await renderPdf();},closePdf:()=>{pdfMode=false;pdfPages.clear();},queue:()=>queued.map(e=>({...e})),pdfState:()=>({page,scale,bundle:Boolean(pdfBundle)})});
-  document.querySelector("#pdf-toggle").addEventListener("click",async()=>{pdfMode=true;panel.hidden=false;panel.scrollIntoView();add("reader_mode",{mode:"pdf"});await renderPdf();});document.querySelector("#pdf-close").addEventListener("click",()=>{pdfMode=false;panel.hidden=true;pdfPages.clear();add("reader_mode",{mode:"html"});});document.querySelector("#pdf-prev").addEventListener("click",()=>{page--;renderPdf();});document.querySelector("#pdf-next").addEventListener("click",()=>{page++;renderPdf();});document.querySelector("#pdf-zoom").addEventListener("change",e=>{scale=Number(e.target.value);renderPdf();});
+  const pdfViewer = window.createReportPdfViewer({
+    config,
+    onMode(open) { tick(true); pdfMode=open; for(const s of blocks.values())s.qualifiedAt=0; add("reader_mode",{mode:open?"pdf":"html"}); },
+    onVisibility(page,visible) {
+      const state=pdfPages.get(page)||{visible:false,qualifiedAt:0,impressed:false};
+      if(state.visible!==visible)state.qualifiedAt=visible&&active()?Date.now():0;
+      state.visible=visible;pdfPages.set(page,state);
+    },
+    onLink(page_number,url) {const u=new URL(url);add("external_click",{page_number,destination:(u.hostname+u.pathname).slice(0,180)});}
+  });
+  if(config.testHooks) config.testHooks({tick,flush,emit:add,openPdf:pdfViewer.open,changePdfPage:delta=>pdfViewer.goTo(pdfViewer.state().page+delta),setZoom:pdfViewer.setZoom,closePdf:pdfViewer.close,queue:()=>queued.map(e=>({...e})),pdfState:pdfViewer.state});
   add("session_start",{mode:"html"}); if(!config.testHooks) flush();
 })();

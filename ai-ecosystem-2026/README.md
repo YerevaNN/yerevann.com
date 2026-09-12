@@ -1,5 +1,9 @@
 # The AI Ecosystem in Armenia web edition
 
+The PDF opens in a full-window reader with a fixed toolbar and continuous, lazy-rendered pages. Scrolling loads the next pages; page navigation preserves all page positions and evicts distant canvases. Fit-width is the default on phones.
+
+Executive-summary cards, infrastructure cards and education-program rows now render directly from the complete Markdown table cells. Education uses the PDF builder's admissions parser and scales pie area to the applicant pool; descriptions, admission caveats and citations remain visible. Do not substitute shortened hand-maintained program lists. `tools/test_visual_content.py` checks these cells and links survive conversion.
+
 `tools/build_reader.py` is the only content pipeline for this static reader. It accepts the current report-materials directory and publishes an explicit allowlist of nine report chapters plus nine approved report photographs. It never recursively copies the fundraising repository.
 
 From WSL, rebuild the checked-in public snapshot with:

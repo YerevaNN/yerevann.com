@@ -16,6 +16,7 @@ import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+from faithful_visuals import source_table_visual
 
 PUBLIC_CHAPTERS = [
     ("01-executive-summary.md", "01", "Executive Summary", "summary"),
@@ -73,7 +74,7 @@ def inline(text: str) -> str:
 
     def link(match: re.Match[str]) -> str:
         label, href = match.group(1), match.group(2)
-        href = html.escape(href, quote=True)
+        href = html.escape(html.unescape(href), quote=True)
         external = " target=\"_blank\" rel=\"noopener noreferrer\" data-external-link" if href.startswith(("http://", "https://")) else ""
         return f'<a href="{href}"{external}>{label}</a>'
 
@@ -102,46 +103,12 @@ def visual_block(block_id: str, chapter_no: str, markup: str, entries: list[dict
     return f'<section class="report-visual reading-block" data-block-id="{block_id}" aria-label="{html.escape(title, quote=True)}">{markup}</section>'
 
 
-def admission_card(name: str, year: str, applicants: int | None, accepted: int | None, note: str = "") -> str:
-    if applicants is None or accepted is None:
-        metric = '<div class="admission-pie admission-na" aria-hidden="true">n/c</div><p class="admission-values"><b>n/c</b><br>Non-comparable snapshot</p>'
-    else:
-        ratio = round(accepted / applicants * 100, 1)
-        metric = f'<div class="admission-pie" style="--accepted:{ratio}%" role="img" aria-label="{accepted} accepted, {applicants - accepted} not admitted, out of {applicants} applicants"><span>{ratio:g}%</span></div><p class="admission-values"><b>{applicants} → {accepted}</b><br>Applicants → accepted</p>'
-    note_html = f'<p class="admission-note">{html.escape(note)}</p>' if note else ""
-    return f'<article class="admission-card"><div><h4>{html.escape(name)}</h4><p class="admission-year">{html.escape(year)}</p>{metric}</div>{note_html}</article>'
-
-
 def report_visuals(chapter_no: str, entries: list[dict]) -> str:
     """Recreate the report's PDF-only data visuals in accessible responsive HTML."""
-    if chapter_no == "01":
-        return visual_block("01-block-glance", chapter_no, '''<p class="visual-kicker">Executive overview</p><h2>Armenia at a glance</h2><div class="glance-grid"><article><b>Research</b><p><strong>23</strong> active research groups; <strong>103</strong> named publications cited.</p></article><article><b>Industry</b><p><strong>112</strong> organizations profiled across products, services, and internal teams.</p></article><article><b>Education</b><p><strong>487</strong> Generation AI admissions; <strong>460</strong> undergraduate and <strong>88</strong> master's admissions with usable data.</p></article><article><b>Compute</b><p><strong>6,736</strong> publicly documented data-center GPUs at YSU, Eleveight AI, and Firebird.</p></article><article><b>Government</b><p>Research funding, public compute, school coordination, commercial-compute access, and emerging public-service AI.</p></article><article><b>Community</b><p>Conferences, reading groups, meetups, summer schools, and specialist online groups.</p></article></div><p class="literacy-strip"><b>AI literacy - using AI tools</b><span>AI literacy is about learning to use AI tools, not developing AI systems.</span></p>''', entries, "Armenia at a glance")
     if chapter_no == "02":
-        return visual_block("02-block-research-distribution", chapter_no, '''<p class="visual-kicker">Research landscape</p><h2>23 active research groups</h2><div class="research-distribution" role="img" aria-label="Six academic AI groups, eight industrial AI groups, and nine groups using AI in other fields"><div class="research-total"><strong>23</strong><span>active research groups</span></div><div class="research-segments"><span style="--size:26.1"><b>6</b> Academic AI</span><span style="--size:34.8"><b>8</b> Industrial AI</span><span style="--size:39.1"><b>9</b> AI in other fields</span></div></div><p class="visual-footnote"><strong>103</strong> named publications cited. Counts reflect this chapter; repeated titles are counted once.</p>''', entries, "Research group distribution")
+        return visual_block("02-block-research-distribution", chapter_no, '''<p class="visual-kicker">Research landscape</p><h2>23 active research groups</h2><div class="research-distribution" role="img" aria-label="Six academic AI groups, eight industrial AI groups, and nine groups using AI in other fields"><div class="research-total"><strong>23</strong><span>active research groups</span></div><div class="research-segments"><span style="--size:26.1"><b>6</b> Academic AI</span><span style="--size:34.8"><b>8</b> Industrial AI</span><span style="--size:39.1"><b>9</b> AI in other fields</span></div></div><p class="visual-footnote"><strong>103</strong> named publications cited. Counts reflect this chapter; cited outputs include papers, preprints and technical reports. Repeated titles counted once.</p>''', entries, "Research group distribution")
     if chapter_no == "03":
-        undergraduate = "".join([
-            admission_card("YSU - Applied Statistics and Data Science", "2026", 100, 55),
-            admission_card("YSU - Informatics and Applied Mathematics", "2026", 239, 198),
-            admission_card("YSU - Data Processing in Physics and AI", "2026", 40, 30),
-            admission_card("AUA - Data Science", "2025", 141, 117),
-            admission_card("AUA - Computer Science", "2025", 187, 122),
-            admission_card("UFAR - Computer Science", "2026", 102, 84),
-            admission_card("NPUA - Artificial Intelligence Systems", "2025", 64, 48),
-            admission_card("NPUA - Data Science", "2025", 77, 56),
-            admission_card("RAU - Applied Mathematics and Informatics", "2026", None, None, "90 cumulative admissions; no comparable final applicant total."),
-        ])
-        masters = "".join([
-            admission_card("YSU - Applied Statistics and Data Science", "2026", 58, 40),
-            admission_card("YSU - Data Science in Business", "2026", 33, 25),
-            admission_card("UFAR - Master in Artificial Intelligence", "2026", None, None, "23 reported admissions; applicant total unavailable."),
-            admission_card("RAU - AI and Robotics", "Current", None, None, "Shared admissions pool."),
-            admission_card("RAU - Machine Learning and Data Science", "Current", None, None, "Shared admissions pool."),
-            admission_card("RAU - AI in Economics", "Current", None, None, "Shared admissions pool."),
-            admission_card("AUA - Computer and Information Science", "2025", 62, 49),
-        ])
-        return visual_block("03-block-education-scale", chapter_no, f'''<p class="visual-kicker">Latest public figures</p><h2>Annual AI education scale</h2><div class="education-scale"><article><b>High school</b><strong>487</strong><span>Generation AI admissions</span><small>2026-27 Grade 10 intake; STEP.ai intake unpublished</small></article><article><b>Undergraduate</b><strong>767+</strong><span>reported admissions / enrollments</span><small>Includes traditional CS programs, not only AI degrees</small></article><article><b>Master's</b><strong>133+</strong><span>reported admissions / enrollments</span><small>Includes traditional CS programs, not only AI degrees</small></article><article><b>AI-related PhD</b><strong>~2</strong><span>documented defenses</span><small>14 selected examples across 2020-26</small></article><article><b>ACA + ARCS.ai</b><strong>242</strong><span>recorded AI / AI-adjacent enrollments</span><small>ACA 116; ARCS.ai 126 course enrollments; repeats possible</small></article></div><p class="visual-footnote">Measures differ by category and are not additive. Counts are documented scale indicators, not national totals.</p><h2 class="visual-subhead">Undergraduate admissions</h2><p class="visual-legend"><i class="legend-accepted"></i> Accepted <i class="legend-not-admitted"></i> Not admitted <span>Pie area is fixed for mobile readability; each card reports its applicant count separately.</span></p><div class="admission-grid">{undergraduate}</div><h2 class="visual-subhead">Master's admissions</h2><p class="visual-legend"><i class="legend-accepted"></i> Accepted <i class="legend-not-admitted"></i> Not admitted <span>n/c means the published snapshot is not comparable.</span></p><div class="admission-grid">{masters}</div>''', entries, "AI education scale and admissions")
-    if chapter_no == "04":
-        return visual_block("04-block-infrastructure-snapshot", chapter_no, '''<p class="visual-kicker">Infrastructure snapshot</p><h2>6,736 operational GPUs across three platforms</h2><div class="compute-cards"><article><p>YSU Datacenter</p><strong>80</strong><span>72 NVIDIA H100 + 8 A100</span><div class="capacity-bar"><i style="--capacity:1.2%"></i></div><b>1.2% of operational capacity</b><dl><dt>Status</dt><dd>Operational since Jan 2026</dd><dt>Role</dt><dd>Government-funded compute for Armenian research groups</dd></dl></article><article><p>Eleveight AI</p><strong>512</strong><span>512 NVIDIA B300</span><div class="capacity-bar"><i style="--capacity:7.6%"></i></div><b>7.6% of operational capacity</b><dl><dt>Status</dt><dd>Opened Jun 2026; expansion targets are not included here</dd><dt>Role</dt><dd>Private commercial infrastructure with a planned Armenian allocation</dd></dl></article><article><p>Firebird AI</p><strong>6,144</strong><span>6,144 NVIDIA B200</span><div class="capacity-bar"><i style="--capacity:91.2%"></i></div><b>91.2% of operational capacity</b><dl><dt>Status</dt><dd>Opened Aug 2026; future Vera Rubin target excluded</dd><dt>Role</dt><dd>Hyperscale commercial infrastructure, mostly serving large U.S.-based customers</dd></dl></article></div><p class="visual-footnote">Future deployments are targets and are not included in the operational total.</p>''', entries, "Infrastructure snapshot")
+        return visual_block("03-block-education-scale", chapter_no, f'''<p class="visual-kicker">Latest public figures</p><h2>Annual AI education scale</h2><div class="education-scale"><article><b>High school</b><strong>487</strong><span>Generation AI admissions</span><small>2026-27 Grade 10 intake; STEP.ai intake unpublished</small></article><article><b>Undergraduate</b><strong>767+</strong><span>reported admissions / enrollments</span><small>Includes traditional CS programs, not only AI degrees</small></article><article><b>Master's</b><strong>133+</strong><span>reported admissions / enrollments</span><small>Includes traditional CS programs, not only AI degrees</small></article><article><b>AI-related PhD</b><strong>~2</strong><span>documented defenses</span><small>14 selected examples across 2020-26</small></article><article><b>ACA + ARCS.ai</b><strong>242</strong><span>recorded AI / AI-adjacent enrollments</span><small>ACA 116; ARCS.ai 126 course enrollments; repeats possible</small></article></div><p class="visual-footnote">Measures differ by category and are not additive. Counts are documented scale indicators, not national totals.</p>''', entries, "AI education scale and admissions")
     if chapter_no == "05":
         return visual_block("05-block-industry-overview", chapter_no, '''<p class="visual-kicker">Industry at a glance</p><h2><strong>112</strong> profiled organizations</h2><div class="industry-overview"><section><h3>By primary category</h3><ol class="horizontal-chart"><li><span>AI product companies</span><i style="--value:61%"></i><b>61</b></li><li><span>Consulting / services</span><i style="--value:25%"></i><b>25</b></li><li><span>Internal AI teams</span><i style="--value:26%"></i><b>26</b></li></ol></section><section><h3>Most frequent application areas</h3><ol class="horizontal-chart"><li><span>Computer vision</span><i style="--value:100%"></i><b>21</b></li><li><span>Physical AI</span><i style="--value:57.1%"></i><b>12</b></li><li><span>Recommendation</span><i style="--value:47.6%"></i><b>10</b></li><li><span>Robotics</span><i style="--value:38.1%"></i><b>8</b></li><li><span>Banking</span><i style="--value:33.3%"></i><b>7</b></li><li><span>NLP</span><i style="--value:28.6%"></i><b>6</b></li></ol></section></div><p class="visual-footnote">Primary categories are mutually exclusive; application-area counts can overlap.</p>''', entries, "Industry overview")
     if chapter_no == "06":
@@ -157,6 +124,7 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
             raise ValueError(f"{path.name}:{number} contains a local/non-public link: {match.group(1)}")
     out, buffer, table, list_items = [], [], [], []
     block_ordinal = 0
+    current_heading = ""
     duplicate_blocks: dict[str, int] = {}
 
     def block_id_for(content: str) -> str:
@@ -189,7 +157,8 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
         if table:
             block_ordinal += 1
             block_id = block_id_for("\n".join(table))
-            out.append(f'<div class="reading-block" data-block-id="{block_id}">{table_html(table)}</div>')
+            markup = source_table_visual(table, chapter_no, current_heading, inline, path.parent) or table_html(table)
+            out.append(f'<div class="reading-block" data-block-id="{block_id}">{markup}</div>')
             entries.append({"id": block_id, "type": "table", "chapter_id": chapter_no})
         table.clear()
 
@@ -200,6 +169,7 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
         if heading:
             flush_paragraph(); flush_list(); flush_table()
             level, title = len(heading.group(1)), heading.group(2)
+            current_heading = title
             if level == 1:
                 continue
             section_id = stable_id(chapter_no, "section", title, 0)
@@ -213,7 +183,7 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
             flush_paragraph(); flush_list(); table.append(line)
         elif bullet:
             flush_paragraph(); flush_table(); list_items.append(bullet.group(1))
-        elif not line.strip():
+        elif not line.strip() or line.strip() == "---":
             flush_paragraph(); flush_list(); flush_table()
         else:
             flush_list(); flush_table(); buffer.append(line)
@@ -271,10 +241,12 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     }
     (output / "content-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     nav = "".join(f'<a href="#chapter-{c["id"]}"><small>{c["id"]}</small>{html.escape(c["title"])}</a>' for c in chapters)
-    html_page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A public web edition of The AI Ecosystem in Armenia, prepared by YerevaNN."><title>The AI Ecosystem in Armenia — YerevaNN</title><link rel="icon" href="../assets/yerevann-icon-128.png"><link rel="stylesheet" href="styles.css"></head><body><a class="skip-link" href="#report">Skip to report</a><header class="site-header"><a class="brand" href="../">YerevaNN</a><span>Research report · August 2026</span><button id="contents-toggle" aria-expanded="false" aria-controls="contents">Contents</button></header><div class="reader-shell"><aside id="contents" class="contents" aria-label="Report contents"><div><p class="eyebrow">The AI Ecosystem in Armenia</p><nav>{nav}</nav><button id="pdf-toggle" class="pdf-button">View original-layout PDF</button><p class="analytics-note">We collect minimal anonymous engagement statistics to understand which parts of this report are useful. <a href="#analytics-notice">How it works</a></p></div></aside><main id="report"><section class="cover"><p class="eyebrow">YerevaNN research report</p><h1>The AI Ecosystem<br>in Armenia</h1><p>August 2026</p><p class="intro">A public, mobile-friendly edition. It distinguishes verified current activity from announcements and planned activity.</p></section>{''.join(rendered)}<section id="analytics-notice" class="analytics-notice"><h2>Anonymous engagement analytics</h2><p>This reader uses a random browser-tab session identifier, not a person identifier. It records a content block only after it has been visibly on screen for two continuous seconds in an active tab, and estimates visible time while the tab is active and the reader is not idle. We do not use fingerprinting or retain raw IP addresses in the report analytics. Delivery can be blocked or lost; these figures are estimates of engagement, not proof that a person read a passage.</p></section><section id="pdf-panel" class="pdf-panel" hidden aria-live="polite"><div class="pdf-toolbar"><button id="pdf-close">Return to web edition</button><button id="pdf-prev" aria-label="Previous PDF page">Previous</button><span id="pdf-page">Loading PDF…</span><button id="pdf-next" aria-label="Next PDF page">Next</button><label>Zoom <select id="pdf-zoom"><option value="1">100%</option><option value="1.25">125%</option><option value="1.5">150%</option></select></label></div><div id="pdf-viewer" class="pdf-viewer"></div><p id="pdf-error" class="error" hidden>Could not load the original-layout PDF. The web edition remains available.</p></section></main></div><script>window.READER_CONFIG={{basePath:{json.dumps(base_path.rstrip('/') or '/')},analyticsEndpoint:""}};</script><script src="reader.js" defer></script></body></html>'''
+    html_page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A public web edition of The AI Ecosystem in Armenia, prepared by YerevaNN."><title>The AI Ecosystem in Armenia — YerevaNN</title><link rel="icon" href="../assets/yerevann-icon-128.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="reader-fixes.css"></head><body><a class="skip-link" href="#report">Skip to report</a><header class="site-header"><a class="brand" href="../">YerevaNN</a><span>Research report · August 2026</span><button id="contents-toggle" aria-expanded="false" aria-controls="contents">Contents</button></header><div class="reader-shell"><aside id="contents" class="contents" aria-label="Report contents"><div><p class="eyebrow">The AI Ecosystem in Armenia</p><nav>{nav}</nav><button id="pdf-toggle" class="pdf-button">View original-layout PDF</button><p class="analytics-note">We collect minimal anonymous engagement statistics to understand which parts of this report are useful. <a href="#analytics-notice">How it works</a></p></div></aside><main id="report"><section class="cover"><p class="eyebrow">YerevaNN research report</p><h1>The AI Ecosystem<br>in Armenia</h1><p>August 2026</p><p class="intro">A public, mobile-friendly edition. It distinguishes verified current activity from announcements and planned activity.</p></section>{''.join(rendered)}<section id="analytics-notice" class="analytics-notice"><h2>Anonymous engagement analytics</h2><p>This reader uses a random browser-tab session identifier, not a person identifier. It records a content block only after it has been visibly on screen for two continuous seconds in an active tab, and estimates visible time while the tab is active and the reader is not idle. We do not use fingerprinting or retain raw IP addresses in the report analytics. Delivery can be blocked or lost; these figures are estimates of engagement, not proof that a person read a passage.</p></section></main></div><section id="pdf-panel" class="pdf-panel" hidden role="dialog" aria-modal="true" aria-label="Original PDF reader"><div class="pdf-toolbar"><button id="pdf-close">Return to web edition</button><button id="pdf-prev" aria-label="Previous PDF page">Previous</button><span id="pdf-page">Loading PDF…</span><button id="pdf-next" aria-label="Next PDF page">Next</button><label>Zoom <select id="pdf-zoom"><option value="fit">Fit width</option><option value="1">100%</option><option value="1.25">125%</option><option value="1.5">150%</option></select></label></div><div id="pdf-viewer" class="pdf-viewer"></div><p id="pdf-error" class="error" hidden>Could not load the original-layout PDF. The web edition remains available.</p></section><script>window.READER_CONFIG={{basePath:{json.dumps(base_path.rstrip('/') or '/')},analyticsEndpoint:""}};</script><script src="pdf-viewer.js" defer></script><script src="reader.js" defer></script></body></html>'''
     old_config = f'<script>window.READER_CONFIG={{basePath:{json.dumps(base_path.rstrip("/") or "/")},analyticsEndpoint:""}};</script>'
     new_config = f'<script src="reader-config.js"></script><script>window.READER_CONFIG=Object.assign({{basePath:{json.dumps(base_path.rstrip("/") or "/")},reportVersion:{json.dumps(report_version)}}},window.READER_CONFIG||{{}});</script><script src="tracking-core.js"></script>'
     html_page = html_page.replace(old_config, new_config)
+    for asset in ('reader.js', 'pdf-viewer.js', 'styles.css', 'reader-fixes.css'):
+        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-2"')
     (output / "index.html").write_text(html_page, encoding="utf-8")
 
 
