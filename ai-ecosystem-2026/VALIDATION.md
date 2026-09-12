@@ -22,7 +22,7 @@
 
 - Reader health: `http://localhost:8790/index.html` returned HTTP 200.
 - Local Worker/admin health: `http://127.0.0.1:8788/health` returned HTTP 200.
-- Production analytics remains off by default: `reader-config.js` has an empty endpoint. Its localhost-only override points to the local Worker (`127.0.0.1:8788`); the local Worker accepts the matching `http://localhost:8790` preview origin.
+- The local override points to the local Worker (`127.0.0.1:8788`); the production hostname uses the dedicated production Worker described below.
 - Local D1 migrations `0001_initial.sql` and `0002_destinations_and_pdf.sql` were applied to an isolated temporary local state.
 - `npm test` passes offline. The opt-in local acceptance check is:
 
@@ -38,15 +38,17 @@
 
 Browser visual inspection was not performed. The browser-control tool rejected opening the local preview and explicitly said: “The browser URL policy blocks this action. Browser use cannot visit the requested page because its URL is blocked by the Browser use URL policy. The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention.” No workaround was attempted.
 
-## Still required before any public release
+## Production deployment — 2026-09-13
 
-1. Create a dedicated production D1 database and replace the placeholder ID in `analytics-worker/wrangler.toml`.
-2. Configure a deployed public manifest URL and only the intended public reader origin(s).
-3. Set distinct Worker secrets for `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET`, and `RATE_LIMIT_SECRET`.
-4. Deploy the Worker/admin and the static reader through the chosen production pipeline, then set `reader-config.js` to that Worker origin.
-5. Conduct visual QA at desktop, narrow-mobile, and PDF-canvas sizes after the deployed preview is accessible.
+- Public reader: `https://yerevann.com/ai-ecosystem-2026/`
+- Production Worker/admin: `https://yerevann-ai-ecosystem-analytics.aidiffusion.workers.dev/admin/`
+- Dedicated production D1 database: `yerevann-ai-ecosystem-analytics`
 
-No public deployment, DNS change, Git push, reviewer-portal change, report-source edit, or production secret was made during this work.
+The public reader is deployed through GitHub Pages. Its production-only configuration sends analytics to the dedicated Worker, which allows `https://yerevann.com` (and `https://www.yerevann.com`) only. The Worker has distinct deployed secrets for its admin password, session signing, and rate-limit hashing; no secret is committed to the repository.
+
+Production health returned HTTP 200, the live-origin preflight returned HTTP 204 with the exact allowed origin, and a valid live-origin test event was accepted with HTTP 202 and stored in the dedicated D1 database. The existing staging database, reviewer platform, DNS, and report source remain separate and unchanged.
+
+Deployed-reader acceptance covers desktop navigation and PDF rendering, plus a 390px-wide responsive check with a working Contents panel, PDF text layer, and no horizontal overflow. A local Chrome client still blocks direct `workers.dev` navigation, so its remote admin visual check remains pending a browser client without that block. Admin access also requires the administrator to choose and install a durable password in Cloudflare rather than sharing one in chat.
 
 ## Isolated Cloudflare staging — 2026-09-12
 
