@@ -41,7 +41,7 @@ Browser visual inspection was not performed. The browser-control tool rejected o
 ## Production deployment — 2026-09-13
 
 - Public reader: `https://yerevann.com/ai-ecosystem-2026/`
-- Production Worker/admin: `https://yerevann-ai-ecosystem-analytics.aidiffusion.workers.dev/admin/`
+- Production Worker/dashboard: `https://yerevann-ai-ecosystem-analytics.aidiffusion.workers.dev/`
 - Dedicated production D1 database: `yerevann-ai-ecosystem-analytics`
 
 The public reader is deployed through GitHub Pages. Its production-only configuration sends analytics to the dedicated Worker, which allows `https://yerevann.com` (and `https://www.yerevann.com`) only. The Worker has distinct deployed secrets for its admin password, session signing, and rate-limit hashing; no secret is committed to the repository.
