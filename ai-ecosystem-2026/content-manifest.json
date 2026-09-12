@@ -1,0 +1,2903 @@
+{
+  "report_version": "August-2026-4af88b5521dd",
+  "report_label": "August 2026",
+  "built_at": "2026-09-12T15:48:56.899953+00:00",
+  "source_hashes": {
+    "01-executive-summary.md": "8ea97aef0033c9b85cc2c621c5c84270951c8480a05ab00f099560f3edc3b9bb",
+    "02-research-academia.md": "6b404ebb6f85d9d052ab34107e733eee909c571a914361a224a911f38ffd8c45",
+    "04-education.md": "44e724119081ba2c8b61e1021f4c7261726ac321cb454d03bdc021946da5e532",
+    "05-infrastructure-and-compute.md": "78380feb87a8408b3b7b2447638510d4543b6dd14848e94a23837c14f2ee27d9",
+    "03-industry.md": "c4431097033266f40f6d6c1441c2325ce068cc07e1a4726d4f873c6d7d695bb4",
+    "06-government-support-and-coordination.md": "745e0711050d845918a64e83bae7152e58fb6eabe2615338cd3d64fec9b0b8ac",
+    "07-ai-community.md": "f5d5978b39de74deabc609058db036540162d5d3d26ab22e95b5690c8fb693ae",
+    "ai-literacy.md": "91029b9677b57031b29879497ad81fbd5c586a30b3c6c5bfbee4f227b720b1f2",
+    "08-gaps-challenges-outlook.md": "ba5bf9fc154b329df8cfd9e3fea9eede19f619253e1b5422edab1a3cc1cc04a3"
+  },
+  "assets": {
+    "ysu-supercomputer-center-print.jpg": "a8362bf01ec69575aa84bc4673535f57cd478998f77dcffc704d90e4dea76fe9",
+    "hack-armenia-2026-print.jpg": "764b8288e54d8e0401a5b420d7f31804b1e24496c51a9159b126312ddd30fbd4",
+    "firebird-facility-print.jpg": "090a674b3964d27c8a9e55d64847f54cd680d683ae6cf6e62e158e7f26be481f",
+    "pydata-pycon-yerevan-2026-print.jpg": "1e40d2d9cf1bfa96178c674568b7270ad35e887c2de31d13db6f5beb58eaf179",
+    "generation-ai-graduation-print.jpg": "78ce88c7eb580d0d58a71fdd005b4f626fba6d055b8b470dc16a8c33829934f9",
+    "ai-conf-armenia-2026-print.jpg": "b96383a419f9e57621d61b0d8b59ed891ef33b7865422bc7b98e13a8b8951766",
+    "datafest-yerevan-2025-print.jpg": "92211f2c062996e55753166df3549bd827739f13e9c722f70e5f6d79230a38ed",
+    "eleveight-ai-factory-print.jpg": "a1b986f8123f5009cec197df304579e1430b18a1ab8f6163ec82f5fd58e4e922",
+    "yandex-hall-ml-opentalk-print.jpg": "6688965c89cd645fc620fd1326cfa0d7deb5c41f46cceb580021b3bf2a1cdb67"
+  },
+  "chapters": [
+    {
+      "id": "01",
+      "title": "Executive Summary",
+      "theme": "summary",
+      "source": "01-executive-summary.md"
+    },
+    {
+      "id": "02",
+      "title": "AI Research",
+      "theme": "research",
+      "source": "02-research-academia.md"
+    },
+    {
+      "id": "03",
+      "title": "AI Education",
+      "theme": "education",
+      "source": "04-education.md"
+    },
+    {
+      "id": "04",
+      "title": "AI Infrastructure and Compute",
+      "theme": "infrastructure",
+      "source": "05-infrastructure-and-compute.md"
+    },
+    {
+      "id": "05",
+      "title": "AI Industry",
+      "theme": "industry",
+      "source": "03-industry.md"
+    },
+    {
+      "id": "06",
+      "title": "The Role of Government",
+      "theme": "government",
+      "source": "06-government-support-and-coordination.md"
+    },
+    {
+      "id": "07",
+      "title": "AI Community",
+      "theme": "community",
+      "source": "07-ai-community.md"
+    },
+    {
+      "id": "08",
+      "title": "AI Literacy",
+      "theme": "literacy",
+      "source": "ai-literacy.md"
+    },
+    {
+      "id": "09",
+      "title": "Overall Assessment",
+      "theme": "assessment",
+      "source": "08-gaps-challenges-outlook.md"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "01-block-72141b05d469",
+      "type": "paragraph",
+      "chapter_id": "01"
+    },
+    {
+      "id": "01-block-986828dd36cc",
+      "type": "paragraph",
+      "chapter_id": "01"
+    },
+    {
+      "id": "01-section-armenia-at-a-glance",
+      "type": "heading",
+      "title": "Armenia at a glance",
+      "chapter_id": "01",
+      "level": 2
+    },
+    {
+      "id": "01-block-e67994db00ca",
+      "type": "table",
+      "chapter_id": "01"
+    },
+    {
+      "id": "01-section-principal-findings",
+      "type": "heading",
+      "title": "Principal findings",
+      "chapter_id": "01",
+      "level": 2
+    },
+    {
+      "id": "01-block-643d4dc4fe59",
+      "type": "paragraph",
+      "chapter_id": "01"
+    },
+    {
+      "id": "01-block-896416310da5",
+      "type": "paragraph",
+      "chapter_id": "01"
+    },
+    {
+      "id": "01-block-glance",
+      "type": "summary",
+      "chapter_id": "01"
+    },
+    {
+      "id": "02-block-501e988bada0",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-e1161e8a88fc",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-a00b7a3b7628",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-scope",
+      "type": "heading",
+      "title": "Scope",
+      "chapter_id": "02",
+      "level": 2
+    },
+    {
+      "id": "02-block-c6a64758f302",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-318091ae4c88",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-academic-ai-research-groups",
+      "type": "heading",
+      "title": "Academic AI research groups",
+      "chapter_id": "02",
+      "level": 2
+    },
+    {
+      "id": "02-section-ysu-machine-learning-research-group-yerevann",
+      "type": "heading",
+      "title": "YSU Machine Learning Research Group / YerevaNN",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-08dfc523f094",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-c3aab5ab77be",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-ed1ff117aac5",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7207af9e119e",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-fcfa06699ded",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-3cf6f0d5c5b9",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-a42a7d208b99",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-46d7cd53ad24",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-aaafab49399a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-bcfa24d7f8dd",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-cast-machine-learning-research-group-rau",
+      "type": "heading",
+      "title": "CAST Machine Learning Research Group, RAU",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-fa268aa06dd5",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-aab81a669e0c",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-5954db11e5da",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-926abf169f61",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-4f052dae0a92",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-5a170d7ce066",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-e0470118da61",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-ysu-artificial-intelligence-laboratory",
+      "type": "heading",
+      "title": "YSU Artificial Intelligence Laboratory",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-27d522fce9f6",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7d0ec1100885",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-305b754ebb4a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-44648c009948",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-ee415269bfb7",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-aua-fast-advance-data-science-research-group",
+      "type": "heading",
+      "title": "AUA/FAST ADVANCE Data-science Research Group",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-47972482c8b1",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-50395033ffd2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7207af9e119e-2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-373896cd1eea",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-0268339128a2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-aua-computer-vision-and-medical-imaging-research",
+      "type": "heading",
+      "title": "AUA Computer Vision and Medical Imaging Research",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-119747846a66",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-f139fe79ddfc",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-4f052dae0a92-2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-c3778de9fb10",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-b0dc5352d342",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-mathematical-modeling-machine-learning-laboratory-institute-of-mechanics-of-nas-ra",
+      "type": "heading",
+      "title": "Mathematical Modeling & Machine Learning Laboratory, Institute of Mechanics of NAS RA",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-decb252fdceb",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-5beb9ef0e8f2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-8361fbe897e1",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-a00e2558abb8",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-ysu-fast-computer-vision-research-group",
+      "type": "heading",
+      "title": "YSU/FAST Computer Vision Research Group",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-e446ea438327",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-31e170049a8a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-ed51c397f072",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-f94099f18b38",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7de84fc36dad",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-1e70a199e77a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-industrial-ai-research-groups",
+      "type": "heading",
+      "title": "Industrial AI research groups",
+      "chapter_id": "02",
+      "level": 2
+    },
+    {
+      "id": "02-block-40a77dc79b77",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-picsart-ai-research-pair",
+      "type": "heading",
+      "title": "Picsart AI Research (PAIR)",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-be82ed5fb562",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-57db32e4615c",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-9c9838a0e28f",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-b3191ca018ed",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-nvidia-armenia-research-team",
+      "type": "heading",
+      "title": "NVIDIA Armenia research team",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-6d155315b7c1",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-2775d33c4aab",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-764a06d15c3c",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-26b0d8a57274",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-809c0d6f93fd",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-9c9838a0e28f-2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-9578626180d9",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-metric-ai-lab",
+      "type": "heading",
+      "title": "Metric AI Lab",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-2acd52a906ba",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-271fc271b42d",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-b3c562f7b22a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-b7d0fa3551e9",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-deep-origin",
+      "type": "heading",
+      "title": "Deep Origin",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-d2f0415d47b5",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-1f6a7e681fe1",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7207af9e119e-3",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-b4c162eec949",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-denovo-sciences",
+      "type": "heading",
+      "title": "Denovo Sciences",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-5dc932aa3f98",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-567178ccba79",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-c5b14dc3e952",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-4c31a45b3f6e",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-toxometris",
+      "type": "heading",
+      "title": "Toxometris",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-1e03623ea460",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-381020cc0dca",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-830afe5b5c67",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-47434b2efe5f",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-3098e03e88ba",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-2e40e44dd0fd",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-servicetitan-armenia",
+      "type": "heading",
+      "title": "ServiceTitan Armenia",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-746e29a0521b",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-d5edac870508",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-bd261435077a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-07c05fc30198",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-amaros-ai",
+      "type": "heading",
+      "title": "Amaros AI",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-e0e6a6be060f",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-933523ecf635",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-106434f74203",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-academic-research-groups-that-use-ai-within-another-field",
+      "type": "heading",
+      "title": "Academic research groups that use AI within another field",
+      "chapter_id": "02",
+      "level": 2
+    },
+    {
+      "id": "02-section-ysu-computational-materials-science-laboratory",
+      "type": "heading",
+      "title": "YSU Computational Materials Science Laboratory",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-93d7066aeaa6",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-05e566796026",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-5e2d51c77eb6",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-250c5b7bdbfd",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-1e6277406123",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-division-of-quantum-technologies-a-alikhanyan-national-laboratory",
+      "type": "heading",
+      "title": "Division of Quantum Technologies, A. Alikhanyan National Laboratory",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-b49defe1936b",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-e9593260c2de",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-a1d48f18eefd",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7062579dcb0a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-868a9e456bd1",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-842efb90c416",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-icranet-armenia-astrophysics-research",
+      "type": "heading",
+      "title": "ICRANet-Armenia astrophysics research",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-0182de1b4b8f",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-9feff9f77bec",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7062579dcb0a-2",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-412f2d89f6e0",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-4f80ad19f08b",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-institute-of-mathematics-of-nas-ra-and-ysu-scientific-machine-learning-research",
+      "type": "heading",
+      "title": "Institute of Mathematics of NAS RA and YSU scientific machine learning research",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-fbc5d53b2418",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-52239d7034d7",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-4067443f9267",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7062579dcb0a-3",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-7e4b772e7952",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-f3b56b9dff3e",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-ysu-photonics-and-artificial-intelligence-laboratory",
+      "type": "heading",
+      "title": "YSU Photonics and Artificial Intelligence Laboratory",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-8c52731fc7b4",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-f0ed8206e488",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-517c818fd894",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-dc85cec00cb3",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-center-for-scientific-innovation-and-education-csie-npua",
+      "type": "heading",
+      "title": "Center for Scientific Innovation and Education (CSIE) / NPUA",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-996bde817e77",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-e4c30ed7324a",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-63f4797dbd5f",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-0d5b20af8f04",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-9b58ddd5a6d1",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-fast-advance-drug-discovery-group-l-a-orbeli-institute-of-physiology",
+      "type": "heading",
+      "title": "FAST ADVANCE drug-discovery group, L.A. Orbeli Institute of Physiology",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-0502638fdf56",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-f0761e2b922f",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-ea98181c3b78",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-d2750a6dadc4",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-armenian-bioinformatics-institute",
+      "type": "heading",
+      "title": "Armenian Bioinformatics Institute",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-9c62589ccea0",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-0bf8e80ec982",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-d1b6fd3bee34",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-ed46b13fae4c",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-institute-of-molecular-biology-nas-ra",
+      "type": "heading",
+      "title": "Institute of Molecular Biology, NAS RA",
+      "chapter_id": "02",
+      "level": 3
+    },
+    {
+      "id": "02-block-4a40cbcf08a4",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-8feb534b57de",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-c48692864d61",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-47434b2efe5f-2",
+      "type": "list",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-ade999c198ed",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-3c3bba52c332",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-section-overall-picture",
+      "type": "heading",
+      "title": "Overall picture",
+      "chapter_id": "02",
+      "level": 2
+    },
+    {
+      "id": "02-block-29c036899917",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-9208e816d6da",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-8604f8687219",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "03-block-72141b05d469",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-6d7e88149a31",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-3b6a033e8dfa",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-high-school-and-school-age-education",
+      "type": "heading",
+      "title": "High school and school-age education",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-section-generation-ai-high-school-program",
+      "type": "heading",
+      "title": "Generation AI High School Program",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-90d96c10a443",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-f5e45a5b1109",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-c41b2e301011",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-step-ai",
+      "type": "heading",
+      "title": "STEP.ai",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-0486bfe17a15",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-273cc91d8f85",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-c7bc5475a514",
+      "type": "list",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-51e9e5f8e46b",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-7abeeb08b0b1",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-armenian-national-olympiad-in-artificial-intelligence",
+      "type": "heading",
+      "title": "Armenian National Olympiad in Artificial Intelligence",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-0be662ed0a23",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-ai-career-guidance-camp",
+      "type": "heading",
+      "title": "AI Career Guidance Camp",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-fb41c576a206",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-undergraduate-education",
+      "type": "heading",
+      "title": "Undergraduate education",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-block-189c963decc8",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-88f1368af93e",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-133f0c466c50",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-b3c1992bf524",
+      "type": "table",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-e907e2af2867",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-master-s-education",
+      "type": "heading",
+      "title": "Master's education",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-block-b8f5dd54fcdf",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-837a26345234",
+      "type": "table",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-f6cd7d604177",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-phd-education-and-research-training",
+      "type": "heading",
+      "title": "PhD education and research training",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-block-7efc3c954624",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-2f1b38b6a47a",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-a08e936d050d",
+      "type": "table",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-9646de5b4317",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-827228eba05e",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-non-degree-ai-education",
+      "type": "heading",
+      "title": "Non-degree AI education",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-section-unit-1991-pre-service-ai-training",
+      "type": "heading",
+      "title": "Unit 1991 pre-service AI training",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-5e9e70216c47",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-armenian-code-academy",
+      "type": "heading",
+      "title": "Armenian Code Academy",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-d9e566f68203",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-b4f574e6ae8c",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-9b24dd56fc17",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-430823a9828a",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-da19db1dceee",
+      "type": "list",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-162cff6be713",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-arcs-ai",
+      "type": "heading",
+      "title": "ARCS.ai",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-66f2be70932d",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-c4d38b130f9e",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-2d81533d7767",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-d08839c069b4",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-yandex-ml-school-armenia",
+      "type": "heading",
+      "title": "Yandex ML School Armenia",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-dbb63beef4d5",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-1e751510dffa",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-f6d8648199f0",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-intensive-summer-schools",
+      "type": "heading",
+      "title": "Intensive summer schools",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-section-armenian-mathematics-and-applications-summer-schools-armxss",
+      "type": "heading",
+      "title": "Armenian Mathematics and Applications Summer Schools (ArmXSS)",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-c554478c68d0",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-d13384df673c",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-55708537ee79",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-da32bb45dd9f",
+      "type": "list",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-aabe336985fa",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-a1d1ccddf79b",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-armenia-llm-summer-school",
+      "type": "heading",
+      "title": "Armenia LLM Summer School",
+      "chapter_id": "03",
+      "level": 3
+    },
+    {
+      "id": "03-block-5ac3fb56b788",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-7d6fc91be1d3",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-91f8d393d41e",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-5ca8514f2449",
+      "type": "list",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-0630462a6e6e",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-180461741a98",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-fbd764fe770d",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-4e56fcef90a6",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-diaspora-and-international-faculty",
+      "type": "heading",
+      "title": "Diaspora and international faculty",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-block-a6058d992c6b",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-159a93ad25a2",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-section-overall-picture",
+      "type": "heading",
+      "title": "Overall picture",
+      "chapter_id": "03",
+      "level": 2
+    },
+    {
+      "id": "03-block-5c29a3ff78de",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-2a876386c6c0",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "04-block-0fa5474229bd",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-aa7c2e9dfdff",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-cb3f91d54eee",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-section-infrastructure-snapshot",
+      "type": "heading",
+      "title": "Infrastructure snapshot",
+      "chapter_id": "04",
+      "level": 2
+    },
+    {
+      "id": "04-block-f58927211dd8",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-d96503ccd2cf",
+      "type": "table",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-efef1b5e4f92",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-cb3f91d54eee-2",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-section-yerevan-state-university",
+      "type": "heading",
+      "title": "Yerevan State University",
+      "chapter_id": "04",
+      "level": 2
+    },
+    {
+      "id": "04-block-07eded78890a",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-797209404534",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-769966d09870",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-dbb93c11d275",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-cb3f91d54eee-3",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-section-eleveight-ai",
+      "type": "heading",
+      "title": "Eleveight AI",
+      "chapter_id": "04",
+      "level": 2
+    },
+    {
+      "id": "04-block-46c68babc13b",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-45e4d9e5701f",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-8fd7fbe9c2dc",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-5635b795564f",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-cb3f91d54eee-4",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-section-firebird-ai",
+      "type": "heading",
+      "title": "Firebird AI",
+      "chapter_id": "04",
+      "level": 2
+    },
+    {
+      "id": "04-block-b336a7aee4e5",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-4eb731c0204d",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-5bdba0638497",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-582ce7103a79",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-cb3f91d54eee-5",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-section-bottom-line",
+      "type": "heading",
+      "title": "Bottom line",
+      "chapter_id": "04",
+      "level": 2
+    },
+    {
+      "id": "04-block-c277fc40cce9",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "04-block-4d320c1df3de",
+      "type": "paragraph",
+      "chapter_id": "04"
+    },
+    {
+      "id": "05-block-72141b05d469",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-de1a3fdf8738",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-eecc1da33113",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-section-how-to-read-the-profiles",
+      "type": "heading",
+      "title": "How to read the profiles",
+      "chapter_id": "05",
+      "level": 2
+    },
+    {
+      "id": "05-block-43db07243468",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-section-1-ai-consulting-and-service-providers",
+      "type": "heading",
+      "title": "1. AI consulting and service providers",
+      "chapter_id": "05",
+      "level": 2
+    },
+    {
+      "id": "05-block-2ade802c2a91",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-2fe6a1f408af",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-fc3ac37a0cd5",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-64bf12f07db6",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-de4946b3b1b0",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-5a447b59c61b",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-7a441b9a89f0",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-90f2e415ab4e",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-a2eb8b58aa30",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-3c1d97620f5c",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-99822f547897",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-fc02bd7cd3ef",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-7c3a77e6d47d",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-3fededfd9c34",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-ed36ec66b35e",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-6f193c8f6657",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-f206b4caf703",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-4ca70ac17cf8",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-5e3203ce8809",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-6a8cdfe08fda",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-b9c278c10b10",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-461f37bd647e",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-853aa4a08496",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-8d1ae7aa6806",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-45e05cdf67e2",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-a0fb0dd204eb",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-section-2-ai-product-companies",
+      "type": "heading",
+      "title": "2. AI product companies",
+      "chapter_id": "05",
+      "level": 2
+    },
+    {
+      "id": "05-block-da311ef6ca94",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-0b7377eecc83",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-c20cc7d34b98",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-ae8a22991969",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-94a81c648d8d",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-92e2ce099145",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-c2b9c69ba28c",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-a3c98aece746",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-4b7a1bfb7758",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-c27bce9136f1",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-4fdad5ce0255",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-42674b908866",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-173c194602f0",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-7008423bdf24",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-225e2dae9d05",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-28ecfc22c183",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-dc4e7b636e9f",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-f1c044440f51",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-431c881a3235",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-975479225289",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-38db075ccf75",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-ca6048a3d102",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-3edb4f069b05",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-1a86367dbef4",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-7ddce33ab110",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-f2a360ada7c4",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-fb80832e5896",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-0d89ac6b49c7",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-4fcb975b3466",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-14f94f80fba5",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-5422d5f75519",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-961d4f300d71",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-d1898c1eb3cf",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-f50896d1e582",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-4a9c55ae92eb",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-b1c7aee939fd",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-8a3cdb94431a",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-68779acf13fc",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-1a8936c8481f",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-1101758f4198",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-c27a95d13a70",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-ece56526e91e",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-cc37bc6f9270",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-8c263a637315",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-ef9c2fcd419b",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-9e4e4f51cc09",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-e732fe1167b1",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-ba4d82de6351",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-51132426d800",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-a4812aea49dd",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-5f61f4975a8a",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-e4d212cc9978",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-5b3536310369",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-baedce559573",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-a56de0546cd5",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-bdb08ba7e7a6",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-660e359f8f18",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-8572f4e158f0",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-9fa4664ebdfb",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-c8c68ddffd5a",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-1c6ed5726206",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-3a63dd43d8ac",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-6ce81bb4dd1c",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-94a942ffafd5",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-section-3-ai-teams-inside-broader-companies",
+      "type": "heading",
+      "title": "3. AI teams inside broader companies",
+      "chapter_id": "05",
+      "level": 2
+    },
+    {
+      "id": "05-block-76adabde9571",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-04e3c6fc3238",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-514a36ea48af",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-3a7c65ea1e67",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-913b86aa61d1",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-47aa67a9e3fe",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-668294e30eda",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-b3b1d4f5acfa",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-d96f60beb96c",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-dde107138ce3",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-f30e6452879e",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-be1cb45d73a7",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-32b201f3c62b",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-3c3d7648f7eb",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-34b9b35c6dc1",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-9af93bb8c81e",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-fd763a9d9fd6",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-a55aa324595a",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-dd92c2e4b94c",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-7114e3d3c6f7",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-4538213ef2d4",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-dbe7a726bbdb",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-cbac5a2a281d",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-85e4fd73e41b",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-bcc4d23ffd92",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-6f1e7db748f7",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-926ef4301af4",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-section-borderline-cases",
+      "type": "heading",
+      "title": "Borderline cases",
+      "chapter_id": "05",
+      "level": 2
+    },
+    {
+      "id": "05-block-e40631f7474c",
+      "type": "paragraph",
+      "chapter_id": "05"
+    },
+    {
+      "id": "05-block-543db5d887df",
+      "type": "list",
+      "chapter_id": "05"
+    },
+    {
+      "id": "06-block-0fa5474229bd",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-80aa5c9000ad",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-f19f369f94b5",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-ministry-of-education-science-culture-and-sport",
+      "type": "heading",
+      "title": "Ministry of Education, Science, Culture and Sport",
+      "chapter_id": "06",
+      "level": 2
+    },
+    {
+      "id": "06-block-e5204643269c",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-research-funding-through-the-hesc",
+      "type": "heading",
+      "title": "Research funding through the HESC",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-4a043f132ab9",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-e749f30685a8",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-07a15ce066ed",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-8f71e7e1964d",
+      "type": "table",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-c4571b776d86",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-bae899fc7cc1",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-research-computing-and-equipment",
+      "type": "heading",
+      "title": "Research computing and equipment",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-6b880b00a67f",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-3825714bfc30",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-strategy-and-research-priorities",
+      "type": "heading",
+      "title": "Strategy and research priorities",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-65a99c0740fb",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-f4528e74e76d",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-the-ministry-s-role-in-school-ai-education",
+      "type": "heading",
+      "title": "The Ministry's role in school AI education",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-ea950b41de16",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-7d8d57b5a19d",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-8745f0129d22",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-ministry-of-high-tech-industry-and-artificial-intelligence",
+      "type": "heading",
+      "title": "Ministry of High-Tech Industry and Artificial Intelligence",
+      "chapter_id": "06",
+      "level": 2
+    },
+    {
+      "id": "06-block-f551d00d27aa",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-public-access-to-ai-compute",
+      "type": "heading",
+      "title": "Public access to AI compute",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-0e531c01c0f9",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-5817695e20a7",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-support-for-private-ai-infrastructure",
+      "type": "heading",
+      "title": "Support for private AI infrastructure",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-d5674b5eb6be",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-036e885da6ab",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-0c850193118e",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-general-r-d-and-startup-incentives",
+      "type": "heading",
+      "title": "General R&D and startup incentives",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-900d01974807",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-790bc2dd3968",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-ai-in-public-services",
+      "type": "heading",
+      "title": "AI in public services",
+      "chapter_id": "06",
+      "level": 3
+    },
+    {
+      "id": "06-block-297bc32a7c09",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-f4fc615f6344",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-ai-use-and-governance-across-the-wider-government",
+      "type": "heading",
+      "title": "AI use and governance across the wider government",
+      "chapter_id": "06",
+      "level": 2
+    },
+    {
+      "id": "06-block-4ab89d0693bd",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-0766cb9ad2b3",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-80579075be86",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-ed6f780b8752",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-block-2949ac069bde",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "06-section-overall-picture",
+      "type": "heading",
+      "title": "Overall picture",
+      "chapter_id": "06",
+      "level": 2
+    },
+    {
+      "id": "06-block-c8c044c961b5",
+      "type": "paragraph",
+      "chapter_id": "06"
+    },
+    {
+      "id": "07-block-72141b05d469",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-27e6c09e2dea",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-major-recurring-conferences",
+      "type": "heading",
+      "title": "Major recurring conferences",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-section-datafest-yerevan",
+      "type": "heading",
+      "title": "DataFest Yerevan",
+      "chapter_id": "07",
+      "level": 3
+    },
+    {
+      "id": "07-block-16d113d3ee95",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-32a9e81f2f02",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-00beb113e479",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-ce9e0a90b3a5",
+      "type": "list",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-ai-conf-armenia",
+      "type": "heading",
+      "title": "AI Conf Armenia",
+      "chapter_id": "07",
+      "level": 3
+    },
+    {
+      "id": "07-block-8efe3c90990a",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-57df7fa20550",
+      "type": "list",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-236601b3fa15",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-91cd39ef1edb",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-f78159ff9419",
+      "type": "list",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-pydata-yerevan",
+      "type": "heading",
+      "title": "PyData Yerevan",
+      "chapter_id": "07",
+      "level": 3
+    },
+    {
+      "id": "07-block-9b6f7c7482ae",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-2ff5931b3ed8",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-6cf38c4adb99",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-women-in-data-science-armenia",
+      "type": "heading",
+      "title": "Women in Data Science Armenia",
+      "chapter_id": "07",
+      "level": 3
+    },
+    {
+      "id": "07-block-94af04e01e55",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-86efe79c813d",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-yandex-hall-machine-learning-meetups",
+      "type": "heading",
+      "title": "Yandex Hall machine-learning meetups",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-e0f1b2a92ed9",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-c127281244ca",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-fb64ff7911b1",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-6d9d13b5d5d1",
+      "type": "list",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-f6c383343ba6",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-9a1b0093a9e6",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-hack-nation-global-ai-hackathon",
+      "type": "heading",
+      "title": "Hack-Nation Global AI Hackathon",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-4a836c149027",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-hack-armenia",
+      "type": "heading",
+      "title": "Hack Armenia",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-81d69415906c",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-ai-workshops-in-broader-developer-communities",
+      "type": "heading",
+      "title": "AI workshops in broader developer communities",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-fe18f2fb9514",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-f44622d2e175",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-3fd04034905f",
+      "type": "list",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-community-groups-and-communication-channels",
+      "type": "heading",
+      "title": "Community groups and communication channels",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-599f7f615414",
+      "type": "list",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-section-role-of-community-activity-in-the-ecosystem",
+      "type": "heading",
+      "title": "Role of community activity in the ecosystem",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-2f9b286c2fd6",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "07-block-bd6d8e427433",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
+      "id": "08-block-72141b05d469",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-439f8c802118",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-2f41d98be44c",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-providers-and-programs",
+      "type": "heading",
+      "title": "Providers and programs",
+      "chapter_id": "08",
+      "level": 2
+    },
+    {
+      "id": "08-section-lumiverse-formerly-rearmenia-academy",
+      "type": "heading",
+      "title": "Lumiverse (formerly reArmenia Academy)",
+      "chapter_id": "08",
+      "level": 3
+    },
+    {
+      "id": "08-block-6a099294a408",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-dd18b391493b",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-5dc984a234e0",
+      "type": "list",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-59115f3024c5",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-3991eb4d4ef3",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-bb69835fbb1c",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-armenian-code-academy",
+      "type": "heading",
+      "title": "Armenian Code Academy",
+      "chapter_id": "08",
+      "level": 3
+    },
+    {
+      "id": "08-block-1acdbded5a13",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-c99c1fd53a53",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-9e1e692e75c6",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-180a4eb51bbc",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-8c254a1ba3c3",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-32eaf043199d",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-fast-literacy-and-teacher-development-initiatives",
+      "type": "heading",
+      "title": "FAST literacy and teacher-development initiatives",
+      "chapter_id": "08",
+      "level": 3
+    },
+    {
+      "id": "08-block-a0a34b9189af",
+      "type": "list",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-ardi-academy",
+      "type": "heading",
+      "title": "ARDI Academy",
+      "chapter_id": "08",
+      "level": 3
+    },
+    {
+      "id": "08-block-f2e8fe2481f9",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-enterprise-incubator-foundation-ai4all",
+      "type": "heading",
+      "title": "Enterprise Incubator Foundation: AI4ALL",
+      "chapter_id": "08",
+      "level": 3
+    },
+    {
+      "id": "08-block-4869fe1268cb",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-db46b72f13ac",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-national-access-initiative-chatgpt-edu",
+      "type": "heading",
+      "title": "National access initiative: ChatGPT Edu",
+      "chapter_id": "08",
+      "level": 2
+    },
+    {
+      "id": "08-block-29313b216ae9",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-block-364d277f66bb",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "08-section-what-these-programs-show",
+      "type": "heading",
+      "title": "What these programs show",
+      "chapter_id": "08",
+      "level": 2
+    },
+    {
+      "id": "08-block-92390cb54a79",
+      "type": "paragraph",
+      "chapter_id": "08"
+    },
+    {
+      "id": "09-block-e0287c46e29d",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-section-what-the-ecosystem-shows",
+      "type": "heading",
+      "title": "What the ecosystem shows",
+      "chapter_id": "09",
+      "level": 2
+    },
+    {
+      "id": "09-block-f8f02d3eb3a6",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-dac452b24fd1",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-15b46108578c",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-ecc8512bb49b",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-d7fe706dbaf5",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-4e17d76cb8ea",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-a2ebec308f58",
+      "type": "paragraph",
+      "chapter_id": "09"
+    }
+  ],
+  "base_path": "/ai-ecosystem-2026"
+}

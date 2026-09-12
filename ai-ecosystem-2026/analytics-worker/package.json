@@ -1,0 +1,6 @@
+{
+  "name": "yerevann-ai-ecosystem-analytics",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test"}
+}

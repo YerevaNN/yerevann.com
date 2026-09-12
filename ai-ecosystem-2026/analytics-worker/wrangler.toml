@@ -1,0 +1,43 @@
+name = "yerevann-ai-ecosystem-analytics"
+main = "src/index.js"
+compatibility_date = "2026-09-12"
+
+# Create a new, dedicated D1 database. Do not point this at the reviewer portal.
+[[d1_databases]]
+binding = "ANALYTICS_DB"
+database_name = "yerevann-ai-ecosystem-analytics"
+database_id = "REPLACE_WITH_NEW_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[vars]
+# Comma-separated exact origins. Replace the preview domain before deployment.
+ALLOWED_ORIGINS = "https://yerevann.com,http://localhost:8788"
+# This must point to the checked-in public manifest for the deployed report.
+MANIFEST_URL = "https://yerevann.com/ai-ecosystem-2026/content-manifest.json"
+# Raw events are deleted by the scheduled handler after this period.
+RAW_RETENTION_DAYS = "90"
+
+[triggers]
+crons = ["20 3 * * *"]
+
+# Isolated Cloudflare staging. It has its own Worker name, D1 database, and
+# Pages-only origin; production remains configured above.
+[env.staging]
+name = "yerevann-ai-ecosystem-analytics-staging"
+
+[env.staging.vars]
+ALLOWED_ORIGINS = "https://yerevann-ai-ecosystem-staging.pages.dev"
+MANIFEST_URL = "https://yerevann-ai-ecosystem-staging.pages.dev/content-manifest.json"
+RAW_RETENTION_DAYS = "30"
+
+[[env.staging.d1_databases]]
+binding = "ANALYTICS_DB"
+database_name = "yerevann-ai-ecosystem-staging"
+database_id = "491070d4-164d-49c9-8e8f-1c45b7d8811b"
+
+# The authenticated dashboard is served from the Worker origin itself. This
+# avoids relying on cross-site cookies between GitHub Pages and workers.dev.
+[assets]
+directory = "../admin"
+binding = "ASSETS"
+run_worker_first = ["/admin/login", "/admin/logout", "/admin/dashboard"]
