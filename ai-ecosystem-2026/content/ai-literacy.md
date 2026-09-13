@@ -1,7 +1,5 @@
 # AI Literacy
 
-**Snapshot:** August 2026
-
 > **AI literacy is not AI education.** In this report, AI education means developing the mathematical, computational, and research skills required to understand or build AI systems. AI literacy means learning to use existing AI products effectively, critically, safely, and responsibly. The programs below are listed for reference and are not evidence of Armenia's capacity to train AI engineers, researchers, or model developers.
 
 Armenia has a growing market for short courses that introduce generative-AI tools to professionals, educators, students, and the general public. These programs range from broad introductory courses to role-specific training in research, content creation, marketing, teaching, automation, and organizational workflows.

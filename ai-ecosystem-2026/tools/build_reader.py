@@ -8,6 +8,8 @@ material, credentials, and unpublished source notes never enter the site.
 from __future__ import annotations
 
 import argparse
+import ast
+from collections import Counter
 import hashlib
 import html
 import json
@@ -189,6 +191,18 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
             flush_list(); flush_table(); buffer.append(line)
 
     visuals = report_visuals(chapter_no, entries)
+    if chapter_no == "05":
+        tree = ast.parse((path.parent / "build_report.py").read_text(encoding="utf-8"))
+        fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "industry_snapshot_data")
+        scope = {"re": re, "Counter": Counter}
+        exec(compile(ast.Module(body=[fn], type_ignores=[]), "industry_snapshot_data", "exec"), scope)
+        categories, tags = scope["industry_snapshot_data"](path)
+        def chart(items):
+            maximum = max(v for _, v in items) or 1
+            return '<ol class="horizontal-chart">' + ''.join(f'<li><span>{html.escape(k)}</span><i style="--value:{v / maximum * 100:.1f}%"></i><b>{v}</b></li>' for k, v in items) + '</ol>'
+        visuals = re.sub(r'<h2>.*?</h2>', f'<h2><strong>{sum(v for _, v in categories)}</strong> profiled organizations</h2>', visuals, count=1)
+        charts = iter([chart(categories), chart(tags)])
+        visuals = re.sub(r'<ol class="horizontal-chart">.*?</ol>', lambda _: next(charts), visuals)
     if visuals:
         out.insert(0, visuals)
     return "\n".join(out)
@@ -244,10 +258,11 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     nav = "".join(f'<a href="#chapter-{c["id"]}"><small>{c["id"]}</small>{html.escape(c["title"])}</a>' for c in chapters)
     html_page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A public web edition of The AI Ecosystem in Armenia, prepared by YerevaNN."><title>The AI Ecosystem in Armenia — YerevaNN</title><link rel="icon" href="../assets/yerevann-icon-128.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="reader-fixes.css"></head><body><a class="skip-link" href="#report">Skip to report</a><header class="site-header"><a class="brand" href="../">YerevaNN</a><span>Research report · August 2026</span><button id="contents-toggle" aria-expanded="false" aria-controls="contents">Contents</button></header><div class="reader-shell"><aside id="contents" class="contents" aria-label="Report contents"><div><p class="eyebrow">The AI Ecosystem in Armenia</p><nav>{nav}</nav><button id="pdf-toggle" class="pdf-button">View original-layout PDF</button><p class="analytics-note">We collect minimal anonymous engagement statistics to understand which parts of this report are useful. <a href="#analytics-notice">How it works</a></p></div></aside><main id="report"><section class="cover"><p class="eyebrow">YerevaNN research report</p><h1>The AI Ecosystem<br>in Armenia</h1><p>August 2026</p><p class="intro">A public, mobile-friendly edition. It distinguishes verified current activity from announcements and planned activity.</p></section>{''.join(rendered)}<section id="analytics-notice" class="analytics-notice"><h2>Anonymous engagement analytics</h2><p>This reader uses a random browser-tab session identifier, not a person identifier. It records a content block only after it has been visibly on screen for two continuous seconds in an active tab, and estimates visible time while the tab is active and the reader is not idle. We do not use fingerprinting or retain raw IP addresses in the report analytics. Delivery can be blocked or lost; these figures are estimates of engagement, not proof that a person read a passage.</p></section></main></div><section id="pdf-panel" class="pdf-panel" hidden role="dialog" aria-modal="true" aria-label="Original PDF reader"><div class="pdf-toolbar"><button id="pdf-close">Return to web edition</button><button id="pdf-prev" aria-label="Previous PDF page">Previous</button><span id="pdf-page">Loading PDF…</span><button id="pdf-next" aria-label="Next PDF page">Next</button><label>Zoom <select id="pdf-zoom"><option value="fit">Fit width</option><option value="1">100%</option><option value="1.25">125%</option><option value="1.5">150%</option></select></label></div><div id="pdf-viewer" class="pdf-viewer"></div><p id="pdf-error" class="error" hidden>Could not load the original-layout PDF. The web edition remains available.</p></section><script>window.READER_CONFIG={{basePath:{json.dumps(base_path.rstrip('/') or '/')},analyticsEndpoint:""}};</script><script src="pdf-viewer.js" defer></script><script src="reader.js" defer></script></body></html>'''
     old_config = f'<script>window.READER_CONFIG={{basePath:{json.dumps(base_path.rstrip("/") or "/")},analyticsEndpoint:""}};</script>'
+    html_page = html_page.replace('<p>August 2026</p><p class="intro">A public, mobile-friendly edition. It distinguishes verified current activity from announcements and planned activity.</p>', '<div class="cover-details"><span>August 2026</span><span>Prepared by <b>YerevaNN</b></span></div>')
     new_config = f'<script src="reader-config.js"></script><script>window.READER_CONFIG=Object.assign({{basePath:{json.dumps(base_path.rstrip("/") or "/")},reportVersion:{json.dumps(report_version)}}},window.READER_CONFIG||{{}});</script><script src="tracking-core.js"></script>'
     html_page = html_page.replace(old_config, new_config)
     for asset in ('reader.js', 'pdf-viewer.js', 'styles.css', 'reader-fixes.css'):
-        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-4"')
+        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-5"')
     (output / "index.html").write_text(html_page, encoding="utf-8")
 
 

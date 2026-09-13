@@ -1,10 +1,8 @@
 # AI Industry in Armenia
 
-**Snapshot:** August 2026
-
 Armenia's AI industry is best understood through three forms of economic activity. Some companies sell AI engineering and expertise to clients. Others own products whose value substantially depends on AI. A third group consists of AI teams inside broader companies whose principal business is not itself an AI product or AI consultancy.
 
-Across the three categories, Armenia's strongest visible concentrations are in creative and visual AI, voice and speech, life sciences, enterprise document systems, banking and financial decisioning, advertising and recommendations, applied computer vision, and a growing cluster in robotics and physical AI.
+There is no dominant specialization; instead, Armenia has several overlapping, mid-sized clusters. Voice and speech, document intelligence, and life sciences are among the clearest established clusters, alongside visible activity in banking and financial decisioning, search and recommendation, and creative and visual AI. Physical AI is beginning to emerge across robotics, autonomous systems, perception, UAVs, and embedded computing.
 
 ## How to read the profiles
 

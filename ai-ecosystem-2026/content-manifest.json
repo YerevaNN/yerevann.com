@@ -1,28 +1,28 @@
 {
-  "report_version": "August-2026-1086d7860d07",
+  "report_version": "August-2026-68c7c10b720d",
   "report_label": "August 2026",
-  "built_at": "2026-09-13T08:33:24.547090+00:00",
+  "built_at": "2026-09-13T10:10:51.251326+00:00",
   "source_hashes": {
-    "01-executive-summary.md": "8ea97aef0033c9b85cc2c621c5c84270951c8480a05ab00f099560f3edc3b9bb",
-    "02-research-academia.md": "6b404ebb6f85d9d052ab34107e733eee909c571a914361a224a911f38ffd8c45",
-    "04-education.md": "44e724119081ba2c8b61e1021f4c7261726ac321cb454d03bdc021946da5e532",
+    "01-executive-summary.md": "27aa2d1dacadf1f90616e70e7c21ccc0921b21cef801fdc30b684404c1e1140d",
+    "02-research-academia.md": "d7298878fc0c0cb2cce89cbfc6a9236c341a1bdd2d04bdd64e5297e78edf4040",
+    "04-education.md": "17970eb8caa90d5d759cb68cfd8c1e377341bad342757112baf86895304d8532",
     "05-infrastructure-and-compute.md": "78380feb87a8408b3b7b2447638510d4543b6dd14848e94a23837c14f2ee27d9",
-    "03-industry.md": "c4431097033266f40f6d6c1441c2325ce068cc07e1a4726d4f873c6d7d695bb4",
+    "03-industry.md": "4635a3b306a1b6d51001b1d5efecab9070893c9b7e71d2d40b02f8bd28053ef2",
     "06-government-support-and-coordination.md": "745e0711050d845918a64e83bae7152e58fb6eabe2615338cd3d64fec9b0b8ac",
-    "07-ai-community.md": "f5d5978b39de74deabc609058db036540162d5d3d26ab22e95b5690c8fb693ae",
-    "ai-literacy.md": "91029b9677b57031b29879497ad81fbd5c586a30b3c6c5bfbee4f227b720b1f2",
-    "08-gaps-challenges-outlook.md": "ba5bf9fc154b329df8cfd9e3fea9eede19f619253e1b5422edab1a3cc1cc04a3"
+    "07-ai-community.md": "12f3dd7555b05f25eec232b6fe29cb4e22cf7b922c75e914a3d19779fd00aa43",
+    "ai-literacy.md": "edbbfcca4c617d04211ca28ca9691259ea50fd85662750cad8bb254024d9d551",
+    "08-gaps-challenges-outlook.md": "4a7368a879ec04573531f65c094f9805d9d58b0de4ba31a696c9249a64ef171d"
   },
   "assets": {
+    "ysu-supercomputer-center-print.jpg": "a8362bf01ec69575aa84bc4673535f57cd478998f77dcffc704d90e4dea76fe9",
+    "datafest-yerevan-2025-print.jpg": "92211f2c062996e55753166df3549bd827739f13e9c722f70e5f6d79230a38ed",
     "hack-armenia-2026-print.jpg": "764b8288e54d8e0401a5b420d7f31804b1e24496c51a9159b126312ddd30fbd4",
+    "generation-ai-graduation-print.jpg": "78ce88c7eb580d0d58a71fdd005b4f626fba6d055b8b470dc16a8c33829934f9",
     "eleveight-ai-factory-print.jpg": "a1b986f8123f5009cec197df304579e1430b18a1ab8f6163ec82f5fd58e4e922",
     "ai-conf-armenia-2026-print.jpg": "b96383a419f9e57621d61b0d8b59ed891ef33b7865422bc7b98e13a8b8951766",
-    "firebird-facility-print.jpg": "090a674b3964d27c8a9e55d64847f54cd680d683ae6cf6e62e158e7f26be481f",
-    "ysu-supercomputer-center-print.jpg": "a8362bf01ec69575aa84bc4673535f57cd478998f77dcffc704d90e4dea76fe9",
     "pydata-pycon-yerevan-2026-print.jpg": "1e40d2d9cf1bfa96178c674568b7270ad35e887c2de31d13db6f5beb58eaf179",
     "yandex-hall-ml-opentalk-print.jpg": "6688965c89cd645fc620fd1326cfa0d7deb5c41f46cceb580021b3bf2a1cdb67",
-    "datafest-yerevan-2025-print.jpg": "92211f2c062996e55753166df3549bd827739f13e9c722f70e5f6d79230a38ed",
-    "generation-ai-graduation-print.jpg": "78ce88c7eb580d0d58a71fdd005b4f626fba6d055b8b470dc16a8c33829934f9"
+    "firebird-facility-print.jpg": "090a674b3964d27c8a9e55d64847f54cd680d683ae6cf6e62e158e7f26be481f"
   },
   "chapters": [
     {
@@ -82,11 +82,6 @@
   ],
   "blocks": [
     {
-      "id": "01-block-72141b05d469",
-      "type": "paragraph",
-      "chapter_id": "01"
-    },
-    {
       "id": "01-block-986828dd36cc",
       "type": "paragraph",
       "chapter_id": "01"
@@ -99,7 +94,7 @@
       "level": 2
     },
     {
-      "id": "01-block-e67994db00ca",
+      "id": "01-block-aef63825d1e3",
       "type": "table",
       "chapter_id": "01"
     },
@@ -111,12 +106,12 @@
       "level": 2
     },
     {
-      "id": "01-block-643d4dc4fe59",
+      "id": "01-block-685c4f5e5a8a",
       "type": "paragraph",
       "chapter_id": "01"
     },
     {
-      "id": "01-block-896416310da5",
+      "id": "01-block-ae6a935bb319",
       "type": "paragraph",
       "chapter_id": "01"
     },
@@ -974,7 +969,12 @@
       "chapter_id": "02"
     },
     {
-      "id": "02-block-9208e816d6da",
+      "id": "02-block-d80b71103112",
+      "type": "paragraph",
+      "chapter_id": "02"
+    },
+    {
+      "id": "02-block-929c137ee6c8",
       "type": "paragraph",
       "chapter_id": "02"
     },
@@ -988,11 +988,6 @@
       "type": "report_visual",
       "title": "Research group distribution",
       "chapter_id": "02"
-    },
-    {
-      "id": "03-block-72141b05d469",
-      "type": "paragraph",
-      "chapter_id": "03"
     },
     {
       "id": "03-block-6d7e88149a31",
@@ -1401,7 +1396,12 @@
       "chapter_id": "03"
     },
     {
-      "id": "03-block-2a876386c6c0",
+      "id": "03-block-8d2f74e5f154",
+      "type": "paragraph",
+      "chapter_id": "03"
+    },
+    {
+      "id": "03-block-e349b74213da",
       "type": "paragraph",
       "chapter_id": "03"
     },
@@ -1542,17 +1542,12 @@
       "chapter_id": "04"
     },
     {
-      "id": "05-block-72141b05d469",
-      "type": "paragraph",
-      "chapter_id": "05"
-    },
-    {
       "id": "05-block-de1a3fdf8738",
       "type": "paragraph",
       "chapter_id": "05"
     },
     {
-      "id": "05-block-eecc1da33113",
+      "id": "05-block-6a5b6c7f8299",
       "type": "paragraph",
       "chapter_id": "05"
     },
@@ -2453,11 +2448,6 @@
       "chapter_id": "06"
     },
     {
-      "id": "07-block-72141b05d469",
-      "type": "paragraph",
-      "chapter_id": "07"
-    },
-    {
       "id": "07-block-27e6c09e2dea",
       "type": "paragraph",
       "chapter_id": "07"
@@ -2629,6 +2619,18 @@
       "chapter_id": "07"
     },
     {
+      "id": "07-section-firebird-build",
+      "type": "heading",
+      "title": "Firebird Build",
+      "chapter_id": "07",
+      "level": 2
+    },
+    {
+      "id": "07-block-9a752bf20bb2",
+      "type": "paragraph",
+      "chapter_id": "07"
+    },
+    {
       "id": "07-section-ai-workshops-in-broader-developer-communities",
       "type": "heading",
       "title": "AI workshops in broader developer communities",
@@ -2636,12 +2638,7 @@
       "level": 2
     },
     {
-      "id": "07-block-fe18f2fb9514",
-      "type": "paragraph",
-      "chapter_id": "07"
-    },
-    {
-      "id": "07-block-f44622d2e175",
+      "id": "07-block-9a0487a56204",
       "type": "paragraph",
       "chapter_id": "07"
     },
@@ -2678,11 +2675,6 @@
       "id": "07-block-bd6d8e427433",
       "type": "paragraph",
       "chapter_id": "07"
-    },
-    {
-      "id": "08-block-72141b05d469",
-      "type": "paragraph",
-      "chapter_id": "08"
     },
     {
       "id": "08-block-439f8c802118",
@@ -2846,7 +2838,7 @@
       "chapter_id": "08"
     },
     {
-      "id": "09-block-e0287c46e29d",
+      "id": "09-block-a436253b1833",
       "type": "paragraph",
       "chapter_id": "09"
     },
@@ -2858,37 +2850,42 @@
       "level": 2
     },
     {
-      "id": "09-block-f8f02d3eb3a6",
+      "id": "09-block-db3822e4c1b0",
       "type": "paragraph",
       "chapter_id": "09"
     },
     {
-      "id": "09-block-dac452b24fd1",
+      "id": "09-block-3ff1b397d64a",
       "type": "paragraph",
       "chapter_id": "09"
     },
     {
-      "id": "09-block-15b46108578c",
+      "id": "09-block-ae35ab084a06",
       "type": "paragraph",
       "chapter_id": "09"
     },
     {
-      "id": "09-block-ecc8512bb49b",
+      "id": "09-block-dca04de9f348",
       "type": "paragraph",
       "chapter_id": "09"
     },
     {
-      "id": "09-block-d7fe706dbaf5",
+      "id": "09-block-d7416fe8d206",
       "type": "paragraph",
       "chapter_id": "09"
     },
     {
-      "id": "09-block-4e17d76cb8ea",
+      "id": "09-block-cda33896ed39",
       "type": "paragraph",
       "chapter_id": "09"
     },
     {
-      "id": "09-block-a2ebec308f58",
+      "id": "09-block-388cdf01c7b7",
+      "type": "paragraph",
+      "chapter_id": "09"
+    },
+    {
+      "id": "09-block-b9343e28001c",
       "type": "paragraph",
       "chapter_id": "09"
     }

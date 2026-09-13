@@ -1,7 +1,5 @@
 # AI community in Armenia
 
-**Snapshot:** August 2026
-
 Armenia's AI community is organized through a small number of recurring conferences, specialist online groups, reading groups, build sessions, hackathons, and company-hosted technical meetups. These activities connect researchers, engineers, students, founders, and people entering the field, complementing the country's formal education and research institutions.
 
 ## Major recurring conferences
@@ -81,11 +79,13 @@ These meetups provide a recurring, lower-barrier format between the country's la
 
 [Hack Armenia](https://hightech.gov.am/articles/news/hack-armenia-24) was a 24-hour AI hackathon held at AI9 Startup Campus on August 8–9, 2026. Participants built solutions to a common LLM evaluation and reasoning challenge in mentored teams and presented them to an expert jury. The event was open beyond the participants of the preceding LLM Summer School and was organized by AI9 Startup Campus, the Armenia LLM Summer School, and YerevaNN.
 
+## Firebird Build
+
+[Firebird Build](https://hackathon.firebird.ai/) is an upcoming two-day AI hackathon scheduled for September 26–27, 2026 at AI9 Startup Campus. Around 80 engineers and R&D specialists in roughly 20 teams are expected to build working prototypes with OpenAI Codex, supported by mentors and judges from OpenAI, NVIDIA, Firebird, and Armenia's technology community. Applications close on September 20.
+
 ## AI workshops in broader developer communities
 
-[GDG Yerevan](https://gdg.community.dev/gdg-yerevan/) includes AI in its broader developer-community program. Recent AI-focused events include:
-
-These workshops primarily target software developers who want practical experience integrating frontier-model tools and agentic systems into applications, rather than researchers seeking research-level presentations.
+[GDG Yerevan](https://gdg.community.dev/gdg-yerevan/) includes AI in its broader program through practical workshops for software developers building with frontier-model tools and agentic systems. Recent examples include:
 
 - [IWD 2025: Redefine Possible — Build with AI](https://gdg.community.dev/events/details/google-gdg-yerevan-presents-iwd-2025-redefine-possible-build-with-ai/), with talks on AI, ML, data, and women shaping the field.
 - [Build with AI: AI-Powered Frontends](https://gdg.community.dev/events/details/google-gdg-yerevan-presents-build-with-ai-ai-powered-frontends-with-angular-google-agent-development-kit-adk/), a February 2026 workshop using Angular and Google's Agent Development Kit.
