@@ -5,7 +5,7 @@ import sys
 import unittest
 from pathlib import Path
 from html.parser import HTMLParser
-from build_reader import inline, render_markdown
+from build_reader import inline, render_markdown, industry_profile
 from faithful_visuals import source_table_visual
 
 SOURCE = Path(sys.argv.pop()) if len(sys.argv)>1 else Path('/home/hrant/YerevaNN-fundraising/materials/ai-ecosystem-armenia')
@@ -52,6 +52,15 @@ class VisualContent(unittest.TestCase):
         self.assertIn('Pie area = applicant pool',parsed.plain())
     def test_urls_are_not_double_escaped(self):
         self.assertEqual(Parsed(inline('[reference](https://example.org/?a=1&b=2)')).links,['https://example.org/?a=1&b=2'])
+
+    def test_industry_research_matches_pdf_policy(self):
+        prefix='**[Example](https://example.org)** builds AI tools. **Tags:** `AI`. **Armenia:** Yerevan. **Research:** '
+        self.assertNotIn('Research:', industry_profile(prefix+'No.'))
+        self.assertNotIn('No.', industry_profile(prefix+'No.'))
+        self.assertIn('Published a benchmark.', industry_profile(prefix+'Published a benchmark.'))
+        body=render_markdown(SOURCE/'03-industry.md','05','AI Industry',[])
+        self.assertNotIn('<strong>Research:</strong> No',body)
+        self.assertEqual(body.count('<h4>'),114)
 
     def test_principal_findings_are_six_numbered_items(self):
         body=render_markdown(SOURCE/'01-executive-summary.md','01','Executive Summary',[])

@@ -118,6 +118,33 @@ def report_visuals(chapter_no: str, entries: list[dict]) -> str:
     return ""
 
 
+def industry_profile(item: str) -> str:
+    match = re.match(r"^\*\*(.+?)\*\*([,;:]?)\s*(.+)$", item.strip())
+    if not match:
+        return inline(item)
+    company, separator, remainder = match.groups()
+    if separator:
+        plain = re.sub(r"\[([^]]+)\]\([^)]+\)", r"\1", company)
+        remainder = re.sub(r"[*_`]", "", plain).strip() + separator + " " + remainder
+    public = re.search(r"\s+\*\*Public research(?:\.|:)\*\*\s*(.+)$", remainder)
+    public_research = public.group(1).strip() if public else ""
+    if public:
+        remainder = remainder[:public.start()].rstrip()
+    parts = re.split(r"\s+\*\*(Tags|Approach|Armenia|Research):\*\*\s*", remainder)
+    fields = dict(zip(parts[1::2], parts[2::2]))
+    tags = re.findall(r"`([^`]+)`", fields.get("Tags", ""))
+    result = f'<h4>{inline(company)}</h4>'
+    if tags:
+        result += '<p class="industry-tags">' + ' · '.join(html.escape(t) for t in tags) + '</p>'
+    result += f'<p>{inline(parts[0].strip())}</p>'
+    if fields.get("Armenia"):
+        result += f'<p>{inline(fields["Armenia"])}</p>'
+    research = public_research or fields.get("Research", "")
+    if research and not re.match(r"^No(?:\.|\b)", re.sub(r"\*+", "", research).strip(), re.I):
+        result += f'<p>{inline(research)}</p>'
+    return result
+
+
 def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: list[dict]) -> str:
     lines = path.read_text(encoding="utf-8").splitlines()
     for number, line in enumerate(lines, 1):
@@ -153,7 +180,10 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
             block_ordinal += 1
             block_id = block_id_for("\n".join(list_items))
             start = f' start="{list_start}"' if list_tag == "ol" else ""
-            out.append(f'<{list_tag}{start} class="reading-block" data-block-id="{block_id}">' + "".join(f"<li>{inline(item)}</li>" for item in list_items) + f"</{list_tag}>")
+            profiles = chapter_no == "05" and current_heading.startswith(("1.", "2.", "3."))
+            css = "reading-block industry-profiles" if profiles else "reading-block"
+            render_item = industry_profile if profiles else inline
+            out.append(f'<{list_tag}{start} class="{css}" data-block-id="{block_id}">' + "".join(f"<li>{render_item(item)}</li>" for item in list_items) + f"</{list_tag}>")
             entries.append({"id": block_id, "type": "list", "chapter_id": chapter_no})
         list_items.clear()
 
@@ -273,7 +303,7 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     new_config = f'<script src="reader-config.js"></script><script>window.READER_CONFIG=Object.assign({{basePath:{json.dumps(base_path.rstrip("/") or "/")},reportVersion:{json.dumps(report_version)}}},window.READER_CONFIG||{{}});</script><script src="tracking-core.js"></script>'
     html_page = html_page.replace(old_config, new_config)
     for asset in ('reader.js', 'pdf-viewer.js', 'styles.css', 'reader-fixes.css'):
-        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-6"')
+        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-7"')
     (output / "index.html").write_text(html_page, encoding="utf-8")
 
 
