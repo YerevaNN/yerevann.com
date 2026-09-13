@@ -13,7 +13,7 @@ cd '/mnt/c/Users/hrant/.codex/worktrees/a3ce/YerevaNN website'
 python3 ai-ecosystem-2026/tools/build_reader.py \
   --source '/home/hrant/YerevaNN-fundraising/materials/ai-ecosystem-armenia' \
   --output ai-ecosystem-2026 --base-path /ai-ecosystem-2026 \
-  --pdf '/home/hrant/YerevaNN-fundraising/output/pdf/DRAFT-The-AI-Ecosystem-in-Armenia.pdf'
+  --pdf '/home/hrant/YerevaNN-fundraising/output/pdf/The-AI-Ecosystem-in-Armenia.pdf'
 ```
 
 The generated `content-manifest.json` separates the report version (`August-2026`) from the build timestamp, records source hashes, and defines every chapter, heading, and tracked semantic block. The build fails on missing approved assets or local/non-public Markdown links.
