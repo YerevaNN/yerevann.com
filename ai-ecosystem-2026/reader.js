@@ -84,5 +84,8 @@
     onLink(page_number,url) {const u=new URL(url);add("external_click",{page_number,destination:(u.hostname+u.pathname).slice(0,180)});}
   });
   if(config.testHooks) config.testHooks({tick,flush,emit:add,openPdf:pdfViewer.open,changePdfPage:delta=>pdfViewer.goTo(pdfViewer.state().page+delta),setZoom:pdfViewer.setZoom,closePdf:pdfViewer.close,queue:()=>queued.map(e=>({...e})),pdfState:pdfViewer.state});
-  add("session_start",{mode:"html"}); if(!config.testHooks) flush();
+  const startInPdf = innerWidth >= 1024 && !location.hash;
+  add("session_start",{mode:startInPdf?"pdf":"html"});
+  if(startInPdf) pdfViewer.open();
+  if(!config.testHooks) flush();
 })();

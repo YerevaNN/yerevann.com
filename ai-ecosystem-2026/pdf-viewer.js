@@ -14,7 +14,7 @@ window.createReportPdfViewer = function ({config, onMode, onVisibility, onLink})
     if (bundle) return bundle;
     if (!loading) loading = (config.pdfLoader ? config.pdfLoader() : import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs').then(async lib => {
       lib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs';
-      return {lib, doc: await lib.getDocument('AI-Ecosystem-in-Armenia-August-2026.pdf').promise};
+      return {lib, doc: await lib.getDocument('AI-Ecosystem-in-Armenia-August-2026.pdf?v=' + encodeURIComponent(config.reportVersion || 'August-2026')).promise};
     })).catch(e => { loading = null; throw e; });
     bundle = await loading;
     return bundle;

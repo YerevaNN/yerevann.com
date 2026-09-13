@@ -228,7 +228,8 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     duplicates = sorted({item for item in ids if ids.count(item) > 1})
     if duplicates:
         raise ValueError(f"Duplicate stable content IDs: {', '.join(duplicates)}")
-    report_version = f"August-2026-{hashlib.sha256(''.join(hashes.values()).encode()).hexdigest()[:12]}"
+    pdf_hash = hashlib.sha256((output / "AI-Ecosystem-in-Armenia-August-2026.pdf").read_bytes()).hexdigest()
+    report_version = f"August-2026-{hashlib.sha256((''.join(hashes.values()) + pdf_hash).encode()).hexdigest()[:12]}"
     manifest = {
         "report_version": report_version,
         "report_label": "August 2026",
@@ -246,7 +247,7 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     new_config = f'<script src="reader-config.js"></script><script>window.READER_CONFIG=Object.assign({{basePath:{json.dumps(base_path.rstrip("/") or "/")},reportVersion:{json.dumps(report_version)}}},window.READER_CONFIG||{{}});</script><script src="tracking-core.js"></script>'
     html_page = html_page.replace(old_config, new_config)
     for asset in ('reader.js', 'pdf-viewer.js', 'styles.css', 'reader-fixes.css'):
-        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-2"')
+        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-3"')
     (output / "index.html").write_text(html_page, encoding="utf-8")
 
 
