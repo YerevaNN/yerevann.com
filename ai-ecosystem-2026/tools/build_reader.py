@@ -303,7 +303,7 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     new_config = f'<script src="reader-config.js"></script><script>window.READER_CONFIG=Object.assign({{basePath:{json.dumps(base_path.rstrip("/") or "/")},reportVersion:{json.dumps(report_version)}}},window.READER_CONFIG||{{}});</script><script src="tracking-core.js"></script>'
     html_page = html_page.replace(old_config, new_config)
     for asset in ('reader.js', 'pdf-viewer.js', 'styles.css', 'reader-fixes.css'):
-        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-7"')
+        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-8"')
     (output / "index.html").write_text(html_page, encoding="utf-8")
 
 

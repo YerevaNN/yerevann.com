@@ -29,7 +29,7 @@ function validEvent(event, manifest) {
   if (!["mobile", "tablet", "desktop"].includes(event.device)) return false;
   if (event.block_id && !manifest.ids.has(event.block_id)) return false;
   if (event.section_id && !manifest.ids.has(event.section_id) && !manifest.chapterIds.has(event.section_id)) return false;
-  if (event.visible_ms != null && (!Number.isInteger(event.visible_ms) || event.visible_ms < 0 || event.visible_ms > 30_000)) return false;
+  if (event.visible_ms != null && (!Number.isInteger(event.visible_ms) || event.visible_ms < 0 || event.visible_ms > 120_000)) return false;
   if (event.destination && (typeof event.destination !== "string" || event.destination.length > 180 || /[?#]/.test(event.destination))) return false;
   if (["pdf_page_impression", "pdf_page_time"].includes(event.event_type) && (!Number.isInteger(event.page_number) || event.page_number < 1 || event.page_number > 1000)) return false;
   if (["block_impression", "block_time"].includes(event.event_type) && !event.block_id) return false;

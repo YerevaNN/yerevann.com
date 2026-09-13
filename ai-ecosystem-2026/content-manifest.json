@@ -1,7 +1,7 @@
 {
   "report_version": "August-2026-68c7c10b720d",
   "report_label": "August 2026",
-  "built_at": "2026-09-13T10:37:21.095465+00:00",
+  "built_at": "2026-09-13T12:14:01.082919+00:00",
   "source_hashes": {
     "01-executive-summary.md": "27aa2d1dacadf1f90616e70e7c21ccc0921b21cef801fdc30b684404c1e1140d",
     "02-research-academia.md": "d7298878fc0c0cb2cce89cbfc6a9236c341a1bdd2d04bdd64e5297e78edf4040",
@@ -14,15 +14,15 @@
     "08-gaps-challenges-outlook.md": "4a7368a879ec04573531f65c094f9805d9d58b0de4ba31a696c9249a64ef171d"
   },
   "assets": {
-    "firebird-facility-print.jpg": "090a674b3964d27c8a9e55d64847f54cd680d683ae6cf6e62e158e7f26be481f",
-    "ysu-supercomputer-center-print.jpg": "a8362bf01ec69575aa84bc4673535f57cd478998f77dcffc704d90e4dea76fe9",
     "pydata-pycon-yerevan-2026-print.jpg": "1e40d2d9cf1bfa96178c674568b7270ad35e887c2de31d13db6f5beb58eaf179",
-    "eleveight-ai-factory-print.jpg": "a1b986f8123f5009cec197df304579e1430b18a1ab8f6163ec82f5fd58e4e922",
+    "firebird-facility-print.jpg": "090a674b3964d27c8a9e55d64847f54cd680d683ae6cf6e62e158e7f26be481f",
     "generation-ai-graduation-print.jpg": "78ce88c7eb580d0d58a71fdd005b4f626fba6d055b8b470dc16a8c33829934f9",
-    "ai-conf-armenia-2026-print.jpg": "b96383a419f9e57621d61b0d8b59ed891ef33b7865422bc7b98e13a8b8951766",
     "yandex-hall-ml-opentalk-print.jpg": "6688965c89cd645fc620fd1326cfa0d7deb5c41f46cceb580021b3bf2a1cdb67",
+    "eleveight-ai-factory-print.jpg": "a1b986f8123f5009cec197df304579e1430b18a1ab8f6163ec82f5fd58e4e922",
+    "hack-armenia-2026-print.jpg": "764b8288e54d8e0401a5b420d7f31804b1e24496c51a9159b126312ddd30fbd4",
     "datafest-yerevan-2025-print.jpg": "92211f2c062996e55753166df3549bd827739f13e9c722f70e5f6d79230a38ed",
-    "hack-armenia-2026-print.jpg": "764b8288e54d8e0401a5b420d7f31804b1e24496c51a9159b126312ddd30fbd4"
+    "ysu-supercomputer-center-print.jpg": "a8362bf01ec69575aa84bc4673535f57cd478998f77dcffc704d90e4dea76fe9",
+    "ai-conf-armenia-2026-print.jpg": "b96383a419f9e57621d61b0d8b59ed891ef33b7865422bc7b98e13a8b8951766"
   },
   "chapters": [
     {

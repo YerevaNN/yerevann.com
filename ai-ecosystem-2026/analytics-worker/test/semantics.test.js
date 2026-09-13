@@ -6,7 +6,7 @@ const manifest = {versions: new Set(["August-2026"]), ids: new Set(["01-block-00
 const base = {event_id: "b6c7a1a2-80ee-4f19-a7ae-2ef3f70e816d", session_id: "781610ec-95cc-43ae-a2f3-2a0d9645b3cf", event_type: "block_impression", report_version: "August-2026", block_id: "01-block-001", section_id: "01", device: "mobile", visible_ms: 0};
 test("accepts a bounded, allowlisted event", () => assert.equal(validEvent(base, manifest), true));
 test("rejects arbitrary content identifiers", () => assert.equal(validEvent({...base, block_id: "private-review-note"}, manifest), false));
-test("rejects excessive visible time and malformed session IDs", () => { assert.equal(validEvent({...base, visible_ms: 30001}, manifest), false); assert.equal(validEvent({...base, session_id: "not-a-session"}, manifest), false); });
+test("rejects excessive visible time and malformed session IDs", () => { assert.equal(validEvent({...base, visible_ms: 120001}, manifest), false); assert.equal(validEvent({...base, session_id: "not-a-session"}, manifest), false); });
 test("accepts union-time and bounded PDF events without a content block", () => { assert.equal(validEvent({...base, event_type: "session_active_time", block_id: "", visible_ms: 500}, manifest), true); assert.equal(validEvent({...base, event_type: "pdf_page_time", block_id: "", page_number: 4, visible_ms: 500}, manifest), true); assert.equal(validEvent({...base, event_type: "pdf_page_time", block_id: "", page_number: 0, visible_ms: 500}, manifest), false); });
 test("rejects destinations with query strings", () => assert.equal(validEvent({...base, event_type: "external_click", block_id: "", destination: "example.org/paper?token=x"}, manifest), false));
 test("requires allowlisted IDs for semantic time events", () => {

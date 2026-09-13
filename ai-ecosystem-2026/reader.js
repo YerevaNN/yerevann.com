@@ -5,7 +5,7 @@
   const device = innerWidth < 700 ? "mobile" : innerWidth < 1024 ? "tablet" : "desktop";
   const campaign = Object.fromEntries(["utm_source","utm_medium","utm_campaign"].map(k => [k, new URLSearchParams(location.search).get(k)]).filter(([,v]) => v && v.length <= 80));
   const referrerHost = (() => { try { return document.referrer ? new URL(document.referrer).hostname.slice(0, 200) : ""; } catch { return ""; } })();
-  const maxQueue = 128, maxAttempts = 4, heartbeat = 25_000, idleAfter = 60_000;
+  const maxQueue = 128, maxAttempts = 4, heartbeat = 120_000, idleAfter = 60_000;
   let queued = (() => { try { const value = JSON.parse(sessionStorage.getItem(queueKey) || "[]"); return Array.isArray(value) ? value.slice(-maxQueue) : []; } catch { return []; } })();
   let lastActivity = Date.now(), lastTick = Date.now(), lastFlush = 0, lastSection = "", pdfMode = false, flushing = false;
   const blocks = new Map(), pdfPages = new Map(), sectionDeltas = new Map(), pageDeltas = new Map();
@@ -52,7 +52,7 @@
       if (state.visible && isActive && pdfMode) { if (!state.qualifiedAt) state.qualifiedAt = now; if (!state.impressed && now-state.qualifiedAt >= 2000) { state.impressed=true; add("pdf_page_impression", {page_number:page}); } if (delta) pageDeltas.set(page,(pageDeltas.get(page)||0)+delta); }
       else state.qualifiedAt = 0;
     }
-    if (force || now-lastFlush >= heartbeat) { if(sessionDelta){add("session_active_time",{visible_ms:Math.min(sessionDelta,30_000)});sessionDelta=0;} for(const [section_id,visible_ms] of sectionDeltas){add("section_active_time",{section_id,visible_ms:Math.min(visible_ms,30_000)});}sectionDeltas.clear();for(const [el,state] of blocks)if(state.delta){add("block_time",{block_id:el.dataset.blockId,section_id:sectionFor(el),visible_ms:Math.min(state.delta,30_000)});state.delta=0;}for(const [page_number,visible_ms] of pageDeltas){add("pdf_page_time",{page_number,visible_ms:Math.min(visible_ms,30_000)});}pageDeltas.clear();lastFlush=now;flush(force); }
+    if (force || now-lastFlush >= heartbeat) { if(sessionDelta){add("session_active_time",{visible_ms:Math.min(sessionDelta,120_000)});sessionDelta=0;} for(const [section_id,visible_ms] of sectionDeltas){add("section_active_time",{section_id,visible_ms:Math.min(visible_ms,120_000)});}sectionDeltas.clear();for(const [el,state] of blocks)if(state.delta){add("block_time",{block_id:el.dataset.blockId,section_id:sectionFor(el),visible_ms:Math.min(state.delta,120_000)});state.delta=0;}for(const [page_number,visible_ms] of pageDeltas){add("pdf_page_time",{page_number,visible_ms:Math.min(visible_ms,120_000)});}pageDeltas.clear();lastFlush=now;flush(force); }
   }
   const observer = new IntersectionObserver(entries => entries.forEach(entry => {
     const state = blocks.get(entry.target) || {visible:false,qualifiedAt:0,impressed:false};
