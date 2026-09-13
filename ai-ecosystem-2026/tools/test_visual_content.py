@@ -53,4 +53,10 @@ class VisualContent(unittest.TestCase):
     def test_urls_are_not_double_escaped(self):
         self.assertEqual(Parsed(inline('[reference](https://example.org/?a=1&b=2)')).links,['https://example.org/?a=1&b=2'])
 
+    def test_principal_findings_are_six_numbered_items(self):
+        body=render_markdown(SOURCE/'01-executive-summary.md','01','Executive Summary',[])
+        ordered=re.findall(r'<ol\b[^>]*>(.*?)</ol>',body,re.S)
+        self.assertEqual(len(ordered),1)
+        self.assertEqual(ordered[0].count('<li>'),6)
+
 if __name__=='__main__':unittest.main()

@@ -127,6 +127,8 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
     out, buffer, table, list_items = [], [], [], []
     block_ordinal = 0
     current_heading = ""
+    list_tag = "ul"
+    list_start = 1
     duplicate_blocks: dict[str, int] = {}
 
     def block_id_for(content: str) -> str:
@@ -150,7 +152,8 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
         if list_items:
             block_ordinal += 1
             block_id = block_id_for("\n".join(list_items))
-            out.append(f'<ul class="reading-block" data-block-id="{block_id}">' + "".join(f"<li>{inline(item)}</li>" for item in list_items) + "</ul>")
+            start = f' start="{list_start}"' if list_tag == "ol" else ""
+            out.append(f'<{list_tag}{start} class="reading-block" data-block-id="{block_id}">' + "".join(f"<li>{inline(item)}</li>" for item in list_items) + f"</{list_tag}>")
             entries.append({"id": block_id, "type": "list", "chapter_id": chapter_no})
         list_items.clear()
 
@@ -168,6 +171,7 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
         heading = re.match(r"^(#{1,3})\s+(.+?)\s*$", line)
         is_table = line.strip().startswith("|") and line.strip().endswith("|")
         bullet = re.match(r"^\s*[-*]\s+(.+)$", line)
+        numbered = re.match(r"^\s*(\d+)[.)]\s+(.+)$", line)
         if heading:
             flush_paragraph(); flush_list(); flush_table()
             level, title = len(heading.group(1)), heading.group(2)
@@ -183,8 +187,15 @@ def render_markdown(path: Path, chapter_no: str, chapter_title: str, entries: li
                 out.append(f'<figure class="report-photo"><img src="assets/{filename}" alt="{html.escape(caption, quote=True)}" loading="lazy"><figcaption>{html.escape(caption)}. Photo: <a href="{html.escape(source, quote=True)}" target="_blank" rel="noopener noreferrer" data-external-link>{html.escape(credit)}</a></figcaption></figure>')
         elif is_table:
             flush_paragraph(); flush_list(); table.append(line)
-        elif bullet:
-            flush_paragraph(); flush_table(); list_items.append(bullet.group(1))
+        elif bullet or numbered:
+            flush_paragraph(); flush_table()
+            tag = "ol" if numbered else "ul"
+            if list_items and list_tag != tag:
+                flush_list()
+            if not list_items:
+                list_start = int(numbered.group(1)) if numbered else 1
+            list_tag = tag
+            list_items.append(numbered.group(2) if numbered else bullet.group(1))
         elif not line.strip() or line.strip() == "---":
             flush_paragraph(); flush_list(); flush_table()
         else:
@@ -262,7 +273,7 @@ def build(source: Path, output: Path, base_path: str, pdf: Path | None) -> None:
     new_config = f'<script src="reader-config.js"></script><script>window.READER_CONFIG=Object.assign({{basePath:{json.dumps(base_path.rstrip("/") or "/")},reportVersion:{json.dumps(report_version)}}},window.READER_CONFIG||{{}});</script><script src="tracking-core.js"></script>'
     html_page = html_page.replace(old_config, new_config)
     for asset in ('reader.js', 'pdf-viewer.js', 'styles.css', 'reader-fixes.css'):
-        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-5"')
+        html_page = html_page.replace(f'"{asset}"', f'"{asset}?v=20260913-6"')
     (output / "index.html").write_text(html_page, encoding="utf-8")
 
 
