@@ -1,13 +1,13 @@
 {
   "files_sha256": {
-    "raysar-rgb-comparison.html": "ddb4ecf6b81315dd9300af8d067add9e0925854a032de8b92087daae327a4102",
+    "raysar-rgb-comparison.html": "e2a794b15f4850a2b6fd8547fe179a2cc020af85da3e49bf379a53e992bd6e35",
     "comparison.html": "d6bd8994f747393fabbf63f75480e8ad975d8875cc5375482b0921d89c978330",
     "raysar-comparison.html": "7475e64abcb36c3c7cb6f45be26e2267d9796bda4fc46d121d2fad8a17d65849",
     "roof-experiment.html": "c7403848d2c7d888a385c098e2f4e12432f3aa46cf824551e451150c55dd0fc0",
     "repeatability.html": "606202db3281787dce629ddf822800f9e80da67f89d07266c2cd9e8e61f04e6d",
     "point-response-validation.html": "4f4d53f832b90f48f2bfbb30767aa048a54d5c09faab982345c61d344b82397b",
     "textured-cities.html": "c395034e56ae2093c3ffcbdb15574e87620d5c17312aadef575a2d773ce76510",
-    "results/raysar_rgb_comparison_v1/publication_audit.json": "4a0f6542a296774e9ff345f839e24b020b5dd739a633998db9dd28d99c51c910",
+    "results/raysar_rgb_comparison_v1/publication_audit.json": "6391568c1aa812e10387e11aecd4f3afd3da166f7dceb37bc806e9d41dedeaec",
     "results/raysar_city_baseline_v1/comparison_report.json": "0e74c151b9c51a4405f53e38dc9f1360cd602a127897c3495af9dbadfa576f2f",
     "results/roof_comparison_publication_v1/audit.json": "6457bd83692363ed046472767ee559e13e2cb4e7fcf3b87b15355a92ecf940aa",
     "results/controlled_additions/eemhaven_roof_material_assessment_v1/report.json": "54b8d53f3f5bfaec5df5b48a84ab7f889b1e1b6dbb06f83a646d38aab833fb13",
