@@ -1,0 +1,3642 @@
+{
+  "records": [
+    {
+      "seed": 0,
+      "case": "original_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.04592213874517105,
+            "positive_log_correlation": 0.4054802257336228,
+            "rank_correlation": 0.32776824330636056,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.060240963855421686,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.24594618379513217,
+            "positive_log_correlation": 0.5151900716736869,
+            "rank_correlation": 0.4626237011065874,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10052910052910052,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0795209684477676,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.32281861891372604,
+            "positive_log_correlation": 0.5800776240652306,
+            "rank_correlation": 0.4548487396126719,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.42669377576176026,
+            "positive_log_correlation": 0.6047249385442371,
+            "rank_correlation": 0.34947149372307634,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3770491803278688,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.17683685926039702,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.1198652680937356,
+            "positive_log_correlation": 0.023049858218903672,
+            "rank_correlation": -0.0010544834167236152,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03418803418803419,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.1353274856187286,
+            "positive_log_correlation": 0.005391826181183672,
+            "rank_correlation": 0.030360496501602892,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4948157374832216,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.270148685272815
+    },
+    {
+      "seed": 0,
+      "case": "original_PEC_rough128",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.11978551231482902,
+            "positive_log_correlation": -0.2489054733648019,
+            "rank_correlation": -0.23633221687664527,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.20184202647054758,
+            "positive_log_correlation": -0.3567504516765307,
+            "rank_correlation": -0.2877557591711154,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03482587064676617,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 10.847601374133879,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.20179095367204283,
+            "positive_log_correlation": 0.284048657979425,
+            "rank_correlation": 0.29771514971064356,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10891089108910891,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.3743414202204808,
+            "positive_log_correlation": 0.44878432266658946,
+            "rank_correlation": 0.4317012443922443,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 28.42580259095616,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.050574309821710114,
+            "positive_log_correlation": -0.02362295842855659,
+            "rank_correlation": -0.046577707051701514,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.01680672268907563,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.12101564466138665,
+            "positive_log_correlation": -0.09054950523885863,
+            "rank_correlation": -0.07422563569500616,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 2.76045888419817,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 10.127314527586133
+    },
+    {
+      "seed": 0,
+      "case": "refined_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.04591939875591753,
+            "positive_log_correlation": 0.4055282064901437,
+            "rank_correlation": 0.32778606756531437,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.060240963855421686,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.24593396038180312,
+            "positive_log_correlation": 0.5152003895555599,
+            "rank_correlation": 0.46272430388989144,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10052910052910052,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.079528191146519,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3227534572186225,
+            "positive_log_correlation": 0.5804074852308072,
+            "rank_correlation": 0.4553021673990105,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4266100435985566,
+            "positive_log_correlation": 0.6048006038927376,
+            "rank_correlation": 0.3505991541701072,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3770491803278688,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.17686497758748795,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.11986025371466917,
+            "positive_log_correlation": 0.02305199150861195,
+            "rank_correlation": -0.0010690770039752323,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03418803418803419,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.1353334841265956,
+            "positive_log_correlation": 0.005387704444725593,
+            "rank_correlation": 0.03034783064438641,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4948133468022131,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.269451235097748
+    },
+    {
+      "seed": 0,
+      "case": "refined_PEC_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.11975134184437053,
+            "positive_log_correlation": -0.2489391333831082,
+            "rank_correlation": -0.23641066115392312,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.20177454819428803,
+            "positive_log_correlation": -0.3567733515408276,
+            "rank_correlation": -0.2878929447847117,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03482587064676617,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 10.847446638445206,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.20156392315711683,
+            "positive_log_correlation": 0.2838050081539211,
+            "rank_correlation": 0.2975312240733682,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10891089108910891,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.37389454222898666,
+            "positive_log_correlation": 0.4485681601488996,
+            "rank_correlation": 0.4317387879764136,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 28.42663259330396,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.05060238418608051,
+            "positive_log_correlation": -0.02376530442895596,
+            "rank_correlation": -0.04673938009039455,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.01680672268907563,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.12122869978603452,
+            "positive_log_correlation": -0.09085297497778698,
+            "rank_correlation": -0.07444259309405055,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 2.759851103472751,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 10.12839764292366
+    },
+    {
+      "seed": 0,
+      "case": "refined_glass_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.046655481819915266,
+            "positive_log_correlation": 0.4085508149456393,
+            "rank_correlation": 0.33000106529306544,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.060240963855421686,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.24689138035847044,
+            "positive_log_correlation": 0.5181298461072456,
+            "rank_correlation": 0.46385035154692883,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10052910052910052,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.078112939418848,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3260214234959941,
+            "positive_log_correlation": 0.591249177492896,
+            "rank_correlation": 0.4622469922623506,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4286273890905593,
+            "positive_log_correlation": 0.6190423544345035,
+            "rank_correlation": 0.3441271137820046,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3770491803278688,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.17412322655978502,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.11923806119887326,
+            "positive_log_correlation": 0.025112428862757934,
+            "rank_correlation": 0.0012776402335250353,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03418803418803419,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.1345934158224009,
+            "positive_log_correlation": 0.007797482179563953,
+            "rank_correlation": 0.032021252434901865,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4940083730387002,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.334963252741403
+    },
+    {
+      "seed": 0,
+      "case": "refined_glass_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.10977938269840079,
+            "positive_log_correlation": -0.055378781640205446,
+            "rank_correlation": -0.060504753376774384,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.023255813953488372,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.13343218592949882,
+            "positive_log_correlation": -0.10829844820020346,
+            "rank_correlation": -0.09379729453735004,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.3447705933589393,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.2469608200248866,
+            "positive_log_correlation": 0.36103908353013753,
+            "rank_correlation": 0.3717509663901443,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.42287519681593483,
+            "positive_log_correlation": 0.4956627904356657,
+            "rank_correlation": 0.47883941281496134,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2537313432835821,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.87379089392332,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.12556257427203107,
+            "positive_log_correlation": 0.011140841983632499,
+            "rank_correlation": -0.011557340291084022,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02109704641350211,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.16546777171391172,
+            "positive_log_correlation": -0.03961867141632317,
+            "rank_correlation": -0.019289663787003957,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.641319490021084,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.7294304732593715
+    },
+    {
+      "seed": 0,
+      "case": "refined_concrete_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.04668872101736986,
+            "positive_log_correlation": 0.40870253000597717,
+            "rank_correlation": 0.3301423329237043,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.060240963855421686,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.24693081894680846,
+            "positive_log_correlation": 0.5182636538589452,
+            "rank_correlation": 0.4639823311423683,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10052910052910052,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0780586767967466,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3261689720776122,
+            "positive_log_correlation": 0.5918005491168792,
+            "rank_correlation": 0.46293550709972836,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4287175855652115,
+            "positive_log_correlation": 0.619666343386394,
+            "rank_correlation": 0.344226384430236,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3770491803278688,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.17399679161509202,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.11921063593457513,
+            "positive_log_correlation": 0.025204272922705603,
+            "rank_correlation": 0.0014250375377191024,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03418803418803419,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.13458946600353616,
+            "positive_log_correlation": 0.007839261517607058,
+            "rank_correlation": 0.032135354338274476,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4939873144884728,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.338056696260818
+    },
+    {
+      "seed": 0,
+      "case": "refined_concrete_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.10590670688945371,
+            "positive_log_correlation": -0.01753998348990858,
+            "rank_correlation": -0.018591163845733116,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.11237399667330397,
+            "positive_log_correlation": -0.039550028142700824,
+            "rank_correlation": -0.02737006141261461,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.1116032365441164,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.2548197812395795,
+            "positive_log_correlation": 0.37013560416604335,
+            "rank_correlation": 0.3821228963860032,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13131313131313133,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4323275590959391,
+            "positive_log_correlation": 0.50270702053842,
+            "rank_correlation": 0.48474559359662045,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2537313432835821,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.198616593366934,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.12961950501101357,
+            "positive_log_correlation": 0.01238415079380897,
+            "rank_correlation": -0.010816777926646494,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.025423728813559324,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.16249259861642065,
+            "positive_log_correlation": -0.03562301068095769,
+            "rank_correlation": -0.015339008219704582,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6115047454267966,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 2.9773059716589962
+    },
+    {
+      "seed": 1,
+      "case": "original_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.1538801438757333,
+            "positive_log_correlation": 0.41029248795746737,
+            "rank_correlation": 0.3512237248980741,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.0764525993883792,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.3362093014212313,
+            "positive_log_correlation": 0.509030881164227,
+            "rank_correlation": 0.46603027694609567,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12432432432432433,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0971834214301937,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.34805397746688077,
+            "positive_log_correlation": 0.5359589657919541,
+            "rank_correlation": 0.4330541902262258,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.49560356234280206,
+            "positive_log_correlation": 0.5314603664960926,
+            "rank_correlation": 0.3085757071871019,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3125,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.13233821395847692,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.03731088595300439,
+            "positive_log_correlation": 0.0915743587260899,
+            "rank_correlation": 0.0788814934380681,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.09631490602765767,
+            "positive_log_correlation": 0.12080502650612313,
+            "rank_correlation": 0.13731667263563388,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.010526315789473684,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.5410764328543696,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.661389098879614
+    },
+    {
+      "seed": 1,
+      "case": "original_PEC_rough128",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.11070683046748239,
+            "positive_log_correlation": -0.21943469954458908,
+            "rank_correlation": -0.19865717574124037,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.011494252873563218,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.19793300857020277,
+            "positive_log_correlation": -0.33646526117241415,
+            "rank_correlation": -0.25600766377824663,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.009708737864077669,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 12.112675228018379,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.18580824912361255,
+            "positive_log_correlation": 0.24057972599009977,
+            "rank_correlation": 0.26765643542464546,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08737864077669903,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.36076652191327957,
+            "positive_log_correlation": 0.4699751903051408,
+            "rank_correlation": 0.4841795648749329,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 31.80026019375512,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.008449346922346678,
+            "positive_log_correlation": 0.07421286418664344,
+            "rank_correlation": 0.0685226895041566,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02109704641350211,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.02041679197239306,
+            "positive_log_correlation": 0.07762790587163194,
+            "rank_correlation": 0.10944883867191936,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02127659574468085,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.055075821984756,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 10.174086802604084
+    },
+    {
+      "seed": 1,
+      "case": "refined_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.15387424361729166,
+            "positive_log_correlation": 0.4101923005491468,
+            "rank_correlation": 0.3511580288842216,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.0764525993883792,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.3362027480665485,
+            "positive_log_correlation": 0.5089100655275409,
+            "rank_correlation": 0.465957414338543,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12432432432432433,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.097192397471264,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.34792609179940187,
+            "positive_log_correlation": 0.5353748702156875,
+            "rank_correlation": 0.43259799504025215,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.17894736842105263,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4952417458306104,
+            "positive_log_correlation": 0.5304680344713386,
+            "rank_correlation": 0.30780707840309546,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3125,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.13237678156109403,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.037309340969597114,
+            "positive_log_correlation": 0.09157176118967887,
+            "rank_correlation": 0.07886803306497807,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.09631437809174569,
+            "positive_log_correlation": 0.12080710599989267,
+            "rank_correlation": 0.13731055808387418,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.010526315789473684,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.5410717948076398,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.660110539164837
+    },
+    {
+      "seed": 1,
+      "case": "refined_PEC_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.1106897563010435,
+            "positive_log_correlation": -0.21937999041256517,
+            "rank_correlation": -0.19863596933525499,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.011494252873563218,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.19791828898309358,
+            "positive_log_correlation": -0.33643151247891,
+            "rank_correlation": -0.2559885173206173,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.009708737864077669,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 12.112416638151881,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.18577590529914292,
+            "positive_log_correlation": 0.24060561789300822,
+            "rank_correlation": 0.267595339755782,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08737864077669903,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.360712004884149,
+            "positive_log_correlation": 0.4699267075607988,
+            "rank_correlation": 0.4841442197889358,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.21739130434782608,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 31.8000631731629,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.008434751569466053,
+            "positive_log_correlation": 0.07428181407900626,
+            "rank_correlation": 0.06861243108295888,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02109704641350211,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.020507963109747476,
+            "positive_log_correlation": 0.07781764246895831,
+            "rank_correlation": 0.10962921794882995,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02127659574468085,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.0547889061543,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 10.174467780041798
+    },
+    {
+      "seed": 1,
+      "case": "refined_glass_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.15463762889608174,
+            "positive_log_correlation": 0.4122621657798058,
+            "rank_correlation": 0.35243223363098247,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.0764525993883792,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.33721338691308245,
+            "positive_log_correlation": 0.5114854292114975,
+            "rank_correlation": 0.46720256183715947,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12432432432432433,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0948416944129236,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3501473744355086,
+            "positive_log_correlation": 0.5450862801330805,
+            "rank_correlation": 0.43624989817388526,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5031264182075784,
+            "positive_log_correlation": 0.5486058513593098,
+            "rank_correlation": 0.31020952955944214,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3333333333333333,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.12914171651314724,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.0381603775334246,
+            "positive_log_correlation": 0.09299105167283667,
+            "rank_correlation": 0.08014380418612074,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.09813231281403831,
+            "positive_log_correlation": 0.12348210800983829,
+            "rank_correlation": 0.13968900952996569,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.010526315789473684,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.5391279571238856,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.762081722690127
+    },
+    {
+      "seed": 1,
+      "case": "refined_glass_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.05788106706364136,
+            "positive_log_correlation": -0.018469171168927195,
+            "rank_correlation": -0.035904930606384805,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.011494252873563218,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.08936758943240186,
+            "positive_log_correlation": -0.07313217386511928,
+            "rank_correlation": -0.07877279107621385,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.009708737864077669,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.5341161125970078,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.21880932504901832,
+            "positive_log_correlation": 0.31623278843010205,
+            "rank_correlation": 0.3338303535771692,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.09803921568627451,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.3819254129284469,
+            "positive_log_correlation": 0.48967545989988637,
+            "rank_correlation": 0.49748741254099466,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2537313432835821,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 4.269944062107131,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.01890298864010748,
+            "positive_log_correlation": 0.1126136120839668,
+            "rank_correlation": 0.09215514531053176,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.029787234042553193,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.09491168291727102,
+            "positive_log_correlation": 0.12071486639403106,
+            "rank_correlation": 0.148340008385671,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.010526315789473684,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.7355197265079079,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.90992631264851
+    },
+    {
+      "seed": 1,
+      "case": "refined_concrete_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.15466711272442896,
+            "positive_log_correlation": 0.41235131671943653,
+            "rank_correlation": 0.3525172479536426,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.0764525993883792,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.3372539436835381,
+            "positive_log_correlation": 0.5115934357699693,
+            "rank_correlation": 0.46715855420758295,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12432432432432433,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0947758498859632,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3502969751928362,
+            "positive_log_correlation": 0.5454414788590598,
+            "rank_correlation": 0.4361096832590488,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5033977282052359,
+            "positive_log_correlation": 0.5492293290874818,
+            "rank_correlation": 0.30979925597748403,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3333333333333333,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.12906582292544885,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.0381890536927485,
+            "positive_log_correlation": 0.09305011045649443,
+            "rank_correlation": 0.08027715723553785,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.0981826170464499,
+            "positive_log_correlation": 0.12353543637504003,
+            "rank_correlation": 0.13965963784383437,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.010526315789473684,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.5390667358336871,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.764461969693508
+    },
+    {
+      "seed": 1,
+      "case": "refined_concrete_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.04375263672796333,
+            "positive_log_correlation": 0.020186828282831772,
+            "rank_correlation": 0.006719892144607656,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.011494252873563218,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.05726237101480686,
+            "positive_log_correlation": -0.0011080352622475863,
+            "rank_correlation": 0.000873539541439634,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.009708737864077669,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.269422061103916,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.2219934916792797,
+            "positive_log_correlation": 0.3245819180429406,
+            "rank_correlation": 0.3414986760476311,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.09803921568627451,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.38336191538618697,
+            "positive_log_correlation": 0.4914571433648756,
+            "rank_correlation": 0.4978660615723237,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2537313432835821,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.5113844417930666,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.022791265028334947,
+            "positive_log_correlation": 0.112567990719917,
+            "rank_correlation": 0.09375728902005305,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.029787234042553193,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.09708443709893336,
+            "positive_log_correlation": 0.1217104626668271,
+            "rank_correlation": 0.1497640438151309,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.010526315789473684,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6980367062610706,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.1553130643356733
+    },
+    {
+      "seed": 2,
+      "case": "original_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.13400248974113518,
+            "positive_log_correlation": 0.43408278134604955,
+            "rank_correlation": 0.3707594756790323,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.09316770186335403,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.33067967231317663,
+            "positive_log_correlation": 0.5281937069205316,
+            "rank_correlation": 0.4734116963534171,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.18857142857142858,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0158539373766398,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3848383558437719,
+            "positive_log_correlation": 0.5744094964380481,
+            "rank_correlation": 0.43045141539009124,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.17894736842105263,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5420393718754005,
+            "positive_log_correlation": 0.5878551661326386,
+            "rank_correlation": 0.29750542331448127,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.47368421052631576,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.14822279185566656,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.00654117716819887,
+            "positive_log_correlation": 0.14971285629719194,
+            "rank_correlation": 0.10775267393628157,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08035714285714286,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.08160262724809511,
+            "positive_log_correlation": 0.14072443127544867,
+            "rank_correlation": 0.14576370751478412,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10344827586206896,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4150220101495998,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.798482060276575
+    },
+    {
+      "seed": 2,
+      "case": "original_PEC_rough128",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.09372003980879513,
+            "positive_log_correlation": -0.21278060538199767,
+            "rank_correlation": -0.20036011174644872,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.16062718629361203,
+            "positive_log_correlation": -0.32946576900903435,
+            "rank_correlation": -0.2702733440938807,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 11.61842364189388,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.2684308603249246,
+            "positive_log_correlation": 0.2762736631504938,
+            "rank_correlation": 0.27987471768975775,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.15463917525773196,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4280303395162409,
+            "positive_log_correlation": 0.3959520381565219,
+            "rank_correlation": 0.36102307958013763,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2537313432835821,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 29.78863303778198,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.014425355359144963,
+            "positive_log_correlation": 0.06415726719492476,
+            "rank_correlation": 0.05495981581123968,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02109704641350211,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.013580895772295414,
+            "positive_log_correlation": 0.036207115817223745,
+            "rank_correlation": 0.04724211877953547,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.258917988045196,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 9.609771430437831
+    },
+    {
+      "seed": 2,
+      "case": "refined_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.1339946661122134,
+            "positive_log_correlation": 0.4340523813478366,
+            "rank_correlation": 0.37081661587098813,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.09316770186335403,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.33067827573263564,
+            "positive_log_correlation": 0.5281543321493692,
+            "rank_correlation": 0.47347345423201126,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.18857142857142858,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0159149268706307,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.38468678723647864,
+            "positive_log_correlation": 0.574169260135155,
+            "rank_correlation": 0.4308927801523802,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.17894736842105263,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5413294746524944,
+            "positive_log_correlation": 0.5874634857441119,
+            "rank_correlation": 0.2977991764933194,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.47368421052631576,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.14837568761761946,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.006535742840475076,
+            "positive_log_correlation": 0.14971823804895168,
+            "rank_correlation": 0.1077531299858832,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08035714285714286,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.08160015028987957,
+            "positive_log_correlation": 0.14072094099935084,
+            "rank_correlation": 0.14578816572182282,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10344827586206896,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.415040716643439,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.79406191891163
+    },
+    {
+      "seed": 2,
+      "case": "refined_PEC_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.09377634762093327,
+            "positive_log_correlation": -0.21282903090341085,
+            "rank_correlation": -0.20038422411269946,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.16076690837891147,
+            "positive_log_correlation": -0.32950307713924365,
+            "rank_correlation": -0.2702937677035735,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 11.624110809785977,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.26805958665244334,
+            "positive_log_correlation": 0.2761003333362482,
+            "rank_correlation": 0.2796949076724523,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.15463917525773196,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4277046656162941,
+            "positive_log_correlation": 0.39593574071668386,
+            "rank_correlation": 0.36130634761384733,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2537313432835821,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 29.80397678033037,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.014456984854736668,
+            "positive_log_correlation": 0.06412747436679091,
+            "rank_correlation": 0.05493494383334565,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.02109704641350211,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.013551403387593166,
+            "positive_log_correlation": 0.03617323248306995,
+            "rank_correlation": 0.047194731003397945,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.2601624888949177,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 9.610349702121281
+    },
+    {
+      "seed": 2,
+      "case": "refined_glass_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.13440451527942796,
+            "positive_log_correlation": 0.4364896383279511,
+            "rank_correlation": 0.3720658657672196,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.09316770186335403,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.33081841494943653,
+            "positive_log_correlation": 0.530588659396491,
+            "rank_correlation": 0.4738108496665389,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.18857142857142858,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0142092338135484,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.39259926210816276,
+            "positive_log_correlation": 0.5861581641236407,
+            "rank_correlation": 0.4400803340634538,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5564462740561219,
+            "positive_log_correlation": 0.6040424709673116,
+            "rank_correlation": 0.2992052006319837,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.5,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.14472190700395632,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.006666502025525359,
+            "positive_log_correlation": 0.15026926024512433,
+            "rank_correlation": 0.10851083912435712,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08035714285714286,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.08102300022342215,
+            "positive_log_correlation": 0.14069729489076013,
+            "rank_correlation": 0.1453924668722321,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10344827586206896,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4142312735187936,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.899861601612237
+    },
+    {
+      "seed": 2,
+      "case": "refined_glass_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.04774691588309133,
+            "positive_log_correlation": 0.020096376982523693,
+            "rank_correlation": 0.0016000663438054529,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.061876143716721184,
+            "positive_log_correlation": -0.06842872742751244,
+            "rank_correlation": -0.0733564216450433,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.447821328010689,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.29899226291187503,
+            "positive_log_correlation": 0.3440686128100525,
+            "rank_correlation": 0.33987591547708695,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.16666666666666666,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.46483290178068504,
+            "positive_log_correlation": 0.43605077579479934,
+            "rank_correlation": 0.3911922244193112,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2923076923076923,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 4.137119893554901,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.00557744987035952,
+            "positive_log_correlation": 0.15142796499976363,
+            "rank_correlation": 0.12118426407759476,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06607929515418502,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.06373567526274736,
+            "positive_log_correlation": 0.1313086589995815,
+            "rank_correlation": 0.1395634428420437,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10344827586206896,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6706315553435096,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.9381742669342854
+    },
+    {
+      "seed": 2,
+      "case": "refined_concrete_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.13442164189064207,
+            "positive_log_correlation": 0.4366051381337952,
+            "rank_correlation": 0.3721037198401492,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.09316770186335403,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.33082532914928336,
+            "positive_log_correlation": 0.5307072092942767,
+            "rank_correlation": 0.473948067750103,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.18857142857142858,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0141453467627435,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3930030510053998,
+            "positive_log_correlation": 0.5867059982425976,
+            "rank_correlation": 0.4403696337637515,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5570621836447092,
+            "positive_log_correlation": 0.6047969507685966,
+            "rank_correlation": 0.3002816191600807,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.5,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.14458843402692026,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": 0.0066656611389841625,
+            "positive_log_correlation": 0.15029767651371725,
+            "rank_correlation": 0.1085166572116989,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08035714285714286,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.0809873759221462,
+            "positive_log_correlation": 0.1406795474033314,
+            "rank_correlation": 0.14547108253771368,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10344827586206896,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4141994006253973,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.903770947443517
+    },
+    {
+      "seed": 2,
+      "case": "refined_concrete_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.037192511086728275,
+            "positive_log_correlation": 0.062224135360180136,
+            "rank_correlation": 0.043758439182501246,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.036494258875594564,
+            "positive_log_correlation": -0.003049545085444918,
+            "rank_correlation": -0.015019016036592359,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.191523172196102,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3036024894056726,
+            "positive_log_correlation": 0.3545417360097403,
+            "rank_correlation": 0.34866680877382056,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.16666666666666666,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.47046327077170974,
+            "positive_log_correlation": 0.44275257132858287,
+            "rank_correlation": 0.3947013657324318,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3125,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.4199779608412118,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.004372345567428168,
+            "positive_log_correlation": 0.15574718064514442,
+            "rank_correlation": 0.12423214721281141,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06607929515418502,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.0693890426626511,
+            "positive_log_correlation": 0.1360021464157323,
+            "rank_correlation": 0.14586230466190897,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10344827586206896,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6263522087013051,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.228087035438998
+    },
+    {
+      "seed": 3,
+      "case": "original_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.09027771350173867,
+            "positive_log_correlation": 0.40566020099954486,
+            "rank_correlation": 0.32011059734012354,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06990881458966565,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.28895940758427413,
+            "positive_log_correlation": 0.5134533668996409,
+            "rank_correlation": 0.4472460109832913,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13043478260869565,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0876799106522,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.4062266252441176,
+            "positive_log_correlation": 0.5589833289897063,
+            "rank_correlation": 0.4091061781700137,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5845168771776975,
+            "positive_log_correlation": 0.5671728533554974,
+            "rank_correlation": 0.2864928077400665,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.14255791116090433,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.05290396496787645,
+            "positive_log_correlation": 0.046189346204126326,
+            "rank_correlation": 0.00473224360511356,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04310344827586207,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.02516825548946867,
+            "positive_log_correlation": 0.0019216879788486318,
+            "rank_correlation": 0.03660083332605411,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03225806451612903,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.522498933712671,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.285656739342105
+    },
+    {
+      "seed": 3,
+      "case": "original_PEC_rough128",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.11169818619816436,
+            "positive_log_correlation": -0.22912540051846314,
+            "rank_correlation": -0.2311129046714642,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.026239067055393587,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.2004942197418741,
+            "positive_log_correlation": -0.3324747482787431,
+            "rank_correlation": -0.26872266502238756,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03482587064676617,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 11.230568478712462,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.21124081279736856,
+            "positive_log_correlation": 0.31663263798760344,
+            "rank_correlation": 0.3438127898141528,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.05660377358490566,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.2962399904731822,
+            "positive_log_correlation": 0.423073812813665,
+            "rank_correlation": 0.4734664523976525,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.07692307692307693,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 28.993682676634656,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.035028041030347006,
+            "positive_log_correlation": 0.00256564349539039,
+            "rank_correlation": -0.02586089036083888,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.01680672268907563,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.035211822858726295,
+            "positive_log_correlation": -0.019646231413441802,
+            "rank_correlation": -0.0034360505236676834,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.0583537104504193,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 9.76815669611975
+    },
+    {
+      "seed": 3,
+      "case": "refined_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.09027520728206502,
+            "positive_log_correlation": 0.40570896513035004,
+            "rank_correlation": 0.3201347285762461,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06990881458966565,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.28895694940594,
+            "positive_log_correlation": 0.5134829127874992,
+            "rank_correlation": 0.44725374965893017,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13043478260869565,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.087702241504853,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.40617084302723566,
+            "positive_log_correlation": 0.559314375045479,
+            "rank_correlation": 0.4096758367410194,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.19148936170212766,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5842559555005037,
+            "positive_log_correlation": 0.5673628934113508,
+            "rank_correlation": 0.286681371237133,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.1426242625813786,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.05290105592460929,
+            "positive_log_correlation": 0.0461957697224755,
+            "rank_correlation": 0.004711085667535694,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04310344827586207,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.025165346750191286,
+            "positive_log_correlation": 0.0019239421929488176,
+            "rank_correlation": 0.03660356303666111,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03225806451612903,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.522501012174305,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.283641780546912
+    },
+    {
+      "seed": 3,
+      "case": "refined_PEC_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.11170705183046543,
+            "positive_log_correlation": -0.229169654763117,
+            "rank_correlation": -0.2311805653719743,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.026239067055393587,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.20050136429600735,
+            "positive_log_correlation": -0.33252997585101896,
+            "rank_correlation": -0.26878142484062933,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03482587064676617,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 11.231988588977524,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.21140210935651205,
+            "positive_log_correlation": 0.3167622152415331,
+            "rank_correlation": 0.3437604930569491,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.05660377358490566,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.29656218117419864,
+            "positive_log_correlation": 0.4231582746070973,
+            "rank_correlation": 0.47348877560986136,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.07692307692307693,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 28.996596689274163,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.0350538170941097,
+            "positive_log_correlation": 0.0024310772115225393,
+            "rank_correlation": -0.02599088522682594,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.01680672268907563,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.03529086064588019,
+            "positive_log_correlation": -0.01989939058477004,
+            "rank_correlation": -0.003934932434203056,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.0590865261954634,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 9.767552668753442
+    },
+    {
+      "seed": 3,
+      "case": "refined_glass_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.09078174799241998,
+            "positive_log_correlation": 0.40812322867625483,
+            "rank_correlation": 0.3209263163705021,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06990881458966565,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.2893272188392036,
+            "positive_log_correlation": 0.5157329114798384,
+            "rank_correlation": 0.44696102207665583,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13043478260869565,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.085770971239622,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.41148863842224637,
+            "positive_log_correlation": 0.5712731561551425,
+            "rank_correlation": 0.4184908560858524,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.20430107526881722,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5942479500567979,
+            "positive_log_correlation": 0.584099345479536,
+            "rank_correlation": 0.2844575057784565,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.13903439533027634,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.05233019189991747,
+            "positive_log_correlation": 0.04693809700780593,
+            "rank_correlation": 0.005371176006815868,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04310344827586207,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.024761461247022998,
+            "positive_log_correlation": 0.001897300380689758,
+            "rank_correlation": 0.03655453743415938,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03225806451612903,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.5213328069117251,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.391019783058566
+    },
+    {
+      "seed": 3,
+      "case": "refined_glass_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.07952097019437525,
+            "positive_log_correlation": -0.017908107005927317,
+            "rank_correlation": -0.02102044672825443,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.026239067055393587,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.11253099879158243,
+            "positive_log_correlation": -0.06704867850276816,
+            "rank_correlation": -0.03375025854211794,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.4328124277285266,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.24961688278945482,
+            "positive_log_correlation": 0.37340005101179385,
+            "rank_correlation": 0.39021661785162937,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06666666666666667,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.3320978378746486,
+            "positive_log_correlation": 0.4452878603704665,
+            "rank_correlation": 0.47660861363128065,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.9848931150459093,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.059089546192905316,
+            "positive_log_correlation": 0.04585084711274695,
+            "rank_correlation": 0.021643367829570118,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.05217391304347826,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.03160460747653001,
+            "positive_log_correlation": 0.0011448841561386128,
+            "rank_correlation": 0.03200891414295822,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03225806451612903,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.7187520116831758,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.652034575203364
+    },
+    {
+      "seed": 3,
+      "case": "refined_concrete_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.09081294072670337,
+            "positive_log_correlation": 0.4082167799978117,
+            "rank_correlation": 0.3209197740749315,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.06990881458966565,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.2893431338868779,
+            "positive_log_correlation": 0.5158245959757708,
+            "rank_correlation": 0.4469192007582388,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13043478260869565,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0856371813499583,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.4118233347569567,
+            "positive_log_correlation": 0.5717807529936993,
+            "rank_correlation": 0.4189989932342046,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.20430107526881722,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5948341933824296,
+            "positive_log_correlation": 0.5848757642915249,
+            "rank_correlation": 0.2847651264073031,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.1388167545853069,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.05229155721261247,
+            "positive_log_correlation": 0.04696868463123934,
+            "rank_correlation": 0.005369051230262899,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04310344827586207,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.024731308045442827,
+            "positive_log_correlation": 0.00191159264385248,
+            "rank_correlation": 0.03646412941885553,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03225806451612903,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.5212375939962581,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.397551627335442
+    },
+    {
+      "seed": 3,
+      "case": "refined_concrete_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.07028372546497424,
+            "positive_log_correlation": 0.021646371275784768,
+            "rank_correlation": 0.019799169752056287,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.026239067055393587,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.08652380923253723,
+            "positive_log_correlation": 0.00012365718053566958,
+            "rank_correlation": 0.03277670067679319,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.189252237730519,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.25798798171897663,
+            "positive_log_correlation": 0.3818220267482122,
+            "rank_correlation": 0.3973479938339498,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.07692307692307693,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.3399578067378747,
+            "positive_log_correlation": 0.4502120710262288,
+            "rank_correlation": 0.4800271091736142,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.12,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.290120393870563,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.05983281087705426,
+            "positive_log_correlation": 0.04745132269207195,
+            "rank_correlation": 0.02153559847181924,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.03066616975717314,
+            "positive_log_correlation": 0.0016335613825341543,
+            "rank_correlation": 0.032403193543033344,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03225806451612903,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6827796168108484,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 2.911845473296255
+    }
+  ],
+  "mean_detected_power_records": [
+    {
+      "case": "original_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.12680343936056512,
+            "positive_log_correlation": 0.42520896202805625,
+            "rank_correlation": 0.3438530031033091,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08307692307692308,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.3243383070811417,
+            "positive_log_correlation": 0.5217509181066649,
+            "rank_correlation": 0.47408825142405175,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.14917127071823205,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0700595594767002,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.39211508718722976,
+            "positive_log_correlation": 0.5893121613691766,
+            "rank_correlation": 0.4410151474683403,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.23076923076923078,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5272160216772647,
+            "positive_log_correlation": 0.5897497629948508,
+            "rank_correlation": 0.3162334145509293,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.1499889440588612,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.04959208459883166,
+            "positive_log_correlation": 0.09967418438720076,
+            "rank_correlation": 0.05655669767573628,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04310344827586207,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.005764143054941548,
+            "positive_log_correlation": 0.11650358293216878,
+            "rank_correlation": 0.14401287113145414,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4933532785499657,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.981033121037266
+    },
+    {
+      "case": "original_PEC_rough128",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.12054452954904901,
+            "positive_log_correlation": -0.23869886466315202,
+            "rank_correlation": -0.21323089502980105,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.20303875971572713,
+            "positive_log_correlation": -0.3432213925589269,
+            "rank_correlation": -0.253374479276422,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.024630541871921183,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 11.452317180689649,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.2778233340514546,
+            "positive_log_correlation": 0.3443958319546384,
+            "rank_correlation": 0.3731426136116893,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10891089108910891,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.4349758347540333,
+            "positive_log_correlation": 0.498944197584167,
+            "rank_correlation": 0.5094441985226938,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2923076923076923,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 29.752094624781975,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.026973720970707226,
+            "positive_log_correlation": 0.03125118341685114,
+            "rank_correlation": 0.013050311944837344,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.025423728813559324,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.016525255400819606,
+            "positive_log_correlation": 0.0019105592850549528,
+            "rank_correlation": 0.05756359133830068,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.0332016011696354,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 9.916162700306838
+    },
+    {
+      "case": "refined_PEC_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.12679953437877697,
+            "positive_log_correlation": 0.4251877990402937,
+            "rank_correlation": 0.34385899262263375,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08307692307692308,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.3243352005298238,
+            "positive_log_correlation": 0.5217137549319215,
+            "rank_correlation": 0.47414159958100754,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.14917127071823205,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0700844392483164,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.39205788625425253,
+            "positive_log_correlation": 0.5891478939551916,
+            "rank_correlation": 0.4409417758985321,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.23076923076923078,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5270289148198574,
+            "positive_log_correlation": 0.5894082392554912,
+            "rank_correlation": 0.31705480729106555,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.150060427336895,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.04959215448373987,
+            "positive_log_correlation": 0.09967745042020489,
+            "rank_correlation": 0.056574628716890625,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.04310344827586207,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.005762142960391743,
+            "positive_log_correlation": 0.11650361741882559,
+            "rank_correlation": 0.14398830373599114,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4933567176068991,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -9.978973810063538
+    },
+    {
+      "case": "refined_PEC_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.1205601601351834,
+            "positive_log_correlation": -0.23872122602408377,
+            "rank_correlation": -0.2132820412624624,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.20307163653755872,
+            "positive_log_correlation": -0.3432540169128545,
+            "rank_correlation": -0.2533976953033383,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.024630541871921183,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 11.453990668840149,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.27773050756837453,
+            "positive_log_correlation": 0.3442909201290535,
+            "rank_correlation": 0.3728491273324567,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.10891089108910891,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.43494748677497497,
+            "positive_log_correlation": 0.4989162771841955,
+            "rank_correlation": 0.5095345060629929,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.2923076923076923,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 29.756817309017844,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.026993743077285866,
+            "positive_log_correlation": 0.031195722084082673,
+            "rank_correlation": 0.013020717089629638,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.025423728813559324,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.01655959151168638,
+            "positive_log_correlation": 0.001787401509711211,
+            "rank_correlation": 0.057498405849005514,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 3.033472256179358,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 9.916464513669265
+    },
+    {
+      "case": "refined_glass_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.1274144157462828,
+            "positive_log_correlation": 0.4273550244490211,
+            "rank_correlation": 0.34518374864609636,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08307692307692308,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.3248596505540316,
+            "positive_log_correlation": 0.5240559896293988,
+            "rank_correlation": 0.47464136650075606,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.14917127071823205,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.0682337097212355,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.39562853304249235,
+            "positive_log_correlation": 0.6000963993999605,
+            "rank_correlation": 0.4448985187457975,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.24444444444444444,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5327139213763,
+            "positive_log_correlation": 0.6051745630638797,
+            "rank_correlation": 0.3138191253275023,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.14675531135179123,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.04875640849665529,
+            "positive_log_correlation": 0.10109361600975493,
+            "rank_correlation": 0.05843644776055461,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.006767512284856804,
+            "positive_log_correlation": 0.11856886434335805,
+            "rank_correlation": 0.14592672583223418,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.4921751026482761,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.072259612498964
+    },
+    {
+      "case": "refined_glass_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.08602293673651815,
+            "positive_log_correlation": -0.02160397820995597,
+            "rank_correlation": -0.036217135966170114,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.11012266283874242,
+            "positive_log_correlation": -0.08330079078998895,
+            "rank_correlation": -0.0652512141873844,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03482587064676617,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.439880115423791,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.31992055074415615,
+            "positive_log_correlation": 0.410849692793583,
+            "rank_correlation": 0.4300013936340726,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13131313131313133,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.46714828660405094,
+            "positive_log_correlation": 0.5178769659091115,
+            "rank_correlation": 0.5267062988240995,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3548387096774194,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 4.066436991157815,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.04901724666644179,
+            "positive_log_correlation": 0.10505438283135113,
+            "rank_correlation": 0.0631005810486515,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.029787234042553193,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.0037720951465369766,
+            "positive_log_correlation": 0.09439935149275103,
+            "rank_correlation": 0.13124656056463518,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.07865168539325842,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6915556958889195,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.8092774549007684
+    },
+    {
+      "case": "refined_concrete_smooth",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": 0.12744174028021996,
+            "positive_log_correlation": 0.4274479781170199,
+            "rank_correlation": 0.3452396234466456,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.08307692307692308,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": 0.32487959814292416,
+            "positive_log_correlation": 0.524152706652683,
+            "rank_correlation": 0.47466588132638093,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.14917127071823205,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 1.068154263698853,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.39581941883373056,
+            "positive_log_correlation": 0.600555862267127,
+            "rank_correlation": 0.4450858504133928,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.24444444444444444,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.5329502062419206,
+            "positive_log_correlation": 0.6058014372174729,
+            "rank_correlation": 0.3136150032279872,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.423728813559322,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 0.146616950788192,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.048720837622530086,
+            "positive_log_correlation": 0.10115150315899338,
+            "rank_correlation": 0.05852215053644562,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.047619047619047616,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": 0.006789096341843841,
+            "positive_log_correlation": 0.11860168720983026,
+            "rank_correlation": 0.14609585870144393,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.054945054945054944,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.492122761235954,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": -10.07620372078965
+    },
+    {
+      "case": "refined_concrete_rough512",
+      "metrics": {
+        "all_known": {
+          "raw": {
+            "finite_count": 1755,
+            "positive_count": 1755,
+            "linear_correlation": -0.07625280978835762,
+            "positive_log_correlation": 0.02629041843940115,
+            "rank_correlation": 0.017962653924000562,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.020289855072463767,
+            "brightest_count_per_image": 176
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 1035,
+            "positive_count": 1035,
+            "linear_correlation": -0.08184269284553251,
+            "positive_log_correlation": -0.007076910026703591,
+            "rank_correlation": 0.007851681949739306,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.03482587064676617,
+            "brightest_count_per_image": 104
+          },
+          "prediction_mean_in_component_units": 2.1904501768936635,
+          "measurement_mean_native_sigma0": 4.337689662697138
+        },
+        "roof": {
+          "raw": {
+            "finite_count": 553,
+            "positive_count": 553,
+            "linear_correlation": 0.3278724984501742,
+            "positive_log_correlation": 0.4208559930928427,
+            "rank_correlation": 0.43896074351371206,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.13131313131313133,
+            "brightest_count_per_image": 56
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 414,
+            "positive_count": 414,
+            "linear_correlation": 0.47426844004818897,
+            "positive_log_correlation": 0.5231612877562816,
+            "rank_correlation": 0.5305401414057114,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.3548387096774194,
+            "brightest_count_per_image": 42
+          },
+          "prediction_mean_in_component_units": 3.355024847467944,
+          "measurement_mean_native_sigma0": 1.6369185997392126
+        },
+        "other_known": {
+          "raw": {
+            "finite_count": 1202,
+            "positive_count": 1202,
+            "linear_correlation": -0.052052898888490386,
+            "positive_log_correlation": 0.10806914326621885,
+            "rank_correlation": 0.06533645059359001,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.029787234042553193,
+            "brightest_count_per_image": 121
+          },
+          "fixed_3x3_complete_only": {
+            "finite_count": 479,
+            "positive_count": 479,
+            "linear_correlation": -0.0020578635543868407,
+            "positive_log_correlation": 0.09944593671911042,
+            "rank_correlation": 0.1363337584402652,
+            "absolute_power_comparison_permitted": false,
+            "gain_or_shift_fit": false,
+            "brightest_10_percent_IoU": 0.07865168539325842,
+            "brightest_count_per_image": 48
+          },
+          "prediction_mean_in_component_units": 1.6546683193000051,
+          "measurement_mean_native_sigma0": 5.580224103475619
+        },
+        "scope": "Unfitted shape/rank/contrast diagnostics. Conditional synthetic point-reference m\u00b2 and native sigma0 have incompatible absolute radiometry."
+      },
+      "roof_over_other_mean_power_db": 3.069847890541645
+    }
+  ],
+  "baseline_closures": [
+    {
+      "seed": 0,
+      "case": "original_PEC_smooth",
+      "relative_power_error": 1.438903544408771e-16,
+      "pass": true
+    },
+    {
+      "seed": 0,
+      "case": "original_PEC_rough128",
+      "relative_power_error": 1.416702053459496e-16,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "original_PEC_smooth",
+      "relative_power_error": 1.443299774655624e-16,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "original_PEC_rough128",
+      "relative_power_error": 1.9574083809281662e-16,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "original_PEC_smooth",
+      "relative_power_error": 2.0093165709691046e-16,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "original_PEC_rough128",
+      "relative_power_error": 1.8277446439766555e-16,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "original_PEC_smooth",
+      "relative_power_error": 2.0205468403092041e-16,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "original_PEC_rough128",
+      "relative_power_error": 1.3877048802164307e-16,
+      "pass": true
+    }
+  ],
+  "independent_adjoint_checks": [
+    {
+      "seed": 0,
+      "case": "refined_PEC_smooth",
+      "independent31target_relative_power_error": 1.785112978401793e-15,
+      "pass": true
+    },
+    {
+      "seed": 0,
+      "case": "refined_PEC_rough512",
+      "independent31target_relative_power_error": 2.2390853661714737e-15,
+      "pass": true
+    },
+    {
+      "seed": 0,
+      "case": "refined_glass_smooth",
+      "independent31target_relative_power_error": 2.6256877009058974e-15,
+      "pass": true
+    },
+    {
+      "seed": 0,
+      "case": "refined_glass_rough512",
+      "independent31target_relative_power_error": 2.479397286906702e-15,
+      "pass": true
+    },
+    {
+      "seed": 0,
+      "case": "refined_concrete_smooth",
+      "independent31target_relative_power_error": 1.6670747347688005e-15,
+      "pass": true
+    },
+    {
+      "seed": 0,
+      "case": "refined_concrete_rough512",
+      "independent31target_relative_power_error": 1.8377739840140493e-15,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "refined_PEC_smooth",
+      "independent31target_relative_power_error": 2.0502193364648837e-15,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "refined_PEC_rough512",
+      "independent31target_relative_power_error": 2.2853004067207827e-15,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "refined_glass_smooth",
+      "independent31target_relative_power_error": 1.899247843379792e-15,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "refined_glass_rough512",
+      "independent31target_relative_power_error": 1.454365780025866e-15,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "refined_concrete_smooth",
+      "independent31target_relative_power_error": 2.3572130177117825e-15,
+      "pass": true
+    },
+    {
+      "seed": 1,
+      "case": "refined_concrete_rough512",
+      "independent31target_relative_power_error": 1.6286265487036984e-15,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "refined_PEC_smooth",
+      "independent31target_relative_power_error": 1.738653251884907e-15,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "refined_PEC_rough512",
+      "independent31target_relative_power_error": 2.7807939597955273e-15,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "refined_glass_smooth",
+      "independent31target_relative_power_error": 1.8628362519052565e-15,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "refined_glass_rough512",
+      "independent31target_relative_power_error": 1.6633907522932773e-15,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "refined_concrete_smooth",
+      "independent31target_relative_power_error": 1.5619766775819938e-15,
+      "pass": true
+    },
+    {
+      "seed": 2,
+      "case": "refined_concrete_rough512",
+      "independent31target_relative_power_error": 2.878546856464092e-15,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "refined_PEC_smooth",
+      "independent31target_relative_power_error": 2.2475661142894042e-15,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "refined_PEC_rough512",
+      "independent31target_relative_power_error": 2.3908048690090823e-15,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "refined_glass_smooth",
+      "independent31target_relative_power_error": 2.5717392199038643e-15,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "refined_glass_rough512",
+      "independent31target_relative_power_error": 2.020769922032387e-15,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "refined_concrete_smooth",
+      "independent31target_relative_power_error": 2.392015165489624e-15,
+      "pass": true
+    },
+    {
+      "seed": 3,
+      "case": "refined_concrete_rough512",
+      "independent31target_relative_power_error": 3.2223426441090973e-15,
+      "pass": true
+    }
+  ],
+  "all_numerical_gates_pass": true,
+  "inputs_unchanged": true,
+  "measured_roof_over_other_mean_sigma0_db": -5.3262455721833835,
+  "prospective_physical_fidelity_pass": false,
+  "material_identification_pass": false,
+  "output_sha256": {
+    "all_cases.npz": "fbbad354fb39237918219a4a66c88969ffb59b8c975c0f39de45cf8bccd5bfd5"
+  }
+}

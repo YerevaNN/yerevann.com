@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "city": "helsinki",
+      "direction": "ascending",
+      "point_pair_count": 102,
+      "errors": {
+        "coarse_to_fine_complex_relative_L2": 0.0029030688246535624,
+        "coarse_to_fine_detected_relative_L2": 0.0018291069074913148,
+        "fine_to_reference_complex_relative_L2": 0.00153322263429231,
+        "fine_to_reference_detected_relative_L2": 0.0009194499852190225,
+        "coarse_to_reference_complex_relative_L2": 0.004132836650189951,
+        "coarse_to_reference_detected_relative_L2": 0.0027388940957220158
+      },
+      "all_declared_numerical_gates_pass": true,
+      "orbit_lift_max_error_m": 0.0,
+      "output_sha256": "5017b58dc2f1e01bec13c2d1eb7e20ed4d5b33eb0cdef79c16593c646fe36dd6"
+    },
+    {
+      "city": "helsinki",
+      "direction": "descending",
+      "point_pair_count": 102,
+      "errors": {
+        "coarse_to_fine_complex_relative_L2": 0.00287875670749954,
+        "coarse_to_fine_detected_relative_L2": 0.0016702887561825357,
+        "fine_to_reference_complex_relative_L2": 0.0017314293746954288,
+        "fine_to_reference_detected_relative_L2": 0.0008310825814588841,
+        "coarse_to_reference_complex_relative_L2": 0.00457697214608339,
+        "coarse_to_reference_detected_relative_L2": 0.002501670777070787
+      },
+      "all_declared_numerical_gates_pass": true,
+      "orbit_lift_max_error_m": 0.0,
+      "output_sha256": "828ec7a04e1213cabc779819412cab836b6b8d5e4ccf2c2523eb3d89b7edac14"
+    },
+    {
+      "city": "cologne",
+      "direction": "ascending",
+      "point_pair_count": 102,
+      "errors": {
+        "coarse_to_fine_complex_relative_L2": 0.002549150895330985,
+        "coarse_to_fine_detected_relative_L2": 0.0019112631650443285,
+        "fine_to_reference_complex_relative_L2": 0.0012006052643691782,
+        "fine_to_reference_detected_relative_L2": 0.0008423193153259058,
+        "coarse_to_reference_complex_relative_L2": 0.00360080330309336,
+        "coarse_to_reference_detected_relative_L2": 0.0026942032988157864
+      },
+      "all_declared_numerical_gates_pass": true,
+      "orbit_lift_max_error_m": 0.0,
+      "output_sha256": "64a7d86a0d1e30d1ceb268b658a3532d961133bf026f06f1d2cfeaa3ed8929d3"
+    },
+    {
+      "city": "cologne",
+      "direction": "descending",
+      "point_pair_count": 102,
+      "errors": {
+        "coarse_to_fine_complex_relative_L2": 0.002557640617139374,
+        "coarse_to_fine_detected_relative_L2": 0.0019161110399633946,
+        "fine_to_reference_complex_relative_L2": 0.0012067684389967957,
+        "fine_to_reference_detected_relative_L2": 0.0008474740608212183,
+        "coarse_to_reference_complex_relative_L2": 0.003619888513584459,
+        "coarse_to_reference_detected_relative_L2": 0.0027048856083139554
+      },
+      "all_declared_numerical_gates_pass": true,
+      "orbit_lift_max_error_m": 0.0,
+      "output_sha256": "f46671f9d0fcabd07c250c0eb3a87e112a2a8f9a2128d1e1d51e821bccdd2266"
+    }
+  ],
+  "all_point_response_sampling_gates_pass": true,
+  "inputs_unchanged": true,
+  "extended_scene_sampling_convergence_claimed": false,
+  "physical_fidelity_pass": false,
+  "scope": "Bounded point response ONLY. No extended-scene field quadrature, antenna/TOPS, calibrated radiometry or physical fidelity claim."
+}

@@ -1,0 +1,445 @@
+{
+  "cases": [
+    {
+      "city": "helsinki",
+      "direction": "ascending",
+      "product": "S1A_IW_GRDH_1SDV_20170708T155630_20170708T155655_017382_01D07F",
+      "metrics_common_mask": {
+        "current_simulator": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.05450206075064234,
+          "rank_correlation": 0.11001270662267966,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.026155541086061194
+        },
+        "raysar_five_bounces": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.25904238643756433,
+          "rank_correlation": 0.2970855544936754,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.282463725111588
+        },
+        "raysar_single_bounce": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.1259526446909186,
+          "rank_correlation": 0.17207145357217524,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.11845367945996157
+        },
+        "raysar_multiple_bounces_only": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.37839683865853424,
+          "rank_correlation": 0.4149063503017967,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.41124335740913287
+        }
+      },
+      "audit": {
+        "city": "helsinki",
+        "direction": "ascending",
+        "all_original_faces_verified": 623401,
+        "export_max_coordinate_error_m": 0.0,
+        "all_single_bounce_azimuth_error_m": 0.0,
+        "all_single_bounce_range_error_m": 1.192907802760601e-06,
+        "analytical_response_vs_independent_integral_error": 1.1102230246251565e-16,
+        "density_2m_to_1m_native_relative_L2": 0.01636110212646677,
+        "density_5percent_gate_pass": true,
+        "source_hash_unchanged": true,
+        "native_shape": [
+          104,
+          104
+        ]
+      },
+      "ray_receipt": {
+        "binary_sha256": "10231acd4f5e6220fcb6372ad7dabbc6e45fe277a3c7ec397702cc166c8a1f5f",
+        "protocol_sha256": "a4d292be03ae0de78a81b3221ce1278ed85c70f883381caf26cf63868c6f3b97",
+        "command": [
+          "/home/hrant/Research/robotics/radar-simulation/sar/data/raysar_vendor_v1/source/povray-3.7.0.0_for_raysar-loc_conwriter/unix/povray",
+          "+I/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/helsinki/ascending/scene.pov",
+          "+O/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/helsinki/ascending/rays_1m/optical_trace.png",
+          "+W1876",
+          "+H1524",
+          "-D",
+          "-A",
+          "+WT2",
+          "+FN",
+          "+Q9"
+        ],
+        "returncode": 0,
+        "elapsed_s": 43.13771873500082,
+        "ray_grid": [
+          1876,
+          1524
+        ],
+        "actual_ray_cell_area_m2": 1.0,
+        "contribution_count": 3051074,
+        "contributions_sha256": "f57a1195baa101bd1a48af23a0a9764e410deb66cc60e760771d11abd1570842",
+        "bounce_counts": {
+          "1": 1808454,
+          "2": 616466,
+          "3": 300851,
+          "4": 166125,
+          "5": 98476,
+          "6": 60702
+        },
+        "retained_but_not_imaged_level6_count": 60702
+      },
+      "integrated_trace_proxy_by_bounce": [
+        417973.910614,
+        50264.464148,
+        6925.147744,
+        1613.9432149999998,
+        450.21487199999996
+      ],
+      "native_mapped_multiple_fraction": 0.1149836508099663,
+      "fine_ray_spacing_m": 1.0,
+      "no_fit": true,
+      "source_protocol_sha256": "a4d292be03ae0de78a81b3221ce1278ed85c70f883381caf26cf63868c6f3b97",
+      "measurement_array_sha256": "c0f6675cba550b3785ddc98d0d92367c9823f55aa769f1a512efbaf146c940e7",
+      "current_prediction_sha256": "9b31796bc2bad4ee53931a4ff63487c14086147015b43b4f35879f95118b7a15",
+      "RaySAR_native_arrays_sha256": "2ee09dbab3551e5dc1aa0da63f7ecf3e665b7053d6687f7dc47df05db5c98411",
+      "limits": [
+        "Existing city S1 measurements were already inspected before this baseline was requested; development comparison, not a blind holdout. No parameter/position/gain fitting.",
+        "RaySAR finish is an optical empirical reflection model, not calibrated VV electromagnetic backscatter.",
+        "Noncoherent reflection-intensity image is not a focused full Sentinel-1 TOPS product.",
+        "Source heights, holes, acquisition epoch and datum uncertainties of original cases remain.",
+        "Native targets use the same source-height projection as the existing comparison; no flat-ground substitution."
+      ]
+    },
+    {
+      "city": "helsinki",
+      "direction": "descending",
+      "product": "S1B_IW_GRDH_1SDV_20170709T043249_20170709T043314_006406_00B434",
+      "metrics_common_mask": {
+        "current_simulator": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": -0.03968958453163292,
+          "rank_correlation": -0.02334608003886933,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": -0.07853001104285547
+        },
+        "raysar_five_bounces": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.2770805527227325,
+          "rank_correlation": 0.3442461097953874,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.2946471328749428
+        },
+        "raysar_single_bounce": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.19825969062073484,
+          "rank_correlation": 0.2655562437049693,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.20673550188865972
+        },
+        "raysar_multiple_bounces_only": {
+          "count": 10816,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.40733478002276,
+          "rank_correlation": 0.4352012446550272,
+          "complete3x3_count": 10404,
+          "complete3x3_log_correlation": 0.4152249380913953
+        }
+      },
+      "audit": {
+        "city": "helsinki",
+        "direction": "descending",
+        "all_original_faces_verified": 623401,
+        "export_max_coordinate_error_m": 0.0,
+        "all_single_bounce_azimuth_error_m": 0.0,
+        "all_single_bounce_range_error_m": 1.1990778148174286e-06,
+        "analytical_response_vs_independent_integral_error": 1.1362438767648086e-16,
+        "density_2m_to_1m_native_relative_L2": 0.018681782700685157,
+        "density_5percent_gate_pass": true,
+        "source_hash_unchanged": true,
+        "native_shape": [
+          104,
+          104
+        ]
+      },
+      "ray_receipt": {
+        "binary_sha256": "10231acd4f5e6220fcb6372ad7dabbc6e45fe277a3c7ec397702cc166c8a1f5f",
+        "protocol_sha256": "4d802447db28a7aa138e3eaf64235a379362e1971858f9a96352701c128292db",
+        "command": [
+          "/home/hrant/Research/robotics/radar-simulation/sar/data/raysar_vendor_v1/source/povray-3.7.0.0_for_raysar-loc_conwriter/unix/povray",
+          "+I/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/helsinki/descending/scene.pov",
+          "+O/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/helsinki/descending/rays_1m/optical_trace.png",
+          "+W1820",
+          "+H1312",
+          "-D",
+          "-A",
+          "+WT2",
+          "+FN",
+          "+Q9"
+        ],
+        "returncode": 0,
+        "elapsed_s": 42.025633926008595,
+        "ray_grid": [
+          1820,
+          1312
+        ],
+        "actual_ray_cell_area_m2": 1.0,
+        "contribution_count": 2909758,
+        "contributions_sha256": "215c8c66bbdc161990a5e690fa77171329dfcc86520340ba8012bb34e1834148",
+        "bounce_counts": {
+          "1": 1595197,
+          "2": 634981,
+          "3": 325878,
+          "4": 179956,
+          "5": 107407,
+          "6": 66339
+        },
+        "retained_but_not_imaged_level6_count": 66339
+      },
+      "integrated_trace_proxy_by_bounce": [
+        334708.128952,
+        42590.626824000006,
+        7700.128050999999,
+        1628.9981670000002,
+        474.64822499999997
+      ],
+      "native_mapped_multiple_fraction": 0.12774117126642795,
+      "fine_ray_spacing_m": 1.0,
+      "no_fit": true,
+      "source_protocol_sha256": "4d802447db28a7aa138e3eaf64235a379362e1971858f9a96352701c128292db",
+      "measurement_array_sha256": "50199b70f5ac95cf4184b4f835b7a025817423caa5a8903971c3577393af5906",
+      "current_prediction_sha256": "a9ceca37df37c6f7cf12150790c5c7f34efe4958fadc8cc717ad43c1ea7d2654",
+      "RaySAR_native_arrays_sha256": "dde63b097172cee82a4950049a7ee6851d8802ad37e7e3c7b07dfea33b0a91e1",
+      "limits": [
+        "Existing city S1 measurements were already inspected before this baseline was requested; development comparison, not a blind holdout. No parameter/position/gain fitting.",
+        "RaySAR finish is an optical empirical reflection model, not calibrated VV electromagnetic backscatter.",
+        "Noncoherent reflection-intensity image is not a focused full Sentinel-1 TOPS product.",
+        "Source heights, holes, acquisition epoch and datum uncertainties of original cases remain.",
+        "Native targets use the same source-height projection as the existing comparison; no flat-ground substitution."
+      ]
+    },
+    {
+      "city": "cologne",
+      "direction": "ascending",
+      "product": "S1C_IW_GRDH_1SDV_20250511T171536_20250511T171601_002286_004D71",
+      "metrics_common_mask": {
+        "current_simulator": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.056046321393773524,
+          "rank_correlation": 0.07038577317185774,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.027752536370295525
+        },
+        "raysar_five_bounces": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.23137886437879968,
+          "rank_correlation": 0.27405643806456437,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.23277664626024425
+        },
+        "raysar_single_bounce": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.16641875825200073,
+          "rank_correlation": 0.21252446080924461,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.18491866041831714
+        },
+        "raysar_multiple_bounces_only": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.3727238302639184,
+          "rank_correlation": 0.37263858424238583,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.3388757148747628
+        }
+      },
+      "audit": {
+        "city": "cologne",
+        "direction": "ascending",
+        "all_original_faces_verified": 2617376,
+        "export_max_coordinate_error_m": 0.0,
+        "all_single_bounce_azimuth_error_m": 0.0,
+        "all_single_bounce_range_error_m": 1.1831289157271385e-06,
+        "analytical_response_vs_independent_integral_error": 9.8879238130678e-17,
+        "density_2m_to_1m_native_relative_L2": 0.016132088890898552,
+        "density_5percent_gate_pass": true,
+        "source_hash_unchanged": true,
+        "native_shape": [
+          100,
+          100
+        ]
+      },
+      "ray_receipt": {
+        "binary_sha256": "10231acd4f5e6220fcb6372ad7dabbc6e45fe277a3c7ec397702cc166c8a1f5f",
+        "protocol_sha256": "3a96941a445a3227063b84fd9593654289af0b64672fdefd3b3a30fb47ffeffd",
+        "command": [
+          "/home/hrant/Research/robotics/radar-simulation/sar/data/raysar_vendor_v1/source/povray-3.7.0.0_for_raysar-loc_conwriter/unix/povray",
+          "+I/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/cologne/ascending/scene.pov",
+          "+O/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/cologne/ascending/rays_1m/optical_trace.png",
+          "+W1484",
+          "+H1192",
+          "-D",
+          "-A",
+          "+WT2",
+          "+FN",
+          "+Q9"
+        ],
+        "returncode": 0,
+        "elapsed_s": 36.07697668000765,
+        "ray_grid": [
+          1484,
+          1192
+        ],
+        "actual_ray_cell_area_m2": 1.0,
+        "contribution_count": 1709512,
+        "contributions_sha256": "894565f2beac87606c3ff4d278dcec89db957ec65d8e4008c7d9b80659179e0a",
+        "bounce_counts": {
+          "1": 1107646,
+          "2": 328584,
+          "3": 133174,
+          "4": 70286,
+          "5": 41871,
+          "6": 27951
+        },
+        "retained_but_not_imaged_level6_count": 27951
+      },
+      "integrated_trace_proxy_by_bounce": [
+        253494.709675,
+        27985.860696999996,
+        3113.24693,
+        676.8516930000001,
+        147.342079
+      ],
+      "native_mapped_multiple_fraction": 0.11144311455763706,
+      "fine_ray_spacing_m": 1.0,
+      "no_fit": true,
+      "source_protocol_sha256": "3a96941a445a3227063b84fd9593654289af0b64672fdefd3b3a30fb47ffeffd",
+      "measurement_array_sha256": "4f75f09c645d8cd4e0b082dc009f341d27fa554f91469ce7bbcda24b7c7bc9a5",
+      "current_prediction_sha256": "e3e78c7117097bab3bac45044ebb44f3f7ec714131ff271226ebdfa9df50afb9",
+      "RaySAR_native_arrays_sha256": "69c2df675de63e116795ed56fbe4e23f3306d8c8ad5e0fb7198968ad33223cb4",
+      "limits": [
+        "Existing city S1 measurements were already inspected before this baseline was requested; development comparison, not a blind holdout. No parameter/position/gain fitting.",
+        "RaySAR finish is an optical empirical reflection model, not calibrated VV electromagnetic backscatter.",
+        "Noncoherent reflection-intensity image is not a focused full Sentinel-1 TOPS product.",
+        "Source heights, holes, acquisition epoch and datum uncertainties of original cases remain.",
+        "Native targets use the same source-height projection as the existing comparison; no flat-ground substitution."
+      ]
+    },
+    {
+      "city": "cologne",
+      "direction": "descending",
+      "product": "S1C_IW_GRDH_1SDV_20250513T054923_20250513T054948_002308_004E14",
+      "metrics_common_mask": {
+        "current_simulator": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": -0.04516267992349227,
+          "rank_correlation": -0.04840818882408189,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": -0.10645642523867635
+        },
+        "raysar_five_bounces": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.2501810462217551,
+          "rank_correlation": 0.27683568429235683,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.24804014048222595
+        },
+        "raysar_single_bounce": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.1957052088477469,
+          "rank_correlation": 0.22719847722398476,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.21253439388342157
+        },
+        "raysar_multiple_bounces_only": {
+          "count": 10000,
+          "zero_prediction_pixels": 0,
+          "log_correlation": 0.32941803510610584,
+          "rank_correlation": 0.31080669525606697,
+          "complete3x3_count": 9604,
+          "complete3x3_log_correlation": 0.2778066942226375
+        }
+      },
+      "audit": {
+        "city": "cologne",
+        "direction": "descending",
+        "all_original_faces_verified": 2617376,
+        "export_max_coordinate_error_m": 0.0,
+        "all_single_bounce_azimuth_error_m": 0.0,
+        "all_single_bounce_range_error_m": 1.1828960850834846e-06,
+        "analytical_response_vs_independent_integral_error": 9.8879238130678e-17,
+        "density_2m_to_1m_native_relative_L2": 0.015040672763648366,
+        "density_5percent_gate_pass": true,
+        "source_hash_unchanged": true,
+        "native_shape": [
+          100,
+          100
+        ]
+      },
+      "ray_receipt": {
+        "binary_sha256": "10231acd4f5e6220fcb6372ad7dabbc6e45fe277a3c7ec397702cc166c8a1f5f",
+        "protocol_sha256": "f70532dffa645cac842a024c734fed902745b75b4cd63fe7b0ab9c1dd21f8c47",
+        "command": [
+          "/home/hrant/Research/robotics/radar-simulation/sar/data/raysar_vendor_v1/source/povray-3.7.0.0_for_raysar-loc_conwriter/unix/povray",
+          "+I/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/cologne/descending/scene.pov",
+          "+O/home/hrant/Research/robotics/radar-simulation/sar/results/raysar_city_baseline_v1/cologne/descending/rays_1m/optical_trace.png",
+          "+W1524",
+          "+H1240",
+          "-D",
+          "-A",
+          "+WT2",
+          "+FN",
+          "+Q9"
+        ],
+        "returncode": 0,
+        "elapsed_s": 34.813126216002274,
+        "ray_grid": [
+          1524,
+          1240
+        ],
+        "actual_ray_cell_area_m2": 1.0,
+        "contribution_count": 1679799,
+        "contributions_sha256": "36c9efeae76f1a5bd524ea5e716f005427b7b8b84122137a3bd1c970026ca9a1",
+        "bounce_counts": {
+          "1": 1119646,
+          "2": 318089,
+          "3": 119207,
+          "4": 61505,
+          "5": 36817,
+          "6": 24535
+        },
+        "retained_but_not_imaged_level6_count": 24535
+      },
+      "integrated_trace_proxy_by_bounce": [
+        260293.357874,
+        28576.313793,
+        2801.5847089999997,
+        581.4296899999999,
+        126.239564
+      ],
+      "native_mapped_multiple_fraction": 0.1068417022198137,
+      "fine_ray_spacing_m": 1.0,
+      "no_fit": true,
+      "source_protocol_sha256": "f70532dffa645cac842a024c734fed902745b75b4cd63fe7b0ab9c1dd21f8c47",
+      "measurement_array_sha256": "d7f3c62de5db5f657d66d68bbb8d1c11a55bf50e7ae50094697ebc485ab3a418",
+      "current_prediction_sha256": "3772be49f334a3fed1c373a32b0d07a0f2deef6a90edc2a4d0a2a9816cf3c37e",
+      "RaySAR_native_arrays_sha256": "fb50533d480e18f741fab3c127b94fe6baa00aa256d4437d3c87cc990ce075db",
+      "limits": [
+        "Existing city S1 measurements were already inspected before this baseline was requested; development comparison, not a blind holdout. No parameter/position/gain fitting.",
+        "RaySAR finish is an optical empirical reflection model, not calibrated VV electromagnetic backscatter.",
+        "Noncoherent reflection-intensity image is not a focused full Sentinel-1 TOPS product.",
+        "Source heights, holes, acquisition epoch and datum uncertainties of original cases remain.",
+        "Native targets use the same source-height projection as the existing comparison; no flat-ground substitution."
+      ]
+    }
+  ],
+  "comparison_scope": "Development geometric/reflection-intensity baseline; shared geometry and fixed native target grid; no position/gain/material fitting; not absolute calibrated backscatter or a blind test."
+}

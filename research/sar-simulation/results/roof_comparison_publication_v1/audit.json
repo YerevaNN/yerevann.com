@@ -1,0 +1,13 @@
+{
+  "assessment_sha256": "54b8d53f3f5bfaec5df5b48a84ab7f889b1e1b6dbb06f83a646d38aab833fb13",
+  "array_sha256": "fbbad354fb39237918219a4a66c88969ffb59b8c975c0f39de45cf8bccd5bfd5",
+  "all_assessment_input_hashes_pass": true,
+  "all_8_cases_4_seeds_and_detected_mean_retained": true,
+  "scalar_metric_checks": 960,
+  "max_scalar_metric_difference": 5.551115123125783e-16,
+  "original_view_images_unchanged": true,
+  "added_main_views": 8,
+  "total_main_views": 43,
+  "physical_fidelity_pass": false,
+  "measurement_previously_seen": true
+}

@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "city": "helsinki",
+      "direction": "ascending",
+      "errors": {
+        "coarse_complex_relative_L2": 0.004415144029453944,
+        "coarse_detected_relative_L2": 0.0029612455363420124,
+        "fine_complex_relative_L2": 0.0017944736906725632,
+        "fine_detected_relative_L2": 0.0011414999374310163,
+        "reference_complex_relative_L2": 0.0003067693760141843,
+        "reference_detected_relative_L2": 0.00022239868295887457
+      },
+      "time_boundary_offsets_s": [
+        -0.09,
+        -0.07209883715768206,
+        0.0720988979192085,
+        0.09
+      ],
+      "adaptive_estimated_absolute_error": 1.444608745724708e-12,
+      "all_fixed_numerical_gates_pass": true,
+      "output_sha256": "c1aad403cc3f5f5bc52b6efc164a1cbf4a40effa54de03721e1a33a1651df4bd"
+    },
+    {
+      "city": "helsinki",
+      "direction": "descending",
+      "errors": {
+        "coarse_complex_relative_L2": 0.004855570940923959,
+        "coarse_detected_relative_L2": 0.002741538315957286,
+        "fine_complex_relative_L2": 0.001988372203105619,
+        "fine_detected_relative_L2": 0.0010714224865499974,
+        "reference_complex_relative_L2": 0.0003485509229620411,
+        "reference_detected_relative_L2": 0.00024128912304277513
+      },
+      "time_boundary_offsets_s": [
+        -0.09,
+        -0.0814794351845158,
+        0.08147934534827747,
+        0.09
+      ],
+      "adaptive_estimated_absolute_error": 6.864818294228483e-13,
+      "all_fixed_numerical_gates_pass": true,
+      "output_sha256": "58aef09540eea48ddbbc7e7037adb24910ba6a2e85b9326619d7894c66ebb1bd"
+    },
+    {
+      "city": "cologne",
+      "direction": "ascending",
+      "errors": {
+        "coarse_complex_relative_L2": 0.004367406239703927,
+        "coarse_detected_relative_L2": 0.00329131550645747,
+        "fine_complex_relative_L2": 0.0019924608732507015,
+        "fine_detected_relative_L2": 0.0014847811209452542,
+        "reference_complex_relative_L2": 0.0008377005512446151,
+        "reference_detected_relative_L2": 0.000645075527944393
+      },
+      "time_boundary_offsets_s": [
+        -0.09,
+        -0.07315261296026004,
+        0.07315268347883622,
+        0.09
+      ],
+      "adaptive_estimated_absolute_error": 1.1505168205088633e-12,
+      "all_fixed_numerical_gates_pass": true,
+      "output_sha256": "4c111a7a1e4f04a231720864bfc7c5f71a5145e87e02bcd59fdb4bb02fcae5cc"
+    },
+    {
+      "city": "cologne",
+      "direction": "descending",
+      "errors": {
+        "coarse_complex_relative_L2": 0.004386679176670783,
+        "coarse_detected_relative_L2": 0.0032992161618220404,
+        "fine_complex_relative_L2": 0.0019985003853261233,
+        "fine_detected_relative_L2": 0.00148606600672768,
+        "reference_complex_relative_L2": 0.0008355177177515191,
+        "reference_detected_relative_L2": 0.0006411460975400764
+      },
+      "time_boundary_offsets_s": [
+        -0.09,
+        -0.07221629254308443,
+        0.07221622550968798,
+        0.09
+      ],
+      "adaptive_estimated_absolute_error": 3.933544525864149e-13,
+      "all_fixed_numerical_gates_pass": true,
+      "output_sha256": "67fa212c3594f1209211d1375eaef0a55e1400f26ee7bc418544fdea1168c0d8"
+    }
+  ],
+  "all_fixed_numerical_gates_pass": true,
+  "inputs_unchanged": true,
+  "physical_fidelity_pass": false,
+  "scope": "Flat antenna / stripmap processed point response. No actual TOPS or extended-scene physical-fidelity claim."
+}
