@@ -874,6 +874,223 @@
           "valid_fraction": 0.9996337890625
         }
       }
+    },
+    {
+      "id": "elk-grove",
+      "name": "Elk Grove",
+      "center": [
+        -121.4,
+        38.4
+      ],
+      "bbox": [
+        -121.45461309361785,
+        38.3578720276808,
+        -121.34554264144609,
+        38.44205367720313
+      ],
+      "grid": {
+        "epsg": 5070,
+        "origin": [
+          -2175120,
+          2003400
+        ],
+        "pixel_m": 30,
+        "size": 256
+      },
+      "pairwise_gaps": [
+        {
+          "source": "S",
+          "target": "L",
+          "signed_seconds": 0.0,
+          "absolute_days": 0.0
+        },
+        {
+          "source": "S",
+          "target": "S1",
+          "signed_seconds": -126632.785386,
+          "absolute_days": 1.4656572382638888
+        },
+        {
+          "source": "S",
+          "target": "S2",
+          "signed_seconds": -324339.186,
+          "absolute_days": 3.7539257638888888
+        },
+        {
+          "source": "L",
+          "target": "S1",
+          "signed_seconds": -126632.785386,
+          "absolute_days": 1.4656572382638888
+        },
+        {
+          "source": "L",
+          "target": "S2",
+          "signed_seconds": -324339.186,
+          "absolute_days": 3.7539257638888888
+        },
+        {
+          "source": "S1",
+          "target": "S2",
+          "signed_seconds": -197706.400614,
+          "absolute_days": 2.288268525625
+        }
+      ],
+      "registration_verified": false,
+      "status": "Four-sensor inspection; shares Sacramento NISAR acquisition",
+      "sensors": {
+        "S": {
+          "id": "NISAR_S2_PR_GCOV_028_034_A_021_3700_DHNA_A_20260815T130930_20260815T131007_P00500_M_F_I_001",
+          "datetime": "2026-08-15T13:09:30Z",
+          "footprint": {
+            "coordinates": [
+              [
+                [
+                  -122.348227,
+                  39.293101
+                ],
+                [
+                  -119.561942,
+                  40.003123
+                ],
+                [
+                  -118.73441,
+                  37.835484
+                ],
+                [
+                  -121.432489,
+                  37.149549
+                ],
+                [
+                  -122.348227,
+                  39.293101
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "kind": "aligned_crop",
+          "polarization": "HH/HV",
+          "status": "Common-grid crop; registration review pending",
+          "processing": "PR",
+          "image": "elk-grove-S.png",
+          "display": "HH diagonal covariance, fixed -25 to 0 dB",
+          "valid_fraction": 1.0
+        },
+        "L": {
+          "id": "NISAR_L2_PR_GCOV_028_034_A_021_4005_DHDH_A_20260815T130930_20260815T131005_P05023_N_F_J_001",
+          "datetime": "2026-08-15T13:09:30Z",
+          "footprint": {
+            "coordinates": [
+              [
+                [
+                  -118.63693,
+                  37.85744
+                ],
+                [
+                  -119.44492,
+                  39.96706
+                ],
+                [
+                  -122.28267,
+                  39.24595
+                ],
+                [
+                  -121.39187,
+                  37.15896
+                ],
+                [
+                  -118.63693,
+                  37.85744
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "kind": "aligned_crop",
+          "polarization": "HH/HV",
+          "status": "Common-grid crop; registration review pending",
+          "processing": "PR",
+          "image": "elk-grove-L.png",
+          "display": "HH diagonal covariance, fixed -25..0 dB",
+          "valid_fraction": 1.0
+        },
+        "S1": {
+          "id": "S1C_IW_GRDH_1SDV_20260814T015844_20260814T015909_008985_011D4A_rtc",
+          "datetime": "2026-08-14T01:58:57.214614Z",
+          "footprint": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -119.84456664353411,
+                  37.43170295182101
+                ],
+                [
+                  -118.81467579737107,
+                  37.56807799925858
+                ],
+                [
+                  -119.14119357765608,
+                  39.06759984851542
+                ],
+                [
+                  -122.01101921120136,
+                  38.6740899405153
+                ],
+                [
+                  -121.64308869370174,
+                  37.170872164312854
+                ],
+                [
+                  -119.84456664353411,
+                  37.43170295182101
+                ]
+              ]
+            ]
+          },
+          "kind": "aligned_crop",
+          "status": "Common-grid crop; registration review pending",
+          "image": "elk-grove-S1.png",
+          "display": "VV gamma0, fixed -25..0 dB",
+          "valid_fraction": 1.0
+        },
+        "S2": {
+          "id": "S2C_T10SFH_20260811T185238_L2A",
+          "datetime": "2026-08-11T19:03:50.814000Z",
+          "footprint": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -121.84769810327082,
+                  38.84330548198025
+                ],
+                [
+                  -121.86327090523541,
+                  37.8539639393711
+                ],
+                [
+                  -120.61591109332592,
+                  37.835311345175796
+                ],
+                [
+                  -120.58327961102275,
+                  38.82398358078843
+                ],
+                [
+                  -121.84769810327082,
+                  38.84330548198025
+                ]
+              ]
+            ]
+          },
+          "kind": "aligned_crop",
+          "status": "Common-grid crop; registration review pending",
+          "image": "elk-grove-S2.png",
+          "display": "L2A RGB reflectance, 0..0.3",
+          "valid_fraction": 1.0
+        }
+      }
     }
   ]
 }
