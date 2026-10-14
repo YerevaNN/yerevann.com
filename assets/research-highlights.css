@@ -21,12 +21,12 @@
 #research .yvn-highlight-links a { color: #fff; font-size: 14px; line-height: 1.5; text-decoration: underline; text-underline-offset: 4px; }
 #research .yvn-highlight-links a:first-child { display: inline-block; padding: 10px 14px; border-radius: 8px; background: #fff; color: #40358d; text-decoration: none; font-weight: 600; }
 #research .yvn-highlight-links a:last-child { padding: 10px 0; }
-#research .yvn-highlight-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
+#research .yvn-highlight-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 28px; }
 #research .yvn-highlight-dots { display: flex; gap: 6px; }
-#research button { appearance: none; cursor: pointer; border: 1px solid #b7afe9; background: transparent; color: #fff; min-width: 36px; min-height: 36px; padding: 5px 9px; border-radius: 8px; font: 14px Inter, Arial, sans-serif; }
+#research button { appearance: none; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; text-align: center; cursor: pointer; border: 0; background: transparent; color: #e5e1ff; width: 36px; height: 36px; padding: 0; border-radius: 50%; font: 14px Inter, Arial, sans-serif; transition: background-color .15s, color .15s; }
 #research button[aria-current="true"] { background: #fff; color: #40358d; border-color: #fff; }
-#research button:hover { background: #5145a5; color: #fff; }
-#research button[data-highlight-pause] { margin-left: auto; }
+#research button:hover { background: rgba(255, 255, 255, .14); color: #fff; }
+#research button[aria-current="true"]:hover { background: #fff; color: #40358d; }
 #research button:focus-visible, #research a:focus-visible { outline: 3px solid #ffd58f; outline-offset: 4px; }
 #research .yvn-highlight-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 900px) {
