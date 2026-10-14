@@ -86,7 +86,9 @@
     "source": "/assets/robotics-paper-art/rf-distribution-alignment.svg",
     "alt": "RF Distribution Alignment: Calibration and sim-to-real positioning. Conceptual research illustration.",
     "paperTitle": "On the Physical Plausibility and Distribution Alignment for Sim-to-Real RF Positioning",
-    "paperLinks": []
+    "paperLinks": [
+      "https://arxiv.org/abs/2607.04400"
+    ]
   },
   {
     "slug": "ray-tracing-limitations",
