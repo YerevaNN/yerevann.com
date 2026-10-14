@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="165" y="160" width="245" height="245" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="189.5" y="191.85" width="61.25" height="61.25" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="307.1" y="184.5" width="66.15" height="73.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="201.75" y="311.9" width="49.0" height="56.35" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="294.85" y="297.20000000000005" width="83.30000000000001" height="63.7" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<polyline points="185,277.6 282.6,213.9 373.25,277.6" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="185,277.6 275.25,370.7 373.25,277.6" fill="none" stroke="#e8b546" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="185" cy="277.6" r="10" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="373.25" cy="277.6" r="10" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="795" y="160" width="245" height="245" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="819.5" y="191.85" width="61.25" height="61.25" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="937.1" y="184.5" width="66.15" height="73.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="831.75" y="311.9" width="49.0" height="56.35" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="924.85" y="297.20000000000005" width="83.30000000000001" height="63.7" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<polyline points="815,277.6 912.6,213.9 1003.25,277.6" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="815,277.6 905.25,370.7 1003.25,277.6" fill="none" stroke="#e8b546" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="815" cy="277.6" r="10" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="1003.25" cy="277.6" r="10" fill="#e6495b" stroke="none" stroke-width="3"/>
+<polyline points="495,230 525,230 560,340 600,205 635,310 695,310" fill="none" stroke="#6458c3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="495,310 530,280 570,300 615,250 655,235 695,275" fill="none" stroke="#e6495b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="451.0" y="453.92" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#171722">Simulation / measurement</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Ray-Tracing Limitations</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Comparing simulated and measured urban RF signals</text>
+</svg>

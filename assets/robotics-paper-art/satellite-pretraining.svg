@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="155" y="190" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="186.0" cy="221.0" r="12.4" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="225" y="190" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="256.0" cy="221.0" r="12.4" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="295" y="190" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="326.0" cy="221.0" r="12.4" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="155" y="260" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="186.0" cy="291.0" r="12.4" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="225" y="260" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="256.0" cy="291.0" r="12.4" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="295" y="260" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="326.0" cy="291.0" r="12.4" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="155" y="330" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="186.0" cy="361.0" r="12.4" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="225" y="330" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="256.0" cy="361.0" r="12.4" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="295" y="330" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="326.0" cy="361.0" r="12.4" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="820" y="190" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="828" y="198" width="18.599999999999998" height="21.7" rx="2" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="852.24" y="217.9" width="19.84" height="24.18" rx="2" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="890" y="190" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="898" y="198" width="18.599999999999998" height="21.7" rx="2" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="922.24" y="217.9" width="19.84" height="24.18" rx="2" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="960" y="190" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="968" y="198" width="18.599999999999998" height="21.7" rx="2" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="992.24" y="217.9" width="19.84" height="24.18" rx="2" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="820" y="260" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="828" y="268" width="18.599999999999998" height="21.7" rx="2" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="852.24" y="287.9" width="19.84" height="24.18" rx="2" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="890" y="260" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="898" y="268" width="18.599999999999998" height="21.7" rx="2" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="922.24" y="287.9" width="19.84" height="24.18" rx="2" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="960" y="260" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="968" y="268" width="18.599999999999998" height="21.7" rx="2" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="992.24" y="287.9" width="19.84" height="24.18" rx="2" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="820" y="330" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="828" y="338" width="18.599999999999998" height="21.7" rx="2" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="852.24" y="357.9" width="19.84" height="24.18" rx="2" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="890" y="330" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="898" y="338" width="18.599999999999998" height="21.7" rx="2" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="922.24" y="357.9" width="19.84" height="24.18" rx="2" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="960" y="330" width="62" height="62" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="968" y="338" width="18.599999999999998" height="21.7" rx="2" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="992.24" y="357.9" width="19.84" height="24.18" rx="2" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="410,290 500,290" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="500,290 484.2035138859733,298.62965969487567 484.2035138859733,281.37034030512433" fill="#6458c3"/>
+<rect x="520" y="220" width="155" height="120" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="541.0" y="288.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Encoder</text>
+<polyline points="710,290 795,290" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="795,290 779.2035138859733,298.62965969487567 779.2035138859733,281.37034030512433" fill="#6458c3"/>
+<text x="153.0" y="454.84" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#6458c3">General images</text>
+<text x="834.0" y="454.84" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#32b0ad">Satellite tasks</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Satellite Pretraining</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Do satellite tasks need specialized encoders?</text>
+</svg>

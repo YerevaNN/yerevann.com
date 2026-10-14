@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="175.0" y="173.0" width="120.0" height="104.0" rx="12" fill="#efedf8" stroke="none" stroke-width="3"/>
+<polygon points="201.4,212.2 259.0,212.2 273.4,225 259.0,237.8 201.4,237.8" fill="#32b0ad"/>
+<rect x="211.0" y="217.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="222.2" y="217.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="233.4" y="217.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="244.6" y="217.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="175.0" y="318.0" width="120.0" height="104.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="201.4,357.2 259.0,357.2 273.4,370 259.0,382.8 201.4,382.8" fill="#6458c3"/>
+<rect x="211.0" y="362.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="222.2" y="362.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="233.4" y="362.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="244.6" y="362.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="195.0,342.0 275.0,342.0" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="195.0,360.4 275.0,360.4" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="195.0,378.8 275.0,378.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="195.0,397.2 275.0,397.2" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="350,285 455,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="455,285 439.2035138859733,293.62965969487567 439.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="525" y="150" width="42" height="42" rx="5" fill="#d8d9e2" stroke="none" stroke-width="3"/>
+<rect x="573" y="150" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="621" y="150" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="669" y="150" width="42" height="42" rx="5" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="717" y="150" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="765" y="150" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="525" y="198" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="573" y="198" width="42" height="42" rx="5" fill="#d8d9e2" stroke="none" stroke-width="3"/>
+<rect x="621" y="198" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="669" y="198" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="717" y="198" width="42" height="42" rx="5" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="765" y="198" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="525" y="246" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="573" y="246" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="621" y="246" width="42" height="42" rx="5" fill="#d8d9e2" stroke="none" stroke-width="3"/>
+<rect x="669" y="246" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="717" y="246" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="765" y="246" width="42" height="42" rx="5" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="525" y="294" width="42" height="42" rx="5" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="573" y="294" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="621" y="294" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="669" y="294" width="42" height="42" rx="5" fill="#d8d9e2" stroke="none" stroke-width="3"/>
+<rect x="717" y="294" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="765" y="294" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="525" y="342" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="573" y="342" width="42" height="42" rx="5" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="621" y="342" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="669" y="342" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="717" y="342" width="42" height="42" rx="5" fill="#d8d9e2" stroke="none" stroke-width="3"/>
+<rect x="765" y="342" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="525" y="390" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="573" y="390" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="621" y="390" width="42" height="42" rx="5" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="669" y="390" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="717" y="390" width="42" height="42" rx="5" fill="#eeeaf9" stroke="none" stroke-width="3"/>
+<rect x="765" y="390" width="42" height="42" rx="5" fill="#d8d9e2" stroke="none" stroke-width="3"/>
+<text x="523.5" y="475.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6458c3">Joint similarity matrix</text>
+<text x="895" y="219.84" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#32b0ad">RGB</text>
+<text x="895" y="334.84" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#6458c3">SAR</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Mixed Contrastive Pretraining</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Joint RGB-SAR representation learning</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<polyline points="220,170 220,198" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220" cy="165" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="232" cy="160" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="380,170 380,198" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="380" cy="165" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="392" cy="160" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="540,170 540,198" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="540" cy="165" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="552" cy="160" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="700,170 700,198" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="700" cy="165" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="712" cy="160" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="860,170 860,198" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="860" cy="165" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="872" cy="160" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="220,275 220,303" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220" cy="270" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="232" cy="265" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="185" cy="313" r="8" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="380,275 380,303" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="380" cy="270" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="392" cy="265" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="345" cy="313" r="8" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="540,275 540,303" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="540" cy="270" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="552" cy="265" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="505" cy="313" r="8" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="700,275 700,303" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="700" cy="270" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="712" cy="265" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="665" cy="313" r="8" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="860,275 860,303" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="860" cy="270" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="872" cy="265" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="825" cy="313" r="8" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="220,380 220,408" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220" cy="375" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="232" cy="370" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="380,380 380,408" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="380" cy="375" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="392" cy="370" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="540,380 540,408" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="540" cy="375" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="552" cy="370" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="700,380 700,408" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="700" cy="375" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="712" cy="370" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="860,380 860,408" fill="none" stroke="#171722" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="860" cy="375" r="28" fill="#cce8e0" stroke="none" stroke-width="3"/>
+<circle cx="872" cy="370" r="19" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<polyline points="185,430 1000,430" fill="none" stroke="#6458c3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="220,430 220,300" fill="none" stroke="#6458c3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="380,430 380,300" fill="none" stroke="#6458c3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="540,430 540,300" fill="none" stroke="#6458c3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="700,430 700,300" fill="none" stroke="#6458c3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="860,430 860,300" fill="none" stroke="#6458c3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Networked Orchard Sensors</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Sensing and irrigation in an apple orchard</text>
+</svg>

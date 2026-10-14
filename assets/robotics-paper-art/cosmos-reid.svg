@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="165.0" y="153.0" width="120.0" height="104.0" rx="12" fill="#efedf8" stroke="none" stroke-width="3"/>
+<polygon points="191.4,192.2 249.0,192.2 263.4,205 249.0,217.8 191.4,217.8" fill="#32b0ad"/>
+<rect x="201.0" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="212.2" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="223.4" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="234.6" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="310,205 425,205" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="425,205 409.2035138859733,213.62965969487564 409.2035138859733,196.37034030512436" fill="#6458c3"/>
+<rect x="455.0" y="153.0" width="120.0" height="104.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="481.4,192.2 539.0,192.2 553.4,205 539.0,217.8 481.4,217.8" fill="#6458c3"/>
+<rect x="491.0" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="502.2" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="513.4" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="524.6" y="197.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="475.0,177.0 555.0,177.0" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="475.0,195.4 555.0,195.4" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="475.0,213.8 555.0,213.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="475.0,232.2 555.0,232.2" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="165.0" y="313.0" width="120.0" height="104.0" rx="12" fill="#efedf8" stroke="none" stroke-width="3"/>
+<polygon points="191.4,352.2 249.0,352.2 263.4,365 249.0,377.8 191.4,377.8" fill="#32b0ad"/>
+<rect x="201.0" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="212.2" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="223.4" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="234.6" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="310,365 425,365" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="425,365 409.2035138859733,373.62965969487567 409.2035138859733,356.37034030512433" fill="#6458c3"/>
+<rect x="455.0" y="313.0" width="120.0" height="104.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="481.4,352.2 539.0,352.2 553.4,365 539.0,377.8 481.4,377.8" fill="#6458c3"/>
+<rect x="491.0" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="502.2" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="513.4" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="524.6" y="357.0" width="8.0" height="16.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="475.0,337.0 555.0,337.0" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="475.0,355.4 555.0,355.4" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="475.0,373.8 555.0,373.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="475.0,392.2 555.0,392.2" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="610,285 690,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="690,285 674.2035138859733,293.62965969487567 674.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="740" y="180" width="290" height="85" rx="18" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<text x="784.5" y="231.26" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Known identity</text>
+<rect x="740" y="340" width="290" height="85" rx="18" fill="#e6495b" stroke="none" stroke-width="3"/>
+<text x="779.5" y="391.26" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Unknown query</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">COSMOS-ReID</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Open-world object matching across sensors</text>
+</svg>

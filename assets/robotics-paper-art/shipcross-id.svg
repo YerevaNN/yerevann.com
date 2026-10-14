@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="175.0" y="194.0" width="210.0" height="182.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="221.2,262.6 322.0,262.6 347.2,285 322.0,307.4 221.2,307.4" fill="#6458c3"/>
+<rect x="238.0" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="257.6" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="277.2" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="296.8" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="210.0,236.0 350.0,236.0" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="210.0,268.2 350.0,268.2" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="210.0,300.4 350.0,300.4" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="210.0,332.6 350.0,332.6" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="765.0" y="194.0" width="210.0" height="182.0" rx="12" fill="#efedf8" stroke="none" stroke-width="3"/>
+<polygon points="811.2,262.6 912.0,262.6 937.2,285 912.0,307.4 811.2,307.4" fill="#32b0ad"/>
+<rect x="828.0" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="847.6" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="867.2" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="886.8" y="271.0" width="14.0" height="28.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="460,270 690,270" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="690,270 674.2035138859733,278.62965969487567 674.2035138859733,261.37034030512433" fill="#6458c3"/>
+<polyline points="690,310 460,310" fill="none" stroke="#32b0ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="460,310 475.7964861140267,301.37034030512433 475.7964861140267,318.62965969487567" fill="#32b0ad"/>
+<text x="248.0" y="442.6" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#6458c3">SAR</text>
+<text x="777.5" y="442.6" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#32b0ad">Multispectral</text>
+<text x="497.0" y="379.84" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#171722">Same vessel</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">ShipCross-ID</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Matching vessels across multispectral and SAR imagery</text>
+</svg>

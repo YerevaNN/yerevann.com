@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="155" y="155" width="265" height="265" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="181.5" y="189.45" width="66.25" height="66.25" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="308.7" y="181.5" width="71.55000000000001" height="79.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="194.75" y="319.3" width="53.0" height="60.95" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="295.45000000000005" y="303.4" width="90.10000000000001" height="68.9" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<polyline points="189.45,282.2 274.25,282.2 274.25,388.2 398.8,388.2" fill="none" stroke="#32b0ad" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="274.25,388.2 398.8,388.2" fill="none" stroke="#32b0ad" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="398.8,388.2 383.0035138859733,396.82965969487566 383.0035138859733,379.5703403051243" fill="#32b0ad"/>
+<circle cx="398.8" cy="388.2" r="12" fill="#e6495b" stroke="none" stroke-width="3"/>
+<polyline points="274.25,282.2 251.85,265.4" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="251.85" cy="265.4" r="12.6" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="274.25,282.2 296.65,265.4" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="296.65" cy="265.4" r="12.6" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="274.25,282.2 251.85,299.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="251.85" cy="299.0" r="12.6" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="274.25,282.2 296.65,299.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="296.65" cy="299.0" r="12.6" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<rect x="262.35" y="273.8" width="23.799999999999997" height="16.799999999999997" rx="7" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="197.4" cy="282.2" r="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="223.9" cy="282.2" r="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="250.39999999999998" cy="282.2" r="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="450,285 525,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="525,285 509.2035138859733,293.62965969487567 509.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="555" y="205" width="190" height="145" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="620.5" y="286.26" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">VLM</text>
+<polyline points="775,285 855,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="855,285 839.2035138859733,293.62965969487567 839.2035138859733,276.37034030512433" fill="#6458c3"/>
+<polyline points="970,285 922.0,249.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="922.0" cy="249.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="970,285 1018.0,249.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1018.0" cy="249.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="970,285 922.0,321.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="922.0" cy="321.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="970,285 1018.0,321.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1018.0" cy="321.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<rect x="944.5" y="267.0" width="51.0" height="36.0" rx="7" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="530" y="400" width="53" height="42" rx="5" fill="#e9e6f7" stroke="#6458c3" stroke-width="3"/>
+<rect x="592" y="400" width="53" height="42" rx="5" fill="#e9e6f7" stroke="#6458c3" stroke-width="3"/>
+<rect x="654" y="400" width="53" height="42" rx="5" fill="#e9e6f7" stroke="#6458c3" stroke-width="3"/>
+<rect x="716" y="400" width="53" height="42" rx="5" fill="#e9e6f7" stroke="#6458c3" stroke-width="3"/>
+<text x="573.0" y="476.08" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#6458c3">Flight history</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Map Grounding + History</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Aerial navigation with maps and past observations</text>
+</svg>

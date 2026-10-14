@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="165" y="160" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="191.5" cy="186.5" r="10.600000000000001" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="226" y="160" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="252.5" cy="186.5" r="10.600000000000001" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="287" y="160" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="313.5" cy="186.5" r="10.600000000000001" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="348" y="160" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="374.5" cy="186.5" r="10.600000000000001" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="165" y="221" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="191.5" cy="247.5" r="10.600000000000001" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="226" y="221" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="252.5" cy="247.5" r="10.600000000000001" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="287" y="221" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="313.5" cy="247.5" r="10.600000000000001" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="348" y="221" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="374.5" cy="247.5" r="10.600000000000001" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="165" y="282" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="191.5" cy="308.5" r="10.600000000000001" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="226" y="282" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="252.5" cy="308.5" r="10.600000000000001" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="287" y="282" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="313.5" cy="308.5" r="10.600000000000001" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="348" y="282" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="374.5" cy="308.5" r="10.600000000000001" fill="#e8b546" stroke="none" stroke-width="3"/>
+<rect x="165" y="343" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="191.5" cy="369.5" r="10.600000000000001" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="226" y="343" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="252.5" cy="369.5" r="10.600000000000001" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<rect x="287" y="343" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="313.5" cy="369.5" r="10.600000000000001" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="348" y="343" width="53" height="53" rx="6" fill="#efedf8" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="374.5" cy="369.5" r="10.600000000000001" fill="#e8b546" stroke="none" stroke-width="3"/>
+<polyline points="445,275 555,275" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="555,275 539.2035138859733,283.62965969487567 539.2035138859733,266.37034030512433" fill="#6458c3"/>
+<rect x="595" y="335" width="32" height="65" rx="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="650" y="280" width="32" height="120" rx="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="705" y="310" width="32" height="90" rx="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="760" y="215" width="32" height="185" rx="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="815" y="305" width="32" height="95" rx="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="870" y="270" width="32" height="130" rx="5" fill="#6458c3" stroke="none" stroke-width="3"/>
+<rect x="925" y="170" width="32" height="230" rx="5" fill="#e6495b" stroke="none" stroke-width="3"/>
+<text x="184.5" y="465.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6458c3">Image patches</text>
+<text x="633.0" y="465.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6458c3">Local representations</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Local ViT Representations</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Understanding image patches and high-variance features</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="167.5" y="213.5" width="165.0" height="143.0" rx="12" fill="#efedf8" stroke="none" stroke-width="3"/>
+<polygon points="203.8,267.4 283.0,267.4 302.8,285 283.0,302.6 203.8,302.6" fill="#32b0ad"/>
+<rect x="217.0" y="274.0" width="11.0" height="22.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="232.4" y="274.0" width="11.0" height="22.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="247.8" y="274.0" width="11.0" height="22.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="263.2" y="274.0" width="11.0" height="22.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="395,285 485,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="485,285 469.2035138859733,293.62965969487567 469.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="547.5" y="204.5" width="105.0" height="91.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="570.6,238.8 621.0,238.8 633.6,250 621.0,261.2 570.6,261.2" fill="#b7b2d1"/>
+<rect x="579.0" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="588.8" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="598.6" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="608.4" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="565.0,225.5 635.0,225.5" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="565.0,241.6 635.0,241.6" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="565.0,257.7 635.0,257.7" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="565.0,273.8 635.0,273.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="717.5" y="204.5" width="105.0" height="91.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="740.6,238.8 791.0,238.8 803.6,250 791.0,261.2 740.6,261.2" fill="#6458c3"/>
+<rect x="749.0" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="758.8" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="768.6" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="778.4" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="735.0,225.5 805.0,225.5" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="735.0,241.6 805.0,241.6" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="735.0,257.7 805.0,257.7" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="735.0,273.8 805.0,273.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="887.5" y="204.5" width="105.0" height="91.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="910.6,238.8 961.0,238.8 973.6,250 961.0,261.2 910.6,261.2" fill="#b7b2d1"/>
+<rect x="919.0" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="928.8" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="938.6" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="948.4" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="905.0,225.5 975.0,225.5" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="905.0,241.6 975.0,241.6" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="905.0,257.7 975.0,257.7" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="905.0,273.8 975.0,273.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="770" cy="250" r="77" fill="#ffffff" stroke="#32b0ad" stroke-width="4"/>
+<rect x="717.5" y="204.5" width="105.0" height="91.0" rx="12" fill="#e4e3ec" stroke="none" stroke-width="3"/>
+<polygon points="740.6,238.8 791.0,238.8 803.6,250 791.0,261.2 740.6,261.2" fill="#6458c3"/>
+<rect x="749.0" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="758.8" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="768.6" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<rect x="778.4" y="243.0" width="7.0" height="14.0" rx="1" fill="white" stroke="none" stroke-width="3"/>
+<polyline points="735.0,225.5 805.0,225.5" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="735.0,241.6 805.0,241.6" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="735.0,257.7 805.0,257.7" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="735.0,273.8 805.0,273.8" fill="none" stroke="#c3c0d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="676.0" y="395.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#32b0ad">Gallery match</text>
+<text x="213.0" y="448.92" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#6458c3">Query</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">HOSS-Bench</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Open-set RGB-SAR vessel re-identification</text>
+</svg>

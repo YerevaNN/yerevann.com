@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="170" y="160" width="235" height="235" rx="16" fill="#f3f1fa" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="221" cy="318" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="240" cy="315" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="261" cy="285" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="298" cy="320" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="284" cy="334" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="247" cy="337" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="276" cy="212" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="276" cy="290" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="293" cy="253" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="237" cy="268" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="289" cy="190" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="355" cy="343" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="261" cy="203" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="261" cy="214" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="348" cy="301" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="309" cy="372" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="228" cy="210" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="316" cy="189" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<text x="250" y="298.08" font-family="Arial, sans-serif" font-size="74" font-weight="700" fill="#6458c3">2</text>
+<text x="256.5078125" y="453.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#6458c3">Train</text>
+<rect x="490" y="160" width="235" height="235" rx="16" fill="#f3f1fa" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="541" cy="318" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="560" cy="315" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="581" cy="285" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="618" cy="320" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="604" cy="334" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="567" cy="337" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="596" cy="212" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="596" cy="290" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="613" cy="253" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="557" cy="268" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="609" cy="190" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="675" cy="343" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="581" cy="203" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="581" cy="214" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="668" cy="301" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="629" cy="372" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="548" cy="210" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="636" cy="189" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<text x="570" y="298.08" font-family="Arial, sans-serif" font-size="74" font-weight="700" fill="#32b0ad">3</text>
+<text x="539.5" y="453.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#6458c3">Shifted test</text>
+<rect x="810" y="160" width="235" height="235" rx="16" fill="#f3f1fa" stroke="#d8d9e2" stroke-width="3"/>
+<circle cx="861" cy="318" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="880" cy="315" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="901" cy="285" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="938" cy="320" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="924" cy="334" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="887" cy="337" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="916" cy="212" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="916" cy="290" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="933" cy="253" r="8" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="877" cy="268" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="929" cy="190" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="995" cy="343" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="901" cy="203" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="901" cy="214" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="988" cy="301" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="949" cy="372" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="868" cy="210" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="956" cy="189" r="8" fill="#e8b546" stroke="none" stroke-width="3"/>
+<text x="890" y="298.08" font-family="Arial, sans-serif" font-size="74" font-weight="700" fill="#e6495b">4</text>
+<text x="834.5" y="453.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#6458c3">Unseen domain</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Class-Dependent Domain Shift</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Robust classification when domains depend on labels</text>
+</svg>

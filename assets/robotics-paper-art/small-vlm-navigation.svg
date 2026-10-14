@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="145" y="170" width="255" height="170" rx="12" fill="#eeebf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="175" y="205" width="65" height="100" rx="3" fill="#c5bfe7" stroke="none" stroke-width="3"/>
+<rect x="280" y="230" width="70" height="75" rx="3" fill="#c5bfe7" stroke="none" stroke-width="3"/>
+<polyline points="160,320 385,320" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="167" y="220" width="255" height="170" rx="12" fill="#eeebf8" stroke="#d8d9e2" stroke-width="3"/>
+<rect x="197" y="255" width="65" height="100" rx="3" fill="#c5bfe7" stroke="none" stroke-width="3"/>
+<rect x="302" y="280" width="70" height="75" rx="3" fill="#c5bfe7" stroke="none" stroke-width="3"/>
+<polyline points="182,370 407,370" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="450,285 525,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="525,285 509.2035138859733,293.62965969487567 509.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="555" y="205" width="190" height="145" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="620.5" y="286.26" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">VLM</text>
+<polyline points="775,285 855,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="855,285 839.2035138859733,293.62965969487567 839.2035138859733,276.37034030512433" fill="#6458c3"/>
+<polyline points="970,285 922.0,249.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="922.0" cy="249.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="970,285 1018.0,249.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1018.0" cy="249.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="970,285 922.0,321.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="922.0" cy="321.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<polyline points="970,285 1018.0,321.0" fill="none" stroke="#6458c3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1018.0" cy="321.0" r="27.0" fill="#ebe8f8" stroke="#6458c3" stroke-width="4"/>
+<rect x="944.5" y="267.0" width="51.0" height="36.0" rx="7" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<text x="545.5" y="428.0" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#6458c3">View + action history</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Small VLMs for Navigation</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Fine-tuning aerial agents with observation history</text>
+</svg>

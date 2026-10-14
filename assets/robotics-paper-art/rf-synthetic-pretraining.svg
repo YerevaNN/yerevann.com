@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="150" y="155" width="235" height="235" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="173.5" y="185.55" width="58.75" height="58.75" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="286.29999999999995" y="178.5" width="63.45" height="70.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="185.25" y="300.7" width="47.0" height="54.050000000000004" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="274.55" y="286.6" width="79.9" height="61.1" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<polyline points="170,267.8 262.8,206.7 349.75,267.8" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="170,267.8 255.75,357.1 349.75,267.8" fill="none" stroke="#e8b546" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="170" cy="267.8" r="10" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="349.75" cy="267.8" r="10" fill="#e6495b" stroke="none" stroke-width="3"/>
+<rect x="815" y="155" width="235" height="235" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="838.5" y="185.55" width="58.75" height="58.75" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="951.3" y="178.5" width="63.45" height="70.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="850.25" y="300.7" width="47.0" height="54.050000000000004" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="939.55" y="286.6" width="79.9" height="61.1" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<polyline points="835,267.8 927.8,206.7 1014.75,267.8" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="835,267.8 920.75,357.1 1014.75,267.8" fill="none" stroke="#e8b546" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="835" cy="267.8" r="10" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="1014.75" cy="267.8" r="10" fill="#e6495b" stroke="none" stroke-width="3"/>
+<polyline points="415,265 490,265" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="490,265 474.2035138859733,273.62965969487567 474.2035138859733,256.37034030512433" fill="#6458c3"/>
+<polyline points="710,265 785,265" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="785,265 769.2035138859733,273.62965969487567 769.2035138859733,256.37034030512433" fill="#6458c3"/>
+<rect x="505" y="185" width="185" height="155" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="544.0" y="271.26" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Pretrain</text>
+<text x="194.5" y="450.84" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#6458c3">Simulation</text>
+<text x="869.0" y="450.84" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#32b0ad">Real data</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Sim-to-Real RF Localization</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Large-scale synthetic pretraining for real signals</text>
+</svg>

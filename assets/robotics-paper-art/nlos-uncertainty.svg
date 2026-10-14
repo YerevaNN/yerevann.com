@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="155" y="160" width="250" height="250" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="180.0" y="192.5" width="62.5" height="62.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="300.0" y="185.0" width="67.5" height="75.0" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="192.5" y="315.0" width="50.0" height="57.5" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="287.5" y="300.0" width="85.0" height="65.0" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<polyline points="175,280.0 275.0,215.0 367.5,280.0" fill="none" stroke="#32b0ad" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="175,280.0 267.5,375.0 367.5,280.0" fill="none" stroke="#e8b546" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="175" cy="280.0" r="10" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="435,280 540,280" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="540,280 524.2035138859733,288.62965969487567 524.2035138859733,271.37034030512433" fill="#6458c3"/>
+<rect x="610" y="140" width="340" height="340" rx="8" fill="#f1f0f9" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="644.0" y="184.2" width="85.0" height="85.0" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="807.2" y="174.0" width="91.80000000000001" height="102.0" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="661.0" y="350.8" width="68.0" height="78.2" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<rect x="790.2" y="330.4" width="115.60000000000001" height="88.4" rx="4" fill="#c6c0e9" stroke="none" stroke-width="3"/>
+<circle cx="710" cy="265" r="40" fill="#d5eee9" stroke="none" stroke-width="3"/>
+<circle cx="710" cy="265" r="8" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="875" cy="285" r="32" fill="#e4dff6" stroke="none" stroke-width="3"/>
+<circle cx="875" cy="285" r="8" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="770" cy="395" r="22" fill="#f9e6e9" stroke="none" stroke-width="3"/>
+<circle cx="770" cy="395" r="8" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<text x="657.5" y="483.92" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#6458c3">Candidate locations</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">NLOS Localization + Uncertainty</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Input representations and candidate positions</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<rect x="155" y="158" width="120" height="94" rx="10" fill="#edf5f4" stroke="none" stroke-width="3"/>
+<polygon points="180,230 235,230 235,245 180,245" fill="#32b0ad"/>
+<circle cx="215" cy="205" r="19" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="236" cy="191" r="12" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polygon points="245,189 261,194 245,198" fill="#e8b546"/>
+<rect x="155" y="318" width="120" height="94" rx="10" fill="#f9eded" stroke="none" stroke-width="3"/>
+<polygon points="180,390 235,390 235,405 180,405" fill="#e6495b"/>
+<circle cx="215" cy="365" r="19" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="236" cy="351" r="12" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polygon points="245,349 261,354 245,358" fill="#e8b546"/>
+<polyline points="325,285 440,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="440,285 424.2035138859733,293.62965969487567 424.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="485" y="180" width="175" height="110" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="516.0" y="243.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Encoder</text>
+<polyline points="690,235 760,235" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="760,235 744.2035138859733,243.62965969487564 744.2035138859733,226.37034030512436" fill="#6458c3"/>
+<rect x="785" y="155" width="225" height="70" rx="18" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<text x="865.5" y="198.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Core</text>
+<rect x="785" y="255" width="225" height="70" rx="18" fill="#e6495b" stroke="none" stroke-width="3"/>
+<text x="836.5" y="298.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Spurious</text>
+<rect x="785" y="355" width="225" height="70" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="860.0" y="398.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Other</text>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Disentangling Spurious Features</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Separating core features from shortcut signals</text>
+</svg>

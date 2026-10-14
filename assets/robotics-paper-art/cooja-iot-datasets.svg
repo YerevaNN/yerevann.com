@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#f5f6fa"/>
+<rect x="90" y="90" width="1020" height="420" rx="32" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<polyline points="210,180 340,240" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="210,180 195,350" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="340,240 195,350" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="340,240 365,390" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="340,240 475,185" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="210" cy="180" r="24" fill="#6458c3" stroke="none" stroke-width="3"/>
+<circle cx="340" cy="240" r="24" fill="#32b0ad" stroke="none" stroke-width="3"/>
+<circle cx="195" cy="350" r="24" fill="#e6495b" stroke="none" stroke-width="3"/>
+<circle cx="365" cy="390" r="24" fill="#e8b546" stroke="none" stroke-width="3"/>
+<circle cx="475" cy="185" r="24" fill="#6458c3" stroke="none" stroke-width="3"/>
+<polyline points="510,285 600,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="600,285 584.2035138859733,293.62965969487567 584.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="625" y="205" width="180" height="150" rx="18" fill="#6458c3" stroke="none" stroke-width="3"/>
+<text x="676.0" y="288.76" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="white">Cooja</text>
+<polyline points="840,285 895,285" fill="none" stroke="#6458c3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="895,285 879.2035138859733,293.62965969487567 879.2035138859733,276.37034030512433" fill="#6458c3"/>
+<rect x="930" y="225" width="80" height="115" rx="8" fill="#edeaf9" stroke="#32b0ad" stroke-width="3"/>
+<rect x="945" y="243" width="80" height="115" rx="8" fill="#edeaf9" stroke="#32b0ad" stroke-width="3"/>
+<rect x="960" y="261" width="80" height="115" rx="8" fill="#edeaf9" stroke="#32b0ad" stroke-width="3"/>
+<rect x="70" y="580" width="1060" height="146" rx="28" fill="white" stroke="#d8d9e2" stroke-width="2"/>
+<text x="105" y="651.84" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#171722">Synthetic IoT Datasets</text>
+<text x="107" y="701.68" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#5b596b">Scalable network simulation with Cooja</text>
+</svg>

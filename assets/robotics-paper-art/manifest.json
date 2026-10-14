@@ -1,0 +1,389 @@
+[
+  {
+    "slug": "synthetic-radio-pretraining",
+    "title": "Synthetic Radio Pretraining",
+    "subtitle": "Cheap simulation for indoor radio-map prediction",
+    "concept": "synthetic-radio",
+    "image": "/assets/robotics-paper-art/synthetic-radio-pretraining.webp",
+    "source": "/assets/robotics-paper-art/synthetic-radio-pretraining.svg",
+    "alt": "Synthetic Radio Pretraining: Cheap simulation for indoor radio-map prediction. Conceptual research illustration.",
+    "paperTitle": "Scaling Cheap Synthetic Pretraining Improves Indoor Radio-Map Prediction",
+    "paperLinks": [
+      "/research/preprints/scaling-cheap-synthetic-pretraining-indoor-radio-map-prediction.pdf"
+    ]
+  },
+  {
+    "slug": "data-density-scaling",
+    "title": "Data Density Scaling",
+    "subtitle": "Unique images and repeated views",
+    "concept": "density",
+    "image": "/assets/robotics-paper-art/data-density-scaling.webp",
+    "source": "/assets/robotics-paper-art/data-density-scaling.svg",
+    "alt": "Data Density Scaling: Unique images and repeated views. Conceptual research illustration.",
+    "paperTitle": "Data Density Scaling Laws for Image Self-Distillation",
+    "paperLinks": [
+      "/research/preprints/data-density-scaling-laws-image-self-distillation.pdf",
+      "https://openreview.net/forum?id=YZcVtCc7qM"
+    ]
+  },
+  {
+    "slug": "cosmos-reid",
+    "title": "COSMOS-ReID",
+    "subtitle": "Open-world object matching across sensors",
+    "concept": "cosmos",
+    "image": "/assets/robotics-paper-art/cosmos-reid.webp",
+    "source": "/assets/robotics-paper-art/cosmos-reid.svg",
+    "alt": "COSMOS-ReID: Open-world object matching across sensors. Conceptual research illustration.",
+    "paperTitle": "COSMOS-ReID",
+    "paperLinks": []
+  },
+  {
+    "slug": "shipcross-id",
+    "title": "ShipCross-ID",
+    "subtitle": "Matching vessels across multispectral and SAR imagery",
+    "concept": "shipcross",
+    "image": "/assets/robotics-paper-art/shipcross-id.webp",
+    "source": "/assets/robotics-paper-art/shipcross-id.svg",
+    "alt": "ShipCross-ID: Matching vessels across multispectral and SAR imagery. Conceptual research illustration.",
+    "paperTitle": "ShipCross-ID: Bridging SAR and Multispectral Imagery for Ship Re-Identification",
+    "paperLinks": [
+      "https://openreview.net/forum?id=xIMTuruYwi",
+      "https://openreview.net/forum?id=czRWTWo37E"
+    ]
+  },
+  {
+    "slug": "mixed-contrastive-pretraining",
+    "title": "Mixed Contrastive Pretraining",
+    "subtitle": "Joint RGB-SAR representation learning",
+    "concept": "mixed-contrastive",
+    "image": "/assets/robotics-paper-art/mixed-contrastive-pretraining.webp",
+    "source": "/assets/robotics-paper-art/mixed-contrastive-pretraining.svg",
+    "alt": "Mixed Contrastive Pretraining: Joint RGB-SAR representation learning. Conceptual research illustration.",
+    "paperTitle": "Beyond Cross-Modal Alignment: Mixed Contrastive Pretraining for RGB-SAR Vessel Re-Identification",
+    "paperLinks": [
+      "https://openreview.net/forum?id=ZRjzhb9dHB"
+    ]
+  },
+  {
+    "slug": "map-grounding-history",
+    "title": "Map Grounding + History",
+    "subtitle": "Aerial navigation with maps and past observations",
+    "concept": "map-history",
+    "image": "/assets/robotics-paper-art/map-grounding-history.webp",
+    "source": "/assets/robotics-paper-art/map-grounding-history.svg",
+    "alt": "Map Grounding + History: Aerial navigation with maps and past observations. Conceptual research illustration.",
+    "paperTitle": "Enhancing Aerial Vision-Language Navigation with Map Grounding and History Awareness",
+    "paperLinks": [
+      "https://openreview.net/forum?id=AqgVRok7j8"
+    ]
+  },
+  {
+    "slug": "rf-distribution-alignment",
+    "title": "RF Distribution Alignment",
+    "subtitle": "Calibration and sim-to-real positioning",
+    "concept": "rf-alignment",
+    "image": "/assets/robotics-paper-art/rf-distribution-alignment.webp",
+    "source": "/assets/robotics-paper-art/rf-distribution-alignment.svg",
+    "alt": "RF Distribution Alignment: Calibration and sim-to-real positioning. Conceptual research illustration.",
+    "paperTitle": "On the Physical Plausibility and Distribution Alignment for Sim-to-Real RF Positioning",
+    "paperLinks": []
+  },
+  {
+    "slug": "ray-tracing-limitations",
+    "title": "Ray-Tracing Limitations",
+    "subtitle": "Comparing simulated and measured urban RF signals",
+    "concept": "ray-limits",
+    "image": "/assets/robotics-paper-art/ray-tracing-limitations.webp",
+    "source": "/assets/robotics-paper-art/ray-tracing-limitations.svg",
+    "alt": "Ray-Tracing Limitations: Comparing simulated and measured urban RF signals. Conceptual research illustration.",
+    "paperTitle": "On the Limitations of Ray-Tracing for Learning-Based RF Tasks in Urban Environments",
+    "paperLinks": [
+      "https://arxiv.org/abs/2507.19653"
+    ]
+  },
+  {
+    "slug": "geocrossbench",
+    "title": "GeoCrossBench",
+    "subtitle": "Generalizing to new satellite bands",
+    "concept": "geocross",
+    "image": "/assets/robotics-paper-art/geocrossbench.webp",
+    "source": "/assets/robotics-paper-art/geocrossbench.svg",
+    "alt": "GeoCrossBench: Generalizing to new satellite bands. Conceptual research illustration.",
+    "paperTitle": "GeoCrossBench: Cross-Band Generalization for Remote Sensing",
+    "paperLinks": [
+      "https://openreview.net/forum?id=2PVcpYjZNw"
+    ]
+  },
+  {
+    "slug": "mapradioformer",
+    "title": "MapRadioFormer",
+    "subtitle": "Fusing radio signals and spatial maps",
+    "concept": "rf-map",
+    "image": "/assets/robotics-paper-art/mapradioformer.webp",
+    "source": "/assets/robotics-paper-art/mapradioformer.svg",
+    "alt": "MapRadioFormer: Fusing radio signals and spatial maps. Conceptual research illustration.",
+    "paperTitle": "Fusion of Pervasive RF Data with Spatial Images via Vision Transformers for Enhanced Mapping in Smart Cities",
+    "paperLinks": [
+      "https://www.sciencedirect.com/science/article/pii/S1574119226001021"
+    ]
+  },
+  {
+    "slug": "in-context-spurious",
+    "title": "In-Context Learning",
+    "subtitle": "Learning from context under spurious correlations",
+    "concept": "spurious-context",
+    "image": "/assets/robotics-paper-art/in-context-spurious.webp",
+    "source": "/assets/robotics-paper-art/in-context-spurious.svg",
+    "alt": "In-Context Learning: Learning from context under spurious correlations. Conceptual research illustration.",
+    "paperTitle": "In-context learning in presence of spurious correlations",
+    "paperLinks": [
+      "https://openreview.net/forum?id=C9CSaTR1iA",
+      "https://arxiv.org/abs/2410.03140"
+    ]
+  },
+  {
+    "slug": "hoss-bench",
+    "title": "HOSS-Bench",
+    "subtitle": "Open-set RGB-SAR vessel re-identification",
+    "concept": "hoss",
+    "image": "/assets/robotics-paper-art/hoss-bench.webp",
+    "source": "/assets/robotics-paper-art/hoss-bench.svg",
+    "alt": "HOSS-Bench: Open-set RGB-SAR vessel re-identification. Conceptual research illustration.",
+    "paperTitle": "HOSS-Bench: Open-Set Cross-Modal Vessel Re-Identification Benchmark",
+    "paperLinks": [
+      "https://openreview.net/forum?id=hZwvQwTfU8"
+    ]
+  },
+  {
+    "slug": "satellite-pretraining",
+    "title": "Satellite Pretraining",
+    "subtitle": "Do satellite tasks need specialized encoders?",
+    "concept": "sat-pretrain",
+    "image": "/assets/robotics-paper-art/satellite-pretraining.webp",
+    "source": "/assets/robotics-paper-art/satellite-pretraining.svg",
+    "alt": "Satellite Pretraining: Do satellite tasks need specialized encoders?. Conceptual research illustration.",
+    "paperTitle": "Do Satellite Tasks Need Special Pretraining?",
+    "paperLinks": [
+      "https://arxiv.org/abs/2510.17014",
+      "https://ml-for-rs.github.io/iclr2025/"
+    ]
+  },
+  {
+    "slug": "navigation-maps",
+    "title": "Learning to Read Maps",
+    "subtitle": "Teaching vision-language models to navigate",
+    "concept": "map-navigation",
+    "image": "/assets/robotics-paper-art/navigation-maps.webp",
+    "source": "/assets/robotics-paper-art/navigation-maps.svg",
+    "alt": "Learning to Read Maps: Teaching vision-language models to navigate. Conceptual research illustration.",
+    "paperTitle": "Teaching Visual Language Models to Navigate using Maps",
+    "paperLinks": [
+      "https://openreview.net/forum?id=CMRRNFejHb"
+    ]
+  },
+  {
+    "slug": "vit-radio-map",
+    "title": "ViTs for Radio Maps",
+    "subtitle": "Indoor pathloss prediction from floor plans",
+    "concept": "vit-radio",
+    "image": "/assets/robotics-paper-art/vit-radio-map.webp",
+    "source": "/assets/robotics-paper-art/vit-radio-map.svg",
+    "alt": "ViTs for Radio Maps: Indoor pathloss prediction from floor plans. Conceptual research illustration.",
+    "paperTitle": "Vision Transformers for Efficient Indoor Pathloss Radio Map Prediction",
+    "paperLinks": [
+      "https://www.mdpi.com/2079-9292/14/10/1905"
+    ]
+  },
+  {
+    "slug": "data-specialization",
+    "title": "Data Specialization",
+    "subtitle": "Selecting remote-sensing images for self-supervision",
+    "concept": "specialization",
+    "image": "/assets/robotics-paper-art/data-specialization.webp",
+    "source": "/assets/robotics-paper-art/data-specialization.svg",
+    "alt": "Data Specialization: Selecting remote-sensing images for self-supervision. Conceptual research illustration.",
+    "paperTitle": "Less is More? Data Specialization for Self-Supervised Remote Sensing Models",
+    "paperLinks": [
+      "https://dataworldicml2025.github.io/"
+    ]
+  },
+  {
+    "slug": "sparse-radio-unet",
+    "title": "Sparse Radio Measurements",
+    "subtitle": "Physics-informed pathloss prediction with U-Net",
+    "concept": "sparse-radio",
+    "image": "/assets/robotics-paper-art/sparse-radio-unet.webp",
+    "source": "/assets/robotics-paper-art/sparse-radio-unet.svg",
+    "alt": "Sparse Radio Measurements: Physics-informed pathloss prediction with U-Net. Conceptual research illustration.",
+    "paperTitle": "U-Net for Indoor Pathloss Prediction from Sparse Measurements with Physics-Informed Features",
+    "paperLinks": [
+      "https://openreview.net/forum?id=aHtCh4vone"
+    ]
+  },
+  {
+    "slug": "rf-synthetic-pretraining",
+    "title": "Sim-to-Real RF Localization",
+    "subtitle": "Large-scale synthetic pretraining for real signals",
+    "concept": "sim-real",
+    "image": "/assets/robotics-paper-art/rf-synthetic-pretraining.webp",
+    "source": "/assets/robotics-paper-art/rf-synthetic-pretraining.svg",
+    "alt": "Sim-to-Real RF Localization: Large-scale synthetic pretraining for real signals. Conceptual research illustration.",
+    "paperTitle": "Bridging the Sim-to-Real Gap in RF Localization with Large-Scale Synthetic Pretraining",
+    "paperLinks": [
+      "https://www.sciencedirect.com/science/article/pii/S1566253525011662",
+      "https://openreview.net/forum?id=VzDCtHKr8w"
+    ]
+  },
+  {
+    "slug": "cooja-iot-datasets",
+    "title": "Synthetic IoT Datasets",
+    "subtitle": "Scalable network simulation with Cooja",
+    "concept": "iot",
+    "image": "/assets/robotics-paper-art/cooja-iot-datasets.webp",
+    "source": "/assets/robotics-paper-art/cooja-iot-datasets.svg",
+    "alt": "Synthetic IoT Datasets: Scalable network simulation with Cooja. Conceptual research illustration.",
+    "paperTitle": "Scalable Generation of Synthetic IoT Network Datasets: A Case Study with Cooja",
+    "paperLinks": [
+      "https://www.mdpi.com/1999-5903/17/11/518"
+    ]
+  },
+  {
+    "slug": "small-vlm-navigation",
+    "title": "Small VLMs for Navigation",
+    "subtitle": "Fine-tuning aerial agents with observation history",
+    "concept": "small-vlm",
+    "image": "/assets/robotics-paper-art/small-vlm-navigation.webp",
+    "source": "/assets/robotics-paper-art/small-vlm-navigation.svg",
+    "alt": "Small VLMs for Navigation: Fine-tuning aerial agents with observation history. Conceptual research illustration.",
+    "paperTitle": "Towards Fine-tuning a Small Vision-Language Model for Aerial Navigation",
+    "paperLinks": [
+      "https://openreview.net/forum?id=meOux7qkCk"
+    ]
+  },
+  {
+    "slug": "single-base-station-nlos",
+    "title": "Single-Station NLOS",
+    "subtitle": "Positioning from reflected radio signals",
+    "concept": "nlos",
+    "image": "/assets/robotics-paper-art/single-base-station-nlos.webp",
+    "source": "/assets/robotics-paper-art/single-base-station-nlos.svg",
+    "alt": "Single-Station NLOS: Positioning from reflected radio signals. Conceptual research illustration.",
+    "paperTitle": "Deep learning with synthetic data for wireless NLOS positioning with a single base station",
+    "paperLinks": [
+      "https://www.sciencedirect.com/science/article/pii/S157087052400307X"
+    ]
+  },
+  {
+    "slug": "local-vit-representations",
+    "title": "Local ViT Representations",
+    "subtitle": "Understanding image patches and high-variance features",
+    "concept": "local-features",
+    "image": "/assets/robotics-paper-art/local-vit-representations.webp",
+    "source": "/assets/robotics-paper-art/local-vit-representations.svg",
+    "alt": "Local ViT Representations: Understanding image patches and high-variance features. Conceptual research illustration.",
+    "paperTitle": "Analyzing Local Representations of Self-supervised Vision Transformers",
+    "paperLinks": [
+      "https://arxiv.org/abs/2401.00463"
+    ]
+  },
+  {
+    "slug": "rf-environment-reconstruction",
+    "title": "RF Environment Reconstruction",
+    "subtitle": "Mapping buildings from radio propagation paths",
+    "concept": "rf-reconstruction",
+    "image": "/assets/robotics-paper-art/rf-environment-reconstruction.webp",
+    "source": "/assets/robotics-paper-art/rf-environment-reconstruction.svg",
+    "alt": "RF Environment Reconstruction: Mapping buildings from radio propagation paths. Conceptual research illustration.",
+    "paperTitle": "Outdoor Environment Reconstruction with Deep Learning on Radio Propagation Paths",
+    "paperLinks": [
+      "https://arxiv.org/abs/2402.17336"
+    ]
+  },
+  {
+    "slug": "remote-sensing-robustness",
+    "title": "Remote-Sensing Robustness",
+    "subtitle": "Evaluating models under image distribution shifts",
+    "concept": "robustness",
+    "image": "/assets/robotics-paper-art/remote-sensing-robustness.webp",
+    "source": "/assets/robotics-paper-art/remote-sensing-robustness.svg",
+    "alt": "Remote-Sensing Robustness: Evaluating models under image distribution shifts. Conceptual research illustration.",
+    "paperTitle": "Benchmarking Robustness of Foundation Models for Remote Sensing",
+    "paperLinks": []
+  },
+  {
+    "slug": "spurious-feature-disentangling",
+    "title": "Disentangling Spurious Features",
+    "subtitle": "Separating core features from shortcut signals",
+    "concept": "disentangle",
+    "image": "/assets/robotics-paper-art/spurious-feature-disentangling.webp",
+    "source": "/assets/robotics-paper-art/spurious-feature-disentangling.svg",
+    "alt": "Disentangling Spurious Features: Separating core features from shortcut signals. Conceptual research illustration.",
+    "paperTitle": "Identifying and disentangling spurious features in pretrained image representations",
+    "paperLinks": [
+      "https://arxiv.org/abs/2306.12673"
+    ]
+  },
+  {
+    "slug": "nlos-uncertainty",
+    "title": "NLOS Localization + Uncertainty",
+    "subtitle": "Input representations and candidate positions",
+    "concept": "uncertainty",
+    "image": "/assets/robotics-paper-art/nlos-uncertainty.webp",
+    "source": "/assets/robotics-paper-art/nlos-uncertainty.svg",
+    "alt": "NLOS Localization + Uncertainty: Input representations and candidate positions. Conceptual research illustration.",
+    "paperTitle": "ML-based Approaches for Wireless NLOS Localization: Input Representations and Uncertainty Estimation",
+    "paperLinks": [
+      "https://arxiv.org/abs/2304.11396"
+    ]
+  },
+  {
+    "slug": "orchard-networked-sensors",
+    "title": "Networked Orchard Sensors",
+    "subtitle": "Sensing and irrigation in an apple orchard",
+    "concept": "orchard",
+    "image": "/assets/robotics-paper-art/orchard-networked-sensors.webp",
+    "source": "/assets/robotics-paper-art/orchard-networked-sensors.svg",
+    "alt": "Networked Orchard Sensors: Sensing and irrigation in an apple orchard. Conceptual research illustration.",
+    "paperTitle": "Leveraging Networked Sensors to Improve Apple Orchard Irrigation: A Lab Prototype",
+    "paperLinks": []
+  },
+  {
+    "slug": "domain-generalization-failures",
+    "title": "Domain Generalization",
+    "subtitle": "Studying model failure under distribution shifts",
+    "concept": "domain-failures",
+    "image": "/assets/robotics-paper-art/domain-generalization-failures.webp",
+    "source": "/assets/robotics-paper-art/domain-generalization-failures.svg",
+    "alt": "Domain Generalization: Studying model failure under distribution shifts. Conceptual research illustration.",
+    "paperTitle": "Failure Modes of Domain Generalization Algorithms",
+    "paperLinks": [
+      "https://openaccess.thecvf.com/content/CVPR2022/papers/Galstyan_Failure_Modes_of_Domain_Generalization_Algorithms_CVPR_2022_paper.pdf"
+    ]
+  },
+  {
+    "slug": "semi-supervised-survey",
+    "title": "Semi-Supervised Learning",
+    "subtitle": "Image classification with labeled and unlabeled data",
+    "concept": "semi-supervised",
+    "image": "/assets/robotics-paper-art/semi-supervised-survey.webp",
+    "source": "/assets/robotics-paper-art/semi-supervised-survey.svg",
+    "alt": "Semi-Supervised Learning: Image classification with labeled and unlabeled data. Conceptual research illustration.",
+    "paperTitle": "Deep Semi-Supervised Image Classification Algorithms: a Survey",
+    "paperLinks": [
+      "https://lib.jucs.org/article/77029/;"
+    ]
+  },
+  {
+    "slug": "class-dependent-domain-shift",
+    "title": "Class-Dependent Domain Shift",
+    "subtitle": "Robust classification when domains depend on labels",
+    "concept": "domain-shift",
+    "image": "/assets/robotics-paper-art/class-dependent-domain-shift.webp",
+    "source": "/assets/robotics-paper-art/class-dependent-domain-shift.svg",
+    "alt": "Class-Dependent Domain Shift: Robust classification when domains depend on labels. Conceptual research illustration.",
+    "paperTitle": "Robust classification under class-dependent domain shift",
+    "paperLinks": [
+      "https://arxiv.org/abs/2007.05335"
+    ]
+  }
+]
