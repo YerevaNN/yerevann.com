@@ -40,6 +40,7 @@
     }
     #partner .yvn-partners-lead,
     #partner .yvn-partners-grid,
+    #partner .yvn-compute-partners-grid,
     #partner .yvn-partners-institution-grid {
       display: grid;
     }
@@ -80,6 +81,7 @@
       box-shadow: 0 14px 28px rgba(70, 62, 135, .14);
     }
     #partner .yvn-partner-link:focus-visible,
+    #partner .yvn-compute-partner:focus-visible,
     #partner .yvn-institution-card:focus-visible,
     #partner .yvn-partners-cta:focus-visible {
       outline: 3px solid #221c62;
@@ -94,6 +96,10 @@
     #partner .yvn-partner-card .yvn-jhm-logo {
       filter: grayscale(1) contrast(8);
       mix-blend-mode: multiply;
+    }
+    #partner .yvn-partner-card .yvn-rev-rachel-logo {
+      max-width: 82%;
+      max-height: 106px;
     }
     #partner .yvn-partner-label {
       color: var(--yvn-partners-ink);
@@ -114,6 +120,48 @@
     }
     #partner .yvn-partners-grid img.yvn-support-compact {
       transform: scale(.72);
+    }
+    #partner .yvn-compute-partners {
+      margin: 30px 0 22px;
+    }
+    #partner .yvn-compute-partners-title {
+      margin: 0 0 16px;
+      color: var(--yvn-partners-ink);
+      font-size: 22px;
+      font-weight: 800;
+      text-align: center;
+    }
+    #partner .yvn-compute-partners-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    #partner .yvn-compute-partner {
+      display: flex;
+      height: 120px;
+      padding: 24px 38px;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid var(--yvn-partners-line);
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+    #partner .yvn-compute-partner img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 54px;
+      object-fit: contain;
+    }
+    #partner .yvn-firebird-logo {
+      width: 245px !important;
+      height: 49px !important;
+    }
+    #partner .yvn-eleveight-logo {
+      width: 220px !important;
     }
     #partner .yvn-partners-institution {
       margin-top: 20px;
@@ -138,22 +186,27 @@
     #partner .yvn-institution-card {
       display: flex;
       width: 330px;
-      height: 96px;
+      height: 120px;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 10px;
+      box-sizing: border-box;
     }
     #partner .yvn-institution-card img {
-      width: 100%;
-      height: 80px;
+      width: auto;
+      max-width: 100%;
+      height: auto;
       object-fit: contain;
     }
     #partner .yvn-institution-card .yvn-ysu-logo {
-      filter: brightness(0) invert(1);
+      width: 225px;
     }
-    #partner .yvn-institution-card .yvn-moescs-logo {
-      filter: grayscale(1) contrast(8) brightness(.78);
-      mix-blend-mode: screen;
-      transform: scale(1.3);
+    #partner .yvn-institution-card .yvn-hesc-logo {
+      width: 310px;
+      max-width: none;
+      height: 310px;
     }
     #partner .yvn-partners-cta {
       display: block;
@@ -177,6 +230,12 @@
       #partner .yvn-partners-lead,
       #partner .yvn-partners-institution-grid { grid-template-columns: 1fr; }
       #partner .yvn-partners-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #partner .yvn-compute-partners { margin: 26px 0 20px; }
+      #partner .yvn-compute-partners-title { margin-bottom: 14px; font-size: 20px; }
+      #partner .yvn-compute-partners-grid { grid-template-columns: 1fr; gap: 12px; }
+      #partner .yvn-compute-partner { height: 104px; padding: 22px 28px; }
+      #partner .yvn-firebird-logo { width: 210px !important; height: 42px !important; }
+      #partner .yvn-eleveight-logo { width: 205px !important; }
       #partner .yvn-institution-card { width: 100%; }
     }
   `;
@@ -186,7 +245,7 @@
       <h2 class="yvn-partners-title" id="yvn-partners-title">Partners &amp; Sponsors</h2>
       <p class="yvn-partners-intro">Our research grows through a network of universities, foundations, companies, and supporters.</p>
       <div class="yvn-partners-lead">
-        <a class="yvn-partner-link" href="https://revandrachel.org/" target="_blank" rel="noreferrer"><span class="yvn-partner-card"><img src="/assets/rev-rachel-logo.jpg" alt="R&amp;R Foundation"></span></a>
+        <a class="yvn-partner-link" href="https://revandrachel.org/" target="_blank" rel="noreferrer"><span class="yvn-partner-card"><img class="yvn-rev-rachel-logo" src="/assets/rev-rachel-logo.webp" alt="R&amp;R Foundation"></span></a>
         <a class="yvn-partner-link" href="https://www.jhmfoundation.org/" target="_blank" rel="noreferrer"><span class="yvn-partner-card"><img class="yvn-jhm-logo" src="/assets/jhm-foundation-logo.png" alt=""><span class="yvn-partner-label">JHM Foundation</span></span></a>
         <a class="yvn-partner-link" href="https://yahall.am/" target="_blank" rel="noreferrer"><span class="yvn-partner-card"><img src="/assets/yandex-logo.png" alt="Yandex Armenia"></span></a>
       </div>
@@ -204,11 +263,18 @@
         <a class="yvn-partner-link" href="https://nebius.com/" target="_blank" rel="noreferrer"><span class="yvn-partner-card"><img class="yvn-support-compact" src="/assets/nebius-logo.png" alt="Nebius"></span></a>
         <a class="yvn-partner-link" href="https://www.cognaize.com/" target="_blank" rel="noreferrer"><span class="yvn-partner-card"><img class="yvn-support-compact" src="/assets/cognaize-logo.png" alt="Cognaize"></span></a>
       </div>
+      <div class="yvn-compute-partners">
+        <h3 class="yvn-compute-partners-title">Compute Partners</h3>
+        <div class="yvn-compute-partners-grid">
+          <a class="yvn-compute-partner" href="https://firebird.ai/" target="_blank" rel="noreferrer"><img class="yvn-firebird-logo" src="/assets/firebird-logo.svg" alt="Firebird AI"></a>
+          <a class="yvn-compute-partner" href="https://eleveight.ai/" target="_blank" rel="noreferrer"><img class="yvn-eleveight-logo" src="/assets/eleveight-logo.svg" alt="Eleveight AI"></a>
+        </div>
+      </div>
       <div class="yvn-partners-institution">
         <h3 class="yvn-partners-institution-title">Institutional Partners</h3>
         <div class="yvn-partners-institution-grid">
           <a class="yvn-institution-card" href="https://ysu.am/" target="_blank" rel="noreferrer"><img class="yvn-ysu-logo" src="/assets/yerevan-state-university-logo.png" alt="Yerevan State University"></a>
-          <a class="yvn-institution-card" href="https://www.scs.am/" target="_blank" rel="noreferrer"><img class="yvn-moescs-logo" src="/assets/ra-moescs-logo.png" alt="RA MoESCS Higher Education and Science Committee"></a>
+          <a class="yvn-institution-card" href="https://www.scs.am/" target="_blank" rel="noreferrer"><img class="yvn-hesc-logo" src="/assets/hesc-logo-english.jpg" alt="Higher Education and Science Committee"></a>
         </div>
       </div>
       <a class="yvn-partners-cta" href="/donate/">Partner with us &rarr;</a>
